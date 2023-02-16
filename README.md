@@ -1,3 +1,1 @@
-#modestore
-
-Pontus
+# A Vue.js template for Vite
