@@ -1,10 +1,9 @@
 #modestore
 
 Pontus
-
 Roland b
-Sheila
 Roland björn
+Sheila Martinez
 
 
 # A Vue.js template for Vite
