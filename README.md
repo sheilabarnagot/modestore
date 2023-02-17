@@ -1,4 +1,4 @@
-#modestore
+# modestore
 
 Pontus
 Roland b
@@ -7,5 +7,3 @@ Sheila Martinez
 
 
 # A Vue.js template for Vite
-
-# Sheila
