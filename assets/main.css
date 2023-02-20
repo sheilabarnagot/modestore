@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'jost';
+  src: url('./fonts/Jost-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'didot';
+  src: url('./fonts/GFSDidot-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'couture';
+  src: url('./fonts/couture-bld.otf') format('opentype');
+}

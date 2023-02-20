@@ -1,19 +1,21 @@
 <script>
-  import CitiesList from './components/CitiesList.vue'
-  import CounterButton from './components/CounterButton.vue'
-  import HelloWorld from './components/HelloWorld.vue'
+  // import CitiesList from './components/CitiesList.vue'
+  // import CounterButton from './components/CounterButton.vue'
+  // import HelloWorld from './components/HelloWorld.vue'
+  import FontExamples from './components/FontExamples.vue'
 
   export default {
     components: {
-      CitiesList,
-      CounterButton,
-      HelloWorld
+      // CitiesList,
+      // CounterButton,
+      // HelloWorld,
+      FontExamples
     }
   }
 </script>
 
 <template>
-  <nav>
+  <!-- <nav>
     <ul>
       <li>
         <RouterLink to="/">Hem</RouterLink>
@@ -28,8 +30,9 @@
   </nav>
   <HelloWorld msg="Hello World!" />
   <CitiesList />
-  <CounterButton />
+  <CounterButton /> -->
   <main>
-    <RouterView />
+    <FontExamples />
+    <!-- <RouterView /> -->
   </main>
 </template>
