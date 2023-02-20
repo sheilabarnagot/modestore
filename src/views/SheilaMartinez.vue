@@ -1,4 +1,4 @@
-<script>
+<script default>
   export default {
     data() {
       return {
