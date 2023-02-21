@@ -3,7 +3,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 // import AboutView from './views/AboutView.vue'
 // import ContactView from './views/ContactView.vue'
 // import HomeView from './views/HomeView.vue'
-import KlaraView from './views/KlaraView.vue'
+// import KlaraView from './views/KlaraView.vue'
 import RolandB from './views/RolandB.vue'
 import AccountView from './views/AccountView.vue'
 import BetalningComponent from './components/BetalningComponent.vue'
@@ -24,17 +24,17 @@ export default createRouter({
           component: RolandB
         },
         {
-          path: 'favourites',
-          component: KlaraView
+          // path: 'favourites',
+          // component: KlaraView
         },
         {
           path: 'help',
           component: RolandB
-        },
-        {
-          path: 'settings',
-          component: KlaraView
         }
+        // {
+        //   path: 'settings',
+        //   component: KlaraView
+        // }
       ]
     }
   ]
