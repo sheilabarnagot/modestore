@@ -1,39 +1,15 @@
 <script>
-  // import CitiesList from './components/CitiesList.vue'
-  // import CounterButton from './components/CounterButton.vue'
-  // import HelloWorld from './components/HelloWorld.vue'
-
-  // import FontExamples from './components/FontExamples.vue'
-  // import AccountView from './views/AccountView.vue'
+  import BetalningKomponent from './BetalningKomponent.vue'
 
   export default {
     components: {
-      // CitiesList,
-      // CounterButton,
-      // HelloWorld
-      // FontExamples,
-      // AccountView
+      BetalningKomponent
     }
   }
 </script>
 
 <template>
-  <!-- <nav>
-    <ul>
-      <li>
-        <RouterLink to="/">Hem</RouterLink>
-      </li>
-      <li>
-        <RouterLink to="/about">Om</RouterLink>
-      </li>
-      <li>
-        <RouterLink to="/contact">Kontakt</RouterLink>
-      </li>
-    </ul>
-  </nav> -->
-  <!-- <HelloWorld msg="Hello World!" />
-  <CitiesList />
-  <CounterButton /> -->
+  <BetalningKomponent />
   <nav>
     <ul>
       <li>
@@ -53,8 +29,8 @@
       </li>
     </ul>
   </nav>
+
   <main>
-    <!-- <FontExamples /> -->
     <RouterView />
   </main>
 </template>
