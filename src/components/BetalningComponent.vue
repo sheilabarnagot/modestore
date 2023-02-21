@@ -1,18 +1,48 @@
-<template>
-  <form>
+<!-- <template>
+  <main>
     <div class="Nummer">
       <label>Number</label>
-      <input v-kortformat:formatCardNumber />
+      <input type="text" v-model="" />
     </div>
 
     <div class="Datum">
       <label>Date</label>
-      <input v-kortformat:formaCardDate />
+      <input type="text" v-model="" />
     </div>
 
-    <div class="cvc">
-      <label>Card cvc</label>
-      <input v-kortformat:formaCardCVC />
+    <div class="CVC">
+      <label>Card CVC</label>
+      <input type="text" v-model="" />
     </div>
-  </form>
+  </main>
+
+</template> -->
+
+<template>
+  <div>Payment: {{ payment }}</div>
+
+  <input type="radio" id="form" value="Kort" v-model="payment" />
+  <label for="kort">Credit Card</label>
+
+  <input type="text" :value="namn" placeholder="Credit Number" />
+
+  <input type="text" :value="namn" placeholder="M/Y" />
+
+  <input type="text" :value="namn" placeholder="CVC" />
+
+  <input type="radio" id="form" value="Swish" v-model="payment" />
+  <label for="swish">Swish</label>
+
+  <input type="radio" id="form" value="Klarna" v-model="payment" />
+  <label for="klarna">Klarna</label>
 </template>
+
+<script>
+  export default {
+    data() {
+      return {
+        payment: 'Kort'
+      }
+    }
+  }
+</script>
