@@ -27,6 +27,7 @@
     </ul>
   </nav>
   <RouterView />
+  <button>$emitTest</button>
 </template>
 
 <style scoped>
