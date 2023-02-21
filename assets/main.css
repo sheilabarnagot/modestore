@@ -12,3 +12,9 @@
   font-family: 'couture';
   src: url('./fonts/couture-bld.otf') format('opentype');
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}

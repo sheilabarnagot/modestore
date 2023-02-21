@@ -1,12 +1,17 @@
 <script>
+  import AccountNav from './AccountNav.vue'
+
   export default {
     data() {
       return {}
-    }
+    },
+    components: { AccountNav }
   }
 </script>
 
-<template>placeholder</template>
+<template>
+  <AccountNav />
+</template>
 
 <style scoped>
   p {

@@ -9,7 +9,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   p {
     font-weight: bold;
   }
