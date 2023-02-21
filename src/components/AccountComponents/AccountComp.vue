@@ -5,7 +5,8 @@
     data() {
       return {}
     },
-    components: { AccountNav }
+    components: { AccountNav },
+    methods: {}
   }
 </script>
 

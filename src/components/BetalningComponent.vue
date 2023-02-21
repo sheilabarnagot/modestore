@@ -1,23 +1,3 @@
-<!-- <template>
-  <main>
-    <div class="Nummer">
-      <label>Number</label>
-      <input type="text" v-model="" />
-    </div>
-
-    <div class="Datum">
-      <label>Date</label>
-      <input type="text" v-model="" />
-    </div>
-
-    <div class="CVC">
-      <label>Card CVC</label>
-      <input type="text" v-model="" />
-    </div>
-  </main>
-
-</template> -->
-
 <template>
   <div>Payment: {{ payment }}</div>
 

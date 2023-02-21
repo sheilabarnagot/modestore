@@ -23,6 +23,7 @@ export default createRouter({
           path: 'favourites',
           component: BetalningComponent
         },
+
         {
           path: 'favourites',
           component: BetalningComponent
@@ -35,6 +36,10 @@ export default createRouter({
           path: 'settings',
           component: MyAccountComp
         }
+        // {
+        //   path: 'settings',
+        //   component: KlaraView
+        // }
       ]
     }
   ]
