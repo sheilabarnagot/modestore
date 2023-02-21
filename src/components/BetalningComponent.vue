@@ -1,5 +1,9 @@
 <template>
   <div>Payment: {{ payment }}</div>
+  <div class="container1" />
+  <div class="card" />
+  <div class="inner-card" />
+  <div class="font" />
 
   <input type="radio" id="form" value="Kort" v-model="payment" />
   <label for="kort">Credit Card</label>
