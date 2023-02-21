@@ -1,7 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-import ContactView from './views/ContactView.vue'
-import HomeView from './views/HomeView.vue'
 import Cart from './views/Cart.vue'
 
 import AccountView from './views/AccountView.vue'
@@ -15,14 +13,7 @@ export default createRouter({
       component: Cart,
       path: '/cart'
     },
-    {
-      component: ContactView,
-      path: '/contact'
-    },
-    {
-      component: HomeView,
-      path: '/'
-    },
+
     {
       component: AccountView,
       path: '/account',
