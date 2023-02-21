@@ -1,12 +1,4 @@
-<script>
-  // import BetalningKomponent from './BetalningKomponent.vue'
-
-  // export default {
-  //   components: {
-  //     BetalningKomponent
-  //   }
-  // }
-</script>
+<script></script>
 
 <template>
   <BetalningKomponent />
