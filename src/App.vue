@@ -1,38 +1,58 @@
 <script>
-  import CitiesList from './components/CitiesList.vue'
-  import CounterButton from './components/CounterButton.vue'
-  import HelloWorld from './components/HelloWorld.vue'
-  import BetalningKomponent from './betalningKomponent.vue'
+  import BetalningKomponent from './BetalningKomponent.vue'
 
   export default {
     components: {
-      CitiesList,
-      CounterButton,
-      HelloWorld,
       BetalningKomponent
     }
   }
 </script>
 
 <template>
+  <BetalningKomponent />
   <nav>
     <ul>
       <li>
         <RouterLink to="/">Hem</RouterLink>
       </li>
       <li>
-        <RouterLink to="/about">Om</RouterLink>
+        <RouterLink to="/">Sök</RouterLink>
       </li>
       <li>
-        <RouterLink to="/contact">Kontakt</RouterLink>
+        <RouterLink to="/">Menu</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/account">Konto</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/">Hjälp</RouterLink>
       </li>
     </ul>
   </nav>
-  <HelloWorld msg="Hello World!" />
-  <CitiesList />
-  <CounterButton />
-  <BetalningKomponent />
+
   <main>
     <RouterView />
   </main>
 </template>
+
+<style scoped>
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+  }
+
+  ul li {
+    padding-left: 1em;
+  }
+
+  ul li a {
+    font-family: 'jost';
+    text-decoration: none;
+  }
+</style>
