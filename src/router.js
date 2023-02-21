@@ -6,6 +6,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import KlaraView from './views/KlaraView.vue'
 import RolandB from './views/RolandB.vue'
 import AccountView from './views/AccountView.vue'
+import BetalningComponent from './components/BetalningComponent.vue'
 
 export default createRouter({
   history: createWebHashHistory(),
@@ -16,7 +17,7 @@ export default createRouter({
       children: [
         {
           path: 'kop',
-          component: KlaraView
+          component: BetalningComponent
         },
         {
           path: 'konto',
