@@ -41,7 +41,8 @@
     list-style-type: none;
     display: flex;
     justify-content: center;
-    position: absolute;
+    position: fixed;
+
     bottom: 0;
     left: 50%;
     right: 50%;
