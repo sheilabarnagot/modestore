@@ -30,3 +30,30 @@
     }
   }
 </script>
+
+<style lang="css">
+  .conatiner {
+    min-height: 100vh;
+    width: 100%;
+    background: #000;
+  }
+  .card {
+    width: 500px;
+    height: 300px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .inner-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .font {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, #0045c7, #ff2c7d);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+</style>
