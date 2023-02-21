@@ -1,18 +1,9 @@
 <script>
-  import CitiesList from './components/CitiesList.vue'
-  import CounterButton from './components/CounterButton.vue'
-  import HelloWorld from './components/HelloWorld.vue'
-
-  export default {
-    components: {
-      CitiesList,
-      CounterButton,
-      HelloWorld
-    }
-  }
+  import CartComponents from './components/Cart Components/cartComponents.vue'
 </script>
 
 <template>
+  <BetalningKomponent />
   <nav>
     <ul>
       <li>
@@ -22,17 +13,45 @@
         <RouterLink to="/">Hem</RouterLink>
       </li>
       <li>
-        <RouterLink to="/about">Om</RouterLink>
+        <RouterLink to="/">Sök</RouterLink>
       </li>
       <li>
-        <RouterLink to="/contact">Kontakt</RouterLink>
+        <RouterLink to="/">Menu</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/account">Konto</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/">Hjälp</RouterLink>
       </li>
     </ul>
   </nav>
-  <HelloWorld msg="Hello World!" />
-  <CitiesList />
-  <CounterButton />
+
   <main>
+    <CartComponents />
     <RouterView />
   </main>
 </template>
+
+<style scoped>
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+  }
+
+  ul li {
+    padding-left: 1em;
+  }
+
+  ul li a {
+    font-family: 'jost';
+    text-decoration: none;
+  }
+</style>
