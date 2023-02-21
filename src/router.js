@@ -1,11 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-// import AboutView from './views/AboutView.vue'
-// import ContactView from './views/ContactView.vue'
-// import HomeView from './views/HomeView.vue'
-
 import AccountView from './views/AccountView.vue'
 import BetalningComponent from './components/BetalningComponent.vue'
+import MyAccountComp from './components/MyAccount/MyAccountComp.vue'
 
 export default createRouter({
   history: createWebHashHistory(),
@@ -16,10 +13,14 @@ export default createRouter({
       children: [
         {
           path: 'kop',
-          component: BetalningComponent
+          component: MyAccountComp
         },
         {
           path: 'konto',
+          component: MyAccountComp
+        },
+        {
+          path: 'favourites',
           component: BetalningComponent
         },
 
@@ -33,7 +34,7 @@ export default createRouter({
         },
         {
           path: 'settings',
-          component: BetalningComponent
+          component: MyAccountComp
         }
         // {
         //   path: 'settings',
