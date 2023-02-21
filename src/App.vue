@@ -2,12 +2,14 @@
   import CitiesList from './components/CitiesList.vue'
   import CounterButton from './components/CounterButton.vue'
   import HelloWorld from './components/HelloWorld.vue'
+  import BetalningKomponent from './betalningKomponent.vue'
 
   export default {
     components: {
       CitiesList,
       CounterButton,
-      HelloWorld
+      HelloWorld,
+      BetalningKomponent
     }
   }
 </script>
@@ -29,6 +31,7 @@
   <HelloWorld msg="Hello World!" />
   <CitiesList />
   <CounterButton />
+  <BetalningKomponent />
   <main>
     <RouterView />
   </main>

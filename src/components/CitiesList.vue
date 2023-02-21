@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
   export default {
     created() {
       fetch('https://avancera.app/cities/')
@@ -19,4 +19,7 @@
   <ol>
     <li :key="city.id" v-for="city in cities">{{ city.name }}</li>
   </ol>
+</template> -->
+<template>
+  <p />
 </template>
