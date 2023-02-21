@@ -1,8 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-import RolandB from './views/RolandB.vue'
 import AccountView from './views/AccountView.vue'
-// import BetalningComponent from './components/BetalningComponent.vue'
+import BetalningComponent from './components/BetalningComponent.vue'
 import MyAccountComp from './components/MyAccount/MyAccountComp.vue'
 
 export default createRouter({
@@ -22,11 +21,15 @@ export default createRouter({
         },
         {
           path: 'favourites',
-          component: RolandB
+          component: BetalningComponent
+        },
+        {
+          path: 'favourites',
+          component: BetalningComponent
         },
         {
           path: 'help',
-          component: RolandB
+          component: BetalningComponent
         },
         {
           path: 'settings',
