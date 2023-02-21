@@ -16,6 +16,9 @@
   <nav>
     <ul>
       <li>
+        <RouterLink to="/cart">Cart</RouterLink>
+      </li>
+      <li>
         <RouterLink to="/">Hem</RouterLink>
       </li>
       <li>
