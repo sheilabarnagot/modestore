@@ -10,18 +10,6 @@ import AccountView from './views/AccountView.vue'
 export default createRouter({
   history: createWebHashHistory(),
   routes: [
-    // {
-    //   component: AboutView,
-    //   path: '/about'
-    // },
-    // {
-    //   component: ContactView,
-    //   path: '/contact'
-    // },
-    // {
-    //   component: HomeView,
-    //   path: '/'
-    // }
     {
       component: AccountView,
       path: '/account',
