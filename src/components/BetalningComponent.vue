@@ -1,5 +1,7 @@
 <template>
   <form>
+    <input name="val" type="radio" />
+
     <div class="Nummer">
       <label>Number</label>
       <input v-kortformat:formatCardNumber />
