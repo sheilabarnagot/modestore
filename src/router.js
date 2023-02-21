@@ -36,10 +36,6 @@ export default createRouter({
           path: 'settings',
           component: MyAccountComp
         }
-        // {
-        //   path: 'settings',
-        //   component: KlaraView
-        // }
       ]
     }
   ]
