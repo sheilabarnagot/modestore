@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <h2>Products</h2>
     <ul>
       <li v-for="product in products.shirts" :key="product.id">
@@ -19,11 +18,12 @@
         </li>
       </ul>
     </div>
-
   </div>
 </template>
 
 <script>
+
+
 
   import productsData from '../../../products.json'
   export default {
@@ -36,6 +36,7 @@
     },
     methods: {}
 
+
   export default {
     props: {
       cartItems: {
@@ -43,6 +44,5 @@
         required: true
       }
     }
-
   }
 </script>
