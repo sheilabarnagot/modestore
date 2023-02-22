@@ -4,16 +4,32 @@
   </div>
   <div class="container">
     <input type="radio" id="form" value="Kort" v-model="payment" />
-    <label for="kort">Credit Card</label>
-    <input type="text" :value="namn" placeholder="Credit Number" />
-    <input type="text" :value="namn" placeholder="M/Y" />
-    <input type="text" :value="namn" placeholder="M/Y" />
+
+    <label style="display: block" for="kort">Credit Card</label>
+
+    <input
+      style="display: none"
+      type="text"
+      :value="creditnumber"
+      placeholder="Credit Number"
+    />
+
+    <input style="display: none" type="text" :value="my" placeholder="M/Y" />
+    <input style="display: none" type="text" :value="cvc" placeholder="cvc" />
 
     <input type="radio" id="form" value="Swish" v-model="payment" />
-    <label for="swish">Swish</label>
+    <label style="display: block" for="swish">Swish</label>
+    <input
+      style="display: none"
+      type="text"
+      :value="number"
+      placeholder="Skriv ditt nummer"
+    />
 
-    <input type="radio" id="form" value="Klarna" v-model="payment" />
-    <label for="klarna">Klarna</label>
+    <input type="radio" id="form" value="faktura" v-model="payment" />
+    <label style="display: block" for="faktura">faktura</label>
+
+    <button @click="betala">Bekräfta betalning</button>
   </div>
 </template>
 
@@ -21,7 +37,10 @@
   export default {
     data() {
       return {
-        payment: 'Kort'
+        payment: 'Kort',
+        my: 'M/Y',
+        cvc: 'CVC',
+        creditnumber: 'Credi† Number'
       }
     }
   }
