@@ -1,12 +1,12 @@
 import { createStore } from 'vuex'
 
 const mutations = {
-    increment(state) {
-      state.counter += 1
+    basketItem(state, n) {
+      state.items += n
     }
   },
   state = {
-    counter: 0
+    items: []
   }
 
 export default createStore({ mutations, state, strict: true })

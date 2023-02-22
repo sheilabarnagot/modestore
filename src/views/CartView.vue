@@ -1,11 +1,8 @@
 <script>
-  // import CartComp from '../components/CartComponents/CartComp.vue'
-  import ProductComp from '../components/CartComponents/ProductComponents.vue'
+  // import cartcomp from '../components/CartComponents/CartComp.vue'
+
   export default {
-    components: {
-      // CartComp,
-      ProductComp
-    },
+    components: {},
     data() {
       return {
         test: 'test'
@@ -15,5 +12,5 @@
 </script>
 
 <template>
-  <ProductComp />
+  {{ $store.state.items }}
 </template>
