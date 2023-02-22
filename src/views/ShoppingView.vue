@@ -5,6 +5,7 @@
       <li v-for="product in products.shirts" :key="product.id">
         <div>{{ product.name }}</div>
         <button @click="hej">Add to cart</button>
+        <cartcomp :product="products" />
       </li>
     </ul>
   </div>
@@ -12,7 +13,9 @@
 
 <script>
   import productsData from '../../products.json'
+  import cartcomp from '../components/CartComponents/CartComp.vue'
   export default {
+    components: { cartcomp },
     emits: ['addtocart'],
     data() {
       return {

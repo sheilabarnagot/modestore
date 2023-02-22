@@ -1,20 +1,31 @@
 <template>
   <div>
-    <ShoppingView @addtocart="addToCart" />
-    <!-- <CartView :cartItems="cartItems" /> -->
+    <!-- <ShoppingView @addtocart="addToCart" /> -->
+    <!-- <CartView :cartItems="cartItems" />
+    -->
+    <button>klick</button>
+    {{ product }}
   </div>
 </template>
 
 <script>
-  import ShoppingView from '../../views/ShoppingView.vue'
   // import CartView from '../../views/CartView.vue'
 
   export default {
-    components: { ShoppingView },
+    created() {
+      this.product
+    },
+    components: {},
     // CartView
+    props: {
+      product: {
+        type: Object,
+        default: () => {}
+      }
+    },
     data() {
       return {
-        cartItems: []
+        cartItems: this.product
       }
     },
     methods: {
