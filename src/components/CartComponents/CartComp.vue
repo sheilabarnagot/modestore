@@ -1,20 +1,24 @@
 <template>
   <div>
-    <h2>Cart</h2>
-    <div>
-      <ul>
-        <li v-for="item in cartItems" :key="item.id">{{ item.name }}</li>
-      </ul>
-    </div>
+    <ShoppingView @add-to-cart="addToCart" />
+    <CartView :cartItems="cartItems" />
   </div>
 </template>
 
 <script>
+  import ShoppingView from '../../views/Shopping.vue'
+  import CartView from '../../views/Cart.vue'
+
   export default {
-    props: {
-      cartItems: {
-        type: Array,
-        required: true
+    components: { ShoppingView, CartView },
+    data() {
+      return {
+        cartItems: []
+      }
+    },
+    methods: {
+      addToCart(product) {
+        this.cartItems.push(product)
       }
     }
   }

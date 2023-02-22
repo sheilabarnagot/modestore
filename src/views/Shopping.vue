@@ -4,23 +4,18 @@
     <ul>
       <li v-for="product in products.shirts" :key="product.id">
         <div>{{ product.name }}</div>
-        <button @click="addToCart(product)">Add to cart</button>
+        <button @click="$emit('add-to-cart', product)">Add to cart</button>
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-  import productsData from '../../../products.json'
+  import productsData from '../../products.json'
   export default {
     data() {
       return {
         products: productsData
-      }
-    },
-    methods: {
-      addToCart(product) {
-        this.$emit('add-to-cart', product)
       }
     }
   }

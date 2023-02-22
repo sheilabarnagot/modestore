@@ -1,19 +1,21 @@
+<template>
+  <div>
+    <h2>Cart</h2>
+    <div>
+      <ul>
+        <li v-for="item in cartItems" :key="item.id">{{ item.name }}</li>
+      </ul>
+    </div>
+  </div>
+</template>
+
 <script>
-  import CartComp from '../components/CartComponents/CartComp.vue'
-  import ProductComp from '../components/CartComponents/ProductComponents.vue'
   export default {
-    components: {
-      CartComp,
-      ProductComp
-    },
-    data() {
-      return {
-        test: 'test'
+    props: {
+      cartItems: {
+        type: Array,
+        required: true
       }
     }
   }
 </script>
-
-<template>
-  <ProductComp />
-</template>

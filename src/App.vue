@@ -5,6 +5,9 @@
   <nav>
     <ul>
       <li>
+        <RouterLink to="/shopping">Shopping</RouterLink>
+      </li>
+      <li>
         <RouterLink to="/cart">Cart</RouterLink>
       </li>
       <li>

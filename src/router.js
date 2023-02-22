@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 import Cart from './views/Cart.vue'
+import Shopping from './views/Shopping.vue'
 
 import AccountView from './views/AccountView.vue'
 import BetalningComponent from './components/BetalningComponent.vue'
@@ -11,7 +12,13 @@ export default createRouter({
   routes: [
     {
       component: Cart,
-      path: '/cart'
+      path: '/cart',
+      props: { cartitem: [] }
+    },
+    {
+      component: Shopping,
+      path: '/shopping',
+      props: { products: [] }
     },
 
     {
