@@ -1,39 +1,32 @@
 <template>
   <div>
-    <h4>Payment: {{ payment }}</h4>
+    <h4>Betalningssätt: {{ Betalningssätt }}</h4>
   </div>
 
   <div>
-    <label style="display: block" for="kort">Credit Card</label>
+    <label style="display: block" for="kort">Kortbetalning</label>
+
     <input
       @click="onKort"
       type="radio"
       id="form"
-      value="Kort"
-      v-model="payment"
+      value="kort"
+      v-model="Betalningssätt"
     />
   </div>
 
   <div>
-    <input type="radio" id="form" value="Kort" v-model="payment" />
-    <label style="display: block" for="kort">Credit Card</label>
-
     <input
       style="display: none"
       type="text"
-      :value="creditnumber"
-      placeholder="CreditNumber"
+      :value="kortnummer"
+      placeholder="kortnummer"
     />
 
-    <input style="display: none" type="text" :value="my" placeholder="M/Y" />
-    <input style="display: none" type="text" :value="cvc" placeholder="cvc" />
+    <input style="display: none" type="text" :value="MY" placeholder="M/Y" />
+    <input style="display: none" type="text" :value="cvc" placeholder="CVC" />
   </div>
 
-  <label style="display: block" for="swish">Swish</label>
-  <input type="radio" id="form" value="Swish" v-model="payment" />
-
-  <input style="display: none" type="text" :value="my" placeholder="M/Y" />
-  <input style="display: none" type="text" :value="cvc" placeholder="cvc" />
   <div>
     <label style="display: block" for="swish">Swish</label>
     <input
@@ -41,37 +34,28 @@
       type="radio"
       id="form"
       value="Swish"
-      v-model="payment"
+      v-model="Betalningssätt"
     />
   </div>
-
-  <input
-    style="display: none"
-    type="text"
-    :value="number"
-    placeholder="Skriv ditt nummer"
-  />
-  <label style="display: block" for="faktura">faktura</label>
-  <input
-    @click="OnFaktura"
-    type="radio"
-    id="form"
-    value="faktura"
-    v-model="payment"
-  />
-
-  <button @click="betala">Bekräfta betalning</button>
-
   <div>
-    <label style="display: block" for="faktura">faktura</label>
     <input
-      @click="onFaktura"
+      style="display: none"
+      type="text"
+      :value="number"
+      placeholder="Skriv ditt nummer"
+    />
+  </div>
+  <div>
+    <label style="display: block" for="Faktura">Faktura</label>
+    <input
+      @click="OnFaktura"
       type="radio"
       id="form"
-      value="faktura"
-      v-model="payment"
+      value="Faktura"
+      v-model="Betalningssätt"
     />
   </div>
+
   <div>
     <button @click="betala">Bekräfta betalning</button>
   </div>
@@ -81,16 +65,18 @@
   export default {
     data() {
       return {
-        payment: 'Kort',
-        my: 'M/Y',
+        Betalningssätt: 'Kortbetalning',
+        MY: 'M/Y',
         cvc: 'CVC',
-        creditnumber: 'Credi† Number'
+        kortnummer: 'kortnummer'
       }
     },
     methods: {
       OnFaktura() {},
       onSwish() {},
-      onKort() {}
+      onKort() {
+        this.MY = 'M/Y'
+      }
     }
   }
 </script>
