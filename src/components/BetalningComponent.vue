@@ -27,11 +27,4 @@
   }
 </script>
 
-<style lang="scss">
-  // input {
-  //   width: 50vw;
-  // }
-  div.container {
-    display: flex;
-  }
-</style>
+<style lang="scss"></style>

@@ -19,7 +19,7 @@ export default createRouter({
       path: '/account',
       children: [
         {
-          path: 'kop',
+          path: 'favourites',
           component: MyAccountComp
         },
         {
@@ -27,7 +27,7 @@ export default createRouter({
           component: MyAccountComp
         },
         {
-          path: 'favourites',
+          path: 'kop',
           component: BetalningComponent
         },
         {
