@@ -30,8 +30,8 @@
   }
 </script>
 
-<style scoped>
-  /* input #form label {
+<!-- <style scoped>
+  input #form label {
     position: absolute;
-  } */
-</style>
+  }
+</style> -->
