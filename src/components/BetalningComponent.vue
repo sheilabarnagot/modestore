@@ -1,37 +1,4 @@
 <template>
-  <!-- <div>
-    <div>
-      <input
-        type="radio"
-        class="form-check-radio"
-        id="a"
-        name="bankinfo"
-        value="cardnumber"
-      />
-      <label class="form-check-radio" for="a">A</label>
-    </div>
-    <div>
-      <input
-        type="radio"
-        class="form-check-radio"
-        id="b"
-        name="bankinfo"
-        value="cvc"
-      />
-      <label class="form-check-radio" for="b">B</label>
-    </div>
-    <div>
-      <input
-        type="radio"
-        class="form-check-radio"
-        id="c"
-        name="bankinfo"
-        value="my"
-      />
-      <label class="form-check-radio" for="c">C</label>
-    </div>
-  </div> -->
-
   <div>
     <h4>Payment: {{ payment }}</h4>
   </div>
