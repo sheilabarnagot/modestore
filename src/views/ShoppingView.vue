@@ -4,7 +4,7 @@
     <ul>
       <li v-for="product in products.shirts" :key="product.id">
         <div>{{ product.name }}</div>
-        <button @click="$emit('add-to-cart', product)">Add to cart</button>
+        <button @click="hej">Add to cart</button>
       </li>
     </ul>
   </div>
@@ -13,9 +13,15 @@
 <script>
   import productsData from '../../products.json'
   export default {
+    emits: ['addtocart'],
     data() {
       return {
         products: productsData
+      }
+    },
+    methods: {
+      hej() {
+        this.$emit('addtocart', this.product)
       }
     }
   }

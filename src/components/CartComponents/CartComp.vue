@@ -1,12 +1,12 @@
 <template>
   <div>
-    <ShoppingView @add-to-cart="addToCart" />
+    <ShoppingView @addtocart="addToCart" />
     <CartView :cartItems="cartItems" />
   </div>
 </template>
 
 <script>
-  import ShoppingView from '../../views/Shopping.vue'
+  import ShoppingView from '../../views/ShoppingView.vue'
   import CartView from '../../views/Cart.vue'
 
   export default {

@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 
 import Cart from './views/Cart.vue'
 import Shopping from './views/Shopping.vue'
+import Cart from './views/Cart.vue'
 
 import AccountView from './views/AccountView.vue'
 import BetalningComponent from './components/BetalningComponent.vue'
@@ -26,7 +27,7 @@ export default createRouter({
       path: '/account',
       children: [
         {
-          path: 'kop',
+          path: 'favourites',
           component: MyAccountComp
         },
         {
@@ -34,7 +35,7 @@ export default createRouter({
           component: MyAccountComp
         },
         {
-          path: 'favourites',
+          path: 'kop',
           component: BetalningComponent
         },
         {
