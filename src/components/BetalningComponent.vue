@@ -37,7 +37,6 @@
       v-model="Betalningssätt"
     />
   </div>
-<<<<<<< HEAD
 
   <input
     style="display: none"
@@ -54,8 +53,6 @@
     v-model="payment"
   />
 
-=======
->>>>>>> 5896f9135294561d8d63beb710725da7b60fe365
   <div>
     <input
       style="display: none"

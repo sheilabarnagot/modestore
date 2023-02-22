@@ -22,9 +22,6 @@
 </template>
 
 <script>
-
-
-
   import productsData from '../../../products.json'
   export default {
     emits: ['fromcartcomp'],
@@ -35,14 +32,5 @@
       }
     },
     methods: {}
-
-
-  export default {
-    props: {
-      cartItems: {
-        type: Array,
-        required: true
-      }
-    }
   }
 </script>
