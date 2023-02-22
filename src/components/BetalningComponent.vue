@@ -60,8 +60,6 @@
     v-model="payment"
   />
 
-  <button @click="betala">Bekräfta betalning</button>
-
   <div>
     <label style="display: block" for="faktura">faktura</label>
     <input
