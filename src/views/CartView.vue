@@ -1,9 +1,9 @@
 <script>
-  import CartComp from '../components/CartComponents/CartComp.vue'
+  // import CartComp from '../components/CartComponents/CartComp.vue'
   import ProductComp from '../components/CartComponents/ProductComponents.vue'
   export default {
     components: {
-      CartComp,
+      // CartComp,
       ProductComp
     },
     data() {

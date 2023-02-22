@@ -40,7 +40,7 @@
         <RouterLink to="/account"> <UserIcon /> </RouterLink>
       </li>
       <li>
-        <RouterLink to="/"> <ShoppingIcon /> </RouterLink>
+        <RouterLink to="/cart"> <ShoppingIcon /> </RouterLink>
       </li>
     </ul>
     <template v-if="toggleSearch">
@@ -48,7 +48,7 @@
     </template>
   </nav>
   <main>
-    <RouterView />
+    <!-- <RouterView /> -->
   </main>
 </template>
 
