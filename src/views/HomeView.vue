@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div id="img-container"><img src="/anna.jpg" /></div>
+  <div id="img-container"><img src="/hometest.jpg" /></div>
 </template>
 
 <style scoped>
