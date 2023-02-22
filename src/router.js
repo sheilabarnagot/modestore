@@ -5,7 +5,6 @@ import Cart from './views/Cart.vue'
 import AccountView from './views/AccountView.vue'
 import BetalningComponent from './components/BetalningComponent.vue'
 import MyAccountComp from './components/MyAccount/MyAccountComp.vue'
-import HomeView from './views/HomeView.vue'
 
 export default createRouter({
   history: createWebHashHistory(),
