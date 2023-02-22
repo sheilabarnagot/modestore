@@ -1,5 +1,7 @@
 <template>
-  <div>Payment: {{ payment }}</div>
+  <div>
+    <h4>Payment: {{ payment }}</h4>
+  </div>
   <div class="container">
     <input type="radio" id="form" value="Kort" v-model="payment" />
     <label for="kort">Credit Card</label>
@@ -28,8 +30,8 @@
   }
 </script>
 
-<style lang="css">
-  input {
-    width: 50vw;
-  }
+<style lang="scss">
+  // input {
+  //   width: 50vw;
+  // }
 </style>
