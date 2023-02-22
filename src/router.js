@@ -1,5 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
+import Cart from './views/Cart.vue'
+
 import AccountView from './views/AccountView.vue'
 import BetalningComponent from './components/BetalningComponent.vue'
 import MyAccountComp from './components/MyAccount/MyAccountComp.vue'
@@ -9,15 +11,16 @@ export default createRouter({
   history: createWebHashHistory(),
   routes: [
     {
-      component: HomeView,
-      path: '/'
+      component: Cart,
+      path: '/cart'
     },
+
     {
       component: AccountView,
       path: '/account',
       children: [
         {
-          path: 'kop',
+          path: 'favourites',
           component: MyAccountComp
         },
         {
@@ -25,12 +28,7 @@ export default createRouter({
           component: MyAccountComp
         },
         {
-          path: 'favourites',
-          component: BetalningComponent
-        },
-
-        {
-          path: 'favourites',
+          path: 'kop',
           component: BetalningComponent
         },
         {
@@ -41,10 +39,6 @@ export default createRouter({
           path: 'settings',
           component: MyAccountComp
         }
-        // {
-        //   path: 'settings',
-        //   component: KlaraView
-        // }
       ]
     }
   ]
