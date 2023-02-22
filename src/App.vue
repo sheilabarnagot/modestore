@@ -1,6 +1,4 @@
-<script>
-  import CartComponents from './components/Cart Components/cartComponents.vue'
-</script>
+<script></script>
 
 <template>
   <BetalningKomponent />
@@ -28,7 +26,6 @@
   </nav>
 
   <main>
-    <CartComponents />
     <RouterView />
   </main>
 </template>
