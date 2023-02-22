@@ -67,7 +67,9 @@
       }
     },
     methods: {
-      onFaktura() {},
+      onFaktura() {
+        this.my
+      },
       onSwish() {},
       onKort() {}
     }
