@@ -34,7 +34,7 @@
         <SearchIcon @toggler="toggler" />
       </li>
       <li>
-        <RouterLink to="/">Menu</RouterLink>
+        <RouterLink to="/shopping">Menu</RouterLink>
       </li>
       <li>
         <RouterLink to="/account"> <UserIcon /> </RouterLink>
