@@ -1,16 +1,17 @@
 <template>
   <div>
     <ShoppingView @addtocart="addToCart" />
-    <CartView :cartItems="cartItems" />
+    <!-- <CartView :cartItems="cartItems" /> -->
   </div>
 </template>
 
 <script>
   import ShoppingView from '../../views/ShoppingView.vue'
-  import CartView from '../../views/Cart.vue'
+  // import CartView from '../../views/CartView.vue'
 
   export default {
-    components: { ShoppingView, CartView },
+    components: { ShoppingView },
+    // CartView
     data() {
       return {
         cartItems: []

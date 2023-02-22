@@ -1,10 +1,10 @@
 <script>
   // import CartComp from '../components/CartComponents/CartComp.vue'
-  import ProductComp from '../components/CartComponents/ProductComponents.vue'
+  import cartComp from '../components/CartComponents/CartComp.vue'
   export default {
     components: {
       // CartComp,
-      ProductComp
+      cartComp
     },
     data() {
       return {
@@ -15,5 +15,5 @@
 </script>
 
 <template>
-  <ProductComp />
+  <cartComp />
 </template>
