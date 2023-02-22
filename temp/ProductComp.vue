@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div>
     <h2>Products</h2>
     <ul>
@@ -13,7 +13,7 @@
 
 <script>
   import Cart from '../components/CartComponents/Cart.vue'
-  import productsData from '../../../products.json'
+  import productsData from '../products.json'
 
   export default {
     components: {
@@ -31,4 +31,4 @@
       }
     }
   }
-</script>
+</script> -->

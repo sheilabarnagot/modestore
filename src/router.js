@@ -3,6 +3,8 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import CartView from './views/CartView.vue'
 import HomeView from './views/HomeView.vue'
 
+import Shopping from './views/ShoppingView.vue'
+
 import AccountView from './views/AccountView.vue'
 import BetalningComponent from './components/BetalningComponent.vue'
 import MyAccountComp from './components/MyAccount/MyAccountComp.vue'
@@ -17,6 +19,10 @@ export default createRouter({
     {
       component: CartView,
       path: '/cart'
+    },
+    {
+      component: Shopping,
+      path: '/shopping'
     },
 
     {
