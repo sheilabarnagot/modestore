@@ -47,9 +47,6 @@
       <div id="input-container"><input id="search-input" /></div>
     </template>
   </nav>
-  <main>
-    <!-- <RouterView /> -->
-  </main>
 </template>
 
 <style scoped>
