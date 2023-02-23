@@ -44,14 +44,6 @@
     :value="number"
     placeholder="Skriv ditt nummer"
   />
-  <label style="display: block" for="faktura">faktura</label>
-  <input
-    @click="OnFaktura"
-    type="radio"
-    id="form"
-    value="faktura"
-    v-model="payment"
-  />
 
   <div>
     <input
