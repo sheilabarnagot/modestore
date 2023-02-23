@@ -4,19 +4,16 @@
     <ul>
       <li v-for="product in products.shirts" :key="product.id">
         <div>{{ product.name }}</div>
-        <button @click="() => $emit('fromcartcomp', product.name)">
+        <button @click="() => $emit('fromcartcomp', product.name, product.id)">
           Add to cart
         </button>
+        {{ product.id }}
       </li>
     </ul>
 
     <h2>Cart</h2>
     <div>
-      <ul>
-        <li v-for="item in cartItems" :key="item.id">
-          {{ item.name }}
-        </li>
-      </ul>
+      <!-- {{ $store.state.items }} -->
     </div>
   </div>
 </template>
@@ -30,6 +27,7 @@
       return {
         products: productsData
       }
-    }
+    },
+    methods: {}
   }
 </script>
