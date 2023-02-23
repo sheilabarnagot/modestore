@@ -10,12 +10,16 @@
       @click="onKort"
       type="radio"
       id="form"
-      value="kort"
+      value="kortbetalning "
       v-model="Betalningssätt"
     />
-  </div>
 
-  <div>
+    <!-- <div>
+      <p v-if="Betalningssätt !== ''">{{ Betalningssätt }}</p>
+    </div> -->
+    <!-- <div class="BB">
+      <p v-if="Betalningssätt !== ''">{{ kort.Betalningssätt }}</p>
+    </div> -->
     <input
       style="display: none"
       type="text"
@@ -64,8 +68,19 @@
     />
   </div>
 
+  <!-- <div>
+    <button
+      type="button"
+      class="btn btn-secondary Bekräfta betalning"
+      @click="copyXML()"
+    >
+      Bekräfta betalning<i class="bi bi-clipboard" />
+    </button>
+  </div> -->
   <div>
-    <button @click="betala">Bekräfta betalning</button>
+    <b-button @click="modalShow = !modalShow">Open Modal</b-button>
+
+    <b-modal v-model="modalShow">Hello From Modal!</b-modal>
   </div>
 </template>
 
@@ -73,17 +88,18 @@
   export default {
     data() {
       return {
-        Betalningssätt: 'Kortbetalning',
+        Betalningssätt: '',
         MY: 'M/Y',
         cvc: 'CVC',
-        kortnummer: 'kortnummer'
+        kortnummer: 'kortnummer',
+        modalShow: false
       }
     },
     methods: {
       OnFaktura() {},
       onSwish() {},
-      onKort() {
-        this.MY = 'M/Y'
+      onKort(MY) {
+        this.MY = MY
       }
     }
   }
