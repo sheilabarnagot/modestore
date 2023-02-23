@@ -1,31 +1,3 @@
-<script>
-  import HomeIcon from './SvgIcons/HomeIcon.vue'
-  import SearchIcon from './SvgIcons/SearchIcon.vue'
-  import UserIcon from './SvgIcons/UserIcon.vue'
-  import ShoppingIcon from './SvgIcons/ShoppingIcon.vue'
-  import LangBtn from './LangBtn.vue'
-  export default {
-    data() {
-      return {
-        toggleSearch: false,
-        modal: false
-      }
-    },
-    components: {
-      HomeIcon,
-      SearchIcon,
-      UserIcon,
-      ShoppingIcon,
-      LangBtn
-    },
-    methods: {
-      toggler() {
-        this.toggleSearch = !this.toggleSearch
-      }
-    }
-  }
-</script>
-
 <template>
   <nav>
     <ul>
@@ -36,7 +8,16 @@
         <SearchIcon @toggler="toggler" />
       </li>
       <li>
-        <RouterLink to="/shopping">{{ $t("navbar.menu") }}</RouterLink>
+        <b-dropdown
+          dropup
+          variant="link"
+          text="Menu"
+          class="d-none d-md-inline-block"
+        >
+          <b-dropdown-item>
+            <RouterLink to="/Shopping">Shopping</RouterLink>
+          </b-dropdown-item>
+        </b-dropdown>
       </li>
       <li>
         <RouterLink to="/account"> <UserIcon /> </RouterLink>
@@ -51,6 +32,37 @@
     <LangBtn />
   </nav>
 </template>
+
+<script>
+  import { ref } from 'vue'
+  import { BDropdown, BDropdownItem } from 'bootstrap-vue-next'
+  import HomeIcon from './SvgIcons/HomeIcon.vue'
+  import SearchIcon from './SvgIcons/SearchIcon.vue'
+  import UserIcon from './SvgIcons/UserIcon.vue'
+  import ShoppingIcon from './SvgIcons/ShoppingIcon.vue'
+  import LangBtn from './LangBtn.vue'
+
+  export default {
+    components: {
+      HomeIcon,
+      SearchIcon,
+      UserIcon,
+      ShoppingIcon,
+      LangBtn,
+      BDropdown,
+      BDropdownItem
+    },
+    setup() {
+      const toggleSearch = ref(false)
+
+      function toggler() {
+        toggleSearch.value = !toggleSearch.value
+      }
+
+      return { toggleSearch, toggler }
+    }
+  }
+</script>
 
 <style scoped>
   ul {
@@ -85,6 +97,5 @@
     min-height: 100vh;
   }
   #search-input {
-    
   }
 </style>
