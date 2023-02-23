@@ -4,14 +4,11 @@
   </div>
 
   <div>
-    <label style="display: block" class="form-check-radio" for="kort"
-      >Kortbetalning</label
-    >
+    <label style="display: block" for="kort">Kortbetalning</label>
 
     <input
       @click="onKort"
       type="radio"
-      class="form-check-radio"
       id="form"
       value="kortbetalning "
       v-model="Betalningssätt"
@@ -23,17 +20,15 @@
     <!-- <div class="BB">
       <p v-if="Betalningssätt !== ''">{{ kort.Betalningssätt }}</p>
     </div> -->
-    <!-- name="bankinfo" value="kort" v-model="Betalningssätt" /> -->
-
     <input
-      style="display: block"
+      style="display: none"
       type="text"
-      :value="a"
+      :value="kortnummer"
       placeholder="kortnummer"
     />
 
-    <input style="display: block" type="text" :value="b" placeholder="M/Y" />
-    <input style="display: block" type="text" :value="c" placeholder="CVC" />
+    <input style="display: none" type="text" :value="MY" placeholder="M/Y" />
+    <input style="display: none" type="text" :value="cvc" placeholder="CVC" />
   </div>
 
   <div>
@@ -56,28 +51,20 @@
 
   <div>
     <input
-      style="display: block"
+      style="display: none"
       type="text"
       :value="number"
       placeholder="Skriv ditt nummer"
     />
   </div>
-
   <div>
-    <label style="display: block" for="faktura">faktura</label>
+    <label style="display: block" for="Faktura">Faktura</label>
     <input
       @click="OnFaktura"
       type="radio"
       id="form"
-      value="faktura"
-      v-model="payment"
-    />
-
-    <input
-      style="display: block"
-      type="text"
-      :value="email"
-      placeholder="Skriv ditt epost"
+      value="Faktura"
+      v-model="Betalningssätt"
     />
   </div>
 
@@ -141,12 +128,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-  div {
-    display: block;
-    font-size: 15px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-</style>
