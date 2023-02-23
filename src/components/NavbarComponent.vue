@@ -8,10 +8,7 @@
         <SearchIcon @click="toggler" />
       </li>
       <li>
-        <template v-if="menuToggl">
-          <MenuButtonNav />
-        </template>
-        <RouterLink @click="menuToggler" to="/menu">Menu</RouterLink>
+        <RouterLink to="/menu">Menu</RouterLink>
       </li>
       <li>
         <RouterLink to="/account"> <UserIcon /> </RouterLink>
@@ -34,7 +31,6 @@
   import SearchIcon from './SvgIcons/SearchIcon.vue'
   import UserIcon from './SvgIcons/UserIcon.vue'
   import ShoppingIcon from './SvgIcons/ShoppingIcon.vue'
-  import MenuButtonNav from './MenuButtonNavigation/MenuButtonNav.vue'
   import LangBtn from './LangBtn.vue'
 
   export default {
@@ -50,7 +46,6 @@
       SearchIcon,
       UserIcon,
       ShoppingIcon,
-      MenuButtonNav,
       LangBtn
     },
     methods: {
@@ -96,6 +91,7 @@
     flex-direction: column;
     min-height: 100vh;
   }
-  #search-input {
+  #bad-element {
+    cursor: pointer;
   }
 </style>

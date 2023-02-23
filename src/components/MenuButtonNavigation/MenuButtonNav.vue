@@ -1,18 +1,28 @@
 <template>
   <ul>
-    <li>Shopping</li>
-    <li>Inspiration</li>
-    <li>Temp</li>
+    <li><RouterLink to="/menu/dam">Dam</RouterLink></li>
+    <li><RouterLink to="/menu/herr">herr</RouterLink></li>
+    <li><RouterLink to="/menu/shopping">SHOPPING</RouterLink></li>
+    <li>Home</li>
+    <li>Beauty</li>
   </ul>
+  <RouterView />
 </template>
 
 <style scoped>
   ul {
+    padding-left: 0;
+    list-style-type: none;
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    bottom: 200%;
+  }
+
+  ul li {
+    padding-left: 1em;
+  }
+
+  ul li a {
+    font-family: 'jost';
+    text-decoration: none;
   }
 </style>
