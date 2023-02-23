@@ -38,8 +38,6 @@
       value="Swish"
       v-model="Betalningssätt"
     />
-<<<<<<< HEAD
-=======
   </div>
 
   <input
@@ -50,7 +48,6 @@
   />
 
   <div>
->>>>>>> 12c587bbe6dafee67609f29263562fca4f0be64c
     <input
       style="display: block"
       type="text"
