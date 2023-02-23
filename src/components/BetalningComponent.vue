@@ -38,6 +38,19 @@
       value="Swish"
       v-model="Betalningssätt"
     />
+<<<<<<< HEAD
+=======
+  </div>
+
+  <input
+    style="display: none"
+    type="text"
+    :value="number"
+    placeholder="Skriv ditt nummer"
+  />
+
+  <div>
+>>>>>>> 12c587bbe6dafee67609f29263562fca4f0be64c
     <input
       style="display: block"
       type="text"
