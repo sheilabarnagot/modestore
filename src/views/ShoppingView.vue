@@ -16,8 +16,7 @@
     },
     methods: {
       test(ev) {
-        this.items.push(ev)
-        this.$store.commit('basketItem', this.items)
+        this.$store.commit('basketItem', ev)
       }
     }
   }
