@@ -27,7 +27,11 @@
       return {
         products: productsData
       }
+<<<<<<< HEAD
+    }
+=======
     },
     methods: {}
+>>>>>>> 12c587bbe6dafee67609f29263562fca4f0be64c
   }
 </script>
