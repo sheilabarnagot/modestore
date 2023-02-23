@@ -10,14 +10,11 @@
       CartComp
     },
     data() {
-      return {
-        items: []
-      }
+      return {}
     },
     methods: {
-      test(ev) {
-        this.items.push(ev)
-        this.$store.commit('basketItem', this.items)
+      test(name, id) {
+        this.$store.commit('basketItem', { name, id })
       }
     }
   }
