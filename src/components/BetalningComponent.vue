@@ -78,9 +78,33 @@
     </button>
   </div> -->
   <div>
-    <b-button @click="modalShow = !modalShow">Open Modal</b-button>
+    <b-button @click="modalShow = !modalShow">Swish</b-button>
 
-    <b-modal v-model="modalShow">Hello From Modal!</b-modal>
+    <b-modal v-model="modalShow"
+      >Swisha: <input placeholder="skriv in telefonnummer" />
+    </b-modal>
+  </div>
+  <div>
+    <b-button @click="modalShow = !modalShow">Kortbetalning</b-button>
+
+    <b-modal v-model="modalShow"
+      >Kort:
+      <input
+        style="display: block"
+        type="text"
+        :value="a"
+        placeholder="Kortnummer"
+      />
+      <input style="display: block" type="text" :value="b" placeholder="M/Y" />
+      <input style="display: block" type="text" :value="c" placeholder="CVC" />
+    </b-modal>
+  </div>
+  <div>
+    <b-button @click="modalShow = !modalShow">Faktura</b-button>
+
+    <b-modal v-model="modalShow"
+      >Faktura <input placeholder="skriv in telefonnummer" />
+    </b-modal>
   </div>
 </template>
 
