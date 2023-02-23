@@ -10,19 +10,19 @@
   <nav>
     <ul>
       <li>
-        <RouterLink to="/account/kop">Köp</RouterLink>
+        <RouterLink to="/account/kop">{{ $t("navbar.köp") }}</RouterLink>
       </li>
       <li>
-        <RouterLink to="/account/konto">Konto</RouterLink>
+        <RouterLink to="/account/konto">{{ $t("navbar.konto") }}</RouterLink>
       </li>
       <li>
-        <RouterLink to="/account/favourites">favoriter</RouterLink>
+        <RouterLink to="/account/favourites">{{ $t("navbar.favoriter") }}</RouterLink>
       </li>
       <li>
-        <RouterLink to="/account/help">Hjälp</RouterLink>
+        <RouterLink to="/account/help">{{ $t("navbar.hjälp") }}</RouterLink>
       </li>
       <li>
-        <RouterLink to="/account/settings">Inställningar</RouterLink>
+        <RouterLink to="/account/settings">{{ $t("navbar.Inställningar") }}</RouterLink>
       </li>
     </ul>
   </nav>
