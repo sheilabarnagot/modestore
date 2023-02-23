@@ -4,31 +4,25 @@
   </div>
 
   <div>
-    <label style="display: block" for="kort">Kortbetalning</label>
+    <label style="display: block" for="kortbetalning">Kortbetalning</label>
 
     <input
       @click="onKort"
       type="radio"
       id="form"
-      value="kortbetalning "
+      value="Kortbetalning"
       v-model="Betalningssätt"
     />
 
-    <!-- <div>
-      <p v-if="Betalningssätt !== ''">{{ Betalningssätt }}</p>
-    </div> -->
-    <!-- <div class="BB">
-      <p v-if="Betalningssätt !== ''">{{ kort.Betalningssätt }}</p>
-    </div> -->
-    <input
+    <!-- <input
       style="display: none"
       type="text"
       :value="kortnummer"
       placeholder="kortnummer"
-    />
+    /> -->
 
-    <input style="display: none" type="text" :value="MY" placeholder="M/Y" />
-    <input style="display: none" type="text" :value="cvc" placeholder="CVC" />
+    <!-- <input style="display: none" type="text" :value="MY" placeholder="M/Y" />
+    <input style="display: none" type="text" :value="cvc" placeholder="CVC" /> -->
   </div>
 
   <div>
@@ -41,14 +35,14 @@
       v-model="Betalningssätt"
     />
   </div>
-
+  <!--
   <input
     style="display: none"
     type="text"
     :value="number"
     placeholder="Skriv ditt nummer"
-  />
-
+  /> -->
+  <!--
   <div>
     <input
       style="display: none"
@@ -56,7 +50,7 @@
       :value="number"
       placeholder="Skriv ditt nummer"
     />
-  </div>
+  </div> -->
   <div>
     <label style="display: block" for="Faktura">Faktura</label>
     <input
@@ -68,26 +62,18 @@
     />
   </div>
 
-  <!-- <div>
-    <button
-      type="button"
-      class="btn btn-secondary Bekräfta betalning"
-      @click="copyXML()"
-    >
-      Bekräfta betalning<i class="bi bi-clipboard" />
-    </button>
-  </div> -->
-  <div>
-    <b-button @click="modalShow = !modalShow">Swish</b-button>
+  <div class="swisha" v-if="Betalningssätt === 'Swish'">
+    <b-button @click="modalShowswish = !modalShowswish">Swish</b-button>
 
-    <b-modal v-model="modalShow"
-      >Swisha: <input placeholder="skriv in telefonnummer" />
-    </b-modal>
+    <b-modal v-model="modalShowswish" name="swishmodel"
+      >Swisha: <input type="skriv in telefonnummer"
+    /></b-modal>
   </div>
-  <div>
-    <b-button @click="modalShow = !modalShow">Kortbetalning</b-button>
 
-    <b-modal v-model="modalShow"
+  <div class="korten" v-if="Betalningssätt === 'Kortbetalning'">
+    <b-button @click="modalShowkort = !modalShowkort">Kortbetalning</b-button>
+
+    <b-modal v-model="modalShowkort" name="kortmodel"
       >Kort:
       <input
         style="display: block"
@@ -99,12 +85,20 @@
       <input style="display: block" type="text" :value="c" placeholder="CVC" />
     </b-modal>
   </div>
-  <div>
-    <b-button @click="modalShow = !modalShow">Faktura</b-button>
 
-    <b-modal v-model="modalShow"
-      >Faktura <input placeholder="skriv in telefonnummer" />
+  <div class="Fakturan" v-if="Betalningssätt === 'Faktura'">
+    <b-button @click="modalShowfaktura = !modalShowfaktura">Faktura</b-button>
+
+    <b-modal v-model="modalShowfaktura" name="fakturamodel"
+      >Faktura <input placeholder="skriv din mejl" />
     </b-modal>
+  </div>
+  <div>
+    <!-- <div>
+      <b-button @click="modalShow = !modalShow">Open Modal</b-button>
+
+      <b-modal v-model="modalShow">Hello From Modal!</b-modal>
+    </div> -->
   </div>
 </template>
 
@@ -116,7 +110,9 @@
         MY: 'M/Y',
         cvc: 'CVC',
         kortnummer: 'kortnummer',
-        modalShow: false
+        modalShowswish: false,
+        modalShowkort: false,
+        modalShowfaktura: false
       }
     },
     methods: {
