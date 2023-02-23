@@ -2,12 +2,17 @@
   import CitiesList from './components/CitiesList.vue'
   import CounterButton from './components/CounterButton.vue'
   import HelloWorld from './components/HelloWorld.vue'
-
+  import MovieAuto from './components/MovieAuto.vue'
+  import GridImg from './components/GridImg.vue'
+  import CarouselImg from './components/CarouselImg.vue'
   export default {
     components: {
       CitiesList,
       CounterButton,
-      HelloWorld
+      HelloWorld,
+      MovieAuto,
+      GridImg,
+      CarouselImg
     }
   }
 </script>
@@ -29,7 +34,32 @@
   <HelloWorld msg="Hello World!" />
   <CitiesList />
   <CounterButton />
+  <MovieAuto :items="items" />
+  <CarouselImg />
+  <GridImg :items="items" />
   <main>
     <RouterView />
   </main>
 </template>
+
+<!--
+<template>
+  <div id="app">
+    <header>
+
+    </header>
+    <main>
+      <router-view></router-view>
+    </main>
+    <footer>
+
+    </footer>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'App',
+};
+</script>
+-->
