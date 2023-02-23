@@ -5,4 +5,5 @@ import router from './router'
 import store from './store'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue-next/dist/bootstrap-vue-next.css'
-createApp(App).use(router).use(store).mount('#app')
+import {i18n} from './plugins/i18n.js'
+createApp(App).use(router).use(store).use(i18n).mount('#app')

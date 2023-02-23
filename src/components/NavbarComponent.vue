@@ -3,6 +3,7 @@
   import SearchIcon from './SvgIcons/SearchIcon.vue'
   import UserIcon from './SvgIcons/UserIcon.vue'
   import ShoppingIcon from './SvgIcons/ShoppingIcon.vue'
+  import LangBtn from './LangBtn.vue'
   export default {
     data() {
       return {
@@ -14,7 +15,8 @@
       HomeIcon,
       SearchIcon,
       UserIcon,
-      ShoppingIcon
+      ShoppingIcon,
+      LangBtn
     },
     methods: {
       toggler() {
@@ -34,7 +36,7 @@
         <SearchIcon @toggler="toggler" />
       </li>
       <li>
-        <RouterLink to="/shopping">Menu</RouterLink>
+        <RouterLink to="/shopping">{{ $t("navbar.menu") }}</RouterLink>
       </li>
       <li>
         <RouterLink to="/account"> <UserIcon /> </RouterLink>
@@ -46,6 +48,7 @@
     <template v-if="toggleSearch">
       <div id="input-container"><input id="search-input" /></div>
     </template>
+    <LangBtn />
   </nav>
 </template>
 
@@ -82,5 +85,6 @@
     min-height: 100vh;
   }
   #search-input {
+    
   }
 </style>
