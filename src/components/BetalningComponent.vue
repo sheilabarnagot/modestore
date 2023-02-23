@@ -13,10 +13,17 @@
       type="radio"
       class="form-check-radio"
       id="form"
-      name="bankinfo"
-      value="kort"
+      value="kortbetalning "
       v-model="Betalningssätt"
     />
+
+    <!-- <div>
+      <p v-if="Betalningssätt !== ''">{{ Betalningssätt }}</p>
+    </div> -->
+    <!-- <div class="BB">
+      <p v-if="Betalningssätt !== ''">{{ kort.Betalningssätt }}</p>
+    </div> -->
+    <!-- name="bankinfo" value="kort" v-model="Betalningssätt" /> -->
 
     <input
       style="display: block"
@@ -74,8 +81,43 @@
     />
   </div>
 
+  <!-- <div>
+    <button
+      type="button"
+      class="btn btn-secondary Bekräfta betalning"
+      @click="copyXML()"
+    >
+      Bekräfta betalning<i class="bi bi-clipboard" />
+    </button>
+  </div> -->
   <div>
-    <button @click="betala">Bekräfta betalning</button>
+    <b-button @click="modalShow = !modalShow">Swish</b-button>
+
+    <b-modal v-model="modalShow"
+      >Swisha: <input placeholder="skriv in telefonnummer" />
+    </b-modal>
+  </div>
+  <div>
+    <b-button @click="modalShow = !modalShow">Kortbetalning</b-button>
+
+    <b-modal v-model="modalShow"
+      >Kort:
+      <input
+        style="display: block"
+        type="text"
+        :value="a"
+        placeholder="Kortnummer"
+      />
+      <input style="display: block" type="text" :value="b" placeholder="M/Y" />
+      <input style="display: block" type="text" :value="c" placeholder="CVC" />
+    </b-modal>
+  </div>
+  <div>
+    <b-button @click="modalShow = !modalShow">Faktura</b-button>
+
+    <b-modal v-model="modalShow"
+      >Faktura <input placeholder="skriv in telefonnummer" />
+    </b-modal>
   </div>
 </template>
 
@@ -83,17 +125,18 @@
   export default {
     data() {
       return {
-        Betalningssätt: 'Kortbetalning',
+        Betalningssätt: '',
         MY: 'M/Y',
         cvc: 'CVC',
-        kortnummer: 'kortnummer'
+        kortnummer: 'kortnummer',
+        modalShow: false
       }
     },
     methods: {
       OnFaktura() {},
       onSwish() {},
-      onKort() {
-        this.MY = 'M/Y'
+      onKort(MY) {
+        this.MY = MY
       }
     }
   }
