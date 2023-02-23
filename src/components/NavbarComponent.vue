@@ -5,19 +5,13 @@
         <RouterLink to="/"><HomeIcon /></RouterLink>
       </li>
       <li>
-        <SearchIcon @toggler="toggler" />
+        <SearchIcon @click="toggler" />
       </li>
       <li>
-        <b-dropdown
-          dropup
-          variant="link"
-          text="Menu"
-          class="d-none d-md-inline-block"
-        >
-          <b-dropdown-item>
-            <RouterLink to="/Shopping">Shopping</RouterLink>
-          </b-dropdown-item>
-        </b-dropdown>
+        <template v-if="menuToggl">
+          <MenuButtonNav />
+        </template>
+        <RouterLink @click="menuToggler" to="/menu">Menu</RouterLink>
       </li>
       <li>
         <RouterLink to="/account"> <UserIcon /> </RouterLink>
@@ -26,40 +20,46 @@
         <RouterLink to="/cart"> <ShoppingIcon /> </RouterLink>
       </li>
     </ul>
-    <template v-if="toggleSearch">
-      <div id="input-container"><input id="search-input" /></div>
+    <template v-if="toggl">
+      <div id="input-container">
+        <input id="search-input" />
+      </div>
     </template>
     <LangBtn />
   </nav>
 </template>
 
 <script>
-  import { ref } from 'vue'
-  import { BDropdown, BDropdownItem } from 'bootstrap-vue-next'
   import HomeIcon from './SvgIcons/HomeIcon.vue'
   import SearchIcon from './SvgIcons/SearchIcon.vue'
   import UserIcon from './SvgIcons/UserIcon.vue'
   import ShoppingIcon from './SvgIcons/ShoppingIcon.vue'
+  import MenuButtonNav from './MenuButtonNavigation/MenuButtonNav.vue'
   import LangBtn from './LangBtn.vue'
 
   export default {
+    data() {
+      return {
+        dropdownShow: null,
+        toggl: false,
+        menuToggl: false
+      }
+    },
     components: {
       HomeIcon,
       SearchIcon,
       UserIcon,
       ShoppingIcon,
-      LangBtn,
-      BDropdown,
-      BDropdownItem
+      MenuButtonNav,
+      LangBtn
     },
-    setup() {
-      const toggleSearch = ref(false)
-
-      function toggler() {
-        toggleSearch.value = !toggleSearch.value
+    methods: {
+      toggler() {
+        this.toggl = !this.toggl
+      },
+      menuToggler() {
+        this.menuToggl = !this.menuToggl
       }
-
-      return { toggleSearch, toggler }
     }
   }
 </script>
