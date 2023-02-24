@@ -7,9 +7,7 @@
     <template v-if="isOpen">
       <div class="menu-items">
         <div v-for="category in categories" :key="category.id">
-          <RouterLink :to="`/category/${category.id}`">{{
-            category.name
-          }}</RouterLink>
+          <RouterLink to="/">{{ category.name }}</RouterLink>
         </div>
       </div>
     </template>
@@ -42,7 +40,7 @@
   }
 </script>
 
-<style scoped>
+<!-- <style scoped>
   .sidebar-menu {
     top: 0;
     left: 0;
@@ -86,4 +84,4 @@
       text-align: left; /* remove text-align center */
     }
   }
-</style>
+</style> -->
