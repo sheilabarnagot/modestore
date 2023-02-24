@@ -11,10 +11,7 @@
 
 <template>
   <NavbarComponent class="mobile-menu" />
-<<<<<<< HEAD
-=======
   <SideBarMenu />
->>>>>>> f25d6fee252f74365514ce8c56e50e09f5b3cd53
   <main>
     <RouterView />
   </main>
