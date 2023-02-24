@@ -3,6 +3,8 @@
     <h4>Betalningssätt: {{ Betalningssätt }}</h4>
   </div>
 
+  <img src="frame.png" alt="QR-code" />
+
   <div>
     <label style="display: block" for="kortbetalning">Kortbetalning</label>
 
@@ -50,9 +52,9 @@
   <div class="swisha" v-if="Betalningssätt === 'Swish'">
     <b-button @click="modalShowswish = !modalShowswish">Swish</b-button>
 
-    <b-modal v-model="modalShowswish" name="swishmodel"
-      >Swisha: <input type="skriv in telefonnummer"
-    /></b-modal>
+    <b-modal v-model="modalShowswish" name="swishmodel">
+      Swisha: <input type="skriv in telefonnummer" />
+    </b-modal>
   </div>
 
   <div class="korten" v-if="Betalningssätt === 'Kortbetalning'">
