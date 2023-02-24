@@ -8,6 +8,7 @@ import Shopping from './views/ShoppingView.vue'
 import AccountView from './views/AccountView.vue'
 import BetalningComponent from './components/BetalningComponent.vue'
 import MyAccountComp from './components/MyAccount/MyAccountComp.vue'
+import CarouselImg from './components/CarouselImg.vue'
 
 export default createRouter({
   history: createWebHashHistory(),
@@ -50,6 +51,10 @@ export default createRouter({
           component: MyAccountComp
         }
       ]
+    },
+    {
+      component: CarouselImg,
+      path: '/carousel'
     }
   ]
 })
