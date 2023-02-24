@@ -35,22 +35,7 @@
       v-model="Betalningssätt"
     />
   </div>
-  <!--
-  <input
-    style="display: none"
-    type="text"
-    :value="number"
-    placeholder="Skriv ditt nummer"
-  /> -->
-  <!--
-  <div>
-    <input
-      style="display: none"
-      type="text"
-      :value="number"
-      placeholder="Skriv ditt nummer"
-    />
-  </div> -->
+
   <div>
     <label style="display: block" for="Faktura">Faktura</label>
     <input
@@ -92,13 +77,6 @@
     <b-modal v-model="modalShowfaktura" name="fakturamodel"
       >Faktura <input placeholder="skriv din mejl" />
     </b-modal>
-  </div>
-  <div>
-    <!-- <div>
-      <b-button @click="modalShow = !modalShow">Open Modal</b-button>
-
-      <b-modal v-model="modalShow">Hello From Modal!</b-modal>
-    </div> -->
   </div>
 </template>
 
