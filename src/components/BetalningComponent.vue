@@ -51,15 +51,15 @@
     <b-button @click="modalShowswish = !modalShowswish">Swish</b-button>
 
     <b-modal v-model="modalShowswish" name="swishmodel">
-      <img src="frame1.jpg" />
-      Swisha: <input type="skriv in telefonnummer" />
+      <!-- <img src="frame1.jpg" /> -->
+      <!-- Swisha: <input type="skriv in telefonnummer" /> -->
     </b-modal>
   </div>
 
   <div class="korten" v-if="Betalningssätt === 'Kortbetalning'">
     <b-button @click="modalShowkort = !modalShowkort">Kortbetalning</b-button>
 
-    <b-modal v-model="modalShowkort" name="kortmodel"
+    <b-modal title="hhhhh" v-model="modalShowkort" name="kortmodel"
       >Kort:
       <input
         style="display: block"
@@ -75,8 +75,12 @@
   <div class="Fakturan" v-if="Betalningssätt === 'Faktura'">
     <b-button @click="modalShowfaktura = !modalShowfaktura">Faktura</b-button>
 
-    <b-modal v-model="modalShowfaktura" name="fakturamodel"
-      >Faktura <input placeholder="skriv din mejl" />
+    <b-modal
+      title="Invoice will be sent to your Email"
+      v-model="modalShowfaktura"
+      name="fakturamodel"
+      >Type your Email:
+      <b-form-input type="email" placeholder="me@example.com" />
     </b-modal>
   </div>
 </template>
