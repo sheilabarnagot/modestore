@@ -2,13 +2,13 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 
 import CartView from './views/CartView.vue'
 import HomeView from './views/HomeView.vue'
-
-import Shopping from './views/ShoppingView.vue'
-
 import AccountView from './views/AccountView.vue'
+import ShoppingView from './views/ShoppingView.vue'
+import MenuButtonView from './views/MenuButtonView.vue'
 import BetalningComponent from './components/BetalningComponent.vue'
 import MyAccountComp from './components/MyAccount/MyAccountComp.vue'
-import CarouselImg from './components/CarouselImg.vue'
+import DamComp from './components/dam/DamComp.vue'
+import HerrComp from './components/herr/HerrComp.vue'
 
 export default createRouter({
   history: createWebHashHistory(),
@@ -18,14 +18,27 @@ export default createRouter({
       path: '/'
     },
     {
+      component: MenuButtonView,
+      path: '/menu',
+      children: [
+        {
+          path: 'dam',
+          component: DamComp
+        },
+        {
+          path: 'herr',
+          component: HerrComp
+        },
+        {
+          path: 'shopping',
+          component: ShoppingView
+        }
+      ]
+    },
+    {
       component: CartView,
       path: '/cart'
     },
-    {
-      component: Shopping,
-      path: '/shopping'
-    },
-
     {
       component: AccountView,
       path: '/account',
@@ -52,10 +65,7 @@ export default createRouter({
         }
       ]
     },
-    {
-      component: CarouselImg,
-      path: '/carousel'
-    }
+
   ]
 })
 

@@ -1,29 +1,3 @@
-<script>
-  import HomeIcon from './SvgIcons/HomeIcon.vue'
-  import SearchIcon from './SvgIcons/SearchIcon.vue'
-  import UserIcon from './SvgIcons/UserIcon.vue'
-  import ShoppingIcon from './SvgIcons/ShoppingIcon.vue'
-  export default {
-    data() {
-      return {
-        toggleSearch: false,
-        modal: false
-      }
-    },
-    components: {
-      HomeIcon,
-      SearchIcon,
-      UserIcon,
-      ShoppingIcon
-    },
-    methods: {
-      toggler() {
-        this.toggleSearch = !this.toggleSearch
-      }
-    }
-  }
-</script>
-
 <template>
   <nav>
     <ul>
@@ -31,10 +5,10 @@
         <RouterLink to="/"><HomeIcon /></RouterLink>
       </li>
       <li>
-        <SearchIcon @toggler="toggler" />
+        <SearchIcon @click="toggler" />
       </li>
       <li>
-        <RouterLink to="/shopping">Menu</RouterLink>
+        <RouterLink to="/menu">Menu</RouterLink>
       </li>
       <li>
         <RouterLink to="/account"> <UserIcon /> </RouterLink>
@@ -43,11 +17,47 @@
         <RouterLink to="/cart"> <ShoppingIcon /> </RouterLink>
       </li>
     </ul>
-    <template v-if="toggleSearch">
-      <div id="input-container"><input id="search-input" /></div>
+    <template v-if="toggl">
+      <div id="input-container">
+        <input id="search-input" />
+      </div>
     </template>
+    <LangBtn />
   </nav>
 </template>
+
+<script>
+  import HomeIcon from './SvgIcons/HomeIcon.vue'
+  import SearchIcon from './SvgIcons/SearchIcon.vue'
+  import UserIcon from './SvgIcons/UserIcon.vue'
+  import ShoppingIcon from './SvgIcons/ShoppingIcon.vue'
+  import LangBtn from './LangBtn.vue'
+
+  export default {
+    data() {
+      return {
+        dropdownShow: null,
+        toggl: false,
+        menuToggl: false
+      }
+    },
+    components: {
+      HomeIcon,
+      SearchIcon,
+      UserIcon,
+      ShoppingIcon,
+      LangBtn
+    },
+    methods: {
+      toggler() {
+        this.toggl = !this.toggl
+      },
+      menuToggler() {
+        this.menuToggl = !this.menuToggl
+      }
+    }
+  }
+</script>
 
 <style scoped>
   ul {
@@ -81,6 +91,7 @@
     flex-direction: column;
     min-height: 100vh;
   }
-  #search-input {
+  #bad-element {
+    cursor: pointer;
   }
 </style>

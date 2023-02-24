@@ -1,26 +1,32 @@
+<template>
+  <div id="container" :key="item.id" v-for="item in visibleItems">
+    <p>{{ item.i }}</p>
+    <button v-if="!item.isClicked" @click="() => deleteItem(item)">
+      Delete
+    </button>
+  </div>
+</template>
+
 <script>
   export default {
     components: {},
-    data() {
-      return {
-        test: 'test'
-      }
-    },
     computed: {
       storedShoppingItems() {
         return this.$store.state.items
+      },
+      visibleItems() {
+        return this.storedShoppingItems.filter((item) => !item.isClicked)
+      }
+    },
+    methods: {
+      deleteItem(item) {
+        this.$store.commit('deleteItem', item.id)
+        item.isClicked = true
       }
     }
   }
 </script>
 
-<template>
-  <div id="container" :key="item.id" v-for="item in storedShoppingItems">
-    <p>{{ item.i }}</p>
-    <button @click="() => $store.commit('deleteItem', item.id)">Delete</button>
-  </div>
-</template>
-// this.$store.commit('basketItem', ev) }
 <style>
   #container {
     display: flex;
