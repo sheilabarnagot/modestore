@@ -23,6 +23,7 @@
       </div>
     </template>
     <LangBtn />
+    {{ gettzzz }}
   </nav>
 </template>
 
@@ -38,7 +39,8 @@
       return {
         dropdownShow: null,
         toggl: false,
-        menuToggl: false
+        menuToggl: false,
+        width: window.innerWidth
       }
     },
     components: {
@@ -54,6 +56,11 @@
       },
       menuToggler() {
         this.menuToggl = !this.menuToggl
+      }
+    },
+    computed: {
+      gettzzz() {
+        return this.width
       }
     }
   }
