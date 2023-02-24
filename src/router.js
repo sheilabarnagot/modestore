@@ -3,12 +3,9 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import CartView from './views/CartView.vue'
 import HomeView from './views/HomeView.vue'
 import AccountView from './views/AccountView.vue'
-import ShoppingView from './views/ShoppingView.vue'
 import MenuButtonView from './views/MenuButtonView.vue'
 import BetalningComponent from './components/BetalningComponent.vue'
 import MyAccountComp from './components/MyAccount/MyAccountComp.vue'
-import DamComp from './components/dam/DamComp.vue'
-import HerrComp from './components/herr/HerrComp.vue'
 
 export default createRouter({
   history: createWebHashHistory(),
@@ -19,21 +16,7 @@ export default createRouter({
     },
     {
       component: MenuButtonView,
-      path: '/menu',
-      children: [
-        {
-          path: 'dam',
-          component: DamComp
-        },
-        {
-          path: 'herr',
-          component: HerrComp
-        },
-        {
-          path: 'shopping',
-          component: ShoppingView
-        }
-      ]
+      path: '/menu'
     },
     {
       component: CartView,
