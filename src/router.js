@@ -64,8 +64,7 @@ export default createRouter({
           component: MyAccountComp
         }
       ]
-    },
-
+    }
   ]
 })
 
