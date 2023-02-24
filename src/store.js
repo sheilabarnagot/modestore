@@ -6,9 +6,11 @@ const mutations = {
       console.log(state.items)
     },
     deleteItem(state, id) {
-      for (let i = 0; i < state.items.length; i++) {
-        if (state.items[i].id === id) {
-          delete state.items[i].i
+      const item = state.items.find((item) => item.id === id)
+      if (item) {
+        item.count--
+        if (item.count === 0) {
+          item.isClicked = true
         }
       }
     }
