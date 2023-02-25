@@ -1,10 +1,10 @@
 {
-    "navbar": {
+  "navbar": {
     "konto": "Account",
     "köp": "Shopping",
     "favoriter": "Favourites",
     "hjälp": "Help",
     "Inställningar": "Settings",
-    "menu": "menu"
+    "menu": "Menu"
   }
 }
