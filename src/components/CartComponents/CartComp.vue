@@ -11,9 +11,9 @@
       </li>
     </ul>
 
-    <h2>Cart</h2>
+    <!-- <h2>Cart</h2> -->
     <div>
-      <!-- {{ $store.state.items }} -->
+      {{ $store.state.items }}
     </div>
   </div>
 </template>

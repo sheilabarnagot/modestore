@@ -1,14 +1,46 @@
+<template>
+  <nav>
+    <ul>
+      <li>
+        <RouterLink to="/"><HomeIcon /></RouterLink>
+      </li>
+      <li>
+        <SearchIcon @click="toggler" />
+      </li>
+      <li>
+        <RouterLink to="/menu">Menu</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/account"> <UserIcon /> </RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/cart"> <ShoppingIcon /> </RouterLink>
+      </li>
+    </ul>
+    <template v-if="toggl">
+      <div id="input-container">
+        <input id="search-input" />
+      </div>
+    </template>
+    <LangBtn />
+    {{ gettzzz }}
+  </nav>
+</template>
+
 <script>
   import HomeIcon from './SvgIcons/HomeIcon.vue'
   import SearchIcon from './SvgIcons/SearchIcon.vue'
   import UserIcon from './SvgIcons/UserIcon.vue'
   import ShoppingIcon from './SvgIcons/ShoppingIcon.vue'
   import LangBtn from './LangBtn.vue'
+
   export default {
     data() {
       return {
-        toggleSearch: false,
-        modal: false
+        dropdownShow: null,
+        toggl: false,
+        menuToggl: false,
+        width: window.innerWidth
       }
     },
     components: {
@@ -20,37 +52,19 @@
     },
     methods: {
       toggler() {
-        this.toggleSearch = !this.toggleSearch
+        this.toggl = !this.toggl
+      },
+      menuToggler() {
+        this.menuToggl = !this.menuToggl
+      }
+    },
+    computed: {
+      gettzzz() {
+        return this.width
       }
     }
   }
 </script>
-
-<template>
-  <nav>
-    <ul>
-      <li>
-        <RouterLink to="/"><HomeIcon /></RouterLink>
-      </li>
-      <li>
-        <SearchIcon @toggler="toggler" />
-      </li>
-      <li>
-        <RouterLink to="/shopping">{{ $t("navbar.menu") }}</RouterLink>
-      </li>
-      <li>
-        <RouterLink to="/account"> <UserIcon /> </RouterLink>
-      </li>
-      <li>
-        <RouterLink to="/cart"> <ShoppingIcon /> </RouterLink>
-      </li>
-    </ul>
-    <template v-if="toggleSearch">
-      <div id="input-container"><input id="search-input" /></div>
-    </template>
-    <LangBtn />
-  </nav>
-</template>
 
 <style scoped>
   ul {
@@ -84,7 +98,7 @@
     flex-direction: column;
     min-height: 100vh;
   }
-  #search-input {
-    
+  #bad-element {
+    cursor: pointer;
   }
 </style>

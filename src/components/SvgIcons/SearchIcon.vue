@@ -1,20 +1,5 @@
-<script>
-  export default {
-    data() {
-      return {}
-    },
-    methods: {
-      toggleInput() {
-        this.$emit('toggler')
-      }
-    },
-    emits: ['toggler']
-  }
-</script>
-
 <template>
   <svg
-    @click="toggleInput"
     fill="#000000"
     width="25px"
     height="25px"
