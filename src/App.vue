@@ -1,26 +1,18 @@
 <script>
   import NavbarComponent from './components/NavbarComponent.vue'
-  import SideBarMenu from './components/SideBarMenu.vue'
+  import SidebarMenu from './components/SidebarMenu.vue'
   export default {
     components: {
       NavbarComponent,
-      SideBarMenu
+      SidebarMenu
     }
   }
 </script>
 
 <template>
-  <NavbarComponent class="mobile-menu" />
-  <SideBarMenu />
+  <NavbarComponent />
+  <SidebarMenu />
   <main>
     <RouterView />
   </main>
 </template>
-
-<style scoped>
-  @media (min-width: 428px) {
-    .mobile-menu {
-      display: none;
-    }
-  }
-</style>

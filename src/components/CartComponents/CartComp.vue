@@ -7,7 +7,6 @@
         <button @click="() => $emit('fromcartcomp', product.name, product.id)">
           Add to cart
         </button>
-        {{ product.id }}
       </li>
     </ul>
 
