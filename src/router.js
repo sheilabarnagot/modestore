@@ -6,6 +6,10 @@ import AccountView from './views/AccountView.vue'
 import MenuButtonView from './views/MenuButtonView.vue'
 import BetalningComponent from './components/BetalningComponent.vue'
 import MyAccountComp from './components/MyAccount/MyAccountComp.vue'
+import ShoppingView from './views/ShoppingView.vue'
+
+import LogIn from './components/MyAccount/LogIn.vue'
+import SignUp from './components/MyAccount/SignUp.vue'
 
 export default createRouter({
   history: createWebHashHistory(),
@@ -28,7 +32,7 @@ export default createRouter({
       children: [
         {
           path: 'favourites',
-          component: MyAccountComp
+          component: ShoppingView
         },
         {
           path: 'konto',
@@ -46,7 +50,15 @@ export default createRouter({
           path: 'settings',
           component: MyAccountComp
         }
-      ]
+      ],
+    },
+    {
+      component: LogIn,
+      path: "/login"
+    },
+    {
+      component: SignUp,
+      path: "/signup"
     }
   ]
 })

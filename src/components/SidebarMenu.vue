@@ -1,12 +1,15 @@
 <!--for screen 768 and up -->
 <template>
-  <div class="sidebar-menu">
-    <div class="menu-icon" @click="toggleMenu">
-      <div class="icon"><HamburgerMenu /></div>
-    </div>
+  <div class="menu-icon tablet-menu" @click="toggleMenu">
+    <div class="icon"><HamburgerMenu /></div>
+  </div>
+  <div
+    :style="{ width: isOpenWidth, transition: firstTransitsion }"
+    class="sidebar-menu"
+  >
     <template v-if="isOpen">
-      <div class="menu-items">
-        <div v-for="category in categories" :key="category.id">
+      <div v-for="category in categories" :key="category.id" class="menu-items">
+        <div>
           <RouterLink to="/">{{ category.name }}</RouterLink>
         </div>
       </div>
@@ -23,6 +26,8 @@
     data() {
       return {
         isOpen: false,
+        isOpenWidth: '0',
+        firstTransitsion: '0.5s',
         categories: [
           { id: 1, name: 'T-shirts' },
           { id: 2, name: 'Jeans' },
@@ -31,43 +36,47 @@
         ]
       }
     },
-
     methods: {
       toggleMenu() {
         this.isOpen = !this.isOpen
+
+        this.isOpenWidth === null || this.isOpenWidth === '0'
+          ? (this.isOpenWidth = '250px')
+          : (this.isOpenWidth = '0')
       }
     }
   }
 </script>
 
-<!-- <style scoped>
+<style scoped lang="scss">
   .sidebar-menu {
-    top: 0;
+    height: 100%; /* 100% Full-height */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
     left: 0;
-    width: 80%;
-    height: 100%;
-    background-color: #fff;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-    z-index: 999;
-    border: 2px solid grey;
-  }
-
-  .sidebar-menu.open {
-    transform: translateX(0%);
+    background-color: #f6f6f7; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   }
 
   .menu-icon {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
-    cursor: pointer;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    z-index: 2;
   }
 
   .menu-items {
-    margin-top: 3rem;
-    padding: 0 1rem;
-    text-align: center; /* add text-align center */
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
   }
 
   .menu-items div {
@@ -76,12 +85,9 @@
     font-weight: bold;
   }
 
-  @media (min-width: 768px) {
-    .sidebar-menu {
-      width: 30%;
-    }
-    .menu-items {
-      text-align: left; /* remove text-align center */
+  @media (max-width: 600px) {
+    .tablet-menu {
+      display: none;
     }
   }
-</style> -->
+</style>

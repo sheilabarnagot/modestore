@@ -5,7 +5,7 @@
         <RouterLink to="/account/kop">{{ $t('navbar.köp') }}</RouterLink>
       </li>
       <li>
-        <RouterLink to="/account/konto">{{ $t('navbar.konto') }}</RouterLink>
+        <RouterLink to="/LogIn">{{ $t('navbar.konto') }}</RouterLink>
       </li>
       <li>
         <RouterLink to="/account/favourites">{{

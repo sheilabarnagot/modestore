@@ -1,9 +1,14 @@
 <template>
-  <div id="container" :key="item.id" v-for="item in visibleItems">
-    <p>{{ item.i }}</p>
-    <button v-if="!item.isClicked" @click="() => deleteItem(item)">
-      Delete
-    </button>
+  <div id="container">
+    <template :key="item.id" v-for="item in visibleItems">
+      <p>{{ item.i }}</p>
+      <button
+        v-if="!item.isClicked"
+        @click="(event) => deleteItem(item, event)"
+      >
+        Delete
+      </button>
+    </template>
   </div>
 </template>
 
@@ -30,5 +35,6 @@
 <style>
   #container {
     display: flex;
+    padding-bottom: 4em;
   }
 </style>
