@@ -28,7 +28,7 @@ import {RouterLink} from 'vue-router'
     <input class="loginInput" type="password" :placeholder="$t('login.password')" v-model="password" />
     <input @click="saveData" id="loginButton" type="button" :value="$t('login.login')" />
   </form>
-  <p id="passText">{{ $t('login.forgotten') }}</p>
+  <p id="passText">{{ $t('login.forgotten') }} </p>
 
   <h2>{{ $t('login.secondTitle') }}</h2>
   <RouterLink to="/signup">

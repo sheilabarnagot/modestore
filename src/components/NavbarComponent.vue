@@ -1,5 +1,7 @@
 <template>
+  <div id="langButton">
   <LangBtn id="langbtn" />
+</div>
   <nav class="mobile-menu">
     <ul>
       <li>
