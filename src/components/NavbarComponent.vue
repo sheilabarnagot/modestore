@@ -102,13 +102,9 @@
   #bad-element {
     cursor: pointer;
   }
-
-  #langbtn {
-    position: absolute;
-  }
-  @media (min-width: 428px) {
-    .mobile-menu {
-      display: none;
-    }
+  #langButton {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
   }
 </style>

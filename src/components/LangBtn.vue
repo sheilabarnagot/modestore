@@ -37,7 +37,6 @@
   </label>
 </template>
 
-<!--  med hjälp -->
 <style scoped>
   #langButton {
     background-color: black;

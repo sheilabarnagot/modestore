@@ -6,5 +6,25 @@
     "hjälp": "Hjälp",
     "Inställningar": "Inställningar",
     "menu": "Meny"
+  },
+  "login": {
+    "firstTitle": "LOGGA IN PÅ DITT KONTO",
+    "email": "E-postadress",
+    "password": "Lösenord",
+    "login": "STARTA SESSION",
+    "forgotten": "Glömt ditt lösenord?",
+    "secondTitle": "BEHÖVER DU ETT KONTO",
+    "register": "REGISTRERA DIG"
+  },
+  "signup": {
+    "firstTitle": "PERSONUPPGIFTER",
+    "email": "E-postadress",
+    "password": "Lösenord",
+    "passwordR": "Upprepa lösenord",
+    "name": "Namn",
+    "surname": "Efternamn",
+    "communications": "Jag vill ta emot personanpassad kommersiell kommunikation.",
+    "cookies": "Jag har haft möjlighet att läsa och förstår Sekretess-och cookiepolisyn.",
+    "createAccount": "SKAPA KONTO"
   }
 }

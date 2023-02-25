@@ -8,6 +8,9 @@ import BetalningComponent from './components/BetalningComponent.vue'
 import MyAccountComp from './components/MyAccount/MyAccountComp.vue'
 import ShoppingView from './views/ShoppingView.vue'
 
+import LogIn from './components/MyAccount/LogIn.vue'
+import SignUp from './components/MyAccount/SignUp.vue'
+
 export default createRouter({
   history: createWebHashHistory(),
   routes: [
@@ -47,7 +50,15 @@ export default createRouter({
           path: 'settings',
           component: MyAccountComp
         }
-      ]
+      ],
+    },
+    {
+      component: LogIn,
+      path: "/login"
+    },
+    {
+      component: SignUp,
+      path: "/signup"
     }
   ]
 })
