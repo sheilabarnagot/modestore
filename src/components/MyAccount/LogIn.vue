@@ -1,23 +1,39 @@
 <script>
+import {RouterLink} from 'vue-router'
+
   export default {
     data() {
-      return {}
+      return {
+      email:"",
+      password:""
+      }
+    },
+    methods:{
+      saveData(){
+        localStorage.setItem('email',this.email);
+        localStorage.setItem('password',this.password)
+      }
+    },
+    components:{
+      RouterLink
     }
   }
+
 </script>
 
 <template>
-  <h2>LOG IN TO YOUR ACCOUNT</h2>
+  <h2>{{ $t('login.firstTitle') }}</h2>
   <form id="formlogin">
-    <input class="loginInput" type="email" placeholder="Email" />
-    <input class="loginInput" type="password" placeholder="Password" />
-    <input id="loginButton" type="button" placeholder="login" value="LOG IN" />
+    <input class="loginInput" type="email" :placeholder="$t('login.email')" v-model="email" />
+    <input class="loginInput" type="password" :placeholder="$t('login.password')" v-model="password" />
+    <input @click="saveData" id="loginButton" type="button" :value="$t('login.login')" />
   </form>
-  <p id="passText">Have you forgotten your password?</p>
+  <p id="passText">{{ $t('login.forgotten') }}</p>
 
-  <h2>NEED AN ACCOUNT</h2>
-  <input id="button" type="button" value="REGISTER" />
-
+  <h2>{{ $t('login.secondTitle') }}</h2>
+  <RouterLink to="/signup">
+    <input id="button" type="button" :value="$t('login.register')" />
+  </RouterLink>
 </template>
 
 <style scoped>

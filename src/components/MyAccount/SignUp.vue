@@ -1,22 +1,40 @@
+<script>
+
+  export default {
+    data() {
+      return {
+      email:"",
+      password:""
+      }
+    },
+    methods:{
+      saveInfo(){
+        localStorage.setItem('email',this.email);
+        localStorage.setItem('password',this.password)
+      }
+    }
+  }
+
+</script>
   <template>
-    <h2>PERSONAL DETAILS</h2>
+    <h2> {{ $t('signup.firstTitle') }}</h2>
   <form id="formSignup">
-    <input class="loginInput" type="email" placeholder="Email" />
-    <input class="loginInput" type="password" placeholder="Password" />
-    <input class="loginInput" type="password" placeholder="Repeat password" />
-    <input class="loginInput" type="TEXT" placeholder="Name" />
-    <input class="loginInput" type="TEXT" placeholder="Surname" />
+    <input class="loginInput" type="email" :placeholder="$t('signup.email')" v-model="email" />
+    <input class="loginInput" type="password" :placeholder="$t('signup.password')" v-model="password" />
+    <input class="loginInput" type="password" :placeholder="$t('signup.passwordR')" />
+    <input class="loginInput" type="TEXT" :placeholder="$t('signup.name')" />
+    <input class="loginInput" type="TEXT" :placeholder="$t('signup.surname')" />
   </form>
   <div id="radiobuttons">
     <div class="radioButton">
       <input class="radio" type="checkbox" />
-      <p class="text">I want to recieve personalised commercial communications</p>
+      <p class="text"> {{ $t('signup.communications') }}</p>
     </div>
     <div class="radioButton">
       <input class="radio" type="checkbox" />
-      <p class="text">I have reed and understand the privacy and cookies policy</p>
+      <p class="text"> {{ $t('signup.cookies') }}</p>
     </div>
-    <input id="signupButton" type="button" value="CREATE ACCOUNT" />
+    <input @click="saveInfo" id="signupButton" type="button" :value="$t('signup.createAccount')" />
   </div>
 </template>
 
