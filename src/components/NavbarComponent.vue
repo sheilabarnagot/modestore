@@ -22,8 +22,10 @@
         <input id="search-input" />
       </div>
     </template>
+    <div id="langButton">
     <LangBtn />
     {{ gettzzz }}
+  </div>
   </nav>
 </template>
 
@@ -100,5 +102,10 @@
   }
   #bad-element {
     cursor: pointer;
+  }
+  #langButton{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
   }
 </style>
