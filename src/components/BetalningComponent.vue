@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="Payment">
     <h4>Betalningssätt: {{ Betalningssätt }}</h4>
   </div>
 
-  <div>
+  <div class="cardpayment">
     <label style="display: block" for="kortbetalning">Kortbetalning</label>
 
     <input
@@ -25,7 +25,7 @@
     <input style="display: none" type="text" :value="cvc" placeholder="CVC" /> -->
   </div>
 
-  <div>
+  <div class="swishpayment">
     <label style="display: block" for="swish">Swish</label>
     <input
       @click="onSwish"
@@ -36,7 +36,7 @@
     />
   </div>
 
-  <div>
+  <div class="fakturapayment">
     <label style="display: block" for="Faktura">Faktura</label>
     <input
       @click="OnFaktura"
@@ -107,3 +107,63 @@
     }
   }
 </script>
+
+<style scoped>
+  .Payment {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    /* z-index: 2; */
+    /* height: 4em; */
+    width: 100%;
+    top: 100px;
+  }
+
+  .cardpayment {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 150px;
+  }
+
+  .swishpayment {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 200px;
+  }
+
+  .fakturapayment {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 250px;
+  }
+
+  .swisha {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 300px;
+  }
+
+  .korten {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 300px;
+  }
+
+  .Fakturan {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 300px;
+  }
+</style>
