@@ -5,13 +5,11 @@
         <RouterLink to="/accountinfo/kop">{{ $t('navbar.köp') }}</RouterLink>
       </li>
       <li>
-<<<<<<< HEAD
         <RouterLink to="/accountinfo/konto">{{
           $t('navbar.konto')
         }}</RouterLink>
-=======
+
         <RouterLink to="/LogIn">{{ $t('navbar.konto') }}</RouterLink>
->>>>>>> a490d21395d0c79db6563a3a696fdf95c0e17fba
       </li>
       <li>
         <RouterLink to="/accountinfo/favourites">{{
