@@ -29,7 +29,7 @@ export default createRouter({
     {
       component: AccountView,
       path: '/account',
-      beforeEnter: (to, from) => {
+      beforeEnter: () => {
         // reject the navigation
         return '/login'
       },

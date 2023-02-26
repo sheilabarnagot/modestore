@@ -42,7 +42,7 @@
       :value="$t('login.login')"
     />
   </form>
-  <p id="passText">{{ $t('login.forgotten') }}</p>
+  <p id="passText">{{ $t('login.forgotten') }} </p>
 
   <h2>{{ $t('login.secondTitle') }}</h2>
   <RouterLink to="/signup">

@@ -6,9 +6,9 @@
     setup() {
       const { locale, t } = useI18n()
       const languages = [
-        { text: 'en', value: 'en' },
-        { text: 'es', value: 'es' },
-        { text: 'se', value: 'se' }
+        { text: '🇬🇧', value: 'en' },
+        { text: '🇪🇸', value: 'es' },
+        { text: ' 🇸🇪', value: 'se' }
       ]
       function changeLocale(event) {
         const target = event.target
@@ -39,6 +39,7 @@
 
 <style scoped>
   #langButton {
+    padding: 3px 4px;
     background-color: black;
     color: azure;
     outline: none;
