@@ -102,9 +102,11 @@
   #bad-element {
     cursor: pointer;
   }
-  #langButton {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
+
+  #langbtn {
+    position: absolute;
+    /* width: 100%; */
+    z-index: 1;
+    left: 90%;
   }
 </style>
