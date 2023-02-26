@@ -45,5 +45,6 @@
     outline: none;
     border: none;
     border-radius: 5px;
+    position: absolute;
   }
 </style>
