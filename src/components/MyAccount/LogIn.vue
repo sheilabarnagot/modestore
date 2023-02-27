@@ -2,6 +2,9 @@
   import { RouterLink } from 'vue-router'
 
   export default {
+    created() {
+      localStorage.setItem('auth', false)
+    },
     data() {
       return {
         email: '',
@@ -12,6 +15,10 @@
       saveData() {
         localStorage.setItem('email', this.email)
         localStorage.setItem('password', this.password)
+        if (this.email === 'abr@gmail.com' && this.password === '123456') {
+          localStorage.setItem('auth', true)
+          this.$router.push('/account')
+        }
       }
     },
     components: {
@@ -42,7 +49,7 @@
       :value="$t('login.login')"
     />
   </form>
-  <p id="passText">{{ $t('login.forgotten') }} </p>
+  <p id="passText">{{ $t('login.forgotten') }}</p>
 
   <h2>{{ $t('login.secondTitle') }}</h2>
   <RouterLink to="/signup">
