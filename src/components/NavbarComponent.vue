@@ -127,5 +127,5 @@
   .dropdown-menu{
     flex-direction: column;
   }
-  .dropdown-item{}
+
 </style>
