@@ -92,6 +92,7 @@
     align-items: center;
     justify-content: center;
     position: fixed;
+
     bottom: 0;
     left: 50%;
     right: 50%;

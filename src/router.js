@@ -32,10 +32,7 @@ export default createRouter({
       component: BetalningComponent,
       path: '/payment'
     },
-    {
-      component: MyAccountComp,
-      path: '/favourites'
-    },
+
     {
       component: AccountView,
       path: '/account',

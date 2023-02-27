@@ -2,25 +2,21 @@
   <nav>
     <ul>
       <li>
-        <RouterLink to="/accountinfo/kop">{{ $t('navbar.köp') }}</RouterLink>
+        <RouterLink to="/account/kop">{{ $t('navbar.köp') }}</RouterLink>
       </li>
       <li>
-        <RouterLink to="/accountinfo/konto">{{
-          $t('navbar.konto')
-        }}</RouterLink>
-
-        <RouterLink to="/LogIn">{{ $t('navbar.konto') }}</RouterLink>
+        <RouterLink to="/account/konto">{{ $t('navbar.konto') }}</RouterLink>
       </li>
       <li>
-        <RouterLink to="/accountinfo/favourites">{{
+        <RouterLink to="/account/favourites">{{
           $t('navbar.favoriter')
         }}</RouterLink>
       </li>
       <li>
-        <RouterLink to="/accountinfo/help">{{ $t('navbar.hjälp') }}</RouterLink>
+        <RouterLink to="/account/help">{{ $t('navbar.hjälp') }}</RouterLink>
       </li>
       <li>
-        <RouterLink to="/accountinfo/settings">{{
+        <RouterLink to="/account/settings">{{
           $t('navbar.Inställningar')
         }}</RouterLink>
       </li>
