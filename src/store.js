@@ -21,5 +21,5 @@ const mutations = {
   state = {
     items: []
   }
-// hej
+
 export default createStore({ mutations, state, strict: true })

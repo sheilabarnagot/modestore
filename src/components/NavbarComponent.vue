@@ -10,21 +10,20 @@
       <li>
         <SearchIcon @click="toggler" />
       </li>
-      <div class="dropup-center dropup">
+      <li class="dropup-center dropup">
         <button
           class="btn btn-secondary dropdown-toggle"
           type="button"
           data-bs-toggle="dropdown"
           aria-expanded="false"
+
         >
-          Centered dropup
+          Menu
         </button>
         <ul class="dropdown-menu">
-          <li><RouterLink to="/shopping">Shopping</RouterLink></li>
-          <li><a class="dropdown-item" href="#">Action two</a></li>
-          <li><a class="dropdown-item" href="#">Action three</a></li>
+          <li id="menuitem"><RouterLink to="/shopping"><span>Shopping</span></RouterLink></li>
         </ul>
-      </div>
+      </li>
       <li>
         <RouterLink to="/account"> <UserIcon /> </RouterLink>
       </li>
@@ -84,7 +83,7 @@
     width: 100%;
     background-color: #f6f6f7;
   }
-  ul {
+  ul:not(.dropdown-menu)  {
     margin-bottom: 0;
     padding-left: 0;
     list-style-type: none;
@@ -130,6 +129,14 @@
   }
   .dropdown-menu {
     flex-direction: column;
+
+  }
+  #menuitem {
+    text-align: center;
+    color: black;
+  }
+  span{
+color: black
   }
   /* .dropdown-item {
   } */
