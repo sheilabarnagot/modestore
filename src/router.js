@@ -23,16 +23,20 @@ export default createRouter({
       path: '/menu'
     },
     {
+      component: ShoppingView,
+      path: '/shopping'
+    },
+    {
       component: CartView,
       path: '/cart'
     },
     {
       component: AccountView,
-      path: '/account',
-      beforeEnter: () => {
-        // reject the navigation
-        return '/login'
-      },
+      path: '/',
+      // beforeEnter: () => {
+      //   // reject the navigation
+      //   return '/login'
+      // },
 
       children: [
         {
