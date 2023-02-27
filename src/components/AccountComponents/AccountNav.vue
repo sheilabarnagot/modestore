@@ -27,6 +27,7 @@
     </ul>
   </nav>
   <RouterView />
+  <input id="logout" type="button" value="logout" />
 </template>
 
 <style scoped>
@@ -44,5 +45,13 @@
   ul li a {
     font-family: 'jost';
     text-decoration: none;
+  }
+  #logout {
+    background-color: #000;
+    color: #fff;
+    font-size: 11px;
+    border: none;
+    border: 1px solid #000;
+    padding: 10px;
   }
 </style>
