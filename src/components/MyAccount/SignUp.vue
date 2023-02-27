@@ -1,112 +1,128 @@
 <script>
-
   export default {
     data() {
       return {
-      email:"",
-      password:""
+        email: '',
+        password: ''
       }
     },
-    methods:{
-      saveInfo(){
-        localStorage.setItem('email',this.email);
-        localStorage.setItem('password',this.password)
+    methods: {
+      saveInfo() {
+        localStorage.setItem('email', this.email)
+        localStorage.setItem('password', this.password)
       }
     }
   }
-
 </script>
-  <template>
-    <h2> {{ $t('signup.firstTitle') }}</h2>
+<template>
+  <h2>{{ $t('signup.firstTitle') }}</h2>
   <form id="formSignup">
-    <input class="loginInput" type="email" :placeholder="$t('signup.email')" v-model="email" />
-    <input class="loginInput" type="password" :placeholder="$t('signup.password')" v-model="password" />
-    <input class="loginInput" type="password" :placeholder="$t('signup.passwordR')" />
+    <input
+      class="loginInput"
+      type="email"
+      :placeholder="$t('signup.email')"
+      v-model="email"
+    />
+    <input
+      class="loginInput"
+      type="password"
+      :placeholder="$t('signup.password')"
+      v-model="password"
+    />
+    <input
+      class="loginInput"
+      type="password"
+      :placeholder="$t('signup.passwordR')"
+    />
     <input class="loginInput" type="TEXT" :placeholder="$t('signup.name')" />
     <input class="loginInput" type="TEXT" :placeholder="$t('signup.surname')" />
   </form>
   <div id="radiobuttons">
     <div class="radioButton">
       <input class="radio" type="checkbox" />
-      <p class="text"> {{ $t('signup.communications') }}</p>
+      <p class="text">{{ $t('signup.communications') }}</p>
     </div>
     <div class="radioButton">
       <input class="radio" type="checkbox" />
-      <p class="text"> {{ $t('signup.cookies') }}</p>
+      <p class="text">{{ $t('signup.cookies') }}</p>
     </div>
-    <input @click="saveInfo" id="signupButton" type="button" :value="$t('signup.createAccount')" />
+    <input
+      @click="saveInfo"
+      id="signupButton"
+      type="button"
+      :value="$t('signup.createAccount')"
+    />
   </div>
 </template>
 
 <style scoped>
-h2{
-font-size: 15px;
-font-weight: 700;
-margin: 10px 0 20px 0;
-padding: 10px;
-}
-#formSignup{
-  width: 100%;
-  height: 30vh;
-  margin: 30px 0;
-display:flex;
-flex-direction: column;
-align-items: center;
-justify-content:space-between;
-/* border: 1px solid red */
-}
-.loginInput{
-width: 90%;
-border:none;
-border-bottom: 1px solid #000;
-}
-.loginInput:focus{
-outline: none;
-}
-#signupButton{
-  margin: 0 5%;
-  width: 90%;
-background-color: #fff;
-color: #000;
-font-size: 11px;
-border: none;
-border: 1px solid #000;
-padding: 10px;
-}
-.radioButton{
-  width: 90%;
-  margin-left: 5%;
-  height: 10vh;
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-/* border: 1px solid red; */
-}
-.radio{
-  width: 15px;
-  height: 15px;
-margin: 6px 6px 0 0;
-appearance:none;
-border: 2px solid #000;
-}
-.radio:checked{
-  background-color: #000;
-}
-@media (min-width:980px){
-  .radioButton{
-  width: 90%;
-  margin-left: 5%;
-  height: 7vh;
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-justify-content: center;
-/* border: 1px solid red; */
-}
-#signupButton{
-  width: 30%;
-  margin: 5% 0 0 35%;
-}
-
-}
+  h2 {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 10px 0 20px 0;
+    padding: 10px;
+  }
+  #formSignup {
+    width: 100%;
+    height: 30vh;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid red */
+  }
+  .loginInput {
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid #000;
+  }
+  .loginInput:focus {
+    outline: none;
+  }
+  #signupButton {
+    margin: 0 5%;
+    width: 90%;
+    background-color: #fff;
+    color: #000;
+    font-size: 11px;
+    border: none;
+    border: 1px solid #000;
+    padding: 10px;
+  }
+  .radioButton {
+    width: 90%;
+    margin-left: 5%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /* border: 1px solid red; */
+  }
+  .radio {
+    width: 15px;
+    height: 15px;
+    margin: 6px 6px 0 0;
+    appearance: none;
+    border: 2px solid #000;
+  }
+  .radio:checked {
+    background-color: #000;
+  }
+  @media (min-width: 980px) {
+    .radioButton {
+      width: 90%;
+      margin-left: 5%;
+      height: 7vh;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      /* border: 1px solid red; */
+    }
+    #signupButton {
+      width: 30%;
+      margin: 5% 0 0 35%;
+    }
+  }
 </style>

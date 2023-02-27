@@ -1,4 +1,4 @@
-<!--<template>
+<!-- <template>
   <form @submit.prevent="saveCard">
     <label for="cardNumber">Card number:</label>
     <input type="text" id="cardNumber" v-model="cardNumber" required />
@@ -44,5 +44,4 @@
       }
     }
   }
-</script>
--->
+</script> -->
