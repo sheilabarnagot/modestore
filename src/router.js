@@ -7,7 +7,6 @@ import MenuButtonView from './views/MenuButtonView.vue'
 import BetalningComponent from './components/BetalningComponent.vue'
 import MyAccountComp from './components/MyAccount/MyAccountComp.vue'
 import ShoppingView from './views/ShoppingView.vue'
-
 import LogIn from './components/MyAccount/LogIn.vue'
 import SignUp from './components/MyAccount/SignUp.vue'
 export default createRouter({
@@ -36,6 +35,10 @@ export default createRouter({
     {
       component: AccountView,
       path: '/account',
+      beforeEnter: () => {
+        const auth = localStorage.getItem('auth')
+        return auth === 'true' ? true : '/login'
+      },
 
       children: [
         {
@@ -54,10 +57,6 @@ export default createRouter({
           path: 'help',
           component: BetalningComponent
         }
-        // {
-        //   path: 'settings',¨¨'
-        //   component: MyAccountComp
-        // }
       ]
     },
     {

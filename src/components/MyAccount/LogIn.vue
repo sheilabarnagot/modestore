@@ -2,6 +2,9 @@
   import { RouterLink } from 'vue-router'
 
   export default {
+    created() {
+      localStorage.setItem('auth', false)
+    },
     data() {
       return {
         email: '',
@@ -12,6 +15,10 @@
       saveData() {
         localStorage.setItem('email', this.email)
         localStorage.setItem('password', this.password)
+        if (this.email === 'abr@gmail.com' && this.password === '123456') {
+          localStorage.setItem('auth', true)
+          this.$router.push('/account')
+        }
       }
     },
     components: {
