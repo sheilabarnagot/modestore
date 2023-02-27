@@ -1,4 +1,46 @@
 <template>
+  <!-- <div class="container">
+    <h1>confirm yor payment</h1>
+    <div class="firs-row">
+      <div class="owner">
+        <h3>owner</h3>
+        <div class="input-field">
+          <input type="text" />
+        </div>
+      </div>
+      <div class="cvv">
+        <h3>CVV</h3>
+        <div class="input-field">
+          <input type="password" />
+        </div>
+      </div>
+    </div>
+    <div class="second-row">
+      <div class="card-number">
+        <h3>card-number</h3>
+        <div class="input-filed">
+          <input type="text" />
+        </div>
+      </div>
+    </div>
+    <div class="third-row">
+      <h3>card-number</h3>
+      <div class="selection">
+        <div class="date">
+          <select name="Months" id="Months">
+            <option value="JAN">JAN</option>
+            <option value="FEB">FEB</option>
+            <option value="MAR">MAR</option>
+          </select>
+          <select name="years" id="years">
+            <option value="2020">2020</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+          </select>
+        </div>
+      </div>
+    </div> -->
+  <!-- -------------här är orginalet---------- -->
   <div class="Payment">
     <h4>Betalningssätt: {{ Betalningssätt }}</h4>
   </div>
