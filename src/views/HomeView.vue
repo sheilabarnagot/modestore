@@ -1,5 +1,4 @@
 <script>
-  // import image from '../../public/unsplsh.jpg'
   export default {}
 </script>
 
@@ -14,7 +13,7 @@
 
 <style scoped>
   #img-container {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     position: relative;
   }
   #inner {

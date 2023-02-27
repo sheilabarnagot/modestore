@@ -29,6 +29,11 @@ export default createRouter({
     {
       component: AccountView,
       path: '/account',
+      beforeEnter: () => {
+        // reject the navigation
+        return '/login'
+      },
+
       children: [
         {
           path: 'favourites',
@@ -45,20 +50,20 @@ export default createRouter({
         {
           path: 'help',
           component: BetalningComponent
-        },
-        {
-          path: 'settings',
-          component: MyAccountComp
         }
-      ],
+        // {
+        //   path: 'settings',¨¨'
+        //   component: MyAccountComp
+        // }
+      ]
     },
     {
       component: LogIn,
-      path: "/login"
+      path: '/login'
     },
     {
       component: SignUp,
-      path: "/signup"
+      path: '/signup'
     }
   ]
 })
@@ -69,7 +74,7 @@ import Product2 from './components/Product2.vue'
 import Product3 from './components/Product3.vue'
 // add more imports for other product components
 
-const routes = [
+const routes = [´
   { path: '/product/1', component: Product1 },
   { path: '/product/2', component: Product2 },
   { path: '/product/3', component: Product3 },
