@@ -130,6 +130,6 @@
   .dropdown-menu {
     flex-direction: column;
   }
-  .dropdown-item {
-  }
+  /* .dropdown-item {
+  } */
 </style>

@@ -2,7 +2,7 @@ import { createStore } from 'vuex'
 
 const mutations = {
     basketItem(state, { name, id }) {
-      state.items.push({ i: name, id: id,})
+      state.items.push({ i: name, id: id })
     },
     deleteItem(state, id) {
       const item = state.items.find((item) => item.id === id)
@@ -19,7 +19,7 @@ const mutations = {
     }
   },
   state = {
-    items: [],
+    items: []
   }
 
 export default createStore({ mutations, state, strict: true })
