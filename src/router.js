@@ -10,7 +10,6 @@ import ShoppingView from './views/ShoppingView.vue'
 
 import LogIn from './components/MyAccount/LogIn.vue'
 import SignUp from './components/MyAccount/SignUp.vue'
-
 export default createRouter({
   history: createWebHashHistory(),
   routes: [
@@ -29,10 +28,6 @@ export default createRouter({
     {
       component: AccountView,
       path: '/account',
-      beforeEnter: () => {
-        // reject the navigation
-        return '/login'
-      },
 
       children: [
         {
