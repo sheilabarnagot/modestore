@@ -26,6 +26,14 @@ export default createRouter({
       path: '/cart'
     },
     {
+      component: BetalningComponent,
+      path: '/payment'
+    },
+    {
+      component: MyAccountComp,
+      path: '/favourites'
+    },
+    {
       component: AccountView,
       path: '/account',
 
