@@ -11,3 +11,4 @@ export const i18n = createI18n({
 })
 
 // https://www.youtube.com/watch?v=Nle4AQPQUwU
+// https://stackoverflow.com/questions/66732739/internationalization-for-vue-3-vite-with-i18n

@@ -1,14 +1,14 @@
 <script>
-  import MenuButtonComp from '../components/MenuButtonNavigation/MenuButtonComp.vue'
+  import MenuButtonNav from '../components/MenuButtonNavigation/MenuButtonNav.vue'
 
   export default {
     data() {
       return {}
     },
     components: {
-      MenuButtonComp
+      MenuButtonNav
     }
   }
 </script>
 
-<template><MenuButtonComp /></template>
+<template><MenuButtonNav /></template>

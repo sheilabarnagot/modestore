@@ -1,10 +1,30 @@
 {
-    "navbar": {
+  "navbar": {
     "konto": "Account",
     "köp": "Shopping",
     "favoriter": "Favourites",
     "hjälp": "Help",
     "Inställningar": "Settings",
-    "menu": "menu"
+    "menu": "Menu"
+  },
+  "login": {
+    "firstTitle": "LOG IN TO YOUR ACCOUNT",
+    "email": "Email",
+    "password": "Password",
+    "login": "LOG IN",
+    "forgotten": "Have you forgotten your password?",
+    "secondTitle": "NEED AN ACCOUNT",
+    "register": "REGISTER"
+  },
+  "signup": {
+    "firstTitle": "PERSONAL DETAILS",
+    "email": "Email",
+    "password": "Password",
+    "passwordR": "Repeat password",
+    "name": "Name",
+    "surname": "Surname",
+    "communications": "I want to recieve personalised commercial communications.",
+    "cookies": "I have reed and understand the privacy and cookies policy.",
+    "createAccount": "CREATE ACCOUNT"
   }
 }

@@ -1,5 +1,8 @@
 <template>
-  <nav>
+  <div id="langButton">
+  <LangBtn id="langbtn" />
+</div>
+  <nav class="mobile-menu">
     <ul>
       <li>
         <RouterLink to="/"><HomeIcon /></RouterLink>
@@ -12,7 +15,7 @@
     Centered dropup
   </button>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><RouterLink to="/shopping">Shopping</RouterLink></li>
     <li><a class="dropdown-item" href="#">Action two</a></li>
     <li><a class="dropdown-item" href="#">Action three</a></li>
   </ul>
@@ -25,11 +28,10 @@
       </li>
     </ul>
     <template v-if="toggl">
-      <div id="input-container">
-        <input id="search-input" />
-      </div>
+      <form id="input-container">
+        <input />
+      </form>
     </template>
-    <LangBtn />
   </nav>
 </template>
 
@@ -67,10 +69,22 @@
 </script>
 
 <style scoped>
+  nav {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    height: 4em;
+    width: 100%;
+    background-color: #f6f6f7;
+  }
   ul {
+    margin-bottom: 0;
     padding-left: 0;
     list-style-type: none;
     display: flex;
+    align-items: center;
     justify-content: center;
     position: fixed;
 
@@ -97,10 +111,16 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;
+    bottom: 200%;
+    position: absolute;
   }
   #bad-element {
     cursor: pointer;
+  }
+  #langButton {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
   }
   .dropdown-menu{
     flex-direction: column;

@@ -1,10 +1,11 @@
 <template>
   <ul>
-    <li><RouterLink to="/menu/dam">Dam</RouterLink></li>
-    <li><RouterLink to="/menu/herr">herr</RouterLink></li>
-    <li><RouterLink to="/menu/shopping">SHOPPING</RouterLink></li>
-    <li>Home</li>
-    <li>Beauty</li>
+    <li><RouterLink to="/">Dam</RouterLink></li>
+    <li><RouterLink to="/">News</RouterLink></li>
+    <li><RouterLink to="/">Jackets</RouterLink></li>
+    <li><RouterLink to="/">Dresses</RouterLink></li>
+    <li><RouterLink to="/">Tops</RouterLink></li>
+    <li><RouterLink to="/">Bottoms</RouterLink></li>
   </ul>
   <RouterView />
 </template>
@@ -13,8 +14,7 @@
   ul {
     padding-left: 0;
     list-style-type: none;
-    display: flex;
-    justify-content: center;
+    position: absolute;
   }
 
   ul li {

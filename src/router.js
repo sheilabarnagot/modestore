@@ -3,12 +3,13 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import CartView from './views/CartView.vue'
 import HomeView from './views/HomeView.vue'
 import AccountView from './views/AccountView.vue'
-import ShoppingView from './views/ShoppingView.vue'
 import MenuButtonView from './views/MenuButtonView.vue'
 import BetalningComponent from './components/BetalningComponent.vue'
 import MyAccountComp from './components/MyAccount/MyAccountComp.vue'
-import DamComp from './components/dam/DamComp.vue'
-import HerrComp from './components/herr/HerrComp.vue'
+import ShoppingView from './views/ShoppingView.vue'
+
+import LogIn from './components/MyAccount/LogIn.vue'
+import SignUp from './components/MyAccount/SignUp.vue'
 
 export default createRouter({
   history: createWebHashHistory(),
@@ -19,21 +20,7 @@ export default createRouter({
     },
     {
       component: MenuButtonView,
-      path: '/menu',
-      children: [
-        {
-          path: 'dam',
-          component: DamComp
-        },
-        {
-          path: 'herr',
-          component: HerrComp
-        },
-        {
-          path: 'shopping',
-          component: ShoppingView
-        }
-      ]
+      path: '/menu'
     },
     {
       component: CartView,
@@ -45,7 +32,7 @@ export default createRouter({
       children: [
         {
           path: 'favourites',
-          component: MyAccountComp
+          component: ShoppingView
         },
         {
           path: 'konto',
@@ -63,7 +50,15 @@ export default createRouter({
           path: 'settings',
           component: MyAccountComp
         }
-      ]
+      ],
+    },
+    {
+      component: LogIn,
+      path: "/login"
+    },
+    {
+      component: SignUp,
+      path: "/signup"
     }
   ]
 })

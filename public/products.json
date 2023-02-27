@@ -1,6 +1,7 @@
 [
   {
-    "name": "/public/img1200/baispring_MG_0466.jpg",
+    "name": "testar",
+    "src": "/img1200/baispring_MG_0466.jpg",
     "id": "",
     "price": "",
     "compostion": "",
@@ -8,7 +9,8 @@
     "product": ""
   },
   {
-    "name": "/public/img1200/baispring_MG_0466.jpg",
+    "name": "",
+    "src": "/img1200/baispring_MG_0535.jpg",
     "id": "",
     "price": "",
     "compostion": "",

@@ -1,41 +1,37 @@
 <template>
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" v-for="(image, index) in Products" :key="index">
-        <router-link :to="image.link">
-          <img :src="image.name" :alt="image.alt" />
-        </router-link>
+      <div class="swiper-slide" v-for="(image, index) in images" :key="index">
+        <RouterLink to="carousel" />
+        <img :src="image.src" :alt="image.alt" />
+        {{ image.src }}
       </div>
     </div>
     <div class="swiper-pagination" />
   </div>
+  test
 </template>
 
 <script>
-  import Swiper from 'swiper/bundle'
-  import Products from '../../public/products.json'
+  //import Swiper from 'swiper/bundle'
 
   export default {
+    created() {
+      this.fetchJsonData()
+    },
     data() {
       return {
-        images: Products,
+        images: null,
         swiper: null
       }
     },
-    mounted() {
-      this.swiper = new Swiper('.swiper-container', {
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        spaceBetween: 16,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
-        },
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false
-        }
-      })
+    methods: {
+      async fetchJsonData() {
+        const response = await fetch('/products.json')
+        const result = await response.json()
+        this.images = result
+        console.log(result)
+      }
     },
     beforeUnmount() {
       if (this.swiper) {
