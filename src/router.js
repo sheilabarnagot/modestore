@@ -21,6 +21,10 @@ export default createRouter({
       path: '/menu'
     },
     {
+      component: ShoppingView,
+      path: '/shopping'
+    },
+    {
       component: CartView,
       path: '/cart'
     },

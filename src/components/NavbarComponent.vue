@@ -10,9 +10,16 @@
       <li>
         <SearchIcon @click="toggler" />
       </li>
-      <li>
-        <RouterLink to="/menu">Menu</RouterLink>
-      </li>
+     <div class="dropup-center dropup">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Centered dropup
+  </button>
+  <ul class="dropdown-menu">
+    <li><RouterLink to="/shopping">Shopping</RouterLink></li>
+    <li><a class="dropdown-item" href="#">Action two</a></li>
+    <li><a class="dropdown-item" href="#">Action three</a></li>
+  </ul>
+</div>
       <li>
         <RouterLink to="/account"> <UserIcon /> </RouterLink>
       </li>
@@ -50,14 +57,14 @@
       ShoppingIcon,
       LangBtn
     },
-    methods: {
-      toggler() {
-        this.toggl = !this.toggl
-      },
-      menuToggler() {
-        this.menuToggl = !this.menuToggl
-      }
-    }
+    // methods: {
+    //   toggler() {
+    //     this.toggl = !this.toggl
+    //   },
+    //   menuToggler() {
+    //     this.menuToggl = !this.menuToggl
+    //   }
+    // }
   }
 </script>
 
@@ -79,6 +86,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+
+
+    bottom: 0;
+    left: 50%;
+    right: 50%;
   }
 
   ul li:first-child {
@@ -111,4 +124,8 @@
     z-index: 1;
     left: 90%;
   }
+  .dropdown-menu{
+    flex-direction: column;
+  }
+  .dropdown-item{}
 </style>

@@ -21,6 +21,7 @@
       },
       visibleItems() {
         return this.storedShoppingItems.filter((item) => !item.isClicked)
+
       }
     },
     methods: {
