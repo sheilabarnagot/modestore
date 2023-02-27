@@ -21,13 +21,12 @@
       },
       visibleItems() {
         return this.storedShoppingItems.filter((item) => !item.isClicked)
-
       }
     },
     methods: {
       deleteItem(item) {
         this.$store.commit('deleteItem', item.id)
-        item.isClicked = true
+        // item.isClicked = true
       }
     }
   }
