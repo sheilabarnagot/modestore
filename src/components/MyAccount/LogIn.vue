@@ -15,7 +15,7 @@
       saveData() {
         localStorage.setItem('email', this.email)
         localStorage.setItem('password', this.password)
-        if (this.email === 'abr@gmail.com' && this.password === '123456') {
+        if (this.email === 'admin' && this.password === 'admin') {
           localStorage.setItem('auth', true)
           this.$router.push('/account')
         }
