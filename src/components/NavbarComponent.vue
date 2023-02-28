@@ -1,4 +1,5 @@
 <template>
+  <!-- Test -->
   <div id="langButton">
     <LangBtn id="langbtn" />
   </div>
@@ -16,12 +17,13 @@
           type="button"
           data-bs-toggle="dropdown"
           aria-expanded="false"
-
         >
           Menu
         </button>
         <ul class="dropdown-menu">
-          <li id="menuitem"><RouterLink to="/shopping"><span>Shopping</span></RouterLink></li>
+          <li id="menuitem">
+            <RouterLink to="/shopping"><span>Shopping</span></RouterLink>
+          </li>
         </ul>
       </li>
       <li>
@@ -83,7 +85,7 @@
     width: 100%;
     background-color: #f6f6f7;
   }
-  ul:not(.dropdown-menu)  {
+  ul:not(.dropdown-menu) {
     margin-bottom: 0;
     padding-left: 0;
     list-style-type: none;
@@ -129,13 +131,11 @@
   }
   .dropdown-menu {
     flex-direction: column;
-
   }
   #menuitem {
     text-align: center;
   }
-  span{
-color: black
+  span {
+    color: black;
   }
-
 </style>
