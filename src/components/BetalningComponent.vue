@@ -66,16 +66,13 @@
     >
       <div class="container">
         <div class="first">
-          <b-form-input type="text" placeholder="Owner" />
+          <b-form-input type="text" placeholder="Card owner" />
         </div>
         <div class="second">
-          <b-form-input type="text" placeholder="00000-000" />
+          <b-form-input type="text" placeholder="card-number" />
         </div>
         <div class="third">
           <b-form-input type="password" placeholder="CVV" />
-        </div>
-        <div class="forth">
-          <b-form-input type="text" placeholder="Card-number" />
         </div>
 
         <!-- <div class="container">
@@ -130,7 +127,7 @@
               <option value="2025">2025</option>
               <option value="2026">2026</option>
             </select>
-            <img src="" alt="cardlogo" />
+            <img src="assets/mastercardlogo.jpeg" alt="" class="logo" />
           </div>
         </div>
       </div>
@@ -180,19 +177,9 @@
     position: absolute;
     display: flex;
     justify-content: center;
-    /* z-index: 2; */
-    /* height: 4em; */
     width: 100%;
     top: 100px;
   }
-
-  /* .cardpayment {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    top: 150px;
-  } */
 
   .swishpayment {
     position: absolute;
@@ -210,20 +197,20 @@
     top: 250px;
   }
 
-  .swisha {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    top: 300px;
-  }
-
   .cardPayment {
     position: absolute;
     display: flex;
     justify-content: center;
     width: 100%;
     top: 150px;
+  }
+
+  .swisha {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 300px;
   }
 
   .Fakturan {
@@ -239,7 +226,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    top: 350px;
+    top: 300px;
   }
   .container {
     height: 300px;
@@ -284,5 +271,9 @@
   }
   .forth {
     margin: 5px;
+  }
+
+  .logo {
+    width: 150px;
   }
 </style>
