@@ -6,25 +6,26 @@
       <button @click="deleteItem(item)">Delete</button>
     </div>
   </div>
+  <!-- hej -->
 </template>
 
 <script>
-export default {
-  computed: {
-    storedShoppingItems() {
-      return this.$store.state.items
+  export default {
+    computed: {
+      storedShoppingItems() {
+        return this.$store.state.items
+      },
+      visibleItems() {
+        return this.storedShoppingItems.filter((item) => !item.isClicked)
+      }
     },
-    visibleItems() {
-      return this.storedShoppingItems.filter((item) => !item.isClicked)
-    },
-  },
-  methods: {
-    deleteItem(item) {
-      this.$store.commit('deleteItem', { id: item.id })
-      item.isClicked = true
-      console.log(item)
-      console.log("visible:", this.visibleItems)
-    },
-  },
-}
+    methods: {
+      deleteItem(item) {
+        this.$store.commit('deleteItem', { id: item.id })
+        item.isClicked = true
+        console.log(item)
+        console.log('visible:', this.visibleItems)
+      }
+    }
+  }
 </script>
