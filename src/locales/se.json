@@ -26,5 +26,13 @@
     "communications": "Jag vill ta emot personanpassad kommersiell kommunikation.",
     "cookies": "Jag har haft möjlighet att läsa och förstår Sekretess-och cookiepolisyn.",
     "createAccount": "SKAPA KONTO"
+  },
+  "menuButtonNav": {
+    "women": "Dam",
+    "news": "Nyhet",
+    "jackets": "Jackor",
+    "dresses": "Dresses",
+    "tops": "Tops",
+    "Bottoms": "Bottoms"
   }
 }
