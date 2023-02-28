@@ -1,4 +1,5 @@
 <template>
+  <!-- Test -->
   <div id="langButton">
     <LangBtn id="langbtn" />
   </div>
