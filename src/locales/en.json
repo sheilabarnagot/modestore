@@ -26,5 +26,13 @@
     "communications": "I want to recieve personalised commercial communications.",
     "cookies": "I have reed and understand the privacy and cookies policy.",
     "createAccount": "CREATE ACCOUNT"
+  },
+  "menuButtonNav": {
+    "women": "Women",
+    "news": "News",
+    "jackets": "Jackets",
+    "dresses": "Dresses",
+    "tops": "Tops",
+    "Bottoms": "Bottoms"
   }
 }

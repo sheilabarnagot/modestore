@@ -1,24 +1,19 @@
 import { createStore } from 'vuex'
 
 const mutations = {
-    basketItem(state, { name, id }) {
-      state.items.push({ i: name, id: id })
-    },
-    deleteItem(state, id) {
-      const item = state.items.find((item) => item.id === id)
-      if (item) {
-        item.count--
-        if (item.count === 0) {
-          item.isClicked = true
-        }
-      }
-      // const index = state.items.findIndex((item) => item.id === id)
-
-      // state.items.splice(index, 1)
-    }
+  basketItem(state, { name, id }) {
+    state.items.push({ i: name, id: id })
   },
-  state = {
-    items: []
+  deleteItem(state, payload) {
+    const itemIndex = state.items.findIndex(hej => hej.id === payload.id)
+    if (itemIndex !== -1) {
+      state.items.splice(itemIndex, 1)
+    }
   }
+}
 
-export default createStore({ mutations, state, strict: true })
+const state = {
+  items: []
+}
+
+export default createStore({ state, mutations, strict: true })
