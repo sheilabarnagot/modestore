@@ -133,7 +133,6 @@
   }
   #menuitem {
     text-align: center;
-    color: black;
   }
   span {
     color: black;
