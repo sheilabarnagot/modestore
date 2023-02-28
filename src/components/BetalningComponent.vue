@@ -1,59 +1,17 @@
 <template>
-  <!-- <div class="container">
-    <h1>confirm yor payment</h1>
-    <div class="firs-row">
-      <div class="owner">
-        <h3>owner</h3>
-        <div class="input-field">
-          <input type="text" />
-        </div>
-      </div>
-      <div class="cvv">
-        <h3>CVV</h3>
-        <div class="input-field">
-          <input type="password" />
-        </div>
-      </div>
-    </div>
-    <div class="second-row">
-      <div class="card-number">
-        <h3>card-number</h3>
-        <div class="input-filed">
-          <input type="text" />
-        </div>
-      </div>
-    </div>
-    <div class="third-row">
-      <h3>card-number</h3>
-      <div class="selection">
-        <div class="date">
-          <select name="Months" id="Months">
-            <option value="JAN">JAN</option>
-            <option value="FEB">FEB</option>
-            <option value="MAR">MAR</option>
-          </select>
-          <select name="years" id="years">
-            <option value="2020">2020</option>
-            <option value="2022">2022</option>
-            <option value="2023">2023</option>
-          </select>
-        </div>
-      </div>
-    </div> -->
-  <!-- -------------här är orginalet---------- -->
   <div class="Payment">
-    <h4>Betalningssätt: {{ Betalningssätt }}</h4>
+    <h4>Payment: {{ Payment }}</h4>
   </div>
 
-  <div class="cardpayment">
-    <label style="display: block" for="kortbetalning">Kortbetalning</label>
+  <div class="cardPayment">
+    <label style="display: block" for="Creditcard">Creditcard</label>
 
     <input
       @click="onKort"
       type="radio"
       id="form"
-      value="Kortbetalning"
-      v-model="Betalningssätt"
+      value="Creditcard"
+      v-model="Payment"
     />
 
     <!-- <input
@@ -74,7 +32,7 @@
       type="radio"
       id="form"
       value="Swish"
-      v-model="Betalningssätt"
+      v-model="Payment"
     />
   </div>
 
@@ -85,36 +43,103 @@
       type="radio"
       id="form"
       value="Faktura"
-      v-model="Betalningssätt"
+      v-model="Payment"
     />
   </div>
 
-  <div class="swisha" v-if="Betalningssätt === 'Swish'">
+  <div class="swisha" v-if="Payment === 'Swish'">
     <b-button @click="modalShowswish = !modalShowswish">Swish</b-button>
 
-    <b-modal v-model="modalShowswish" name="swishmodel">
-      <!-- <img src="frame1.jpg" /> -->
+    <b-modal v-model="modalShowswish" name="swishmodel" hide-footer>
+      <img src="assets/swish.png" alt="" class="swishlogo" />
+      <div class="swishaBtn">
+        <b-button class="swishaBtn" variant="primary">Swisha</b-button>
+      </div>
       <!-- Swisha: <input type="skriv in telefonnummer" /> -->
     </b-modal>
   </div>
 
-  <div class="korten" v-if="Betalningssätt === 'Kortbetalning'">
-    <b-button @click="modalShowkort = !modalShowkort">Kortbetalning</b-button>
+  <div class="card" v-if="Payment === 'Creditcard'">
+    <b-button @click="modalShowkort = !modalShowkort">Creditcard</b-button>
 
-    <b-modal title="hhhhh" v-model="modalShowkort" name="kortmodel"
-      >Kort:
-      <input
-        style="display: block"
-        type="text"
-        :value="a"
-        placeholder="Kortnummer"
-      />
-      <input style="display: block" type="text" :value="b" placeholder="M/Y" />
-      <input style="display: block" type="text" :value="c" placeholder="CVC" />
+    <b-modal
+      title="confirm yor payment"
+      v-model="modalShowkort"
+      name="kortmodel"
+    >
+      <div class="container">
+        <div class="first">
+          <b-form-input type="text" placeholder="Card owner" />
+        </div>
+        <div class="second">
+          <b-form-input type="text" placeholder="card-number" />
+        </div>
+        <div class="third">
+          <b-form-input type="password" placeholder="CVV" />
+        </div>
+
+        <!-- <div class="container">
+        <h1>confirm yor payment</h1>
+        <div class="first">
+          <div class="owner">
+            <h3>owner</h3>
+            <div class="input1">
+              <input type="text" />
+            </div>
+          </div>
+          <div class="cvv">
+            <h3>cvv</h3>
+            <div class="input2">
+              <input type="password" />
+            </div>
+          </div>
+        </div>
+        <div class="second">
+          <div class="card-number">
+            <h4>card-number</h4>
+            <div class="input3">
+              <input type="text" />
+            </div>
+          </div>
+        </div>
+        <div class="third">
+          <h4>M/Y</h4> -->
+        <div class="selection">
+          <div class="date">
+            <select name="Months" id="Months">
+              <option value="JAN">JAN</option>
+              <option value="FEB">FEB</option>
+              <option value="MAR">MAR</option>
+              <option value="APR">APR</option>
+              <option value="MAY">MAJ</option>
+              <option value="JUN">JUN</option>
+              <option value="JUL">JUL</option>
+              <option value="AUG">AUG</option>
+              <option value="SEP">SEP</option>
+              <option value="OKT">OKT</option>
+              <option value="NOV">NOV</option>
+              <option value="DEC">DEC</option>
+            </select>
+            <select name="years" id="years">
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2023">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+            </select>
+            <img src="assets/mastercardlogo.jpeg" alt="" class="logo" />
+          </div>
+        </div>
+      </div>
     </b-modal>
   </div>
-
-  <div class="Fakturan" v-if="Betalningssätt === 'Faktura'">
+  <!-- </div> -->
+  <!-- </b-modal> -->
+  <!-- </div> -->
+  <div class="Fakturan" v-if="Payment === 'Faktura'">
     <b-button @click="modalShowfaktura = !modalShowfaktura">Faktura</b-button>
 
     <b-modal
@@ -131,7 +156,7 @@
   export default {
     data() {
       return {
-        Betalningssätt: '',
+        Payment: '',
         MY: 'M/Y',
         cvc: 'CVC',
         kortnummer: 'kortnummer',
@@ -155,18 +180,8 @@
     position: absolute;
     display: flex;
     justify-content: center;
-    /* z-index: 2; */
-    /* height: 4em; */
     width: 100%;
     top: 100px;
-  }
-
-  .cardpayment {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    top: 150px;
   }
 
   .swishpayment {
@@ -185,15 +200,15 @@
     top: 250px;
   }
 
-  .swisha {
+  .cardPayment {
     position: absolute;
     display: flex;
     justify-content: center;
     width: 100%;
-    top: 300px;
+    top: 150px;
   }
 
-  .korten {
+  .swisha {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -207,5 +222,69 @@
     justify-content: center;
     width: 100%;
     top: 300px;
+  }
+
+  .card {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 300px;
+  }
+  .container {
+    height: 300px;
+    width: 450px;
+    background-color: white;
+    display: flex;
+    margin-right: 50px;
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  /* .container h1 {
+    text-align: center;
+  } */
+
+  /* .first {
+    display: flex;
+  } */
+
+  /* .owner {
+    width: 100%;
+  } */
+  .selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .section select {
+    padding: 10px 20px;
+  }
+
+  .first {
+    margin: 5px;
+  }
+  .second {
+    margin: 5px;
+  }
+  .third {
+    margin: 5px;
+  }
+  .forth {
+    margin: 5px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+  .swishlogo {
+    width: 180px;
+  }
+  .swishaBtn {
+    width: 100px;
+    left: 40px;
+    /* bottom: 110px; */
   }
 </style>

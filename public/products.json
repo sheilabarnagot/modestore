@@ -1,37 +1,33 @@
 [
   {
-    "name": "testar",
-    "src": "/img1200/baispring_MG_0466.jpg",
+    "name": "Charlie",
+    "src": "/img1200/billy-aw-campagne/billy-aw-campagne-30.jpg",
     "id": "",
-    "price": "",
-    "compostion": "",
-    "color": "",
-    "product": ""
+    "price": "1700 sek",
+    "compostion": "100% silk",
+    "color": "forest green",
+    "product": "dress",
+    "category": "campagne"
   },
   {
-    "name": "",
-    "src": "/img1200/baispring_MG_0535.jpg",
+    "name": "Nico",
+    "src": "/img1200/billy-aw-campagne/billy-aw-campagne-32.jpg",
     "id": "",
-    "price": "",
-    "compostion": "",
-    "color": "",
-    "product": ""
+    "price": "3400 sek",
+    "compostion": "fake fur",
+    "color": "black",
+    "product": "jacket",
+    "category": "campagne"
   },
   {
-    "name": "baispring_MG_0466.jpg",
+    "name": "Tuva",
+    "src": "/img1200/billy-aw-campagne/billy-aw-campagne-id.jpg",
     "id": "",
-    "price": "",
-    "compostion": "",
-    "color": "",
-    "product": ""
-  },
-  {
-    "name": "",
-    "id": "",
-    "price": "",
-    "compostion": "",
-    "color": "",
-    "product": ""
+    "price": "2800",
+    "compostion": "100% silk",
+    "color": "forest print",
+    "product": "dress",
+    "category": "campagne"
   },
   {
     "name": "",
@@ -39,7 +35,8 @@
     "price": "",
     "compostion": "",
     "color": "",
-    "product": ""
+    "product": "",
+    "category": ""
   },
   {
     "name": "",
@@ -47,6 +44,16 @@
     "price": "",
     "compostion": "",
     "color": "",
-    "product": ""
+    "product": "",
+    "category": ""
+  },
+  {
+    "name": "",
+    "id": "",
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": "",
+    "category": ""
   }
 ]

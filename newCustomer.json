@@ -1,0 +1,1318 @@
+const arr = ["name", "two"]
+
+[
+  {
+    "name": "",
+    "src": "/baispring_MG_0466.jpg",
+    "id": 0,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baispring_MG_0535.jpg",
+    "id": 1,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baispring_MG_0825.jpg",
+    "id": 2,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baispring_MG_1343.jpg",
+    "id": 3,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baispring_MG_1514.jpg",
+    "id": 4,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baispring_MG_1594.jpg",
+    "id": 5,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baispring_MG_1852.jpg",
+    "id": 6,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baispring_MG_1923.jpg",
+    "id": 7,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baissBillyandI_MG_0660.jpg",
+    "id": 8,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baissBillyandI__MG_0377.jpg",
+    "id": 9,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baisslookbookss13_3388.jpg",
+    "id": 10,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baisslookbookss13_3431.jpg",
+    "id": 11,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baisslookbookss13_3465.jpg",
+    "id": 12,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baisslookbookss13_3489.jpg",
+    "id": 13,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baisslookbookss13_3490.jpg",
+    "id": 14,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baisslookbookss13_3497.jpg",
+    "id": 15,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baisslookbookss13_3512.jpg",
+    "id": 16,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baisslookbookss13_3515.jpg",
+    "id": 17,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baisslookbookss13_3524.jpg",
+    "id": 18,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baisslookbookss13_3527.jpg",
+    "id": 19,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baisslookbookss13_3529.jpg",
+    "id": 20,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baisslookbookss13_3574.jpg",
+    "id": 21,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baiww©AB.Duoblau_04.jpg",
+    "id": 22,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baiww©AB.Duoblau_05 2.jpg",
+    "id": 23,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baiww©AB.Duoblau_05.jpg",
+    "id": 24,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baiww©AB.Duoblau_07.jpg",
+    "id": 25,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baiww©AB.Duoblau_08.jpg",
+    "id": 26,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baiww©AB.Duoblau_10.jpg",
+    "id": 27,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baiww©AB.Duoblau_13.jpg",
+    "id": 28,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baiww©AB.Duoblau_17.jpg",
+    "id": 29,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baiww©AB.Duoblau_18.jpg",
+    "id": 30,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baiww©AB.Duoblau_19.jpg",
+    "id": 31,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baiww©AB.Duoblau_20.jpg",
+    "id": 32,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/baiww©AB.Duoblau_27.jpg",
+    "id": 33,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/cover1.jpg",
+    "id": 34,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/cover2.jpg",
+    "id": 35,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/cover3.jpg",
+    "id": 36,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/cover4.jpg",
+    "id": 37,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/cover5.jpg",
+    "id": 38,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/cover6.jpg",
+    "id": 39,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/elvinegreen.jpg",
+    "id": 40,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/elvinenude.jpg",
+    "id": 41,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/elvineorange.jpg",
+    "id": 42,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/elvineQuill_brown0826.jpg",
+    "id": 43,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/elvineScolder_maple0233.jpg",
+    "id": 44,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/elvineScolder_maple0240.jpg",
+    "id": 45,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/elvineShane_green_mist0042.jpg",
+    "id": 46,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fuc.parisorangejpg.jpg",
+    "id": 47,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucFanny web 6.jpg",
+    "id": 48,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucFanny web 7.jpg",
+    "id": 49,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucFanny web 8.jpg",
+    "id": 50,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucFanny webb 1.jpg",
+    "id": 51,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucFanny webb 3.jpg",
+    "id": 52,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucFanny webb 4.jpg",
+    "id": 53,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucFanny webb 5.jpg",
+    "id": 54,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucFanny webb 9.jpg",
+    "id": 55,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucparisStudio alt FUC_2015.jpg",
+    "id": 56,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucparisStudio FUC_1889.jpg",
+    "id": 57,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucparisStudio FUC_1952.jpg",
+    "id": 58,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucparisStudio FUC_2015.jpg",
+    "id": 59,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucparisStudio FUC_2064.jpg",
+    "id": 60,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucparisvalierieValeriia_0040croped.jpg",
+    "id": 61,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucparisvalierieValeriia_0095.jpg",
+    "id": 62,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucpfannyUppslag1.jpg",
+    "id": 63,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucpfannyUppslag5.jpg",
+    "id": 64,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucStudio FUC_1178K.jpg",
+    "id": 65,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucStudio FUC_1249K kopia.jpg",
+    "id": 66,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucStudio FUC_1341K utan ram web.jpg",
+    "id": 67,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucStudio FUC_1513K.jpg",
+    "id": 68,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucStudio FUC_1690K.jpg",
+    "id": 69,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/fucStudio FUC_1796K utan ram web.jpg",
+    "id": 70,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/Malcolm tuschat layout_Page_5.jpg",
+    "id": 71,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/Malcolm tuschat webb 2_Page_1.jpg",
+    "id": 72,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/Malcolm tuschat webb_Page_1.jpg",
+    "id": 73,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/Malcolm tuschat webb_Page_3.jpg",
+    "id": 74,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/Malcolm tuschat webb_Page_4.jpg",
+    "id": 75,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/Malcolm tuschat webb_Page_5.jpg",
+    "id": 76,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/Malcolm tuschat webb_Page_6.jpg",
+    "id": 77,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/Malcolm tuschat webb_Page_8.jpg",
+    "id": 78,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/Malcolm tuschat web_Page_7.jpg",
+    "id": 79,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/odalisqueslättenbw.jpg",
+    "id": 80,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/odalisqueslättencheckedn.jpg",
+    "id": 81,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/odalisqueslättendots.jpg",
+    "id": 82,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/odalisqueslättenflowerprint.jpg",
+    "id": 83,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/odalisqueslättengreen.jpg",
+    "id": 84,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/odalisqueslättenhope.jpg",
+    "id": 85,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/odalisqueslättenpuffer.jpg",
+    "id": 86,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/odalisqueslättenshirt.jpg",
+    "id": 87,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/odalisqueslättenyellow.jpg",
+    "id": 88,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/odalisquesvv1.jpg",
+    "id": 89,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/odalisquesvv2.jpg",
+    "id": 90,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/odalisquesvv3 (kopia).jpg",
+    "id": 91,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/odalisquesvv3.jpg",
+    "id": 92,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/odalisquesvv4.jpg",
+    "id": 93,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/odalisquesvv5.jpg",
+    "id": 94,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/odalisquesvv6.jpg",
+    "id": 95,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/pkdenimblue.jpg",
+    "id": 96,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/pkdenimcoat.jpg",
+    "id": 97,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/pkdenimhorizontal.jpg",
+    "id": 98,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/pkdeniminthegrass.jpg",
+    "id": 99,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/pkdenimlightblue.jpg",
+    "id": 100,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/pkdenimplywood.jpg",
+    "id": 101,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/pkdenimrunning.jpg",
+    "id": 102,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/pkdenimvetements.jpg",
+    "id": 103,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/pkdenimwhiteysl.jpg",
+    "id": 104,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/pkdenomrost.jpg",
+    "id": 105,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/pkparis10.jpg",
+    "id": 106,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/pkparis7.jpg",
+    "id": 107,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/pkparis8.jpg",
+    "id": 108,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/pkparis9.jpg",
+    "id": 109,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/pkparisfucparisStudio FUC_2372.jpg",
+    "id": 110,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/pkparisfucparisStudio FUC_2615.jpg",
+    "id": 111,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/pkparisfucparisStudio FUC_2664.jpg",
+    "id": 112,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/pkparisfucparisStudio FUC_2827.jpg",
+    "id": 113,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/punkeditorialLook 1.jpg",
+    "id": 114,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/punkeditorialLook 2.jpg",
+    "id": 115,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/punkeditorialLook 3.jpg",
+    "id": 116,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/punkeditorialLook 4.jpg",
+    "id": 117,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/punkeditorialLook 5.jpg",
+    "id": 118,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/punkeditorialLook 6.jpg",
+    "id": 119,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/svamoaacne.jpg",
+    "id": 120,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/svamoaacnedenim.jpg",
+    "id": 121,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/svamoaadidas.jpg",
+    "id": 122,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/svamoabai.jpg",
+    "id": 123,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/svamoablazer.jpg",
+    "id": 124,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/svamoasilkblazer.jpg",
+    "id": 125,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/svamoaysl.jpg",
+    "id": 126,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/thumbnailbeigedetail.jpg",
+    "id": 127,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/thumbnailblazerfrombehind.jpg",
+    "id": 128,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/thumbnailbwface.jpg",
+    "id": 129,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/thumbnailbwmirrormirror.jpg",
+    "id": 130,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/thumbnailbwshirtwithbelt.jpg",
+    "id": 131,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/thumbnailhairacc.jpg",
+    "id": 132,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/thumbnailhandbagandbelt.jpg",
+    "id": 133,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/thumbnailmonocrome.jpg",
+    "id": 134,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/thumbnailroundring.jpg",
+    "id": 135,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/toneintone-blue-id2.jpg",
+    "id": 136,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/toneintone-green-id-4.jpg",
+    "id": 137,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/toneintone-grey-id-6.jpg",
+    "id": 138,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/toneintone-pink-id-3.jpg",
+    "id": 139,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/toneintone-red-id-5.jpg",
+    "id": 140,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/toneintone-white-id-1.jpg",
+    "id": 141,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/Uppslag1web.jpg",
+    "id": 142,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/uppslag2web.jpg",
+    "id": 143,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/uppslag3web.jpg",
+    "id": 144,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  },
+  {
+    "name": "",
+    "src": "/Uppslag4web.jpg",
+    "id": 145,
+    "price": "",
+    "compostion": "",
+    "color": "",
+    "product": ""
+  }
+]

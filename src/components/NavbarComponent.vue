@@ -1,4 +1,5 @@
 <template>
+  <!-- Test -->
   <div id="langButton">
     <LangBtn id="langbtn" />
   </div>
@@ -21,7 +22,9 @@
         </button>
         <ul class="dropdown-menu">
           <li id="menuitem">
-            <RouterLink to="/shopping"><span>Shopping</span></RouterLink>
+            <RouterLink to="/shopping"
+              ><span>{{ $t('menuButtonNav.shopping') }}</span></RouterLink
+            >
           </li>
         </ul>
       </li>
