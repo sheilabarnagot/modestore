@@ -50,8 +50,11 @@
   <div class="swisha" v-if="Payment === 'Swish'">
     <b-button @click="modalShowswish = !modalShowswish">Swish</b-button>
 
-    <b-modal v-model="modalShowswish" name="swishmodel">
-      <!-- <img src="frame1.jpg" /> -->
+    <b-modal v-model="modalShowswish" name="swishmodel" hide-footer>
+      <img src="assets/swish.png" alt="" class="swishlogo" />
+      <div class="swishaBtn">
+        <b-button class="swishaBtn" variant="primary">Swisha</b-button>
+      </div>
       <!-- Swisha: <input type="skriv in telefonnummer" /> -->
     </b-modal>
   </div>
@@ -317,5 +320,13 @@
 
   .logo {
     width: 150px;
+  }
+  .swishlogo {
+    width: 180px;
+  }
+  .swishaBtn {
+    width: 100px;
+    left: 40px;
+    /* bottom: 110px; */
   }
 </style>

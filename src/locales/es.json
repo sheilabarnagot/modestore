@@ -36,6 +36,27 @@
     "Bottoms": "Bottoms",
     "t-shirt": "Camisetas",
     "jeans": "Tejanos",
-    "sweaters": "Suéters"
+    "sweaters": "Suéters",
+    "shopping": "Comprar"
+  },
+  "betalning": {
+    "payment": "Pago",
+    "creditcard": "Tarjeta de crédito",
+    "swish": "Swish",
+    "factura": "Factura"
+  },
+  "mounths": {
+    "jan": "ENE",
+    "feb": "FEB",
+    "mar": "MAR",
+    "apr": "ABR",
+    "may": "MAY",
+    "jun": "JUN",
+    "jul": "JUL",
+    "aug": "AGO",
+    "sep": "SEP",
+    "oct": "OCT",
+    "nov": "NOV",
+    "dec": "DIC"
   }
 }
