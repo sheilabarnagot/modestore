@@ -33,6 +33,30 @@
     "jackets": "Jackets",
     "dresses": "Dresses",
     "tops": "Tops",
-    "Bottoms": "Bottoms"
+    "bottoms": "Bottoms",
+    "t-shirt": "T-shirt",
+    "jeans": "Jeans",
+    "sweaters": "Sweaters",
+    "shopping": "Shopping"
+  },
+  "betalning": {
+    "payment": "Payment",
+    "creditcard": "Creditcard",
+    "swish": "Swish",
+    "factura": "Invoice"
+  },
+  "mounths": {
+    "jan": "JAN",
+    "feb": "FEB",
+    "mar": "MAR",
+    "apr": "APR",
+    "may": "MAY",
+    "jun": "JUN",
+    "jul": "JUL",
+    "aug": "AUG",
+    "sep": "SEP",
+    "oct": "OCT",
+    "nov": "NOV",
+    "dec": "DEC"
   }
 }
