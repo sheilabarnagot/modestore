@@ -65,7 +65,21 @@
       name="kortmodel"
     >
       <div class="container">
-        <!-- <h1>confirm yor payment</h1> -->
+        <div class="first">
+          <b-form-input type="text" placeholder="Owner" />
+        </div>
+        <div class="second">
+          <b-form-input type="text" placeholder="00000-000" />
+        </div>
+        <div class="third">
+          <b-form-input type="password" placeholder="CVV" />
+        </div>
+        <div class="forth">
+          <b-form-input type="text" placeholder="Card-number" />
+        </div>
+
+        <!-- <div class="container">
+        <h1>confirm yor payment</h1>
         <div class="first">
           <div class="owner">
             <h3>owner</h3>
@@ -89,40 +103,42 @@
           </div>
         </div>
         <div class="third">
-          <h4>card-number</h4>
-          <div class="selection">
-            <div class="date">
-              <select name="Months" id="Months">
-                <option value="JAN">JAN</option>
-                <option value="FEB">FEB</option>
-                <option value="MAR">MAR</option>
-                <option value="APR">APR</option>
-                <option value="MAY">MAJ</option>
-                <option value="JUN">JUN</option>
-                <option value="JUL">JUL</option>
-                <option value="AUG">AUG</option>
-                <option value="SEP">SEP</option>
-                <option value="OKT">OKT</option>
-                <option value="NOV">NOV</option>
-                <option value="DEC">DEC</option>
-              </select>
-              <select name="years" id="years">
-                <option value="2019">2019</option>
-                <option value="2020">2020</option>
-                <option value="2023">2021</option>
-                <option value="2022">2022</option>
-                <option value="2023">2023</option>
-                <option value="2024">2024</option>
-                <option value="2025">2025</option>
-                <option value="2026">2026</option>
-              </select>
-              <img src="card.png" alt="cardlogo" />
-            </div>
+          <h4>M/Y</h4> -->
+        <div class="selection">
+          <div class="date">
+            <select name="Months" id="Months">
+              <option value="JAN">JAN</option>
+              <option value="FEB">FEB</option>
+              <option value="MAR">MAR</option>
+              <option value="APR">APR</option>
+              <option value="MAY">MAJ</option>
+              <option value="JUN">JUN</option>
+              <option value="JUL">JUL</option>
+              <option value="AUG">AUG</option>
+              <option value="SEP">SEP</option>
+              <option value="OKT">OKT</option>
+              <option value="NOV">NOV</option>
+              <option value="DEC">DEC</option>
+            </select>
+            <select name="years" id="years">
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2023">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+            </select>
+            <img src="" alt="cardlogo" />
           </div>
         </div>
       </div>
     </b-modal>
   </div>
+  <!-- </div> -->
+  <!-- </b-modal> -->
+  <!-- </div> -->
   <div class="Fakturan" v-if="Payment === 'Faktura'">
     <b-button @click="modalShowfaktura = !modalShowfaktura">Faktura</b-button>
 
@@ -224,5 +240,49 @@
     justify-content: center;
     width: 100%;
     top: 350px;
+  }
+  .container {
+    height: 300px;
+    width: 450px;
+    background-color: white;
+    display: flex;
+    margin-right: 50px;
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  /* .container h1 {
+    text-align: center;
+  } */
+
+  /* .first {
+    display: flex;
+  } */
+
+  /* .owner {
+    width: 100%;
+  } */
+  .selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .section select {
+    padding: 10px 20px;
+  }
+
+  .first {
+    margin: 5px;
+  }
+  .second {
+    margin: 5px;
+  }
+  .third {
+    margin: 5px;
+  }
+  .forth {
+    margin: 5px;
   }
 </style>
