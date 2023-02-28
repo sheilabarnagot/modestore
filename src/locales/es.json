@@ -33,6 +33,9 @@
     "jackets": "Abrigos",
     "dresses": "Vestidos",
     "tops": "Tops",
-    "Bottoms": "Bottoms"
+    "Bottoms": "Bottoms",
+    "t-shirt": "Camisetas",
+    "jeans": "Tejanos",
+    "sweaters": "Suéters"
   }
 }

@@ -10,7 +10,7 @@
     <template v-if="isOpen">
       <div v-for="category in categories" :key="category.id" class="menu-items">
         <div>
-          <RouterLink to="/">{{ category.name }}</RouterLink>
+          <RouterLink to="/">{{ $t(category.name) }}</RouterLink>
         </div>
       </div>
     </template>
@@ -29,10 +29,10 @@
         isOpenWidth: '0',
         firstTransitsion: '0.5s',
         categories: [
-          { id: 1, name: 'T-shirts' },
-          { id: 2, name: 'Jeans' },
-          { id: 3, name: 'Sweaters' },
-          { id: 4, name: 'Dresses' }
+          { id: 1, name: 'menuButtonNav.t-shirt' },
+          { id: 2, name: 'menuButtonNav.jeans' },
+          { id: 3, name: 'menuButtonNav.sweaters' },
+          { id: 4, name: 'menuButtonNav.dresses' }
         ]
       }
     },
