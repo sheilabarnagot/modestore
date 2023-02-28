@@ -51,7 +51,7 @@
     <b-button @click="modalShowswish = !modalShowswish">Swish</b-button>
 
     <b-modal v-model="modalShowswish" name="swishmodel">
-      <!-- <img src="frame1.jpg" /> -->
+      <img src="assets/swish.png" alt="" class="swishlogo" />
       <!-- Swisha: <input type="skriv in telefonnummer" /> -->
     </b-modal>
   </div>
@@ -275,5 +275,8 @@
 
   .logo {
     width: 150px;
+  }
+  .swishlogo {
+    width: 250px;
   }
 </style>
