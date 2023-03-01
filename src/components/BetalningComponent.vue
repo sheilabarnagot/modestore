@@ -13,16 +13,6 @@
       value="Creditcard"
       v-model="Payment"
     />
-
-    <!-- <input
-      style="display: none"
-      type="text"
-      :value="kortnummer"
-      placeholder="kortnummer"
-    /> -->
-
-    <!-- <input style="display: none" type="text" :value="MY" placeholder="M/Y" />
-    <input style="display: none" type="text" :value="cvc" placeholder="CVC" /> -->
   </div>
 
   <div class="swishpayment">
@@ -37,7 +27,7 @@
   </div>
 
   <div class="fakturapayment">
-    <label style="display: block" for="Faktura">Faktura</label>
+    <label style="display: block" for="Faktura">Invoice</label>
     <input
       @click="OnFaktura"
       type="radio"
@@ -50,25 +40,34 @@
   <div class="swisha" v-if="Payment === 'Swish'">
     <b-button @click="modalShowswish = !modalShowswish">Swish</b-button>
 
-    <b-modal v-model="modalShowswish" name="swishmodel" hide-footer>
+    <!-- <b-modal v-model="modalShowswish" name="swishmodel" hide-footer> -->
+
+    <b-modal
+      title="Swish With phone number or Scan"
+      v-model="modalShowswish"
+      name="swishmodel"
+    >
       <img src="assets/swish.png" alt="" class="swishlogo" />
-      <div class="swishaBtn">
+
+      <b-form-input
+        class="swish-number"
+        required
+        type="text"
+        :state="number.length <= 1 ? false : true"
+        placeholder="+46"
+        v-model="number"
+      />
+
+      <img src="assets/frame1.jpg" allt="" class="scan" />
+
+      <!-- <div class="swishaBtn">
         <b-button class="swishaBtn" variant="primary">Swisha</b-button>
-        <b-form-input
-          class="swish-number"
-          required
-          type="text"
-          :state="cardowner.length >= 1 ? true : false"
-          placeholder="number"
-          v-model="swisha"
-        />
-      </div>
-      <!-- Swisha: <input type="skriv in telefonnummer" /> -->
+      </div> -->
     </b-modal>
   </div>
 
-  <div class="card" v-if="Payment === 'Creditcard'">
-    <b-button @click="modalShowkort = !modalShowkort">Creditcard</b-button>
+  <div class="kort" v-if="Payment === 'Creditcard'">
+    <b-button @click="modalShowkort = !modalShowkort">Credit card</b-button>
 
     <b-modal
       title="confirm yor payment"
@@ -98,39 +97,13 @@
         <div class="third">
           <b-form-input
             required
-            type="password"
+            type="text"
             :state="CVC.length >= 1 ? true : false"
             placeholder="CVC"
             v-model="CVC"
           />
         </div>
 
-        <!-- <div class="container">
-        <h1>confirm yor payment</h1>
-        <div class="first">
-          <div class="owner">
-            <h3>owner</h3>
-            <div class="input1">
-              <input type="text" />
-            </div>
-          </div>
-          <div class="cvv">
-            <h3>cvv</h3>
-            <div class="input2">
-              <input type="password" />
-            </div>
-          </div>
-        </div>
-        <div class="second">
-          <div class="card-number">
-            <h4>card-number</h4>
-            <div class="input3">
-              <input type="text" />
-            </div>
-          </div>
-        </div>
-        <div class="third">
-          <h4>M/Y</h4> -->
         <div class="selection">
           <div class="date">
             <select name="Months" id="Months">
@@ -163,11 +136,9 @@
       </div>
     </b-modal>
   </div>
-  <!-- </div> -->
-  <!-- </b-modal> -->
-  <!-- </div> -->
+
   <div class="Fakturan" v-if="Payment === 'Faktura'">
-    <b-button @click="modalShowfaktura = !modalShowfaktura">Faktura</b-button>
+    <b-button @click="modalShowfaktura = !modalShowfaktura">Invoice</b-button>
 
     <b-modal
       title="Invoice will be sent to your Email"
@@ -197,7 +168,8 @@
         modalShowkort: false,
         modalShowfaktura: false,
         regex: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
-        email: ''
+        email: '',
+        number: ''
       }
     },
     methods: {
@@ -208,7 +180,6 @@
       },
       inputValidation() {},
       pay(event) {
-        // console.log('jhjjh' + this.kortnummer + this.CVC + this.cardowner)
         console.log(event.target)
 
         if (
@@ -216,9 +187,9 @@
           this.CVC !== '' &&
           this.cardowner !== ''
         ) {
-          console.log('pay nok')
+          // console.log('pay nok')
         } else {
-          console.log('paymentinfo incomplete')
+          // console.log('paymentinfo incomplete')
         }
       }
     }
@@ -274,7 +245,7 @@
     top: 300px;
   }
 
-  .card {
+  .kort {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -291,17 +262,6 @@
     padding: 30px;
   }
 
-  /* .container h1 {
-    text-align: center;
-  } */
-
-  /* .first {
-    display: flex;
-  } */
-
-  /* .owner {
-    width: 100%;
-  } */
   .selection {
     display: flex;
     justify-content: space-between;
@@ -332,15 +292,20 @@
   .swishlogo {
     width: 180px;
   }
-  .swishaBtn {
+  /* .swishaBtn {
     width: 100px;
-    left: 40px;
-    /* bottom: 110px; */
-  }
+    left: 162px;
+  } */
 
   .swish-number {
-    width: 400px;
+    width: 450px;
     top: 500px;
-    left: 400px;
+    left: 450px;
+  }
+
+  .scan {
+    display: block;
+    padding: 50px;
+    margin-left: 90px;
   }
 </style>
