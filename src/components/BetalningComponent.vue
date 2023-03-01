@@ -54,6 +54,14 @@
       <img src="assets/swish.png" alt="" class="swishlogo" />
       <div class="swishaBtn">
         <b-button class="swishaBtn" variant="primary">Swisha</b-button>
+        <b-form-input
+          class="swish-number"
+          required
+          type="text"
+          :state="cardowner.length >= 1 ? true : false"
+          placeholder="number"
+          v-model="swisha"
+        />
       </div>
       <!-- Swisha: <input type="skriv in telefonnummer" /> -->
     </b-modal>
@@ -328,5 +336,11 @@
     width: 100px;
     left: 40px;
     /* bottom: 110px; */
+  }
+
+  .swish-number {
+    width: 400px;
+    top: 500px;
+    left: 400px;
   }
 </style>
