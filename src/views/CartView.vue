@@ -3,7 +3,8 @@
     <h2>Cart</h2>
     <div v-for="item in visibleItems" :key="item.id">
       <p>{{ item.i }}</p>
-      <button @click="deleteItem(item)">Delete</button>
+      <img :src="`/assets/${item.pic}`" alt="product image" />
+      <button id="delete" @click="deleteItem(item)">Delete</button>
     </div>
   </div>
   <!-- hej -->
@@ -29,3 +30,8 @@
     }
   }
 </script>
+<style>
+  #delete {
+    background-color: red;
+  }
+</style>
