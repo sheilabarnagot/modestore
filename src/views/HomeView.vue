@@ -24,6 +24,7 @@
       Carousel,
       GridImg
     },
+    created: {},  //ladda in json filen och lagra i carouselImages och gridImages
     data() {
       return {
         carouselImages: [
