@@ -15,7 +15,10 @@
       saveData() {
         localStorage.setItem('email', this.email)
         localStorage.setItem('password', this.password)
-        if (this.email === 'admin' && this.password === 'admin') {
+        if (
+          this.email === 'admin@modestore.com' &&
+          this.password === 'modestoreAdmin'
+        ) {
           localStorage.setItem('auth', true)
           this.$router.push('/account')
         }
