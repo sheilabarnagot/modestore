@@ -1,21 +1,414 @@
 {
   "shirts": [
     {
-      "name": "The pancake shirt",
-      "id": "1",
-      "pic": "aaron-weiss-sBJ4ZWUXhWo-unsplash.jpg"
+      "name": "Charlie",
+      "src": "/img1200/billy-aw-campagne/billy-aw-campagne-30.jpg",
+      "id": "30",
+      "price": "1700 sek",
+      "compostion": "100% silk",
+      "color": "forest green",
+      "product": "dress",
+      "category": "dress",
+      "type": "campagne"
     },
-    { "name": "shirt2", "id": "2" },
-    { "name": "shirt3", "id": "3" }
-  ],
-  "pants": [
-    { "name": "pants", "id": "4" },
-    { "name": "pants2", "id": "5" },
-    { "name": "pants3", "id": "6" }
-  ],
-  "jackets": [
-    { "name": "jackets", "id": "7" },
-    { "name": "jackets2", "id": "8" },
-    { "name": "jackets3", "id": "9" }
+    {
+      "name": "Nico",
+      "src": "/img1200/billy-aw-campagne/billy-aw-campagne-32.jpg",
+      "id": "",
+      "price": "3400 sek",
+      "compostion": "fake fur",
+      "color": "black",
+      "product": "jacket",
+      "category": "jacket",
+      "type": "campagne"
+    },
+    {
+      "name": "Nico",
+      "src": "/img1200/billy-aw-campagne/billy-aw-look-40.jpg",
+      "id": "",
+      "price": "3400 sek",
+      "compostion": "fake fur",
+      "color": "black",
+      "product": "jacket",
+      "category": "jacket",
+      "type": "look"
+    },
+    {
+      "name": "Nico",
+      "src": "/img1200/billy-aw-campagne/billy-aw-look-40.jpg",
+      "id": "",
+      "price": "3400 sek",
+      "compostion": "fake fur",
+      "color": "black",
+      "product": "jacket",
+      "category": "jacket",
+      "type": "look"
+    },
+    {
+      "name": "Tuva",
+      "src": "/img1200/billy-aw-campagne/billy-aw-campagne-33.jpg",
+      "id": "33",
+      "price": "2800",
+      "compostion": "100% silk",
+      "color": "forest print",
+      "product": "dress",
+      "category": "dress",
+      "type": "campagne"
+    },
+    {
+      "name": "Tuva",
+      "src": "/img1200/billy-aw-campagne/billy-aw-campagne-34.jpg",
+      "id": "34",
+      "price": "2800 sek",
+      "compostion": "100% silk",
+      "color": "forest print",
+      "product": "dress",
+      "category": "dress",
+      "type": "campagne"
+    },
+    {
+      "name": "Tuva",
+      "src": "/img1200/billy-aw-look/billy-aw-look-31.jpg",
+      "id": "31",
+      "price": "2800 sek",
+      "compostion": "100% silk",
+      "color": "forest print",
+      "product": "dress",
+      "category": "dress",
+      "type": "look"
+    },
+    {
+      "name": "Dora",
+      "src": "/img1200/billy-aw-look/billy-aw-look-35.jpg",
+      "id": "35",
+      "price": "1250 sek",
+      "compostion": "100% silk",
+      "color": "forest green",
+      "product": "blouse",
+      "category": "tops",
+      "type": "look"
+    },
+    {
+      "name": "Dora",
+      "src": "/img1200/billy-aw-look/billy-aw-look-35.jpg",
+      "id": "35",
+      "price": "2250 sek",
+      "compostion": "100% wool",
+      "color": "black",
+      "product": "trousers",
+      "category": "bottoms",
+      "type": "look"
+    },
+    {
+      "name": "Sarah",
+      "src": "public/img1200/billy-aw-look/billy-aw-look-36.jpg",
+      "id": "36",
+      "price": "4600 sek",
+      "compostion": "wool/leather",
+      "color": "black",
+      "product": "coat",
+      "category": "jacket",
+      "type": "look"
+    },
+    {
+      "name": "Dora",
+      "src": "/img1200/billy-aw-look/billy-aw-look-37.jpg",
+      "id": "37",
+      "price": "1350 sek",
+      "compostion": "wool",
+      "color": "wine red",
+      "product": "blouse",
+      "category": "tops",
+      "type": "look"
+    },
+    {
+      "name": "Doris",
+      "src": "/img1200/billy-aw-look/billy-aw-look-37.jpg",
+      "id": "37",
+      "price": "1550 sek",
+      "compostion": "wool",
+      "color": "wine red",
+      "product": "trousers",
+      "category": "bottoms",
+      "type": "look"
+    },
+    {
+      "name": "Lou",
+      "src": "",
+      "id": "",
+      "price": "1700 sek",
+      "compostion": "100% silk",
+      "color": "forest green",
+      "product": "dress",
+      "category": "dress",
+      "type": "look"
+    },
+    {
+      "name": "Chu",
+      "src": "/img1200/billy-aw-look/billy-aw-look-38.jpg",
+      "id": "38",
+      "price": "1400 sek",
+      "compostion": "100% silk",
+      "color": "mixed",
+      "product": "shirt",
+      "category": "tops",
+      "type": "look"
+    },
+    {
+      "name": "Line",
+      "src": "/img1200/billy-aw-look/billy-aw-look-39.jpg",
+      "id": "39",
+      "price": "3400 sek",
+      "compostion": "100% wool",
+      "color": "mixed",
+      "product": "shirt",
+      "category": "jacket",
+      "type": "look"
+    },
+
+    {
+      "name": "Titi",
+      "src": "/img1200/billy-aw-look/billy-aw-look-38.jpg",
+      "id": "38",
+      "price": "1400 sek",
+      "compostion": "100% silk",
+      "color": "mixed",
+      "product": "shirt",
+      "category": "tops",
+      "type": "look"
+    },
+    {
+      "name": "Chu",
+      "src": "/img1200/billy-aw-look/billy-aw-look-38.jpg",
+      "id": "38",
+      "price": "1400 sek",
+      "compostion": "100% silk",
+      "color": "mixed",
+      "product": "shirt",
+      "category": "tops",
+      "type": "look"
+    },
+    {
+      "name": "Chu",
+      "src": "/img1200/billy-aw-look/billy-aw-look-38.jpg",
+      "id": "38",
+      "price": "1400 sek",
+      "compostion": "100% silk",
+      "color": "mixed",
+      "product": "shirt",
+      "category": "tops",
+      "type": "look"
+    },
+    {
+      "name": "Chu",
+      "src": "/img1200/billy-aw-look/billy-aw-look-38.jpg",
+      "id": "38",
+      "price": "1400 sek",
+      "compostion": "100% silk",
+      "color": "mixed",
+      "product": "shirt",
+      "category": "tops",
+      "type": "look"
+    },
+    {
+      "name": "Alba",
+      "src": "/img1200/billy-ss-campagne/billy-ss-campagne-10.jpg",
+      "id": "10",
+      "price": "4200 sek",
+      "compostion": "cotton",
+      "color": "beige",
+      "product": "jacket",
+      "category": "jacket",
+      "type": "campagne"
+    },
+    {
+      "name": "Susie",
+      "src": "/img1200/billy-ss-campagne/billy-ss-campagne-20.jpg",
+      "id": "20",
+      "price": "1300 sek",
+      "compostion": "linen",
+      "color": "beige",
+      "product": "top",
+      "category": "tops",
+      "type": "campagne"
+    },
+    {
+      "name": "Sici",
+      "src": "/img1200/billy-ss-campagne/billy-ss-campagne-20.jpg",
+      "id": "20",
+      "price": "2300 sek",
+      "compostion": "100% silk",
+      "color": "beige",
+      "product": "trousers",
+      "category": "bottoms",
+      "type": "campagne"
+    },
+    {
+      "name": "Seny",
+      "src": "/img1200/billy-ss-campagne/billy-ss-campagne-21.jpg",
+      "id": "10",
+      "price": "5300 sek",
+      "compostion": "leather",
+      "color": "black",
+      "product": "jacket",
+      "category": "jacket",
+      "type": "campagne"
+    },
+    {
+      "name": "Seny suede",
+      "src": "/img1200/billy-ss-campagne/billy-ss-campagne-22.jpg",
+      "id": "22",
+      "price": "5300 sek",
+      "compostion": "leather",
+      "color": "beige",
+      "product": "jacket",
+      "category": "jacket",
+      "type": "campagne"
+    },
+    {
+      "name": "Vera",
+      "src": "/img1200/billy-ss-campagne/billy-ss-campagne-23.jpg",
+      "id": "23",
+      "price": "4200 sek",
+      "compostion": "100% silk",
+      "color": "beige",
+      "product": "jacket",
+      "category": "jacket",
+      "type": "campagne"
+    },
+    {
+      "name": "Vera",
+      "src": "/img1200/billy-ss-campagne/billy-ss-campagne-24.jpg",
+      "id": "24",
+      "price": "4200 sek",
+      "compostion": "100% silk",
+      "color": "beige",
+      "product": "jacket",
+      "category": "jacket",
+      "type": "campagne"
+    },
+
+    {
+      "name": "Alba",
+      "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
+      "id": "25",
+      "price": "4200 sek",
+      "compostion": "cotton",
+      "color": "beige",
+      "product": "jacket",
+      "category": "jacket",
+      "type": "campagne"
+    },
+    {
+      "name": "Alba",
+      "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
+      "id": "25",
+      "price": "4200 sek",
+      "compostion": "cotton",
+      "color": "beige",
+      "product": "jacket",
+      "category": "jacket",
+      "type": "campagne"
+    },
+    {
+      "name": "Tilly",
+      "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-26.jpg",
+      "id": "25",
+      "price": "2400 sek",
+      "compostion": "100% silk",
+      "color": "yellow",
+      "product": "shirt",
+      "category": "tops",
+      "type": "campagne"
+    },
+    {
+      "name": "Stina",
+      "src": "/img1200/billy-ss-look/billy-ss-look-id-11.jpg",
+      "id": "11",
+      "price": "1800 sek",
+      "compostion": "silk",
+      "color": "apricot",
+      "product": "dress",
+      "category": "dress",
+      "type": "look"
+    },
+    {
+      "name": "Tilde",
+      "src": "public/img1200/billy-ss-look/billy-ss-look-id-27.jpg",
+      "id": "27",
+      "price": "2200 sek",
+      "compostion": "100% silk",
+      "color": "yellow",
+      "product": "kimono",
+      "category": "top",
+      "type": "look"
+    },
+    {
+      "name": "Toni",
+      "src": "public/img1200/billy-ss-look/billy-ss-look-id-27.jpg",
+      "id": "27",
+      "price": "2700 sek",
+      "compostion": "100% silk",
+      "color": "yellow",
+      "product": "trousers",
+      "category": "bottoms",
+      "type": "look"
+    },
+
+    {
+      "name": "Alba",
+      "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
+      "id": "25",
+      "price": "4200 sek",
+      "compostion": "cotton",
+      "color": "beige",
+      "product": "jacket",
+      "category": "jacket",
+      "type": "campagne"
+    },
+    {
+      "name": "Alba",
+      "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
+      "id": "25",
+      "price": "4200 sek",
+      "compostion": "cotton",
+      "color": "beige",
+      "product": "jacket",
+      "category": "jacket",
+      "type": "campagne"
+    },
+    {
+      "name": "Alba",
+      "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
+      "id": "25",
+      "price": "4200 sek",
+      "compostion": "cotton",
+      "color": "beige",
+      "product": "jacket",
+      "category": "jacket",
+      "type": "campagne"
+    },
+    {
+      "name": "Alba",
+      "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
+      "id": "25",
+      "price": "4200 sek",
+      "compostion": "cotton",
+      "color": "beige",
+      "product": "jacket",
+      "category": "jacket",
+      "type": "campagne"
+    },
+    {
+      "name": "Alba",
+      "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
+      "id": "25",
+      "price": "4200 sek",
+      "compostion": "cotton",
+      "color": "beige",
+      "product": "jacket",
+      "category": "jacket",
+      "type": "campagne"
+    }
   ]
 }

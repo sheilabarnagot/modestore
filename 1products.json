@@ -1,0 +1,21 @@
+{
+  "shirts": [
+    {
+      "name": "The pancake shirt",
+      "id": "1",
+      "pic": "aaron-weiss-sBJ4ZWUXhWo-unsplash.jpg"
+    },
+    { "name": "shirt2", "id": "2" },
+    { "name": "shirt3", "id": "3" }
+  ],
+  "pants": [
+    { "name": "pants", "id": "4" },
+    { "name": "pants2", "id": "5" },
+    { "name": "pants3", "id": "6" }
+  ],
+  "jackets": [
+    { "name": "jackets", "id": "7" },
+    { "name": "jackets2", "id": "8" },
+    { "name": "jackets3", "id": "9" }
+  ]
+}
