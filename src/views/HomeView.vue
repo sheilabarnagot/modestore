@@ -14,9 +14,9 @@
 </template>
 
 <script>
-  import MovieAuto from '@/components/MovieAuto.vue'
-  import Carousel from '@/components/Carousel.vue'
-  import GridImg from '@/components/GridImg.vue'
+  import Carousel from '../components/CarouselImg.vue'
+  import GridImg from '../components/GridImg.vue'
+  import MovieAuto from '../components/MovieAuto.vue'
 
   export default {
     components: {

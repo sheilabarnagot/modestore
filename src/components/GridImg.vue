@@ -2,9 +2,9 @@
   <div class="grid">
     <div v-for="item in items" :key="item.id">
       <a :href="`/product/${item.id}`">
-        <img :src="item.image" alt="" />
-        <p>{{ item.title }}</p>
-        <p>{{ item.price }}</p>
+        <img :src="item.src" alt="item.alt" />
+        <!-- <p>{{ item.title }}</p>
+        <p>{{ item.price }}</p> -->
       </a>
     </div>
   </div>
