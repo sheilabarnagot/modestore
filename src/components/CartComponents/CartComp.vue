@@ -1,14 +1,14 @@
 <template>
   <div>
-    <h2>Products</h2>
+    <h2 id="productsh2">Products</h2>
     <ul>
       <li v-for="product in products.shirts" :key="product.id">
-        <div id="text-img-div">
-          <div id="shirtname">{{ product.name }}</div>
+        <div id="shirtname">{{ product.name }}</div>
 
-          <img :src="`/assets/${product.pic}`" alt="product image" />
-        </div>
+        <img :src="`/assets/${product.pic}`" alt="product image" />
+
         <button
+          id="addbutton"
           @click="
             () => $emit('fromcartcomp', product.name, product.id, product.pic)
           "
@@ -39,10 +39,10 @@
   }
 </script>
 <style>
-  button {
+  #addbutton {
     background-color: #2ea44f;
     border: 1px solid rgba(27, 31, 35, 0.15);
-    border-radius: 6px;
+    border-radius: 20px;
     color: #fff;
     cursor: pointer;
     font-family: -apple-system, system-ui, 'Segoe UI', Helvetica, Arial,
@@ -54,19 +54,25 @@
     position: relative;
     text-align: center;
     display: block;
+    margin-top: 3px;
   }
 
-  button:hover {
+  #addbutton:hover {
     background-color: #3f684b;
   }
   img {
     max-width: 50%;
   }
   #shirtname {
+    margin-bottom: 10px;
   }
   ul {
     list-style: none;
   }
-  #text-img-div {
+
+  #productsh2 {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 10px;
   }
 </style>
