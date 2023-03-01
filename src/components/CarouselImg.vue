@@ -14,6 +14,7 @@
 
 <script>
   export default {
+    // props: [data]  //aktivera denna för att ta emot bilderna från HomeView.vue och kommentera bort data nedanför
     data() {
       return {
         images: [
