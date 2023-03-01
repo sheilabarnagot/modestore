@@ -13,6 +13,52 @@
 </template>
 
 <script>
+  export default {
+    data() {
+      return {
+        images: [
+          {
+            src: '/img1200/pk-paris-107.jpg',
+            alt: 'PK Paris 107'
+          },
+          {
+            src: '/img1200/punk-look-107.jpg',
+            alt: 'Punk Look 107'
+          },
+          {
+            src: '/img1200/sva-studio-122.jpg',
+            alt: 'SVA Studio 122'
+          },
+          {
+            src: '/img1200/sva-studio-125.jpg',
+            alt: 'SVA Studio 125'
+          },
+          {
+            src: '/img1200/billy-ss-campagne-21.jpg',
+            alt: 'Billy SS Campagne 21'
+          }
+        ]
+      }
+    }
+  }
+</script>
+
+<!--
+<template>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" v-for="(image, index) in images" :key="index">
+        <RouterLink to="carousel" />
+        <img :src="image.src" :alt="image.alt" />
+        {{ image.src }}
+      </div>
+    </div>
+    <div class="swiper-pagination" />
+  </div>
+  test
+</template>
+
+<script>
   //import Swiper from 'swiper/bundle'
 
   export default {
@@ -66,3 +112,4 @@
     opacity: 1;
   }
 </style>
+-->
