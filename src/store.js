@@ -1,15 +1,16 @@
 import { createStore } from 'vuex'
 import createPersistedState from 'vuex-persistedstate'
+import createPersistedState from 'vuex-persistedstate'
 // så att sparade item i vuex inte försvinner när man uppdaterar
 
 const mutations = {
   // Lägg till en produkt i kundvagnen
-  basketItem(state, { name, id }) {
-    state.items.push({ name: name, id: id })
+  basketItem(state, { name, id, pic }) {
+    state.items.push({ name: name, id: id, pic: pic })
   },
   // Ta bort en produkt från kundvagnen
   deleteItem(state, payload) {
-    const itemIndex = state.items.findIndex((item) => item.id === payload.id)
+    const itemIndex = state.items.findIndex(((item)) => item.id === payload.id)
     if (itemIndex !== -1) {
       state.items.splice(itemIndex, 1)
     }

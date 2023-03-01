@@ -1,6 +1,10 @@
 {
   "shirts": [
-    { "name": "shirt", "id": "1" },
+    {
+      "name": "The pancake shirt",
+      "id": "1",
+      "pic": "aaron-weiss-sBJ4ZWUXhWo-unsplash.jpg"
+    },
     { "name": "shirt2", "id": "2" },
     { "name": "shirt3", "id": "3" }
   ],

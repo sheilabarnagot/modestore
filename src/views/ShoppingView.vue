@@ -13,8 +13,8 @@
       return {}
     },
     methods: {
-      test(name, id) {
-        this.$store.commit('basketItem', { name, id })
+      test(name, id, pic) {
+        this.$store.commit('basketItem', { name, id, pic })
       }
     }
   }
