@@ -1,7 +1,7 @@
 <template>
   <div class="AA">
     <div class="Payment">
-      <h4>Payment: {{ Payment }}</h4>
+      <h4>Payment <i class="bi bi-cash-coin" />: {{ Payment }}</h4>
     </div>
 
     <div class="cardPayment">
@@ -39,7 +39,7 @@
     </div>
 
     <div class="swisha" v-if="Payment === 'Swish'">
-      <b-button @click="modalShowswish = !modalShowswish">Swish</b-button>
+      <b-button @click="modalShowswish = !modalShowswish">Swish </b-button>
 
       <b-modal v-model="modalShowswish" name="swishmodel" hide-footer>
         <img src="assets/swish.png" alt="" class="swishlogo" />
@@ -58,7 +58,7 @@
     </div>
 
     <div class="card" v-if="Payment === 'Creditcard'">
-      <b-button @click="modalShowkort = !modalShowkort">Creditcard</b-button>
+      <b-button @click="modalShowkort = !modalShowkort">Creditcard </b-button>
 
       <b-modal
         title="confirm yor payment"
@@ -157,7 +157,9 @@
     <!-- </b-modal> -->
     <!-- </div> -->
     <div class="Fakturan" v-if="Payment === 'Faktura'">
-      <b-button @click="modalShowfaktura = !modalShowfaktura">Faktura</b-button>
+      <b-button @click="modalShowfaktura = !modalShowfaktura"
+        >Faktura
+      </b-button>
 
       <b-modal
         title="Invoice will be sent to your Email"
@@ -217,9 +219,16 @@
 </script>
 
 <style lang="scss" scoped>
-  // .AA {
-  //   background-color: aqua;
+  // @import url('https://fonts.googleapis.com/css?family=Questrial');
+
+  // .application {
+  //   font-family: 'Questrial';
   // }
+
+  // :root {
+  //   --bs-body-bg: red;
+  // }
+
   .Payment {
     position: absolute;
     display: flex;
@@ -318,5 +327,17 @@
     width: 400px;
     top: 500px;
     left: 400px;
+  }
+
+  #form {
+    width: 15px;
+    height: 15px;
+    margin: 6px 6px 0 0;
+    margin-left: 6px;
+    appearance: none;
+    border: 2px solid #000;
+  }
+  #form:checked {
+    background-color: #000;
   }
 </style>
