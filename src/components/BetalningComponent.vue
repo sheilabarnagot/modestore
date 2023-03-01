@@ -39,7 +39,9 @@
     </div>
 
     <div class="swisha" v-if="Payment === 'Swish'">
-      <b-button @click="modalShowswish = !modalShowswish">Swish </b-button>
+      <b-button class="swishbtn" @click="modalShowswish = !modalShowswish"
+        >Swish <i class="bi bi-coin" />
+      </b-button>
 
       <b-modal v-model="modalShowswish" name="swishmodel" hide-footer>
         <img src="assets/swish.png" alt="" class="swishlogo" />
@@ -57,8 +59,10 @@
       </b-modal>
     </div>
 
-    <div class="card" v-if="Payment === 'Creditcard'">
-      <b-button @click="modalShowkort = !modalShowkort">Creditcard </b-button>
+    <div class="kort" v-if="Payment === 'Creditcard'">
+      <b-button class="cardbtn" @click="modalShowkort = !modalShowkort"
+        >Creditcard <i class="bi bi-credit-card-2-back" />
+      </b-button>
 
       <b-modal
         title="confirm yor payment"
@@ -157,8 +161,8 @@
     <!-- </b-modal> -->
     <!-- </div> -->
     <div class="Fakturan" v-if="Payment === 'Faktura'">
-      <b-button @click="modalShowfaktura = !modalShowfaktura"
-        >Faktura
+      <b-button class="invocebtn" @click="modalShowfaktura = !modalShowfaktura"
+        >Invoice <i class="bi bi-envelope-exclamation" />
       </b-button>
 
       <b-modal
@@ -236,6 +240,7 @@
     width: 100%;
     top: 100px;
     border-bottom: solid 3px;
+    background-color: #d2e3df;
   }
 
   .swishpayment {
@@ -245,6 +250,7 @@
     width: 100%;
     top: 200px;
     margin-bottom: 20px;
+    // background-color: #d2e3df;
   }
 
   .fakturapayment {
@@ -253,6 +259,7 @@
     justify-content: center;
     width: 100%;
     top: 250px;
+    // background-color: #dcc6b9;
   }
 
   .cardPayment {
@@ -262,6 +269,7 @@
     width: 100%;
     top: 150px;
     margin-top: 150px;
+    // background-color: #6d9288;
   }
 
   .swisha {
@@ -280,19 +288,20 @@
     top: 400px;
   }
 
-  .card {
+  .kort {
     position: absolute;
-    // justify-content: center;
+    display: flex;
+    justify-content: center;
     width: 100%;
     top: 400px;
   }
 
-  .selection {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
+  // .selection {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  //   padding: 10px;
+  // }
 
   .section select {
     padding: 10px 20px;
@@ -319,8 +328,8 @@
   }
   .swishaBtn {
     width: 100px;
-    left: 40px;
-    /* bottom: 110px; */
+    // left: 40px;
+    background-color: #33bedf;
   }
 
   .swish-number {
@@ -339,5 +348,18 @@
   }
   #form:checked {
     background-color: #000;
+  }
+
+  .cardbtn {
+    background-color: black;
+  }
+
+  .invocebtn {
+    background-color: black;
+    width: 124px;
+  }
+  .swishbtn {
+    background-color: black;
+    width: 124px;
   }
 </style>
