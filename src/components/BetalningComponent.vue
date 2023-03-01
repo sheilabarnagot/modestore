@@ -54,6 +54,14 @@
       <img src="assets/swish.png" alt="" class="swishlogo" />
       <div class="swishaBtn">
         <b-button class="swishaBtn" variant="primary">Swisha</b-button>
+        <b-form-input
+          class="swish-number"
+          required
+          type="text"
+          :state="cardowner.length >= 1 ? true : false"
+          placeholder="number"
+          v-model="swisha"
+        />
       </div>
       <!-- Swisha: <input type="skriv in telefonnummer" /> -->
     </b-modal>
@@ -66,16 +74,35 @@
       title="confirm yor payment"
       v-model="modalShowkort"
       name="kortmodel"
+      @ok="(event) => pay(event)"
     >
       <div class="container">
         <div class="first">
-          <b-form-input type="text" placeholder="Card owner" />
+          <b-form-input
+            required
+            type="text"
+            :state="cardowner.length >= 1 ? true : false"
+            placeholder="Card owner"
+            v-model="cardowner"
+          />
         </div>
         <div class="second">
-          <b-form-input type="text" placeholder="card-number" />
+          <b-form-input
+            required
+            type="text"
+            :state="kortnummer.length >= 1 ? true : false"
+            placeholder="card-number"
+            v-model="kortnummer"
+          />
         </div>
         <div class="third">
-          <b-form-input type="password" placeholder="CVV" />
+          <b-form-input
+            required
+            type="password"
+            :state="CVC.length >= 1 ? true : false"
+            placeholder="CVC"
+            v-model="CVC"
+          />
         </div>
 
         <!-- <div class="container">
@@ -147,7 +174,12 @@
       v-model="modalShowfaktura"
       name="fakturamodel"
       >Type your Email:
-      <b-form-input type="email" placeholder="me@example.com" />
+      <b-form-input
+        type="email"
+        v-model="email"
+        :state="regex.test(email) && email.length > 1 ? true : false"
+        placeholder="me@example.com"
+      />
     </b-modal>
   </div>
 </template>
@@ -158,11 +190,14 @@
       return {
         Payment: '',
         MY: 'M/Y',
-        cvc: 'CVC',
-        kortnummer: 'kortnummer',
+        CVC: '',
+        kortnummer: '',
+        cardowner: '',
         modalShowswish: false,
         modalShowkort: false,
-        modalShowfaktura: false
+        modalShowfaktura: false,
+        regex: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
+        email: ''
       }
     },
     methods: {
@@ -170,6 +205,21 @@
       onSwish() {},
       onKort(MY) {
         this.MY = MY
+      },
+      inputValidation() {},
+      pay(event) {
+        // console.log('jhjjh' + this.kortnummer + this.CVC + this.cardowner)
+        console.log(event.target)
+
+        if (
+          this.kortnummer !== '' &&
+          this.CVC !== '' &&
+          this.cardowner !== ''
+        ) {
+          console.log('pay nok')
+        } else {
+          console.log('paymentinfo incomplete')
+        }
       }
     }
   }
@@ -286,5 +336,11 @@
     width: 100px;
     left: 40px;
     /* bottom: 110px; */
+  }
+
+  .swish-number {
+    width: 400px;
+    top: 500px;
+    left: 400px;
   }
 </style>
