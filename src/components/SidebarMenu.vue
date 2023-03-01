@@ -29,10 +29,12 @@
         isOpenWidth: '0',
         firstTransitsion: '0.5s',
         categories: [
-          { id: 1, name: 'menuButtonNav.t-shirt' },
-          { id: 2, name: 'menuButtonNav.jeans' },
-          { id: 3, name: 'menuButtonNav.sweaters' },
-          { id: 4, name: 'menuButtonNav.dresses' }
+          { id: 1, name: 'female' },
+          { id: 2, name: 'jackets' },
+          { id: 3, name: 'tops' },
+          { id: 4, name: 'bottoms' },
+          { id: 5, name: 'dresses' },
+          { id: 6, name: 'about' }
         ]
       }
     },
@@ -64,16 +66,16 @@
   .menu-icon {
     position: absolute;
     top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    right: 10px;
+    font-size: 16px;
+    margin-left: 25px;
     z-index: 2;
   }
 
   .menu-items {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 16px;
     color: #818181;
     display: block;
     transition: 0.3s;
@@ -82,7 +84,7 @@
   .menu-items div {
     padding: 0.5rem 0;
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: lighter;
   }
 
   @media (max-width: 600px) {
