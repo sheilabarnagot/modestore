@@ -78,7 +78,7 @@
 
 <style scoped>
   nav {
-    position: absolute;
+    position: fixed; 
     bottom: 0;
     display: flex;
     justify-content: center;
@@ -96,7 +96,7 @@
     justify-content: center;
     position: fixed;
 
-    bottom: 0;
+    bottom: 15px;
     left: 50%;
     right: 50%;
   }
@@ -125,12 +125,12 @@
     cursor: pointer;
   }
 
-  #langbtn {
+  /* #langbtn {
     position: absolute;
-    /* width: 100%; */
+    width: 100%;
     z-index: 1;
-    left: 90%;
-  }
+    left: 5%;
+  } */
   .dropdown-menu {
     flex-direction: column;
   }
