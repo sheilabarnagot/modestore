@@ -1,3 +1,79 @@
+<template>
+  <div>
+    <!-- Movie component -->
+    <MovieAuto />
+
+    <!-- Carousel component -->
+    <div class="carousel-container">
+      <carousel :images="carouselImages" />
+    </div>
+
+    <!-- Grid of images using GridImg component -->
+    <GridImg :images="gridImages" />
+  </div>
+</template>
+
+<script>
+  import MovieAuto from '@/components/MovieAuto.vue'
+  import Carousel from '@/components/Carousel.vue'
+  import GridImg from '@/components/GridImg.vue'
+
+  export default {
+    components: {
+      MovieAuto,
+      Carousel,
+      GridImg
+    },
+    data() {
+      return {
+        carouselImages: [
+          {
+            src: '/img1200/pk-paris-107.jpg',
+            alt: 'PK Paris 107'
+          }
+          // ... other carousel images ...
+        ],
+        gridImages: [
+          {
+            src: '/img1200/image-1.jpg',
+            alt: 'Image 1'
+          }
+          // ... other grid images ...
+        ]
+      }
+    }
+  }
+</script>
+
+<style scoped>
+  .carousel-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  #img-container {
+    /* min-height: 100vh; */
+    position: relative;
+  }
+  #inner {
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    right: 25%;
+    top: 1%;
+  }
+  h1 {
+    font-family: 'didot';
+    color: black;
+    font-size: 4em;
+  }
+  img {
+    max-width: 100%;
+  }
+</style>
+
+<!--
 <script>
   export default {}
 </script>
@@ -34,3 +110,4 @@
     max-width: 100%;
   }
 </style>
+-->

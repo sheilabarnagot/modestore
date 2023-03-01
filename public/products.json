@@ -319,5 +319,94 @@
     "product": "shirt",
     "category": "tops",
     "type": "campagne"
+  },
+  {
+    "name": "Stina",
+    "src": "/img1200/billy-ss-look/billy-ss-look-id-11.jpg",
+    "id": "11",
+    "price": "1800 sek",
+    "compostion": "silk",
+    "color": "apricot",
+    "product": "dress",
+    "category": "dress",
+    "type": "look"
+  },
+  {
+    "name": "Tilde",
+    "src": "public/img1200/billy-ss-look/billy-ss-look-id-27.jpg",
+    "id": "27",
+    "price": "2200 sek",
+    "compostion": "100% silk",
+    "color": "yellow",
+    "product": "kimono",
+    "category": "top",
+    "type": "look"
+  },
+  {
+    "name": "Toni",
+    "src": "public/img1200/billy-ss-look/billy-ss-look-id-27.jpg",
+    "id": "27",
+    "price": "2700 sek",
+    "compostion": "100% silk",
+    "color": "yellow",
+    "product": "trousers",
+    "category": "bottoms",
+    "type": "look"
+  },
+
+  {
+    "name": "Alba",
+    "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
+    "id": "25",
+    "price": "4200 sek",
+    "compostion": "cotton",
+    "color": "beige",
+    "product": "jacket",
+    "category": "jacket",
+    "type": "campagne"
+  },
+  {
+    "name": "Alba",
+    "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
+    "id": "25",
+    "price": "4200 sek",
+    "compostion": "cotton",
+    "color": "beige",
+    "product": "jacket",
+    "category": "jacket",
+    "type": "campagne"
+  },
+  {
+    "name": "Alba",
+    "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
+    "id": "25",
+    "price": "4200 sek",
+    "compostion": "cotton",
+    "color": "beige",
+    "product": "jacket",
+    "category": "jacket",
+    "type": "campagne"
+  },
+  {
+    "name": "Alba",
+    "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
+    "id": "25",
+    "price": "4200 sek",
+    "compostion": "cotton",
+    "color": "beige",
+    "product": "jacket",
+    "category": "jacket",
+    "type": "campagne"
+  },
+  {
+    "name": "Alba",
+    "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
+    "id": "25",
+    "price": "4200 sek",
+    "compostion": "cotton",
+    "color": "beige",
+    "product": "jacket",
+    "category": "jacket",
+    "type": "campagne"
   }
 ]
