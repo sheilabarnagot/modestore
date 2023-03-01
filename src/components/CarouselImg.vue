@@ -4,7 +4,7 @@
       <div class="swiper-slide" v-for="(image, index) in images" :key="index">
         <RouterLink to="carousel" />
         <img :src="image.src" :alt="image.alt" />
-        {{ image.src }}
+        <!-- {{ image.src }} -->
       </div>
     </div>
     <div class="swiper-pagination" />
@@ -18,19 +18,19 @@
       return {
         images: [
           {
-            src: '/img1200/pk-paris-107.jpg',
+            src: '/img1200/pk-paris/pk-paris-107.jpg',
             alt: 'PK Paris 107'
           },
           {
-            src: '/img1200/punk-look-107.jpg',
+            src: '/img1200/punk/punk-look-107.jpg',
             alt: 'Punk Look 107'
           },
           {
-            src: '/img1200/sva-studio-122.jpg',
+            src: '/img1200/sva/sva-studio-122.jpg',
             alt: 'SVA Studio 122'
           },
           {
-            src: '/img1200/sva-studio-125.jpg',
+            src: '/img1200/sva/sva-studio-125.jpg',
             alt: 'SVA Studio 125'
           },
           {
@@ -86,6 +86,7 @@
     }
   }
 </script>
+-->
 
 <style scoped>
   .carousel {
@@ -112,4 +113,3 @@
     opacity: 1;
   }
 </style>
--->
