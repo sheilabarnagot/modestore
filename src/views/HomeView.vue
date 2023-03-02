@@ -5,11 +5,11 @@
 
     <!-- Carousel component -->
     <div class="carousel-container">
-      <carousel :images="carouselImages" />
+      <Carousel :images="carouselImages" />
     </div>
 
     <!-- Grid of images using GridImg component -->
-    <GridImg :images="gridImages" />
+    <GridImg :images="gridImages" :json-src="products" />
   </div>
 </template>
 
@@ -17,12 +17,19 @@
   import Carousel from '../components/CarouselImg.vue'
   import GridImg from '../components/GridImg.vue'
   import MovieAuto from '../components/MovieAuto.vue'
+  import products from '../../public/products.json'
 
   export default {
     components: {
       MovieAuto,
       Carousel,
       GridImg
+    },
+
+    methods: {
+      products() {
+        products.shirts[0].src
+      }
     },
     created: {}, //ladda in json filen och lagra i carouselImages och gridImages
     data() {

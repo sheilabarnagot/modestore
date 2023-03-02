@@ -12,6 +12,7 @@
 </template>
 
 <script>
+  import 'swiper/css'
   import Swiper from 'swiper'
   export default {
     props: {
@@ -62,34 +63,34 @@
   // props: [data]  //aktivera denna för att ta emot bilderna från HomeView.vue och kommentera bort data nedanför
 
   /* data() {
-          return {
-            images: [
-              {
-                src: '/img1200/pk-paris/pk-paris-107.jpg',
-                alt: 'PK Paris 107'
-              },
-              {
-                src: '/img1200/punk/punk-look-107.jpg',
-                alt: 'Punk Look 107'
-              },
-              {
-                src: '/img1200/sva/sva-studio-122.jpg',
-                alt: 'SVA Studio 122'
-              },
-              {
-                src: '/img1200/sva/sva-studio-125.jpg',
-                alt: 'SVA Studio 125'
-              },
-              {
-                src: '/img1200/billy-ss-campagne-21.jpg',
-                alt: 'Billy SS Campagne 21'
-              }
-            ]
-          }
-        }*/
+            return {
+              images: [
+                {
+                  src: '/img1200/pk-paris/pk-paris-107.jpg',
+                  alt: 'PK Paris 107'
+                },
+                {
+                  src: '/img1200/punk/punk-look-107.jpg',
+                  alt: 'Punk Look 107'
+                },
+                {
+                  src: '/img1200/sva/sva-studio-122.jpg',
+                  alt: 'SVA Studio 122'
+                },
+                {
+                  src: '/img1200/sva/sva-studio-125.jpg',
+                  alt: 'SVA Studio 125'
+                },
+                {
+                  src: '/img1200/billy-ss-campagne-21.jpg',
+                  alt: 'Billy SS Campagne 21'
+                }
+              ]
+            }
+          }*/
 </script>
 <style scoped>
-  @import 'swiper/css/swiper.css';
+  /* @import 'swiper/css/swiper.css';*/
   .swiper-slide {
     /* Set the default styles for the slide */
     position: relative;
