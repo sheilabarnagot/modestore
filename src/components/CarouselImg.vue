@@ -9,13 +9,19 @@
     </div>
     <div class="swiper-pagination" />
   </div>
-  test
 </template>
 
 <script>
   export default {
+    props: {
+      images: {
+        type: Array,
+        required: true
+      }
+    }
     // props: [data]  //aktivera denna för att ta emot bilderna från HomeView.vue och kommentera bort data nedanför
-    data() {
+
+    /* data() {
       return {
         images: [
           {
@@ -40,7 +46,7 @@
           }
         ]
       }
-    }
+    }*/
   }
 </script>
 
