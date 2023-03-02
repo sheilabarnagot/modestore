@@ -55,9 +55,9 @@
           class="swish-number"
           required
           type="text"
-          :state="cardowner.length >= 1 ? true : false"
+          :state="number.length >= 1 ? true : false"
           placeholder="+46"
-          v-model="swisha"
+          v-model="number"
         />
 
         <img src="assets/frame1.jpg" allt="" class="scan" />
@@ -98,7 +98,7 @@
           <div class="third">
             <b-form-input
               required
-              type="password"
+              type="text"
               :state="CVC.length >= 1 ? true : false"
               placeholder="CVC"
               v-model="CVC"
@@ -200,7 +200,8 @@
         modalShowkort: false,
         modalShowfaktura: false,
         regex: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
-        email: ''
+        email: '',
+        number: ''
       }
     },
     methods: {
