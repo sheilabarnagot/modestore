@@ -1,7 +1,7 @@
 <template>
   <div class="AA">
     <div class="Payment">
-      <h4>Payment <i class="bi bi-coin" /> : {{ Payment }}</h4>
+      <h4>Payment : {{ Payment }}</h4>
     </div>
 
     <div class="cardPayment">
@@ -28,7 +28,7 @@
     </div>
 
     <div class="fakturapayment">
-      <label style="display: block" for="Faktura">Faktura</label>
+      <label style="display: block" for="Faktura">Invoice</label>
       <input
         @click="OnFaktura"
         type="radio"
@@ -43,19 +43,25 @@
         >Swish <i class="bi bi-cash-coin" />
       </b-button>
 
-      <b-modal v-model="modalShowswish" name="swishmodel" hide-footer>
+      <b-modal
+        title="Swish With phone number or Scan"
+        v-model="modalShowswish"
+        name="swishmodel"
+      >
         <img src="assets/swish.png" alt="" class="swishlogo" />
-        <div class="swishaBtn">
-          <b-button class="swishaBtn" variant="primary">Swisha</b-button>
-          <b-form-input
-            class="swish-number"
-            required
-            type="text"
-            :state="cardowner.length >= 1 ? true : false"
-            placeholder="number"
-            v-model="swisha"
-          />
-        </div>
+        <!-- <div class="swishaBtn">
+          <b-button class="swishaBtn" variant="primary">Swisha</b-button> -->
+        <b-form-input
+          class="swish-number"
+          required
+          type="text"
+          :state="cardowner.length >= 1 ? true : false"
+          placeholder="+46"
+          v-model="swisha"
+        />
+
+        <img src="assets/frame1.jpg" allt="" class="scan" />
+        <!-- </div> -->
       </b-modal>
     </div>
 
@@ -240,7 +246,7 @@
     width: 100%;
     top: 100px;
     border-bottom: solid 3px;
-    background-color: #d2e3df;
+    // background-color: #d2e3df;
   }
 
   .swishpayment {
@@ -361,5 +367,11 @@
   .swishbtn {
     background-color: black;
     width: 124px;
+  }
+
+  .scan {
+    display: block;
+    padding: 50px;
+    margin-left: 90px;
   }
 </style>
