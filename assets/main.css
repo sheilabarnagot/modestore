@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'jost';
   src: url('./fonts/Jost-VariableFont_wght.ttf') format('truetype');
 }
@@ -6,14 +6,15 @@
 @font-face {
   font-family: 'didot';
   src: url('./fonts/GFSDidot-Regular.ttf') format('truetype');
-}
+} */
 
 @font-face {
-  font-family: 'couture';
-  src: url('./fonts/couture-bld.otf') format('opentype');
+  font-family: 'gloock';
+  src: url('./fonts/Gloock-Regular.ttf') format('truetype');
 }
 
 * {
+  font-family: 'gloock';
   padding: 0;
   margin: 0;
   box-sizing: border-box;
