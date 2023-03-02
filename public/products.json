@@ -1,7 +1,7 @@
 [
   {
     "name": "Charlie",
-    "src": "/img1200/billy-aw-campagne/billy-aw-campagne-30.jpg",
+    "src": "public/img1200/billy-aw-campagne/billy-aw-campagne-30.jpg",
     "id": "30",
     "price": "1700 sek",
     "compostion": "100% silk",
@@ -12,7 +12,7 @@
   },
   {
     "name": "Nico",
-    "src": "/img1200/billy-aw-campagne/billy-aw-campagne-32.jpg",
+    "src": "public/img1200/billy-aw-campagne/billy-aw-campagne-32.jpg",
     "id": "32",
     "price": "4400 sek",
     "compostion": "fake fur",
@@ -23,7 +23,7 @@
   },
   {
     "name": "Tuva",
-    "src": "/img1200/billy-aw-campagne/billy-aw-campagne-33.jpg",
+    "src": "public/img1200/billy-aw-campagne/billy-aw-campagne-33.jpg",
     "id": "33",
     "price": "2800",
     "compostion": "100% silk",
@@ -34,7 +34,7 @@
   },
   {
     "name": "Tuva",
-    "src": "/img1200/billy-aw-campagne/billy-aw-campagne-34.jpg",
+    "src": "public/img1200/billy-aw-campagne/billy-aw-campagne-34.jpg",
     "id": "34",
     "price": "2800 sek",
     "compostion": "100% silk",
@@ -45,7 +45,7 @@
   },
   {
     "name": "Tuva",
-    "src": "/img1200/billy-aw-look/billy-aw-look-31.jpg",
+    "src": "public/img1200/billy-aw-look/billy-aw-look-31.jpg",
     "id": "31",
     "price": "2800 sek",
     "compostion": "100% silk",
@@ -56,7 +56,7 @@
   },
   {
     "name": "Dora",
-    "src": "/img1200/billy-aw-look/billy-aw-look-35.jpg",
+    "src": "public/img1200/billy-aw-look/billy-aw-look-35.jpg",
     "id": "35",
     "price": "2250 sek",
     "compostion": "100% silk",
@@ -67,7 +67,7 @@
   },
   {
     "name": "Disa",
-    "src": "/img1200/billy-aw-look/billy-aw-look-35.jpg",
+    "src": "public/img1200/billy-aw-look/billy-aw-look-35.jpg",
     "id": "35.5",
     "price": "2250 sek",
     "compostion": "100% wool",
@@ -89,7 +89,7 @@
   },
   {
     "name": "Dylan",
-    "src": "/img1200/billy-aw-look/billy-aw-look-37.jpg",
+    "src": "public/img1200/billy-aw-look/billy-aw-look-37.jpg",
     "id": "37",
     "price": "1350 sek",
     "compostion": "wool",
@@ -100,7 +100,7 @@
   },
   {
     "name": "Doris",
-    "src": "/img1200/billy-aw-look/billy-aw-look-37.jpg",
+    "src": "public/img1200/billy-aw-look/billy-aw-look-37.jpg",
     "id": "37.7",
     "price": "1550 sek",
     "compostion": "wool",
@@ -111,7 +111,7 @@
   },
   {
     "name": "Chu",
-    "src": "/img1200/billy-aw-look/billy-aw-look-38.jpg",
+    "src": "public/img1200/billy-aw-look/billy-aw-look-38.jpg",
     "id": "38",
     "price": "1400 sek",
     "compostion": "100% silk",
@@ -122,7 +122,7 @@
   },
   {
     "name": "Line",
-    "src": "/img1200/billy-aw-look/billy-aw-look-39.jpg",
+    "src": "public/img1200/billy-aw-look/billy-aw-look-39.jpg",
     "id": "39",
     "price": "3400 sek",
     "compostion": "100% wool",
@@ -133,7 +133,7 @@
   },
   {
     "name": "Nico",
-    "src": "/img1200/billy-aw-look/billy-aw-look-40.jpg",
+    "src": "public/img1200/billy-aw-look/billy-aw-look-40.jpg",
     "id": "40",
     "price": "4400 sek",
     "compostion": "fake fur",
@@ -144,7 +144,7 @@
   },
   {
     "name": "Nico",
-    "src": "/img1200/billy-aw-look/billy-aw-look-41.jpg",
+    "src": "public/img1200/billy-aw-look/billy-aw-look-41.jpg",
     "id": "41",
     "price": "1400 sek",
     "compostion": "fake fur",
@@ -155,7 +155,7 @@
   },
   {
     "name": "Alba",
-    "src": "/img1200/billy-ss-campagne/billy-ss-campagne-10.jpg",
+    "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-10.jpg",
     "id": "10",
     "price": "4200 sek",
     "compostion": "cotton",
@@ -166,7 +166,7 @@
   },
   {
     "name": "Susie",
-    "src": "/img1200/billy-ss-campagne/billy-ss-campagne-20.jpg",
+    "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-20.jpg",
     "id": "20",
     "price": "1300 sek",
     "compostion": "linen",
@@ -177,7 +177,7 @@
   },
   {
     "name": "Sici",
-    "src": "/img1200/billy-ss-campagne/billy-ss-campagne-20.jpg",
+    "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-20.jpg",
     "id": "20.0",
     "price": "2300 sek",
     "compostion": "100% silk",
@@ -188,7 +188,7 @@
   },
   {
     "name": "Seny",
-    "src": "/img1200/billy-ss-campagne/billy-ss-campagne-21.jpg",
+    "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-21.jpg",
     "id": "21",
     "price": "5300 sek",
     "compostion": "leather",
@@ -199,7 +199,7 @@
   },
   {
     "name": "Seny suede",
-    "src": "/img1200/billy-ss-campagne/billy-ss-campagne-22.jpg",
+    "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-22.jpg",
     "id": "22",
     "price": "5300 sek",
     "compostion": "leather",
@@ -210,7 +210,7 @@
   },
   {
     "name": "Vera",
-    "src": "/img1200/billy-ss-campagne/billy-ss-campagne-23.jpg",
+    "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-23.jpg",
     "id": "23",
     "price": "4200 sek",
     "compostion": "100% silk",
@@ -221,7 +221,7 @@
   },
   {
     "name": "Vera",
-    "src": "/img1200/billy-ss-campagne/billy-ss-campagne-24.jpg",
+    "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-24.jpg",
     "id": "24",
     "price": "4200 sek",
     "compostion": "100% silk",
