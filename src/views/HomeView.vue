@@ -47,30 +47,28 @@
 </script>
 
 <style scoped>
-  .carousel-container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  #img-container {
-    /* min-height: 100vh; */
-    position: relative;
-  }
-  #inner {
-    position: absolute;
-    top: 0;
+  .home-container {
+    /* Set the default styles for the container */
     display: flex;
-    width: 100%;
+    flex-direction: column;
     justify-content: center;
-    right: 25%;
-    top: 1%;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    /* Add styles for larger screens */
+    .home-container {
+      flex-direction: row;
+    }
   }
   h1 {
     font-family: 'didot';
     color: black;
     font-size: 4em;
-  }
-  img {
-    max-width: 100%;
   }
 </style>
 
