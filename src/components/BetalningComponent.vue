@@ -1,42 +1,12 @@
 <template>
+  <div class="Payment">
+    <h4>
+      Payment <i class="bi bi-cash-coin">: {{ Payment }}</i>
+    </h4>
+  </div>
 
-    <div class="Payment">
-      <h4>Payment <i class="bi bi-cash-coin">: {{ Payment }}</i></h4>
-    </div>
-
-    <div class="cardPayment">
-      <label style="display: block" for="Creditcard">Creditcard</label>
-
-      <input
-        @click="onKort"
-        type="radio"
-        id="form"
-        value="Creditcard"
-        v-model="Payment"
-      />
-    </div>
-
-    <div class="swishpayment">
-      <label style="display: block" for="swish">Swish</label>
-      <input
-        @click="onSwish"
-        type="radio"
-        id="form"
-        value="Swish"
-        v-model="Payment"
-      />
-    </div>
-
-    <div class="fakturapayment">
-      <label style="display: block" for="Faktura">Faktura</label>
-      <input
-        @click="OnFaktura"
-        type="radio"
-        id="form"
-        value="Faktura"
-        v-model="Payment"
-      />
-    </div>
+  <div class="cardPayment">
+    <label style="display: block" for="Creditcard">Creditcard</label>
 
     <input
       @click="onKort"
@@ -47,9 +17,40 @@
     />
   </div>
 
+  <div class="swishpayment">
+    <label style="display: block" for="swish">Swish</label>
+    <input
+      @click="onSwish"
+      type="radio"
+      id="form"
+      value="Swish"
+      v-model="Payment"
+    />
+  </div>
+
+  <div class="fakturapayment">
+    <label style="display: block" for="Faktura">Faktura</label>
+    <input
+      @click="OnFaktura"
+      type="radio"
+      id="form"
+      value="Faktura"
+      v-model="Payment"
+    />
+  </div>
+
+  <input
+    @click="onKort"
+    type="radio"
+    id="form"
+    value="Creditcard"
+    v-model="Payment"
+  />
+
   <div class="swisha" v-if="Payment === 'Swish'">
     <b-button class="swishbtn" @click="modalShowswish = !modalShowswish"
-      >Swish <i class="bi bi-coin" /></b-button>
+      >Swish <i class="bi bi-coin"
+    /></b-button>
 
     <b-modal v-model="modalShowswish" name="swishmodel" hide-footer>
       <img src="assets/swish.png" alt="" class="swishlogo" />
@@ -116,7 +117,6 @@
                   :state="cardowner.length >= 1 ? true : false"
                   placeholder="number"
                   v-model="swisha"
-
                 />
               </div>
               <div class="second">
