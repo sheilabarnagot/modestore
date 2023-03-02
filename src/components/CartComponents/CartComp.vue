@@ -5,12 +5,12 @@
       <li v-for="product in products.shirts" :key="product.id">
         <div id="shirtname">{{ product.name }}</div>
 
-        <img :src="`/assets/${product.pic}`" alt="product image" />
+        <img :src="`/public${product.src}`" alt="product image" />
 
         <button
           id="addbutton"
           @click="
-            () => $emit('fromcartcomp', product.name, product.id, product.pic)
+            () => $emit('fromcartcomp', product.name, product.id, product.src)
           "
         >
           Add to cart

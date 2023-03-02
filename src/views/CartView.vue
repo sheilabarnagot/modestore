@@ -3,7 +3,7 @@
     <h2 id="cartsh2">Cart</h2>
     <div v-for="item in visibleItems" :key="item.id">
       <p>{{ item.name }}</p>
-      <img :src="`/assets/${item.pic}`" alt="product image" />
+      <img :src="`/public${item.src}`" alt="product image" />
       <button id="delete" @click="() => deleteItem(item)">Delete</button>
     </div>
   </div>
