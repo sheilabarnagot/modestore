@@ -1,9 +1,11 @@
 <template>
+  <h2 id="cartsh2">Cart</h2>
   <div id="cartdiv">
-    <h2 id="cartsh2">Cart</h2>
     <div v-for="item in visibleItems" :key="item.id">
-      <p>{{ item.name }}</p>
-      <img :src="`/public${item.src}`" alt="product image" />
+      <p class="top-p">{{ item.name }}</p>
+      <p class="bottom-p">{{ item.product }}</p>
+      <img :src="`/${item.src}`" alt="product image" />
+      <p>{{ item.price }}</p>
       <button id="delete" @click="() => deleteItem(item)">Delete</button>
     </div>
   </div>
@@ -55,8 +57,19 @@
     text-align: center;
     margin-bottom: 50px;
     margin-top: 10px;
+    font-family: 'Gloock', serif;
   }
   #cartdiv {
     padding-left: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .top-p {
+    margin-top: 14px;
+    margin-bottom: 0;
+    font-family: 'Gloock', serif;
+  }
+  .bottom-p {
+    margin-bottom: 0;
   }
 </style>

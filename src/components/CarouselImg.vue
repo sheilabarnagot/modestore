@@ -2,7 +2,7 @@
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide" v-for="(image, index) in images" :key="index">
-        <RouterLink to="carousel" />
+        <!-- <RouterLink to="carousel" />-->
         <img :src="image.src" :alt="image.alt" />
         <!-- {{ image.src }} -->
       </div>
@@ -12,6 +12,8 @@
 </template>
 
 <script>
+  import 'swiper/css'
+  import Swiper from 'swiper'
   export default {
     props: {
       images: {
@@ -19,36 +21,93 @@
         required: true
       }
     }
-    // props: [data]  //aktivera denna för att ta emot bilderna från HomeView.vue och kommentera bort data nedanför
-
-    /* data() {
-      return {
-        images: [
-          {
-            src: '/img1200/pk-paris/pk-paris-107.jpg',
-            alt: 'PK Paris 107'
-          },
-          {
-            src: '/img1200/punk/punk-look-107.jpg',
-            alt: 'Punk Look 107'
-          },
-          {
-            src: '/img1200/sva/sva-studio-122.jpg',
-            alt: 'SVA Studio 122'
-          },
-          {
-            src: '/img1200/sva/sva-studio-125.jpg',
-            alt: 'SVA Studio 125'
-          },
-          {
-            src: '/img1200/billy-ss-campagne-21.jpg',
-            alt: 'Billy SS Campagne 21'
-          }
-        ]
-      }
-    }*/
   }
+  new Swiper('.swiper-container', {
+    autoplay: {
+      delay: 5000 // Change image every 5 seconds
+    },
+    touchEventsTarget: 'wrapper', // Listen for touch events on the wrapper element
+    on: {
+      // Listen for user interaction events
+      touchStart: function () {
+        // Stop autoplay when user interacts with carousel
+        this.autoplay.stop()
+      },
+      touchEnd: function () {
+        // Resume autoplay when user stops interacting with carousel
+        this.autoplay.start()
+      },
+      slideChangeTransitionEnd: function () {
+        // Reset autoplay timer after slide change
+        this.autoplay.start()
+      },
+      // Listen for inactivity and trigger automatic slide change
+      init: function () {
+        const swiper = this
+        let timer = null
+        swiper.autoplay.start()
+        swiper.$el.addEventListener('mouseenter', () => {
+          clearTimeout(timer)
+          swiper.autoplay.stop()
+        })
+        swiper.$el.addEventListener('mouseleave', () => {
+          timer = setTimeout(() => {
+            swiper.slideNext()
+          }, 3000) // Change image after 3 seconds of inactivity
+          swiper.autoplay.start()
+        })
+      }
+    }
+    // Add other options here
+  })
+  // props: [data]  //aktivera denna för att ta emot bilderna från HomeView.vue och kommentera bort data nedanför
+
+  /* data() {
+            return {
+              images: [
+                {
+                  src: '/img1200/pk-paris/pk-paris-107.jpg',
+                  alt: 'PK Paris 107'
+                },
+                {
+                  src: '/img1200/punk/punk-look-107.jpg',
+                  alt: 'Punk Look 107'
+                },
+                {
+                  src: '/img1200/sva/sva-studio-122.jpg',
+                  alt: 'SVA Studio 122'
+                },
+                {
+                  src: '/img1200/sva/sva-studio-125.jpg',
+                  alt: 'SVA Studio 125'
+                },
+                {
+                  src: '/img1200/billy-ss-campagne-21.jpg',
+                  alt: 'Billy SS Campagne 21'
+                }
+              ]
+            }
+          }*/
 </script>
+<style scoped>
+  /* @import 'swiper/css/swiper.css';*/
+  .swiper-slide {
+    /* Set the default styles for the slide */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+  }
+
+  @media (min-width: 768px) {
+    /* Add styles for larger screens */
+    .swiper-slide {
+      height: 70vh;
+    }
+  }
+</style>
 
 <!--
 <template>
@@ -93,7 +152,7 @@
     }
   }
 </script>
--->
+
 
 <style scoped>
   .carousel {
@@ -120,3 +179,4 @@
     opacity: 1;
   }
 </style>
+-->

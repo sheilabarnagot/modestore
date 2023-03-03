@@ -1,16 +1,27 @@
 <template>
   <div>
     <h2 id="productsh2">Products</h2>
-    <ul>
-      <li v-for="product in products.shirts" :key="product.id">
-        <div id="shirtname">{{ product.name }}</div>
+    <ul id="products">
+      <li v-for="product in products.productpics" :key="product.id">
+        <div id="shirtname">
+          <p class="top-p">{{ product.name }}</p>
+          <p class="bottom-p">{{ product.product }}</p>
+        </div>
 
-        <img :src="`/public${product.src}`" alt="product image" />
-
+        <img :src="`/${product.src}`" alt="product image" />
+        <p>{{ product.price }}</p>
         <button
           id="addbutton"
           @click="
-            () => $emit('fromcartcomp', product.name, product.id, product.src)
+            () =>
+              $emit(
+                'fromcartcomp',
+                product.name,
+                product.id,
+                product.src,
+                product.price,
+                product.product
+              )
           "
         >
           Add to cart
@@ -26,7 +37,7 @@
 </template>
 
 <script>
-  import productsData from '../../../products.json'
+  import productsData from '../../../public/products.json'
   export default {
     emits: ['fromcartcomp'],
     components: {},
@@ -62,10 +73,14 @@
   }
   img {
     max-width: 50%;
+    box-shadow: 50px 0px 50px 5px grey;
   }
   #shirtname {
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
   }
+
   ul {
     list-style: none;
   }
@@ -74,5 +89,10 @@
     text-align: center;
     margin-bottom: 50px;
     margin-top: 10px;
+    font-family: 'Gloock', serif;
+  }
+  #products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 </style>

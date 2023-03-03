@@ -4,8 +4,14 @@ import createPersistedState from 'vuex-persistedstate'
 
 const mutations = {
   // Lägg till en produkt i kundvagnen
-  basketItem(state, { name, id, src }) {
-    state.items.push({ name: name, id: id, src: src })
+  basketItem(state, { name, id, src, price, product }) {
+    state.items.push({
+      name: name,
+      id: id,
+      src: src,
+      price: price,
+      product: product
+    })
   },
   // Ta bort en produkt från kundvagnen
   deleteItem(state, payload) {
