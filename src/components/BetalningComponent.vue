@@ -1,7 +1,7 @@
 <template>
   <div class="AA">
     <div class="Payment">
-      <h4>Payment <i class="bi bi-coin" /> : {{ Payment }}</h4>
+      <h4>Payment: {{ Payment }}</h4>
     </div>
 
     <div class="cardPayment">
@@ -240,7 +240,6 @@
     width: 100%;
     top: 100px;
     border-bottom: solid 3px;
-    background-color: #d2e3df;
   }
 
   .swishpayment {
