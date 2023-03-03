@@ -28,10 +28,10 @@ export default createRouter({
       component: CartView,
       path: '/cart'
     },
-    {
-      component: BetalningComponent,
-      path: '/payment'
-    },
+    // {
+    //   component: BetalningComponent,
+    //   path: '/payment'
+    // },
 
     {
       component: AccountView,
@@ -52,10 +52,6 @@ export default createRouter({
         },
         {
           path: 'kop',
-          component: BetalningComponent
-        },
-        {
-          path: 'help',
           component: BetalningComponent
         }
       ]
