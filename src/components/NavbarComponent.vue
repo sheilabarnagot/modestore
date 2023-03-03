@@ -19,13 +19,11 @@
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          {{ Menu }}
+          Menu
         </button>
         <ul class="dropdown-menu">
           <li id="menuitem">
-            <RouterLink to="/shopping"
-              ><span>{{ Shopping }}</span></RouterLink
-            >
+            <RouterLink to="/shopping"> Shopping </RouterLink>
           </li>
         </ul>
       </li>
