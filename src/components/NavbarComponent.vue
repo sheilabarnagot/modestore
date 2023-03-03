@@ -9,7 +9,8 @@
         <RouterLink to="/"><HomeIcon /></RouterLink>
       </li>
       <li>
-        <SearchIcon @click="toggler" />
+        <!-- @click="toggler" -->
+        <SearchIcon />
       </li>
       <li class="dropup-center dropup">
         <button
