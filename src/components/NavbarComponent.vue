@@ -18,12 +18,12 @@
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          {{ $t('navbar.menu') }}
+          {{ Menu }}
         </button>
         <ul class="dropdown-menu">
           <li id="menuitem">
             <RouterLink to="/shopping"
-              ><span>{{ $t('menuButtonNav.shopping') }}</span></RouterLink
+              ><span>{{ Shopping }}</span></RouterLink
             >
           </li>
         </ul>
@@ -78,7 +78,7 @@
 
 <style scoped>
   nav {
-    position: fixed; 
+    position: fixed;
     bottom: 0;
     display: flex;
     justify-content: center;

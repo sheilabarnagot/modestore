@@ -31,7 +31,7 @@
     }
   }
 </script>
-<style>
+<style scoped>
   #delete {
     background-color: red;
     border-radius: 15px;
@@ -52,6 +52,10 @@
   }
   #delete:hover {
     background-color: #9c3f17;
+  }
+  img {
+    max-width: 50%;
+    box-shadow: 50px 0px 50px 5px grey;
   }
   #cartsh2 {
     text-align: center;
