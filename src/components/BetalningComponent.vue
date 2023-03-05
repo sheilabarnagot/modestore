@@ -28,7 +28,7 @@
     </div>
 
     <div class="fakturapayment">
-      <label style="display: block" for="Faktura">Faktura</label>
+      <label style="display: block" for="Faktura">Invoice</label>
       <input
         @click="OnFaktura"
         type="radio"
@@ -43,19 +43,22 @@
         >Swish <i class="bi bi-cash-coin" />
       </b-button>
 
-      <b-modal v-model="modalShowswish" name="swishmodel" hide-footer>
+      <b-modal
+        title="Swish With Phone Number or Scan"
+        v-model="modalShowswish"
+        name="swishmodel"
+      >
         <img src="assets/swish.png" alt="" class="swishlogo" />
-        <div class="swishaBtn">
-          <b-button class="swishaBtn" variant="primary">Swisha</b-button>
-          <b-form-input
-            class="swish-number"
-            required
-            type="text"
-            :state="cardowner.length >= 1 ? true : false"
-            placeholder="number"
-            v-model="swisha"
-          />
-        </div>
+
+        <b-form-input
+          class="swish-number"
+          required
+          type="text"
+          :state="number.length >= 1 ? true : false"
+          placeholder="+46"
+          v-model="number"
+        />
+        <img src="assets/frame1.jpg" allt="" class="scan" />
       </b-modal>
     </div>
 
@@ -92,7 +95,7 @@
           <div class="third">
             <b-form-input
               required
-              type="password"
+              type="text"
               :state="CVC.length >= 1 ? true : false"
               placeholder="CVC"
               v-model="CVC"
@@ -194,7 +197,8 @@
         modalShowkort: false,
         modalShowfaktura: false,
         regex: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
-        email: ''
+        email: '',
+        number: ''
       }
     },
     methods: {
@@ -215,7 +219,7 @@
         ) {
           console.log('pay ok')
         } else {
-          console.log('paymentinfo incomplete')
+          console.log()
         }
       }
     }
@@ -323,18 +327,20 @@
     width: 150px;
   }
   .swishlogo {
-    width: 180px;
+    width: 150px;
   }
-  .swishaBtn {
-    width: 100px;
-    // left: 40px;
-    background-color: #33bedf;
-  }
+  // .swishaBtn {
+  //   width: 100px;
+  //   // left: 40px;
+  //   background-color: #33bedf;
+  // }
 
   .swish-number {
     width: 400px;
-    top: 500px;
+    top: 300px;
     left: 400px;
+    font-size: 20px;
+    color: #000;
   }
 
   #form {
@@ -357,8 +363,11 @@
     background-color: black;
     width: 124px;
   }
-  .swishbtn {
-    background-color: black;
-    width: 124px;
+
+  .scan {
+    display: block;
+    padding: 40px;
+    margin-left: 80px;
+    width: 250px;
   }
 </style>
