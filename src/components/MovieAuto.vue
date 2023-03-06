@@ -1,10 +1,7 @@
 <template>
   <div class="container" />
   <video autoplay loop muted playsinline>
-    <source
-      src="public/mixkit-fashion-model-sits-posing-with-white-background-9100-large.mp4"
-      type="video/mp4"
-    />
+    <source :src="movieSrc" type="video/mp4" />
   </video>
 </template>
 

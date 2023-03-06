@@ -9,7 +9,8 @@
         <RouterLink to="/"><HomeIcon /></RouterLink>
       </li>
       <li>
-        <SearchIcon @click="toggler" />
+        <!-- @click="toggler" -->
+        <SearchIcon />
       </li>
       <li class="dropup-center dropup">
         <button
@@ -18,13 +19,11 @@
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          {{ $t('navbar.menu') }}
+          Menu
         </button>
         <ul class="dropdown-menu">
           <li id="menuitem">
-            <RouterLink to="/shopping"
-              ><span>{{ $t('menuButtonNav.shopping') }}</span></RouterLink
-            >
+            <RouterLink to="/shopping"> Shopping </RouterLink>
           </li>
         </ul>
       </li>
@@ -78,7 +77,7 @@
 
 <style scoped>
   nav {
-    position: fixed; 
+    position: fixed;
     bottom: 0;
     display: flex;
     justify-content: center;

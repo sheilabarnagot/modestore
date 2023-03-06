@@ -1,17 +1,17 @@
 <script>
   import NavbarComponent from './components/NavbarComponent.vue'
-  import SidebarMenu from './components/SidebarMenu.vue'
+  // import SidebarMenu from './components/SidebarMenu.vue'
   export default {
     components: {
-      NavbarComponent,
-      SidebarMenu
+      NavbarComponent
+      // SidebarMenu
     }
   }
 </script>
 
 <template>
   <NavbarComponent />
-  <SidebarMenu />
+  <!-- <SidebarMenu /> -->
   <main>
     <RouterView />
   </main>

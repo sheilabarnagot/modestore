@@ -37,7 +37,7 @@
 </template>
 
 <script>
-  import productsData from '../../../public/products.json'
+  import productsData from '/assets/products.json'
   export default {
     emits: ['fromcartcomp'],
     components: {},
@@ -49,7 +49,7 @@
     methods: {}
   }
 </script>
-<style>
+<style scoped>
   #addbutton {
     background-color: #2ea44f;
     border: 1px solid rgba(27, 31, 35, 0.15);
