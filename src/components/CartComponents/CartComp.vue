@@ -37,7 +37,7 @@
 </template>
 
 <script>
-  import productsData from '../../../public/products.json'
+  import productsData from '/assets/products.json'
   export default {
     emits: ['fromcartcomp'],
     components: {},
