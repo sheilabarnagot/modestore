@@ -8,7 +8,8 @@
     data() {
       return {
         email: '',
-        password: ''
+        password: '',
+        regex: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
       }
     },
     methods: {
@@ -33,24 +34,27 @@
 <template>
   <h2>{{ $t('login.firstTitle') }}</h2>
   <form id="formlogin">
-    <input
+    <b-form-input
       class="loginInput"
       type="email"
       :placeholder="$t('login.email')"
       v-model="email"
+      :state="regex.test(email) && email.length > 1 ? true : false"
     />
-    <input
+    <b-form-input
       class="loginInput"
       type="password"
       :placeholder="$t('login.password')"
       v-model="password"
+      :state="password.length > 6 ? true : false"
     />
-    <input
-      @click="saveData"
-      id="loginButton"
-      type="button"
-      :value="$t('login.login')"
-    />
+    <RouterLink to="/AccountNav">
+      <input
+        @click="saveData"
+        id="loginButton"
+        type="button"
+        :value="$t('login.login')"
+    /></RouterLink>
   </form>
   <p id="passText">{{ $t('login.forgotten') }}</p>
 
