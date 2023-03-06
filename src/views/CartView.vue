@@ -1,3 +1,4 @@
+<!-- Here we are looping through and displaying the products in the shoppingcart. We are also placing a button next to each product that when clicked will delete it from the cart. -->
 <template>
   <h2 id="cartsh2">Cart</h2>
   <div id="cartdiv">
@@ -21,12 +22,15 @@
         return this.storedShoppingItems.filter((item) => !item.isClicked)
       }
     },
+
     methods: {
       deleteItem(item) {
         this.$store.commit('deleteItem', { id: item.id })
-        item.isClicked = true
-        console.log(item)
-        console.log('visible:', this.visibleItems)
+        this.$store.commit('setClicked', { id: item.id })
+        console.log(typeof this.visibleItems)
+        console.log('visible', this.visibleItems)
+        console.log(typeof this.storedShoppingItems)
+        console.log(this.storedShoppingItems)
       }
     }
   }

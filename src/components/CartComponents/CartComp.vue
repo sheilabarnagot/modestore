@@ -1,4 +1,5 @@
 <template>
+  <!-- Here we are looping through and displaying the products with all the info about them. We are also placing a button next to each product that when clicked will send an emit with information to a custom event. -->
   <div>
     <h2 id="productsh2">Products</h2>
     <ul id="products">
@@ -10,6 +11,7 @@
 
         <img :src="`/${product.src}`" alt="product image" />
         <p>{{ product.price }}</p>
+        <!-- The buttons sending the productinfo -->
         <button
           id="addbutton"
           @click="
@@ -37,6 +39,7 @@
 </template>
 
 <script>
+  // Import av json fil
   import productsData from '/assets/products.json'
   export default {
     emits: ['fromcartcomp'],
