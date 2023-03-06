@@ -5,8 +5,8 @@
         email: '',
         password: '',
         regex: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
-        name:'',
-        surname:''
+        name: '',
+        surname: ''
       }
     },
     methods: {
@@ -40,8 +40,20 @@
       :placeholder="$t('signup.passwordR')"
       :state="password.length > 6 ? true : false"
     />
-    <b-form-input class="loginInput" type="text" :state="name.length > 3 ? true : false" :placeholder="$t('signup.name')" v-model="name" />
-    <b-form-input class="loginInput" type="text" :state="surname.length > 3 ? true : false" :placeholder="$t('signup.surname')" v-model="surname" />
+    <b-form-input
+      class="loginInput"
+      type="text"
+      :state="name.length > 3 ? true : false"
+      :placeholder="$t('signup.name')"
+      v-model="name"
+    />
+    <b-form-input
+      class="loginInput"
+      type="text"
+      :state="surname.length > 3 ? true : false"
+      :placeholder="$t('signup.surname')"
+      v-model="surname"
+    />
   </form>
   <div id="radiobuttons">
     <div class="radioButton">
@@ -53,11 +65,11 @@
       <p class="text">{{ $t('signup.cookies') }}</p>
     </div>
     <RouterLink to="/">
-    <input
-      @click="saveInfo"
-      id="signupButton"
-      type="button"
-      :value="$t('signup.createAccount')"
+      <input
+        @click="saveInfo"
+        id="signupButton"
+        type="button"
+        :value="$t('signup.createAccount')"
     /></RouterLink>
   </div>
 </template>
