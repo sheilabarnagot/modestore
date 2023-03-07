@@ -9,7 +9,7 @@
           <p class="bottom-p">{{ product.product }}</p>
         </div>
 
-        <img :src="`/${product.src}`" alt="product image" />
+        <img :src="`${product.src}`" alt="product image" />
         <p>{{ product.price }}</p>
         <!-- The buttons sending the productinfo -->
         <button
