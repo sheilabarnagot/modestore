@@ -52,8 +52,8 @@
         <b-form-input
           class="swish-number"
           required
-          type="text"
-          :state="number.length >= 1 ? true : false"
+          type="number"
+          :state="number.length >= 4 ? true : false"
           placeholder="+46"
           v-model="number"
         />
@@ -77,7 +77,7 @@
             <b-form-input
               required
               type="text"
-              :state="cardowner.length >= 1 ? true : false"
+              :state="cardowner.length >= 3 ? true : false"
               placeholder="Card owner"
               v-model="cardowner"
             />
@@ -85,8 +85,8 @@
           <div class="second">
             <b-form-input
               required
-              type="text"
-              :state="kortnummer.length >= 1 ? true : false"
+              type="number"
+              :state="kortnummer.length >= 3 ? true : false"
               placeholder="card-number"
               v-model="kortnummer"
             />
@@ -94,39 +94,13 @@
           <div class="third">
             <b-form-input
               required
-              type="text"
-              :state="CVC.length >= 1 ? true : false"
+              type="password"
+              :state="CVC.length >= 3 ? true : false"
               placeholder="CVC"
               v-model="CVC"
             />
           </div>
 
-          <!-- <div class="container">
-        <h1>confirm yor payment</h1>
-        <div class="first">
-          <div class="owner">
-            <h3>owner</h3>
-            <div class="input1">
-              <input type="text" />
-            </div>
-          </div>
-          <div class="cvv">
-            <h3>cvv</h3>
-            <div class="input2">
-              <input type="password" />
-            </div>
-          </div>
-        </div>
-        <div class="second">
-          <div class="card-number">
-            <h4>card-number</h4>
-            <div class="input3">
-              <input type="text" />
-            </div>
-          </div>
-        </div>
-        <div class="third">
-          <h4>M/Y</h4> -->
           <div class="selection">
             <div class="date">
               <select name="Months" id="Months">
@@ -159,9 +133,7 @@
         </div>
       </b-modal>
     </div>
-    <!-- </div> -->
-    <!-- </b-modal> -->
-    <!-- </div> -->
+
     <div class="Fakturan" v-if="Payment === 'Faktura'">
       <b-button class="invocebtn" @click="modalShowfaktura = !modalShowfaktura"
         >Invoice <i class="bi bi-envelope-exclamation" />
@@ -323,7 +295,8 @@
   }
 
   .logo {
-    width: 150px;
+    width: 160px;
+    padding: 10px;
   }
   .swishlogo {
     width: 150px;
@@ -368,5 +341,13 @@
     padding: 40px;
     margin-left: 80px;
     width: 250px;
+  }
+
+  #Months {
+    margin: 5px;
+  }
+
+  #years {
+    margin: 5px;
   }
 </style>
