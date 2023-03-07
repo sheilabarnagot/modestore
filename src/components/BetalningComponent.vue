@@ -3,7 +3,6 @@
     <div class="Payment">
       <h4>Payment: {{ Payment }}</h4>
     </div>
-
     <div class="cardPayment">
       <label style="display: block" for="Creditcard">Creditcard</label>
 
