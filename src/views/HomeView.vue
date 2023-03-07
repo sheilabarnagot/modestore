@@ -1,7 +1,7 @@
 <template>
   <div>
     <MovieAuto
-      movieSrc="public/mixkit-fashion-model-sits-posing-with-white-background-9100-large.mp4"
+      movieSrc="/mixkit-fashion-model-sits-posing-with-white-background-9100-large.mp4"
     />
 
     <div class="carousel-container">
@@ -38,7 +38,7 @@
 <!--<template>
   <div>
 
-    <MovieAuto movieSrc="public/mixkit-fashion-model-sits-posing-with-white-background-9100-large.mp4" />
+    <MovieAuto movieSrc="/mixkit-fashion-model-sits-posing-with-white-background-9100-large.mp4" /> *ta bort public*
 
     <div class="carousel-container">
       <Carousel :images="carouselImages" />
