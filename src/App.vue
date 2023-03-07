@@ -1,5 +1,5 @@
 <script>
-  import NavbarComponent from './components/NavbarComponent.vue'
+  import NavbarComponent from './components/MenuButtonNavigation/NavbarComponent.vue'
   // import SidebarMenu from './components/SidebarMenu.vue'
   export default {
     components: {

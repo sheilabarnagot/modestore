@@ -18,7 +18,7 @@
 </template>
 
 <script>
-  import HamburgerMenu from './SvgIcons/HamburgerMenu.vue'
+  import HamburgerMenu from '../SvgIcons/HamburgerMenu.vue'
   export default {
     components: {
       HamburgerMenu

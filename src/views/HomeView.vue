@@ -13,8 +13,8 @@
 </template>
 
 <script>
-  import Carousel from '../components/CarouselImg.vue'
-  import MovieAuto from '../components/MovieAuto.vue'
+  import Carousel from '../components/HomeComponents/CarouselImg.vue'
+  import MovieAuto from '../components/Homecomponents/MovieAuto.vue'
 
   export default {
     components: {
