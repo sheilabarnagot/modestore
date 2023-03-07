@@ -29,7 +29,7 @@
         this.$store.commit('setClicked', { id: item.id })
         console.log(typeof this.visibleItems)
         console.log('visible', this.visibleItems)
-        console.log(typeof this.storedShoppingItems)
+        console.log(item.id)
         console.log(this.storedShoppingItems)
       }
     }

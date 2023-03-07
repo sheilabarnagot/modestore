@@ -1,7 +1,7 @@
 <template>
   <div>
     <MovieAuto
-      movieSrc="public/mixkit-fashion-model-sits-posing-with-white-background-9100-large.mp4"
+      movieSrc="/mixkit-fashion-model-sits-posing-with-white-background-9100-large.mp4"
     />
 
     <div class="carousel-container">
@@ -13,8 +13,8 @@
 </template>
 
 <script>
-  import Carousel from '../components/CarouselImg.vue'
-  import MovieAuto from '../components/MovieAuto.vue'
+  import Carousel from '../components/HomeComponents/CarouselImg.vue'
+  import MovieAuto from '../components/Homecomponents/MovieAuto.vue'
 
   export default {
     components: {
@@ -38,7 +38,7 @@
 <!--<template>
   <div>
 
-    <MovieAuto movieSrc="public/mixkit-fashion-model-sits-posing-with-white-background-9100-large.mp4" />
+    <MovieAuto movieSrc="/mixkit-fashion-model-sits-posing-with-white-background-9100-large.mp4" /> *ta bort public*
 
     <div class="carousel-container">
       <Carousel :images="carouselImages" />

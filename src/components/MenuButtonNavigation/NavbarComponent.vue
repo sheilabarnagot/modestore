@@ -43,11 +43,11 @@
 </template>
 
 <script>
-  import HomeIcon from './SvgIcons/HomeIcon.vue'
-  import SearchIcon from './SvgIcons/SearchIcon.vue'
-  import UserIcon from './SvgIcons/UserIcon.vue'
-  import ShoppingIcon from './SvgIcons/ShoppingIcon.vue'
-  import LangBtn from './LangBtn.vue'
+  import HomeIcon from '../SvgIcons/HomeIcon.vue'
+  import SearchIcon from '../SvgIcons/SearchIcon.vue'
+  import UserIcon from '../SvgIcons/UserIcon.vue'
+  import ShoppingIcon from '../SvgIcons/ShoppingIcon.vue'
+  import LangBtn from '../LangBtn.vue'
 
   export default {
     data() {

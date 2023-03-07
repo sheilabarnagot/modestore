@@ -1,3 +1,4 @@
+<!-- Varför två stycken, räcker inte en? Kolla på detta. -->
 <script>
   import AccountNav from './AccountNav.vue'
 
