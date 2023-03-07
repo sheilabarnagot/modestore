@@ -23,6 +23,7 @@
     </ul>
   </nav>
   <RouterView />
+
   <input id="logout" type="button" value="logout" />
 </template>
 
