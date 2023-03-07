@@ -64,7 +64,7 @@
       <input class="radio" type="checkbox" />
       <p class="text">{{ $t('signup.cookies') }}</p>
     </div>
-    <RouterLink to="/">
+    <RouterLink to="/account/konto">
       <input
         @click="saveInfo"
         id="signupButton"

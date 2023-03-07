@@ -72,26 +72,26 @@
           {
             id: 1,
             namn: '',
-            bild: '../public/img1200/billy-aw-campagne/billy-aw-campagne-30.jpg',
+            bild: '/img1200/billy-aw-campagne/billy-aw-campagne-30.jpg',
             favorit: false
           },
 
           {
             id: 2,
             namn: '',
-            bild: '../public/img1200/billy-aw-campagne/billy-aw-campagne-32.jpg',
+            bild: '/img1200/billy-aw-campagne/billy-aw-campagne-32.jpg',
             favorit: false
           },
           {
             id: 3,
             namn: '',
-            bild: '../public/img1200/billy-aw-campagne/billy-aw-campagne-33.jpg',
+            bild: '/img1200/billy-aw-campagne/billy-aw-campagne-33.jpg',
             favorit: false
           },
           {
             id: 4,
             namn: '',
-            bild: '../public/img1200/billy-aw-campagne/billy-aw-campagne-id-34.jpg',
+            bild: '/img1200/billy-aw-campagne/billy-aw-campagne-id-34.jpg',
             favorit: false
           }
         ]
