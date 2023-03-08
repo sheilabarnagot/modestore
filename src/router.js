@@ -11,6 +11,8 @@ import FavoritesView from './views/Account/AccountChildren/FavoritesView.vue'
 import LogIn from './components/MyAccount/LogIn.vue'
 import SignUp from './components/MyAccount/SignUp.vue'
 
+import SearchComponent from './components/SearchComponents/SearchComponent.vue'
+
 export default createRouter({
   history: createWebHashHistory(),
   routes: [
@@ -66,6 +68,11 @@ export default createRouter({
     {
       component: SignUp,
       path: '/signup'
+    },
+
+    {
+      component: SearchComponent,
+      path: '/SearchComponent'
     }
   ]
 })
