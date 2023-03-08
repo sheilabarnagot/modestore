@@ -3,7 +3,10 @@
     data() {
       return {
         email: '',
-        password: ''
+        password: '',
+        regex: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
+        name: '',
+        surname: ''
       }
     },
     methods: {
@@ -17,25 +20,40 @@
 <template>
   <h2>{{ $t('signup.firstTitle') }}</h2>
   <form id="formSignup">
-    <input
+    <b-form-input
       class="loginInput"
       type="email"
       :placeholder="$t('signup.email')"
       v-model="email"
+      :state="regex.test(email) && email.length > 1 ? true : false"
     />
-    <input
+    <b-form-input
       class="loginInput"
       type="password"
       :placeholder="$t('signup.password')"
       v-model="password"
+      :state="password.length > 6 ? true : false"
     />
-    <input
+    <b-form-input
       class="loginInput"
       type="password"
       :placeholder="$t('signup.passwordR')"
+      :state="password.length > 6 ? true : false"
     />
-    <input class="loginInput" type="TEXT" :placeholder="$t('signup.name')" />
-    <input class="loginInput" type="TEXT" :placeholder="$t('signup.surname')" />
+    <b-form-input
+      class="loginInput"
+      type="text"
+      :state="name.length > 3 ? true : false"
+      :placeholder="$t('signup.name')"
+      v-model="name"
+    />
+    <b-form-input
+      class="loginInput"
+      type="text"
+      :state="surname.length > 3 ? true : false"
+      :placeholder="$t('signup.surname')"
+      v-model="surname"
+    />
   </form>
   <div id="radiobuttons">
     <div class="radioButton">
@@ -46,12 +64,13 @@
       <input class="radio" type="checkbox" />
       <p class="text">{{ $t('signup.cookies') }}</p>
     </div>
-    <input
-      @click="saveInfo"
-      id="signupButton"
-      type="button"
-      :value="$t('signup.createAccount')"
-    />
+    <RouterLink to="/account/konto">
+      <input
+        @click="saveInfo"
+        id="signupButton"
+        type="button"
+        :value="$t('signup.createAccount')"
+    /></RouterLink>
   </div>
 </template>
 

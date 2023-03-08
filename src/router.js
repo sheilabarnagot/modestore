@@ -9,6 +9,7 @@ import MyAccountComp from './components/MyAccount/MyAccountComp.vue'
 import ShoppingView from './views/ShoppingView.vue'
 import LogIn from './components/MyAccount/LogIn.vue'
 import SignUp from './components/MyAccount/SignUp.vue'
+
 export default createRouter({
   history: createWebHashHistory(),
   routes: [
@@ -28,18 +29,18 @@ export default createRouter({
       component: CartView,
       path: '/cart'
     },
-    {
-      component: BetalningComponent,
-      path: '/payment'
-    },
+    // {
+    //   component: BetalningComponent,
+    //   path: '/payment'
+    // },
 
     {
       component: AccountView,
       path: '/account',
-      beforeEnter: () => {
-        const auth = localStorage.getItem('auth')
-        return auth === 'true' ? true : '/login'
-      },
+      // beforeEnter: () => {
+      //   const auth = localStorage.getItem('auth')
+      //   return auth === 'true' ? true : '/login'
+      // },
 
       children: [
         {
@@ -53,11 +54,12 @@ export default createRouter({
         {
           path: 'kop',
           component: BetalningComponent
-        },
-        {
-          path: 'help',
-          component: BetalningComponent
         }
+        // {
+        //   //KZ new component
+        //   component: HelpAccount,
+        //   path: 'help'
+        // },
       ]
     },
     {

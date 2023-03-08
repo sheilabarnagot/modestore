@@ -1,11 +1,17 @@
 import { createStore } from 'vuex'
 import createPersistedState from 'vuex-persistedstate'
-// så att sparade item i vuex inte försvinner när man uppdaterar
 
 const mutations = {
   // Lägg till en produkt i kundvagnen
-  basketItem(state, { name, id }) {
-    state.items.push({ name: name, id: id })
+  basketItem(state, { name, id, src, price, product }) {
+    state.items.push({
+      name: name,
+      id: id,
+      src: src,
+      price: price,
+      product: product,
+      isClicked: false
+    })
   },
   // Ta bort en produkt från kundvagnen
   deleteItem(state, payload) {
@@ -26,6 +32,13 @@ const mutations = {
     if (itemIndex !== -1) {
       state.favoriteItems.splice(itemIndex, 1)
     }
+  },
+  // Set the isClicked property for an item
+  setClicked(state, payload) {
+    const itemIndex = state.items.findIndex((item) => item.id === payload.id)
+    if (itemIndex !== -1) {
+      state.items[itemIndex].isClicked = true
+    }
   }
 }
 
@@ -37,6 +50,6 @@ const state = {
 export default createStore({
   state,
   mutations,
-  plugins: [createPersistedState()], //  createPersistedState måste importerad här.
+  plugins: [createPersistedState()],
   strict: true
 })

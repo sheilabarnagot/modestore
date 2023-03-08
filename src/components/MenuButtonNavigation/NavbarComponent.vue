@@ -9,7 +9,8 @@
         <RouterLink to="/"><HomeIcon /></RouterLink>
       </li>
       <li>
-        <SearchIcon @click="toggler" />
+        <!-- @click="toggler" -->
+        <SearchIcon />
       </li>
       <li class="dropup-center dropup">
         <button
@@ -18,13 +19,11 @@
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          {{ $t('navbar.menu') }}
+          Menu
         </button>
         <ul class="dropdown-menu">
           <li id="menuitem">
-            <RouterLink to="/shopping"
-              ><span>{{ $t('menuButtonNav.shopping') }}</span></RouterLink
-            >
+            <RouterLink to="/shopping"> Shopping </RouterLink>
           </li>
         </ul>
       </li>
@@ -44,11 +43,11 @@
 </template>
 
 <script>
-  import HomeIcon from './SvgIcons/HomeIcon.vue'
-  import SearchIcon from './SvgIcons/SearchIcon.vue'
-  import UserIcon from './SvgIcons/UserIcon.vue'
-  import ShoppingIcon from './SvgIcons/ShoppingIcon.vue'
-  import LangBtn from './LangBtn.vue'
+  import HomeIcon from '../SvgIcons/HomeIcon.vue'
+  import SearchIcon from '../SvgIcons/SearchIcon.vue'
+  import UserIcon from '../SvgIcons/UserIcon.vue'
+  import ShoppingIcon from '../SvgIcons/ShoppingIcon.vue'
+  import LangBtn from '../LangBtn.vue'
 
   export default {
     data() {
@@ -78,7 +77,7 @@
 
 <style scoped>
   nav {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     display: flex;
     justify-content: center;
@@ -96,7 +95,7 @@
     justify-content: center;
     position: fixed;
 
-    bottom: 0;
+    bottom: 15px;
     left: 50%;
     right: 50%;
   }
@@ -125,12 +124,12 @@
     cursor: pointer;
   }
 
-  #langbtn {
+  /* #langbtn {
     position: absolute;
-    /* width: 100%; */
+    width: 100%;
     z-index: 1;
-    left: 90%;
-  }
+    left: 5%;
+  } */
   .dropdown-menu {
     flex-direction: column;
   }
