@@ -48,7 +48,7 @@
       v-model="password"
       :state="password.length > 6 ? true : false"
     />
-    <RouterLink to="/">
+    <RouterLink to="/account/konto">
       <input
         @click="saveData"
         id="loginButton"

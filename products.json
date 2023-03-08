@@ -101,7 +101,7 @@
     },
     {
       "name": "Sarah",
-      "src": "public/img1200/billy-aw-look/billy-aw-look-36.jpg",
+      "src": "/img1200/billy-aw-look/billy-aw-look-36.jpg",
       "id": "36",
       "price": "4600 sek",
       "compostion": "wool/leather",
@@ -290,7 +290,7 @@
 
     {
       "name": "Alba",
-      "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
+      "src": "/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
       "id": "25",
       "price": "4200 sek",
       "compostion": "cotton",
@@ -301,7 +301,7 @@
     },
     {
       "name": "Alba",
-      "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
+      "src": "/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
       "id": "25",
       "price": "4200 sek",
       "compostion": "cotton",
@@ -312,7 +312,7 @@
     },
     {
       "name": "Tilly",
-      "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-26.jpg",
+      "src": "/img1200/billy-ss-campagne/billy-ss-campagne-26.jpg",
       "id": "25",
       "price": "2400 sek",
       "compostion": "100% silk",
@@ -334,7 +334,7 @@
     },
     {
       "name": "Tilde",
-      "src": "public/img1200/billy-ss-look/billy-ss-look-id-27.jpg",
+      "src": "/img1200/billy-ss-look/billy-ss-look-id-27.jpg",
       "id": "27",
       "price": "2200 sek",
       "compostion": "100% silk",
@@ -345,7 +345,7 @@
     },
     {
       "name": "Toni",
-      "src": "public/img1200/billy-ss-look/billy-ss-look-id-27.jpg",
+      "src": "/img1200/billy-ss-look/billy-ss-look-id-27.jpg",
       "id": "27",
       "price": "2700 sek",
       "compostion": "100% silk",
@@ -357,7 +357,7 @@
 
     {
       "name": "Alba",
-      "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
+      "src": "/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
       "id": "25",
       "price": "4200 sek",
       "compostion": "cotton",
@@ -368,7 +368,7 @@
     },
     {
       "name": "Alba",
-      "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
+      "src": "/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
       "id": "25",
       "price": "4200 sek",
       "compostion": "cotton",
@@ -379,7 +379,7 @@
     },
     {
       "name": "Alba",
-      "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
+      "src": "/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
       "id": "25",
       "price": "4200 sek",
       "compostion": "cotton",
@@ -390,7 +390,7 @@
     },
     {
       "name": "Alba",
-      "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
+      "src": "/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
       "id": "25",
       "price": "4200 sek",
       "compostion": "cotton",
@@ -401,7 +401,7 @@
     },
     {
       "name": "Alba",
-      "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
+      "src": "/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
       "id": "25",
       "price": "4200 sek",
       "compostion": "cotton",
