@@ -122,7 +122,7 @@
 
 <template>
   <div id="img-container">
-    <img src="/img1200/toneintone-grey-id-6.jpg" />
+    <img src="img1200/billy-aw-campagne/billy-aw-campagne-30.jpg" />
     <div id="inner">
       <h1>Store</h1>
     </div>

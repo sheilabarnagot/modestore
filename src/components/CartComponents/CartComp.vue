@@ -9,7 +9,7 @@
 
           <p class="bottom-p">{{ product.product }}</p>
         </div>
-      <img :src="`${product.src}`" alt="product image" />
+        <img :src="`${product.src}`" alt="product image" />
         <img
           :src="`/${product.src}`"
           alt="product image"
@@ -20,12 +20,10 @@
         <p>{{ product.price }}</p>
         <!-- här skapar en hjärtikon som antingen fylls med färg eller inte beroende på om produkten är favorit eller inte.
     När hjärtat klickas på så ändras statusen för produkten. -->
-        <i
+        <i>
           :class="isFavorit(product) ? 'bi bi-heart-fill' : 'bi bi-heart'"
-          @click="toggleFavorit(product)"
-          type="button"
-          class="heart"
-        />
+          @click="toggleFavorit(product)" type="button" class="heart"
+        </i>
 
         <button
           id="addbutton"
