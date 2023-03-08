@@ -1,9 +1,18 @@
+<script>
+  export default {
+    methods: {
+      logout() {
+        localStorage.removeItem('email')
+        localStorage.removeItem('password')
+        localStorage.removeItem('auth')
+      }
+    }
+  }
+</script>
+
 <template>
   <nav>
     <ul>
-      <!-- <li>
-        <RouterLink to="/account/kop">{{ $t('navbar.köp') }}</RouterLink>
-      </li> -->
       <li>
         <RouterLink to="/account/konto">{{ $t('navbar.konto') }}</RouterLink>
       </li>
@@ -23,8 +32,14 @@
     </ul>
   </nav>
   <RouterView />
-
-  <input id="logout" type="button" value="logout" />
+  <p id="welcomeLogin">
+    Hi,you are now logged in. Welcome to MODESTORE! From your private account
+    you can access different products from the store, you can save the clothes
+    that you like the most and much more. Enjoy!
+  </p>
+  <RouterLink to="/">
+    <button id="logout" @click="logout">Logout</button>
+  </RouterLink>
 </template>
 
 <style scoped>
@@ -44,11 +59,14 @@
     text-decoration: none;
   }
   #logout {
+    margin: 0 5%;
+    width: 90%;
     background-color: #000;
     color: #fff;
     font-size: 11px;
     border: none;
     border: 1px solid #000;
+    margin-top: 40px;
     padding: 10px;
   }
 </style>

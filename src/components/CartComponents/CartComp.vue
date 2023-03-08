@@ -10,8 +10,9 @@
           <p class="bottom-p">{{ product.product }}</p>
         </div>
         <img :src="`${product.src}`" alt="product image" />
+        <!-- Med src här under så blir bilderna dubbla -->
         <img
-          :src="`/${product.src}`"
+          :src="`${product.src}`"
           alt="product image"
           :class="{ selected: isFavorit(product) }"
         />
@@ -22,34 +23,33 @@
     När hjärtat klickas på så ändras statusen för produkten. -->
         <i
           :class="isFavorit(product) ? 'bi bi-heart-fill' : 'bi bi-heart'"
-          @click="() => toggleFavorit(product)"
+          @click="toggleFavorit(product)"
           type="button"
           class="heart"
+        />
+        <button
+          id="addbutton"
+          @click="
+            () =>
+              $emit(
+                'fromcartcomp',
+                product.name,
+                product.id,
+                product.src,
+                product.price,
+                product.product
+              )
+          "
         >
-          <button
-            id="addbutton"
-            @click="
-              () =>
-                $emit(
-                  'fromcartcomp',
-                  product.name,
-                  product.id,
-                  product.src,
-                  product.price,
-                  product.product
-                )
-            "
-          >
-            Add to cart
-          </button>
-        </i>
+          Add to cart
+        </button>
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-  import productsData from '/assets/products.json'
+  import productsData from '../../../assets/products.json'
   export default {
     emits: ['fromcartcomp'],
     components: {},

@@ -1,5 +1,5 @@
 <template>
-  Göra något här?
+<p>Fattar inte koden, kan vi prata om det :) ?</p>
   <!-- <div class="plagg-container">
     <div v-for="plagg in lista" :key="plagg.id" class="plagg-item">
       <h2>{{ plagg.namn }}</h2>
@@ -177,5 +177,8 @@
   .bi-heart,
   .bi-heart-fill {
     font-size: 1.8rem;
+  }
+  #welcomeLogin{
+  font-size: 20px;
   }
 </style>

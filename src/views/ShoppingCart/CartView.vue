@@ -2,14 +2,20 @@
 <template>
   <h2 id="cartsh2">Cart</h2>
   <button id="paybutton">
-    <RouterLink to="/account/kop">{{ $t('navbar.köp') }}</RouterLink>
+    <RouterLink to="/kop">{{ $t('navbar.köp') }}</RouterLink>
   </button>
+
+  <p id="totalamount">{{ this.$store.state.totalCost }} kr</p>
+
   <div id="cartdiv">
     <div v-for="item in visibleItems" :key="item.id">
       <p class="top-p">{{ item.name }}</p>
       <p class="bottom-p">{{ item.product }}</p>
-      <img :src="`/${item.src}`" alt="product image" />
+      <img :src="`${item.src}`" alt="product image" />
       <p>{{ item.price }}</p>
+      <button id="decrease" @click="() => decreaseQuantity(item)">-</button>
+      <span>{{ item.quantity }}</span>
+      <button id="increase" @click="() => increaseItems(item)">+</button>
       <button id="delete" @click="() => deleteItem(item)">Delete</button>
     </div>
   </div>
@@ -28,12 +34,19 @@
 
     methods: {
       deleteItem(item) {
-        this.$store.commit('deleteItem', { id: item.id })
-        this.$store.commit('setClicked', { id: item.id })
+        this.$store.commit('setClicked', item)
+        this.$store.commit('deleteItem', item)
+
         console.log(typeof this.visibleItems)
         console.log('visible', this.visibleItems)
         console.log(item.id)
         console.log(this.storedShoppingItems)
+      },
+      increaseItems(item) {
+        this.$store.commit('basketItem', item)
+      },
+      decreaseQuantity(item) {
+        this.$store.commit('decreaseQuantity', item)
       }
     }
   }
@@ -93,5 +106,8 @@
     float: right;
     margin-right: 100px;
     border-radius: 10px;
+  }
+  #totalamount {
+    float: right;
   }
 </style>
