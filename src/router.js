@@ -5,10 +5,14 @@ import HomeView from './views/HomeView.vue'
 import AccountView from './views/AccountView.vue'
 import MenuButtonView from './views/MenuButtonView.vue'
 import BetalningComponent from './components/BetalningComponent.vue'
+
 import MyAccountComp from './components/MyAccount/MyAccountComp.vue'
 import ShoppingView from './views/ShoppingView.vue'
 import LogIn from './components/MyAccount/LogIn.vue'
 import SignUp from './components/MyAccount/SignUp.vue'
+
+import SearchComponent from './components/SearchComponents/SearchComponent.vue'
+
 export default createRouter({
   history: createWebHashHistory(),
   routes: [
@@ -63,6 +67,11 @@ export default createRouter({
     {
       component: SignUp,
       path: '/signup'
+    },
+
+    {
+      component: SearchComponent,
+      path: '/SearchComponent'
     }
   ]
 })
