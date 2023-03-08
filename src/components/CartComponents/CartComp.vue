@@ -20,27 +20,29 @@
         <p>{{ product.price }}</p>
         <!-- här skapar en hjärtikon som antingen fylls med färg eller inte beroende på om produkten är favorit eller inte.
     När hjärtat klickas på så ändras statusen för produkten. -->
-        <i>
+        <i
           :class="isFavorit(product) ? 'bi bi-heart-fill' : 'bi bi-heart'"
-          @click="toggleFavorit(product)" type="button" class="heart"
-        </i>
-
-        <button
-          id="addbutton"
-          @click="
-            () =>
-              $emit(
-                'fromcartcomp',
-                product.name,
-                product.id,
-                product.src,
-                product.price,
-                product.product
-              )
-          "
+          @click="() => toggleFavorit(product)"
+          type="button"
+          class="heart"
         >
-          Add to cart
-        </button>
+          <button
+            id="addbutton"
+            @click="
+              () =>
+                $emit(
+                  'fromcartcomp',
+                  product.name,
+                  product.id,
+                  product.src,
+                  product.price,
+                  product.product
+                )
+            "
+          >
+            Add to cart
+          </button>
+        </i>
       </li>
     </ul>
   </div>
