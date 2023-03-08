@@ -1,5 +1,9 @@
+<!-- Here we are looping through and displaying the products in the shoppingcart. We are also placing a button next to each product that when clicked will delete it from the cart. -->
 <template>
   <h2 id="cartsh2">Cart</h2>
+  <button id="paybutton">
+    <RouterLink to="/account/kop">{{ $t('navbar.köp') }}</RouterLink>
+  </button>
   <div id="cartdiv">
     <div v-for="item in visibleItems" :key="item.id">
       <p class="top-p">{{ item.name }}</p>
@@ -21,12 +25,15 @@
         return this.storedShoppingItems.filter((item) => !item.isClicked)
       }
     },
+
     methods: {
       deleteItem(item) {
         this.$store.commit('deleteItem', { id: item.id })
-        item.isClicked = true
-        console.log(item)
-        console.log('visible:', this.visibleItems)
+        this.$store.commit('setClicked', { id: item.id })
+        console.log(typeof this.visibleItems)
+        console.log('visible', this.visibleItems)
+        console.log(item.id)
+        console.log(this.storedShoppingItems)
       }
     }
   }
@@ -75,5 +82,16 @@
   }
   .bottom-p {
     margin-bottom: 0;
+  }
+  #paybutton a {
+    text-decoration: none;
+
+    color: black;
+  }
+  #paybutton {
+    background-color: greenyellow;
+    float: right;
+    margin-right: 100px;
+    border-radius: 10px;
   }
 </style>

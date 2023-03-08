@@ -1,3 +1,6 @@
+<!-- This file displays/contains the component that shows all the products. It also recieves
+information about the products through a custom event and passes the information to store.js via the function
+in method. -->
 <template>
   <CartComp @fromcartcomp="test" />
 </template>

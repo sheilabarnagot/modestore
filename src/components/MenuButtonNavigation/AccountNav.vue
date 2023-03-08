@@ -1,9 +1,9 @@
 <template>
   <nav>
     <ul>
-      <li>
+      <!-- <li>
         <RouterLink to="/account/kop">{{ $t('navbar.köp') }}</RouterLink>
-      </li>
+      </li> -->
       <li>
         <RouterLink to="/account/konto">{{ $t('navbar.konto') }}</RouterLink>
       </li>
@@ -23,6 +23,7 @@
     </ul>
   </nav>
   <RouterView />
+
   <input id="logout" type="button" value="logout" />
 </template>
 
