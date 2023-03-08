@@ -2,7 +2,7 @@
 <template>
   <h2 id="cartsh2">Cart</h2>
   <button id="paybutton">
-    <RouterLink to="/cart/kop">{{ $t('navbar.köp') }}</RouterLink>
+    <RouterLink to="/kop">{{ $t('navbar.köp') }}</RouterLink>
   </button>
 
   <div id="cartdiv">

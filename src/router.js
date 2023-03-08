@@ -26,16 +26,12 @@ export default createRouter({
     },
     {
       component: CartView,
-      path: '/cart',
-
-      children: [
-        {
-          path: 'kop',
-          component: PaymentView
-        }
-      ]
+      path: '/cart'
     },
-
+    {
+      path: '/kop',
+      component: PaymentView
+    },
     {
       component: AccountView,
       path: '/account',
