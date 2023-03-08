@@ -9,7 +9,7 @@
     <div v-for="item in visibleItems" :key="item.id">
       <p class="top-p">{{ item.name }}</p>
       <p class="bottom-p">{{ item.product }}</p>
-      <img :src="`/${item.src}`" alt="product image" />
+      <img :src="`${item.src}`" alt="product image" />
       <p>{{ item.price }}</p>
       <button id="delete" @click="() => deleteItem(item)">Delete</button>
     </div>
