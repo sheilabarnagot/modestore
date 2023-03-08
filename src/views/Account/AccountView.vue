@@ -1,5 +1,5 @@
 <script>
-  import AccountComp from '../components/MenuButtonNavigation/AccountComp.vue'
+  import AccountComp from '../../components/Navigation/AccountNav.vue'
 
   export default {
     components: { AccountComp }

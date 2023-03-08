@@ -1,9 +1,6 @@
 <template>
   <nav>
     <ul>
-      <!-- <li>
-        <RouterLink to="/account/kop">{{ $t('navbar.köp') }}</RouterLink>
-      </li> -->
       <li>
         <RouterLink to="/account/konto">{{ $t('navbar.konto') }}</RouterLink>
       </li>

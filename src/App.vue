@@ -1,16 +1,16 @@
 <script>
-  import NavbarComponent from './components/MenuButtonNavigation/NavbarComponent.vue'
+  import MobileMainNav from './components/Navigation/MobileMainNav.vue'
   // import SidebarMenu from './components/SidebarMenu.vue'
   export default {
     components: {
-      NavbarComponent
+      MobileMainNav
       // SidebarMenu
     }
   }
 </script>
 
 <template>
-  <NavbarComponent />
+  <MobileMainNav />
   <!-- <SidebarMenu /> -->
   <main>
     <RouterView />
