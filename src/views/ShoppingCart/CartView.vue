@@ -2,8 +2,9 @@
 <template>
   <h2 id="cartsh2">Cart</h2>
   <button id="paybutton">
-    <RouterLink to="/account/kop">{{ $t('navbar.köp') }}</RouterLink>
+    <RouterLink to="/cart/kop">{{ $t('navbar.köp') }}</RouterLink>
   </button>
+
   <div id="cartdiv">
     <div v-for="item in visibleItems" :key="item.id">
       <p class="top-p">{{ item.name }}</p>
