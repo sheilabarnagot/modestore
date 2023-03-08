@@ -1,19 +1,12 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-import CartView from './views/CartView.vue'
+import CartView from './views/ShoppingCart/CartView.vue'
 import HomeView from './views/HomeView.vue'
-import AccountView from './views/AccountView.vue'
-import MenuButtonView from './views/MenuButtonView.vue'
-
-// import BetalningComponent from './components/BetalningComponent.vue'
-
-// import MyAccountComp from './components/MyAccount/MyAccountComp.vue'
-
-import PaymentView from './views/PaymentView.vue'
-import MyAccountView from './views/MyAccountView.vue'
-
+import AccountView from './views/Account/AccountView.vue'
+import PaymentView from './views/ShoppingCart/Payment/PaymentView.vue'
+import MyAccountView from './views/Account/AccountChildren/MyAccountView.vue'
 import ShoppingView from './views/ShoppingView.vue'
-import FavoritesView from './views/FavoritesView.vue'
+import FavoritesView from './views/Account/AccountChildren/FavoritesView.vue'
 
 import LogIn from './components/MyAccount/LogIn.vue'
 import SignUp from './components/MyAccount/SignUp.vue'
@@ -28,10 +21,6 @@ export default createRouter({
       path: '/'
     },
     {
-      component: MenuButtonView,
-      path: '/menu'
-    },
-    {
       component: ShoppingView,
       path: '/shopping'
     },
@@ -39,11 +28,10 @@ export default createRouter({
       component: CartView,
       path: '/cart'
     },
-    // {
-    //   component: BetalningComponent,
-    //   path: '/payment'
-    // },
-
+    {
+      path: '/kop',
+      component: PaymentView
+    },
     {
       component: AccountView,
       path: '/account',
@@ -60,11 +48,8 @@ export default createRouter({
         {
           path: 'konto',
           component: MyAccountView
-        },
-        {
-          path: 'kop',
-          component: PaymentView
         }
+
         // {
         //   //KZ new component
         //   component: HelpAccount,

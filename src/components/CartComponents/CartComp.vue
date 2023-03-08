@@ -22,27 +22,26 @@
     När hjärtat klickas på så ändras statusen för produkten. -->
         <i
           :class="isFavorit(product) ? 'bi bi-heart-fill' : 'bi bi-heart'"
-          @click="() => toggleFavorit(product)"
+          @click="toggleFavorit(product)"
           type="button"
           class="heart"
+        />
+        <button
+          id="addbutton"
+          @click="
+            () =>
+              $emit(
+                'fromcartcomp',
+                product.name,
+                product.id,
+                product.src,
+                product.price,
+                product.product
+              )
+          "
         >
-          <button
-            id="addbutton"
-            @click="
-              () =>
-                $emit(
-                  'fromcartcomp',
-                  product.name,
-                  product.id,
-                  product.src,
-                  product.price,
-                  product.product
-                )
-            "
-          >
-            Add to cart
-          </button>
-        </i>
+          Add to cart
+        </button>
       </li>
     </ul>
   </div>
