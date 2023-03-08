@@ -92,6 +92,13 @@
   }
 </script>
 
+<i
+  :class="isFavorit(product) ? 'bi bi-heart-fill' : 'bi bi-heart'"
+  @click="toggleFavorit(product)"
+  type="button"
+  class="heart"
+/>
+
 <style scoped>
   .container {
     display: flex;
