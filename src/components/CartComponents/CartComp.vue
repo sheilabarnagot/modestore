@@ -11,7 +11,7 @@
         </div>
         <img :src="`${product.src}`" alt="product image" />
         <img
-          :src="`/${product.src}`"
+          :src="`${product.src}`"
           alt="product image"
           :class="{ selected: isFavorit(product) }"
         />
@@ -48,7 +48,7 @@
 </template>
 
 <script>
-  import productsData from '/assets/products.json'
+  import productsData from '../../../assets/products.json'
   export default {
     emits: ['fromcartcomp'],
     components: {},
