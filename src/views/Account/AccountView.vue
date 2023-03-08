@@ -7,5 +7,7 @@
 </script>
 
 <template>
+
   <AccountComp />
+  
 </template>

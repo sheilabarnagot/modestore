@@ -48,7 +48,7 @@
       v-model="password"
       :state="password.length > 6 ? true : false"
     />
-    <RouterLink to="/account/konto">
+    <RouterLink to="/account/konto" id="linkLogin">
       <input
         @click="saveData"
         id="loginButton"
@@ -56,11 +56,14 @@
         :value="$t('login.login')"
     /></RouterLink>
   </form>
-  <p id="passText">{{ $t('login.forgotten') }}</p>
+  <p class="passText">{{ $t('login.forgotten') }}</p>
 
   <h2>{{ $t('login.secondTitle') }}</h2>
   <RouterLink to="/signup">
     <input id="button" type="button" :value="$t('login.register')" />
+  </RouterLink>
+  <RouterLink to="/" id="guest">
+    <p class="passText">Procide as guest</p>
   </RouterLink>
 </template>
 
@@ -97,14 +100,18 @@
     padding: 10px;
     margin-top: 20px;
   }
-  #passText {
+  #linkLogin {
+    width: 100%;
+    margin-left: 10%;
+  }
+  .passText {
     width: 90%;
     height: 30px;
     margin: 20px 0 40px;
     padding: 10px;
     font-size: 11px;
   }
-  #passText:hover {
+  .passText:hover {
     text-decoration: underline;
   }
   #button {
@@ -116,6 +123,10 @@
     border: none;
     border: 1px solid #000;
     padding: 10px;
+  }
+  #guest {
+    text-decoration: none;
+    color: #000;
   }
 
   @media (min-width: 980px) {
