@@ -4,9 +4,11 @@ import CartView from './views/CartView.vue'
 import HomeView from './views/HomeView.vue'
 import AccountView from './views/AccountView.vue'
 import MenuButtonView from './views/MenuButtonView.vue'
-import BetalningComponent from './components/BetalningComponent.vue'
-import MyAccountComp from './components/MyAccount/MyAccountComp.vue'
+import PaymentView from './views/PaymentView.vue'
+import MyAccountView from './views/MyAccountView.vue'
 import ShoppingView from './views/ShoppingView.vue'
+import FavoritesView from './views/FavoritesView.vue'
+
 import LogIn from './components/MyAccount/LogIn.vue'
 import SignUp from './components/MyAccount/SignUp.vue'
 
@@ -45,15 +47,15 @@ export default createRouter({
       children: [
         {
           path: 'favourites',
-          component: ShoppingView
+          component: FavoritesView
         },
         {
           path: 'konto',
-          component: MyAccountComp
+          component: MyAccountView
         },
         {
           path: 'kop',
-          component: BetalningComponent
+          component: PaymentView
         }
         // {
         //   //KZ new component
