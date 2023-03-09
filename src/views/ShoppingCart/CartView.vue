@@ -5,7 +5,7 @@
     <button id="paybutton">
       <RouterLink to="/kop">{{ $t('navbar.köp') }}</RouterLink>
     </button>
-    <p id="totalamount">{{ this.$store.state.totalCost }} kr</p>
+    <p id="totalamount">{{ $store.state.totalCost }} kr</p>
     <div id="cartdiv">
       <div v-for="item in visibleItems" :key="item.id">
         <p class="top-p">{{ item.name }}</p>
@@ -31,7 +31,6 @@
         return this.storedShoppingItems.filter((item) => !item.isClicked)
       }
     },
-
     methods: {
       deleteItem(item) {
         this.$store.commit('setClicked', item)
