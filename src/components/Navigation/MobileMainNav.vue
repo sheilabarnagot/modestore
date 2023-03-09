@@ -21,8 +21,21 @@
           Menu
         </button>
         <ul class="dropdown-menu">
+          <!-- The different choises in the dropup menu -->
           <li id="menuitem">
-            <RouterLink to="/shopping"> Shopping </RouterLink>
+            <RouterLink to="/bottoms"> Bottoms </RouterLink>
+          </li>
+          <li id="menuitem">
+            <RouterLink to="/tops"> Tops </RouterLink>
+          </li>
+          <li id="menuitem">
+            <RouterLink to="/jackets"> Jackets </RouterLink>
+          </li>
+          <li id="menuitem">
+            <RouterLink to="/dresses"> Dresses </RouterLink>
+          </li>
+          <li id="menuitem">
+            <RouterLink to="/shopping"> All products </RouterLink>
           </li>
         </ul>
       </li>
