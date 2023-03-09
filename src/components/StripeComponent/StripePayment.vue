@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="home">
     <h1>payment integration</h1>
     <stripe-Checkout
@@ -40,4 +40,4 @@
       }
     }
   }
-</script>
+</script> -->
