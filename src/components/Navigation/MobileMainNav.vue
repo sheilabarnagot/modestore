@@ -9,7 +9,7 @@
         <RouterLink to="/"><HomeIcon /></RouterLink>
       </li>
       <li>
-        <RouterLink to="/"><SearchIcon /></RouterLink>
+        <RouterLink @click="toggler" to="/"><SearchIcon /></RouterLink>
       </li>
       <li class="dropup-center dropup">
         <button
@@ -62,15 +62,15 @@
       UserIcon,
       ShoppingIcon,
       LangBtn
+    },
+    methods: {
+      toggler() {
+        this.toggl = !this.toggl
+      },
+      menuToggler() {
+        this.menuToggl = !this.menuToggl
+      }
     }
-    // methods: {
-    //   toggler() {
-    //     this.toggl = !this.toggl
-    //   },
-    //   menuToggler() {
-    //     this.menuToggl = !this.menuToggl
-    //   }
-    // }
   }
 </script>
 
@@ -85,6 +85,7 @@
     width: 100%;
     background-color: #f6f6f7;
   }
+
   ul:not(.dropdown-menu) {
     margin-bottom: 0;
     padding-left: 0;
