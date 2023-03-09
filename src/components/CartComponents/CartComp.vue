@@ -10,6 +10,7 @@
           <p class="bottom-p">{{ product.product }}</p>
         </div>
         <img :src="`${product.src}`" alt="product image" />
+        <!-- Med src här under så blir bilderna dubbla -->
         <img
           :src="`${product.src}`"
           alt="product image"

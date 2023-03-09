@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
   <div class="AA">
     <div class="Payment">
       <h4>Payment: {{ Payment }}</h4>
@@ -350,4 +350,4 @@
   #years {
     margin: 5px;
   }
-</style> -->
+</style>
