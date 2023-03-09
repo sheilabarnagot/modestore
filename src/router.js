@@ -35,11 +35,11 @@ export default createRouter({
     {
       component: AccountView,
       path: '/account',
+      redirect: '/account/konto',
       beforeEnter: () => {
         const auth = localStorage.getItem('auth')
         return auth === 'true' ? true : '/login'
       },
-
       children: [
         {
           path: 'favourites',

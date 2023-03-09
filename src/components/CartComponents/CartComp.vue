@@ -112,6 +112,7 @@
   .container {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2em;
   }
   #addbutton {
     background-color: #2ea44f;
