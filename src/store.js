@@ -65,6 +65,7 @@ const mutations = {
 const state = {
   items: [],
   favoriteItems: [],
+  // Totalpriset av ens produkter
   totalCost: 0
 }
 

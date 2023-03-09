@@ -1,22 +1,22 @@
 <!-- Here we are looping through and displaying the products in the shoppingcart. We are also placing a button next to each product that when clicked will delete it from the cart. -->
 <template>
-  <h2 id="cartsh2">Cart</h2>
-  <button id="paybutton">
-    <RouterLink to="/kop">{{ $t('navbar.köp') }}</RouterLink>
-  </button>
-
-  <p id="totalamount">{{ this.$store.state.totalCost }} kr</p>
-
-  <div id="cartdiv">
-    <div v-for="item in visibleItems" :key="item.id">
-      <p class="top-p">{{ item.name }}</p>
-      <p class="bottom-p">{{ item.product }}</p>
-      <img :src="`${item.src}`" alt="product image" />
-      <p>{{ item.price }}</p>
-      <button id="decrease" @click="() => decreaseQuantity(item)">-</button>
-      <span>{{ item.quantity }}</span>
-      <button id="increase" @click="() => increaseItems(item)">+</button>
-      <button id="delete" @click="() => deleteItem(item)">Delete</button>
+  <div class="container">
+    <h2 id="cartsh2">Cart</h2>
+    <button id="paybutton">
+      <RouterLink to="/kop">{{ $t('navbar.köp') }}</RouterLink>
+    </button>
+    <p id="totalamount">{{ $store.state.totalCost }} kr</p>
+    <div id="cartdiv">
+      <div v-for="item in visibleItems" :key="item.id">
+        <p class="top-p">{{ item.name }}</p>
+        <p class="bottom-p">{{ item.product }}</p>
+        <img :src="`${item.src}`" alt="product image" />
+        <p>{{ item.price }}</p>
+        <button id="decrease" @click="() => decreaseQuantity(item)">-</button>
+        <span>{{ item.quantity }}</span>
+        <button id="increase" @click="() => increaseItems(item)">+</button>
+        <button id="delete" @click="() => deleteItem(item)">Delete</button>
+      </div>
     </div>
   </div>
 </template>
@@ -31,7 +31,6 @@
         return this.storedShoppingItems.filter((item) => !item.isClicked)
       }
     },
-
     methods: {
       deleteItem(item) {
         this.$store.commit('setClicked', item)
@@ -52,6 +51,9 @@
   }
 </script>
 <style scoped>
+  .container {
+    margin-bottom: 10em;
+  }
   #delete {
     background-color: red;
     border-radius: 15px;
