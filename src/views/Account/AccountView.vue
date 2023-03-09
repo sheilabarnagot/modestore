@@ -1,11 +1,11 @@
 <script>
-  import AccountComp from '../../components/Navigation/AccountNav.vue'
+  import AccountNav from '../../components/Navigation/AccountNav.vue'
 
   export default {
-    components: { AccountComp }
+    components: { AccountNav }
   }
 </script>
 
 <template>
-  <AccountComp />
+  <AccountNav />
 </template>

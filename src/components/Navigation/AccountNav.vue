@@ -32,11 +32,11 @@
     </ul>
   </nav>
   <RouterView />
-  <p id="welcomeLogin">
+  <!-- <p id="welcomeLogin">
     Hi,you are now logged in. Welcome to MODESTORE! From your private account
     you can access different products from the store, you can save the clothes
     that you like the most and much more. Enjoy!
-  </p>
+  </p> -->
   <RouterLink to="/">
     <button id="logout" @click="logout">Logout</button>
   </RouterLink>

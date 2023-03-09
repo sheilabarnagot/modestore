@@ -35,11 +35,11 @@ export default createRouter({
     {
       component: AccountView,
       path: '/account',
+      redirect: '/account/konto',
       beforeEnter: () => {
         const auth = localStorage.getItem('auth')
         return auth === 'true' ? true : '/login'
       },
-
       children: [
         {
           path: 'favourites',
@@ -69,6 +69,27 @@ export default createRouter({
     {
       component: SearchComponent,
       path: '/SearchComponent'
+    },
+    // New paths that depending on which you choose sends a certain prop to the Shoppingview page.
+    {
+      path: '/jackets',
+      component: ShoppingView,
+      props: { category: 'jacket' }
+    },
+    {
+      path: '/dresses',
+      component: ShoppingView,
+      props: { category: 'dress' }
+    },
+    {
+      path: '/tops',
+      component: ShoppingView,
+      props: { category: 'top' }
+    },
+    {
+      path: '/bottoms',
+      component: ShoppingView,
+      props: { category: 'bottoms' }
     }
   ]
 })
