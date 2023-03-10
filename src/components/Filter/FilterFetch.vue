@@ -1,5 +1,4 @@
 <template>
-
   <div>
     <input type="text" v-model="searchTerm" @input="filterProducts()" />
     <div v-for="(product, index) in filteredProducts" :key="index" />
@@ -13,28 +12,29 @@
   export default {
     data() {
       return {
-        searchTerm: "",
-        products:[],
-        filteredProducts:[]
+        searchTerm: '',
+        products: [],
+        filteredProducts: []
       }
     },
-    async mounted(){
-      await this.fetchData();
+    async mounted() {
+      await this.fetchData()
     },
     methods: {
       async fetchData() {
         const response = await fetch('../../assets/products.json')
         const result = await response.json()
-        this.products = result.productpics;
-        this.filterProducts();
+        this.products = result.productpics
+        this.filterProducts()
       },
-      filterProducts(){
-        this.filteredProducts= this.products.filter((entry)=>
-          Object.keys(entry).some((key)=>
-          ('' + entry[key]).toLowerCase().includes(this.searchTerm.toLowerCase())
+      filterProducts() {
+        this.filteredProducts = this.products.filter((entry) =>
+          Object.keys(entry).some((key) =>
+            ('' + entry[key])
+              .toLowerCase()
+              .includes(this.searchTerm.toLowerCase())
           )
         )
-
       }
     }
   }
