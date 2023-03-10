@@ -1,21 +1,23 @@
 <template>
-  <div>
+  <div id="input-container">
     <form @submit="filterProducts" action="">
       <input type="text" v-model="searchTerm" />
       <input type="submit" value="tester" />
     </form>
-    <button @click="test">test me</button>
+    <!-- <button @click="test">test me</button>
     <div v-for="(product, index) in filteredProducts" :key="index">
       <h3>{{ product.name }}</h3>
       <img :src="product.image" :alt="product.name" />
       <p>{{ product.description }}</p>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
   export default {
-    created() {},
+    created() {
+      this.fetchData()
+    },
     data() {
       return {
         searchTerm: '',
@@ -24,6 +26,7 @@
         reactiveProductList: null
       }
     },
+    emits: ['filterproducts'],
     async mounted() {
       await this.fetchData()
     },
@@ -44,9 +47,19 @@
               .includes(this.searchTerm.toLocaleLowerCase())
           )
         )
-        this.fetchData()
-        console.log(this.reactiveProductList)
+        this.$emit('filterproducts', this.reactiveProductList)
       }
     }
   }
 </script>
+
+<style scoped>
+  #input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    bottom: 200%;
+    position: absolute;
+  }
+</style>

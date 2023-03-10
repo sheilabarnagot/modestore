@@ -47,9 +47,7 @@
       </li>
     </ul>
     <template v-if="toggl">
-      <form id="input-container">
-        <input />
-      </form>
+      <FilterFetch @filterproducts="testar" />
     </template>
   </nav>
 </template>
@@ -84,6 +82,9 @@
       },
       menuToggler() {
         this.menuToggl = !this.menuToggl
+      },
+      testar(ez) {
+        console.log(ez)
       }
     }
   }
@@ -126,7 +127,7 @@
     font-family: 'jost';
     text-decoration: none;
   }
-
+  /*
   #input-container {
     display: flex;
     justify-content: center;
@@ -134,7 +135,7 @@
     flex-direction: column;
     bottom: 200%;
     position: absolute;
-  }
+  } */
   #bad-element {
     cursor: pointer;
   }
