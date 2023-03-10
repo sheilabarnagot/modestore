@@ -1,6 +1,5 @@
-<!-- Varför två stycken, räcker inte en? Kolla på detta. -->
 <script>
-  import AccountNav from './AccountNav.vue'
+  import AccountNav from '../../components/Navigation/AccountNav.vue'
 
   export default {
     components: { AccountNav }

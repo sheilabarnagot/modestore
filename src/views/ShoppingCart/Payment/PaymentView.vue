@@ -153,6 +153,7 @@
       </b-modal>
     </div>
   </div>
+  <div class="totalcost">Totalcost: {{ $store.state.totalCost }}</div>
 </template>
 
 <script>
@@ -195,6 +196,8 @@
       }
     }
   }
+
+  // this.totalCost
 </script>
 
 <style lang="scss" scoped>
@@ -349,5 +352,13 @@
 
   #years {
     margin: 5px;
+  }
+
+  .totalcost {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 450px;
   }
 </style>

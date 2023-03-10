@@ -1,16 +1,17 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-import CartView from './views/CartView.vue'
+import CartView from './views/ShoppingCart/CartView.vue'
 import HomeView from './views/HomeView.vue'
-import AccountView from './views/AccountView.vue'
-import MenuButtonView from './views/MenuButtonView.vue'
-import PaymentView from './views/PaymentView.vue'
-import MyAccountView from './views/MyAccountView.vue'
+import AccountView from './views/Account/AccountView.vue'
+import PaymentView from './views/ShoppingCart/Payment/PaymentView.vue'
+import MyAccountView from './views/Account/AccountChildren/MyAccountView.vue'
 import ShoppingView from './views/ShoppingView.vue'
-import FavoritesView from './views/FavoritesView.vue'
+import FavoritesView from './views/Account/AccountChildren/FavoritesView.vue'
 
 import LogIn from './components/MyAccount/LogIn.vue'
 import SignUp from './components/MyAccount/SignUp.vue'
+
+import SearchComponent from './components/SearchComponents/SearchComponent.vue'
 
 export default createRouter({
   history: createWebHashHistory(),
@@ -20,10 +21,6 @@ export default createRouter({
       path: '/'
     },
     {
-      component: MenuButtonView,
-      path: '/menu'
-    },
-    {
       component: ShoppingView,
       path: '/shopping'
     },
@@ -31,19 +28,18 @@ export default createRouter({
       component: CartView,
       path: '/cart'
     },
-    // {
-    //   component: BetalningComponent,
-    //   path: '/payment'
-    // },
-
+    {
+      path: '/kop',
+      component: PaymentView
+    },
     {
       component: AccountView,
       path: '/account',
-      // beforeEnter: () => {
-      //   const auth = localStorage.getItem('auth')
-      //   return auth === 'true' ? true : '/login'
-      // },
-
+      redirect: '/account/konto',
+      beforeEnter: () => {
+        const auth = localStorage.getItem('auth')
+        return auth === 'true' ? true : '/login'
+      },
       children: [
         {
           path: 'favourites',
@@ -52,11 +48,8 @@ export default createRouter({
         {
           path: 'konto',
           component: MyAccountView
-        },
-        {
-          path: 'kop',
-          component: PaymentView
         }
+
         // {
         //   //KZ new component
         //   component: HelpAccount,
@@ -71,6 +64,32 @@ export default createRouter({
     {
       component: SignUp,
       path: '/signup'
+    },
+
+    {
+      component: SearchComponent,
+      path: '/SearchComponent'
+    },
+    // New paths that depending on which you choose sends a certain prop to the Shoppingview page.
+    {
+      path: '/jackets',
+      component: ShoppingView,
+      props: { category: 'jacket' }
+    },
+    {
+      path: '/dresses',
+      component: ShoppingView,
+      props: { category: 'dress' }
+    },
+    {
+      path: '/tops',
+      component: ShoppingView,
+      props: { category: 'top' }
+    },
+    {
+      path: '/bottoms',
+      component: ShoppingView,
+      props: { category: 'bottoms' }
     }
   ]
 })

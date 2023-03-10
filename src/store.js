@@ -2,21 +2,38 @@ import { createStore } from 'vuex'
 import createPersistedState from 'vuex-persistedstate'
 
 const mutations = {
-  // Lägg till en produkt i kundvagnen
+  // Add a product to the basket
   basketItem(state, { name, id, src, price, product }) {
-    state.items.push({
-      name: name,
-      id: id,
-      src: src,
-      price: price,
-      product: product,
-      isClicked: false
-    })
+    const existingItem = state.items.find((item) => item.id === id)
+    if (existingItem) {
+      existingItem.quantity++
+    } else {
+      state.items.push({
+        name: name,
+        id: id,
+        src: src,
+        price: price,
+        product: product,
+        isClicked: false,
+        quantity: 1
+      })
+    }
+    state.totalCost += price
   },
-  // Ta bort en produkt från kundvagnen
+  // Decrease the quantity of an item in the basket
+  decreaseQuantity(state, payload) {
+    const item = state.items.find((item) => item.id === payload.id)
+    if (item && item.quantity > 1) {
+      item.quantity--
+      state.totalCost -= item.price
+    }
+  },
+  // Remove an item from the basket
   deleteItem(state, payload) {
     const itemIndex = state.items.findIndex((item) => item.id === payload.id)
     if (itemIndex !== -1) {
+      const deletedItem = state.items[itemIndex]
+      state.totalCost -= deletedItem.price * deletedItem.quantity
       state.items.splice(itemIndex, 1)
     }
   },
@@ -39,12 +56,17 @@ const mutations = {
     if (itemIndex !== -1) {
       state.items[itemIndex].isClicked = true
     }
+  },
+  clearTotalCost(state) {
+    state.totalCost = 0
   }
 }
 
 const state = {
   items: [],
-  favoriteItems: []
+  favoriteItems: [],
+  // Totalpriset av ens produkter
+  totalCost: 0
 }
 
 export default createStore({

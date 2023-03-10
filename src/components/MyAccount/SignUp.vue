@@ -13,6 +13,7 @@
       saveInfo() {
         localStorage.setItem('email', this.email)
         localStorage.setItem('password', this.password)
+        localStorage.setItem('auth', true)
       }
     }
   }

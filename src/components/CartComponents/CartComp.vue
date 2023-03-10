@@ -3,15 +3,17 @@
     <h2 id="productsh2">Products</h2>
 
     <ul id="products">
-      <li v-for="product in products.productpics" :key="product.id">
-        <div id="shirtname">
+      <!-- Here we are looping through the filtered products, which will be different categories of clothes depending on what prop was sent in. -->
+      <li v-for="product in filteredProducts" :key="product.id">
+        <div id="productinfo">
           <p class="top-p">{{ product.name }}</p>
 
           <p class="bottom-p">{{ product.product }}</p>
         </div>
         <img :src="`${product.src}`" alt="product image" />
+        <!-- Med src här under så blir bilderna dubbla -->
         <img
-          :src="`/${product.src}`"
+          :src="`${product.src}`"
           alt="product image"
           :class="{ selected: isFavorit(product) }"
         />
@@ -20,11 +22,12 @@
         <p>{{ product.price }}</p>
         <!-- här skapar en hjärtikon som antingen fylls med färg eller inte beroende på om produkten är favorit eller inte.
     När hjärtat klickas på så ändras statusen för produkten. -->
-        <i>
+        <i
           :class="isFavorit(product) ? 'bi bi-heart-fill' : 'bi bi-heart'"
-          @click="toggleFavorit(product)" type="button" class="heart"
-        </i>
-
+          @click="toggleFavorit(product)"
+          type="button"
+          class="heart"
+        />
         <button
           id="addbutton"
           @click="
@@ -47,16 +50,31 @@
 </template>
 
 <script>
-  import productsData from '/assets/products.json'
+  import productsData from '../../../assets/products.json'
   export default {
+    // Here the prop is recieved and also used down in the filteredProducts method by writing this.category.
+    props: {
+      category: {
+        type: String,
+        required: true
+      }
+    },
     emits: ['fromcartcomp'],
     components: {},
     data() {
       return {
         products: productsData
       }
-    }, //Computed property "favoriter" hämtar och returnerar en array med favoritprodukter från Vuex store.
+    },
     computed: {
+      // This computed method is filtering through the json files and looks for all the categorys that have the same value as the prop that was recieved from Shoppingview.vue. So for example the value could be jacket. We then use this method up in our template to loop through, displaying only the certain category.
+
+      filteredProducts() {
+        return this.products.productpics.filter(
+          (product) => product.category === this.category
+        )
+      },
+      //Computed property "favoriter" hämtar och returnerar en array med favoritprodukter från Vuex store.
       favoriter() {
         return this.$store.state.favoriteItems
       }
@@ -94,6 +112,7 @@
   .container {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2em;
   }
   #addbutton {
     background-color: #2ea44f;
@@ -129,7 +148,7 @@
     max-width: 50%;
     box-shadow: 50px 0px 50px 5px grey;
   }
-  #shirtname {
+  #productinfo {
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;

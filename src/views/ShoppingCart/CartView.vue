@@ -1,16 +1,22 @@
 <!-- Here we are looping through and displaying the products in the shoppingcart. We are also placing a button next to each product that when clicked will delete it from the cart. -->
 <template>
-  <h2 id="cartsh2">Cart</h2>
-  <button id="paybutton">
-    <RouterLink to="/account/kop">{{ $t('navbar.köp') }}</RouterLink>
-  </button>
-  <div id="cartdiv">
-    <div v-for="item in visibleItems" :key="item.id">
-      <p class="top-p">{{ item.name }}</p>
-      <p class="bottom-p">{{ item.product }}</p>
-      <img :src="`/${item.src}`" alt="product image" />
-      <p>{{ item.price }}</p>
-      <button id="delete" @click="() => deleteItem(item)">Delete</button>
+  <div class="container">
+    <h2 id="cartsh2">Cart</h2>
+    <button id="paybutton">
+      <RouterLink to="/kop">{{ $t('navbar.köp') }}</RouterLink>
+    </button>
+    <p id="totalamount">{{ $store.state.totalCost }} kr</p>
+    <div id="cartdiv">
+      <div id="cart-div-grid" v-for="item in visibleItems" :key="item.id">
+        <p class="top-p">{{ item.name }}</p>
+        <p class="bottom-p">{{ item.product }}</p>
+        <img :src="`${item.src}`" alt="product image" />
+        <p>{{ item.price }}</p>
+        <button id="decrease" @click="() => decreaseQuantity(item)">-</button>
+        <span>{{ item.quantity }}</span>
+        <button id="increase" @click="() => increaseItems(item)">+</button>
+        <button id="delete" @click="() => deleteItem(item)">Delete</button>
+      </div>
     </div>
   </div>
 </template>
@@ -25,20 +31,29 @@
         return this.storedShoppingItems.filter((item) => !item.isClicked)
       }
     },
-
     methods: {
       deleteItem(item) {
-        this.$store.commit('deleteItem', { id: item.id })
-        this.$store.commit('setClicked', { id: item.id })
+        this.$store.commit('setClicked', item)
+        this.$store.commit('deleteItem', item)
+
         console.log(typeof this.visibleItems)
         console.log('visible', this.visibleItems)
         console.log(item.id)
         console.log(this.storedShoppingItems)
+      },
+      increaseItems(item) {
+        this.$store.commit('basketItem', item)
+      },
+      decreaseQuantity(item) {
+        this.$store.commit('decreaseQuantity', item)
       }
     }
   }
 </script>
 <style scoped>
+  .container {
+    margin-bottom: 6em;
+  }
   #delete {
     background-color: red;
     border-radius: 15px;
@@ -75,6 +90,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
   .top-p {
     margin-top: 14px;
     margin-bottom: 0;
@@ -93,5 +109,8 @@
     float: right;
     margin-right: 100px;
     border-radius: 10px;
+  }
+  #totalamount {
+    float: right;
   }
 </style>
