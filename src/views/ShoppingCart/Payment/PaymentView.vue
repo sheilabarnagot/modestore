@@ -46,6 +46,7 @@
         title="Swish With Phone Number or Scan"
         v-model="modalShowswish"
         name="swishmodel"
+        :no-close-on-backdrop="true"
       >
         <img src="assets/swish.png" alt="" class="swishlogo" />
 
@@ -67,10 +68,11 @@
       </b-button>
 
       <b-modal
-        title="confirm yor payment"
+        title="confirm your payment"
         v-model="modalShowkort"
         name="kortmodel"
-        @ok="(event) => pay(event)"
+        :no-close-on-backdrop="true"
+        hide-footer
       >
         <div class="container">
           <div class="first">
@@ -78,7 +80,7 @@
               required
               type="text"
               :state="cardowner.length >= 3 ? true : false"
-              placeholder="Card owner"
+              placeholder="Card-owner"
               v-model="cardowner"
             />
           </div>
@@ -131,6 +133,9 @@
             </div>
           </div>
         </div>
+        <b-button class="submit1" href="#/submit" variant="primary"
+          >Submit</b-button
+        >
       </b-modal>
     </div>
 
@@ -143,6 +148,8 @@
         title="Invoice will be sent to your Email"
         v-model="modalShowfaktura"
         name="fakturamodel"
+        :no-close-on-backdrop="true"
+        hide-footer
         >Type your Email:
         <b-form-input
           type="email"
@@ -150,6 +157,9 @@
           :state="regex.test(email) && email.length > 1 ? true : false"
           placeholder="me@example.com"
         />
+        <b-button class="submit2" href="#/submit" variant="primary"
+          >Submit</b-button
+        >
       </b-modal>
     </div>
   </div>
@@ -179,6 +189,7 @@
       onKort(MY) {
         this.MY = MY
       },
+
       inputValidation() {},
       pay(event) {
         // console.log('jhjjh' + this.kortnummer + this.CVC + this.cardowner)
@@ -196,21 +207,9 @@
       }
     }
   }
-
-  // this.totalCost
 </script>
 
 <style lang="scss" scoped>
-  // @import url('https://fonts.googleapis.com/css?family=Questrial');
-
-  // .application {
-  //   font-family: 'Questrial';
-  // }
-
-  // :root {
-  //   --bs-body-bg: red;
-  // }
-
   .Payment {
     position: absolute;
     display: flex;
@@ -359,6 +358,6 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    top: 450px;
+    top: 500px;
   }
 </style>
