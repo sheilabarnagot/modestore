@@ -10,7 +10,7 @@
 
           <p class="bottom-p">{{ product.product }}</p>
         </div>
-        <img :src="`${product.src}`" alt="product image" />
+
         <!-- Med src här under så blir bilderna dubbla -->
         <img
           :src="`${product.src}`"
@@ -68,7 +68,6 @@
     },
     computed: {
       // This computed method is filtering through the json files and looks for all the categorys that have the same value as the prop that was recieved from Shoppingview.vue. So for example the value could be jacket. We then use this method up in our template to loop through, displaying only the certain category.
-
       filteredProducts() {
         return this.products.productpics.filter(
           (product) => product.category === this.category
@@ -108,13 +107,6 @@
   }
 </script>
 
-<i
-  :class="isFavorit(product) ? 'bi bi-heart-fill' : 'bi bi-heart'"
-  @click="toggleFavorit(product)"
-  type="button"
-  class="heart"
-/>
-
 <style scoped>
   .container {
     display: flex;
@@ -136,11 +128,9 @@
     position: relative;
     text-align: center;
   }
-
   #addbutton:hover {
     background-color: #3f684b;
   }
-
   .heart {
     font-size: 30px;
     color: rgb(50, 48, 48);
@@ -150,7 +140,6 @@
     text-align: center;
     padding-bottom: 10%;
   }
-
   img {
     max-width: 50%;
     box-shadow: 50px 0px 50px 5px grey;
@@ -160,11 +149,9 @@
     display: flex;
     flex-direction: column;
   }
-
   ul {
     list-style: none;
   }
-
   #productsh2 {
     text-align: center;
     margin-bottom: 50px;
@@ -175,7 +162,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-
   .selected {
     border: 2px solid red;
   }
