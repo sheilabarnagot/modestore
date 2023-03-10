@@ -8,7 +8,7 @@ import SubmitView from './views/ShoppingCart/Payment/SubmitView.vue'
 import MyAccountView from './views/Account/AccountChildren/MyAccountView.vue'
 import ShoppingView from './views/ShoppingView.vue'
 import FavoritesView from './views/Account/AccountChildren/FavoritesView.vue'
-import HelpAccount from './views/HelpAccount.vue'
+import HelpView from './views/Account/AccountChildren/HelpView.vue'
 
 import LogIn from './components/MyAccount/LogIn.vue'
 import SignUp from './components/MyAccount/SignUp.vue'
@@ -59,7 +59,7 @@ export default createRouter({
     },
     {
       //KZ new component
-      component: HelpAccount,
+      component: HelpView,
       path: '/account/help'
     },
     {

@@ -72,14 +72,14 @@
   h2 {
     font-size: 15px;
     font-weight: 700;
-    margin: 20px 0 30px 0;
+    margin: 50px 0 30px 10px;
     padding: 10px;
   }
 
   #formlogin {
     width: 100%;
-    height: 20vh;
-    margin: 10px 0;
+    height: 30vh;
+    margin: 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,21 +94,22 @@
     outline: none;
   }
   #loginButton {
-    width: 90%;
+    width: 100%;
     background-color: #000;
     color: #fff;
     font-size: 11px;
     border: none;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 10px 150px;
+    /* margin: 30px; */
   }
-  #linkLogin {
+  /* #linkLogin {
     margin-left: 10%;
-  }
+
+  } */
   .passText {
     width: 90%;
     height: 30px;
-    margin: 20px 0 40px;
+    margin: 20px 0 40px 10px;
     padding: 10px;
     font-size: 11px;
   }
@@ -133,18 +134,24 @@
   @media (min-width: 980px) {
     h2 {
       font-size: 20px;
-      margin: 20px 30px 0;
+      margin: 40px 50px 0;
     }
-    #passText {
-      margin: 20px 70px 40px;
-      font-size: 15px;
+    .passText {
+      margin: 50px 0 40px 50px;
+      font-size: 13px;
     }
     #loginButton {
       font-size: 15px;
+      margin: 40px 0;
+      padding: 10px 550px;
     }
     #button {
       font-size: 15px;
       margin-top: 30px;
+    }
+    #formlogin {
+      width: 100%;
+      height: 20vh;
     }
   }
 </style>

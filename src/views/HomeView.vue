@@ -1,10 +1,8 @@
 <!--KZ updated Home new carousel with boutstrapvuenext instead of swiper-->
 <template>
   <div>
+    <MovieAuto movieSrc="/pexels-cottonbro-5836750.mp4" />
     <CarouselImg />
-    <MovieAuto
-      movieSrc="/mixkit-fashion-model-sits-posing-with-white-background-9100-large.mp4"
-    />
     <!--
          :images="[
         {

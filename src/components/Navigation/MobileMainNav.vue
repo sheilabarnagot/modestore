@@ -141,12 +141,12 @@
     cursor: pointer;
   }
 
-  /* #langbtn {
+  #langbtn {
     position: absolute;
-    width: 100%;
+    /* width: 100%; */
     z-index: 1;
     left: 5%;
-  } */
+  }
   .dropdown-menu {
     flex-direction: column;
   }
