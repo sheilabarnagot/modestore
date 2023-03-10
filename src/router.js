@@ -68,7 +68,7 @@ export default createRouter({
 
     {
       component: SearchComponent,
-      path: '/SearchComponent'
+      path: '/searchcomponent'
     },
     // New paths that depending on which you choose sends a certain prop to the Shoppingview page.
     {
