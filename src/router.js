@@ -7,6 +7,7 @@ import PaymentView from './views/ShoppingCart/Payment/PaymentView.vue'
 import MyAccountView from './views/Account/AccountChildren/MyAccountView.vue'
 import ShoppingView from './views/ShoppingView.vue'
 import FavoritesView from './views/Account/AccountChildren/FavoritesView.vue'
+import HelpAccount from './views/HelpAccount.vue'
 
 import LogIn from './components/MyAccount/LogIn.vue'
 import SignUp from './components/MyAccount/SignUp.vue'
@@ -49,13 +50,12 @@ export default createRouter({
           path: 'konto',
           component: MyAccountView
         }
-
-        // {
-        //   //KZ new component
-        //   component: HelpAccount,
-        //   path: 'help'
-        // },
       ]
+    },
+    {
+      //KZ new component
+      component: HelpAccount,
+      path: '/account/help'
     },
     {
       component: LogIn,
