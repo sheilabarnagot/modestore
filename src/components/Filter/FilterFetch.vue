@@ -2,7 +2,7 @@
   <div id="input-container">
     <form @submit="filterProducts" action="">
       <input type="text" v-model="searchTerm" />
-      <input type="submit" value="tester" />
+      <input type="submit" value="Search" />
     </form>
     <!-- <button @click="test">test me</button>
     <div v-for="(product, index) in filteredProducts" :key="index">
