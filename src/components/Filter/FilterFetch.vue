@@ -39,13 +39,12 @@
       filterProducts(event) {
         event.preventDefault()
 
-        this.reactiveProductList = this.filteredProducts = this.products.filter(
-          (entry) =>
-            Object.keys(entry).some((key) =>
-              ('' + entry[key])
-                .toLowerCase()
-                .includes(this.searchTerm.toLocaleLowerCase())
-            )
+        this.reactiveProductList = this.products.filter((entry) =>
+          Object.keys(entry).some((key) =>
+            ('' + entry[key])
+              .toLowerCase()
+              .includes(this.searchTerm.toLocaleLowerCase())
+          )
         )
         console.log(this.reactiveProductList)
       }
