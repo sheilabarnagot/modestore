@@ -52,7 +52,7 @@
 </script>
 <style scoped>
   .container {
-    margin-bottom: 10em;
+    margin-bottom: 6em;
   }
   #delete {
     background-color: red;
@@ -88,7 +88,7 @@
   #cartdiv {
     padding-left: 2rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .top-p {
     margin-top: 14px;
