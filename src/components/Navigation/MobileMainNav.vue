@@ -59,6 +59,7 @@
   import SearchIcon from '../SvgIcons/SearchIcon.vue'
   import UserIcon from '../SvgIcons/UserIcon.vue'
   import ShoppingIcon from '../SvgIcons/ShoppingIcon.vue'
+  import FilterFetch from '../Filter/FilterFetch.vue'
   import LangBtn from '../LangBtn.vue'
 
   export default {
@@ -74,7 +75,8 @@
       SearchIcon,
       UserIcon,
       ShoppingIcon,
-      LangBtn
+      LangBtn,
+      FilterFetch
     },
     methods: {
       toggler() {
