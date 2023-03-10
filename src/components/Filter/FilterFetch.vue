@@ -15,9 +15,7 @@
 
 <script>
   export default {
-    created() {
-      this.fetchData()
-    },
+    created() {},
     data() {
       return {
         searchTerm: '',
@@ -46,6 +44,7 @@
               .includes(this.searchTerm.toLocaleLowerCase())
           )
         )
+        this.fetchData()
         console.log(this.reactiveProductList)
       }
     }
