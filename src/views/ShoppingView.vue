@@ -3,7 +3,14 @@
   in method. -->
 <template>
   <CartComp @fromcartcomp="test" :category="category" />
+  <div id="hacky-divider" />
 </template>
+
+<style scoped>
+  #hacky-divider {
+    margin-bottom: 6em;
+  }
+</style>
 
 <script>
   import CartComp from '../components/CartComponents/CartComp.vue'
