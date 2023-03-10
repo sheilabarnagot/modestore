@@ -5,7 +5,7 @@
     />
 
     <div class="carousel-container">
-      <Carousel :images="carouselImages" />
+      <Carousel id="test" :images="carouselImages" />
     </div>
 
     <!-- <GridImg :images="gridImages" /> -->

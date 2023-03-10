@@ -4,7 +4,7 @@
       <div class="swiper-slide" v-for="(image, index) in images" :key="index">
         <!-- <RouterLink to="carousel" />-->
         <img :src="image.src" :alt="image.alt" />
-        <!-- {{ image.src }} -->
+        {{ image.src }}
       </div>
     </div>
     <div class="swiper-pagination" />
@@ -97,7 +97,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    max-width: 100%;
     height: 50vh;
   }
 
