@@ -15,6 +15,7 @@
 </script>
 
 <template>
+  <!-- Pontus was here -->
   <MobileMainNav />
   <FilterFetch />
   <!-- <SearchView /> -->
