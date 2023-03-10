@@ -7,6 +7,7 @@ import PaymentView from './views/ShoppingCart/Payment/PaymentView.vue'
 import MyAccountView from './views/Account/AccountChildren/MyAccountView.vue'
 import ShoppingView from './views/ShoppingView.vue'
 import FavoritesView from './views/Account/AccountChildren/FavoritesView.vue'
+import HelpView from './views/Account/AccountChildren/HelpView.vue'
 
 import LogIn from './components/MyAccount/LogIn.vue'
 import SignUp from './components/MyAccount/SignUp.vue'
@@ -49,13 +50,12 @@ export default createRouter({
           path: 'konto',
           component: MyAccountView
         }
-
-        // {
-        //   //KZ new component
-        //   component: HelpAccount,
-        //   path: 'help'
-        // },
       ]
+    },
+    {
+      //KZ new component
+      component: HelpView,
+      path: '/account/help'
     },
     {
       component: LogIn,
@@ -68,7 +68,7 @@ export default createRouter({
 
     {
       component: SearchComponent,
-      path: '/SearchComponent'
+      path: '/searchcomponent'
     },
     // New paths that depending on which you choose sends a certain prop to the Shoppingview page.
     {
@@ -84,7 +84,7 @@ export default createRouter({
     {
       path: '/tops',
       component: ShoppingView,
-      props: { category: 'top' }
+      props: { category: 'tops' }
     },
     {
       path: '/bottoms',

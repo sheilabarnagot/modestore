@@ -8,8 +8,8 @@
       <li>
         <RouterLink to="/"><HomeIcon /></RouterLink>
       </li>
-      <li>
-        <RouterLink @click="toggler" to="/"><SearchIcon /></RouterLink>
+      <li @click="toggler">
+        <SearchIcon />
       </li>
       <li class="dropup-center dropup">
         <button
@@ -47,9 +47,7 @@
       </li>
     </ul>
     <template v-if="toggl">
-      <form id="input-container">
-        <input />
-      </form>
+      <FilterFetch @filterproducts="testar" />
     </template>
   </nav>
 </template>
@@ -59,6 +57,7 @@
   import SearchIcon from '../SvgIcons/SearchIcon.vue'
   import UserIcon from '../SvgIcons/UserIcon.vue'
   import ShoppingIcon from '../SvgIcons/ShoppingIcon.vue'
+  import FilterFetch from '../Filter/FilterFetch.vue'
   import LangBtn from '../LangBtn.vue'
 
   export default {
@@ -74,7 +73,8 @@
       SearchIcon,
       UserIcon,
       ShoppingIcon,
-      LangBtn
+      LangBtn,
+      FilterFetch
     },
     methods: {
       toggler() {
@@ -82,6 +82,10 @@
       },
       menuToggler() {
         this.menuToggl = !this.menuToggl
+      },
+      testar(ez) {
+        this.$router.push('/SearchComponent')
+        console.log(ez)
       }
     }
   }
@@ -117,14 +121,14 @@
     padding-left: 0;
   }
   ul li {
-    padding-left: 3em;
+    padding-left: 2em;
   }
 
   ul li a {
     font-family: 'jost';
     text-decoration: none;
   }
-
+  /*
   #input-container {
     display: flex;
     justify-content: center;
@@ -132,17 +136,17 @@
     flex-direction: column;
     bottom: 200%;
     position: absolute;
-  }
+  } */
   #bad-element {
     cursor: pointer;
   }
 
-  /* #langbtn {
+  #langbtn {
     position: absolute;
-    width: 100%;
+    /* width: 100%; */
     z-index: 1;
     left: 5%;
-  } */
+  }
   .dropdown-menu {
     flex-direction: column;
   }

@@ -17,4 +17,6 @@ export default defineConfig({
   ]
 })
 
+/*KZ added  '@': fileURLToPath(new URL to make it easier with carousel.But can be used by anyone..all over the page ..blame me ;) */
+
 // https://github.com/intlify/vite-plugin-vue-i18n/issues/74
