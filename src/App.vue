@@ -10,6 +10,7 @@
       FilterFetch
       // SearchView
       // SidebarMenu
+      //Klara was never here...
     }
   }
 </script>
