@@ -7,7 +7,7 @@
     </button>
     <p id="totalamount">{{ $store.state.totalCost }} kr</p>
     <div id="cartdiv">
-      <div v-for="item in visibleItems" :key="item.id">
+      <div id="cart-div-grid" v-for="item in visibleItems" :key="item.id">
         <p class="top-p">{{ item.name }}</p>
         <p class="bottom-p">{{ item.product }}</p>
         <img :src="`${item.src}`" alt="product image" />
@@ -88,8 +88,9 @@
   #cartdiv {
     padding-left: 2rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
+
   .top-p {
     margin-top: 14px;
     margin-bottom: 0;
