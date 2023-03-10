@@ -117,7 +117,7 @@
     padding-left: 0;
   }
   ul li {
-    padding-left: 3em;
+    padding-left: 2em;
   }
 
   ul li a {

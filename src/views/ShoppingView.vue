@@ -7,6 +7,7 @@
 </template>
 
 <style scoped>
+  /* the hacky divider only exists to act as a mean to make the last item/s visible at the bottom of the product page */
   #hacky-divider {
     margin-bottom: 6em;
   }
