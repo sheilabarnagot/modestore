@@ -7,7 +7,6 @@
       <li>
         <RouterLink to="/help/materials">Material Information</RouterLink>
       </li>
-
       <li>
         <RouterLink to="/help/buy">Buying on Bon.com</RouterLink>
       </li>
