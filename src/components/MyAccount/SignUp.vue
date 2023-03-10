@@ -96,7 +96,6 @@
     width: 90%;
     border: none;
     border-bottom: 1px solid #000;
-
   }
   .loginInput:focus {
     outline: none;
@@ -130,10 +129,9 @@
   .radio:checked {
     background-color: #000;
   }
-  .text{
-  font-size: 13px;
-  margin: 18px 0 0 4px;
-
+  .text {
+    font-size: 13px;
+    margin: 18px 0 0 4px;
   }
   @media (min-width: 980px) {
     .radioButton {

@@ -81,7 +81,7 @@
     height: 30vh;
     margin: 20px 0;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
   }
@@ -150,8 +150,8 @@
       margin-top: 30px;
     }
     #formlogin {
-    width: 100%;
-    height: 20vh;
+      width: 100%;
+      height: 20vh;
     }
   }
 </style>
