@@ -8,8 +8,8 @@
       <li>
         <RouterLink to="/"><HomeIcon /></RouterLink>
       </li>
-      <li>
-        <RouterLink @click="toggler" to="/"><SearchIcon /></RouterLink>
+      <li @click="toggler">
+        <SearchIcon />
       </li>
       <li class="dropup-center dropup">
         <button
@@ -84,6 +84,7 @@
         this.menuToggl = !this.menuToggl
       },
       testar(ez) {
+        this.$router.push('/SearchComponent')
         console.log(ez)
       }
     }
@@ -140,12 +141,12 @@
     cursor: pointer;
   }
 
-  /* #langbtn {
+  #langbtn {
     position: absolute;
-    width: 100%;
+    /* width: 100%; */
     z-index: 1;
     left: 5%;
-  } */
+  }
   .dropdown-menu {
     flex-direction: column;
   }

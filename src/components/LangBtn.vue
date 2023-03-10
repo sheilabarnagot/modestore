@@ -41,8 +41,8 @@
   #langButton {
     margin: 5px 15px;
     padding: 3px 4px;
-    background-color: black;
-    color: azure;
+    background-color: #dbdeed;
+    color: rgb(103, 114, 114);
     outline: none;
     border: none;
     border-radius: 5px;

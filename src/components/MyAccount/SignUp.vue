@@ -79,7 +79,7 @@
   h2 {
     font-size: 15px;
     font-weight: 700;
-    margin: 10px 0 20px 0;
+    margin: 40px 0 0 10px;
     padding: 10px;
   }
   #formSignup {
@@ -101,7 +101,7 @@
     outline: none;
   }
   #signupButton {
-    margin: 0 5%;
+    margin: 35px 5%;
     width: 90%;
     background-color: #fff;
     color: #000;
@@ -122,12 +122,16 @@
   .radio {
     width: 15px;
     height: 15px;
-    margin: 6px 6px 0 0;
+    margin: 20px 6px 0 20px;
     appearance: none;
     border: 2px solid #000;
   }
   .radio:checked {
     background-color: #000;
+  }
+  .text {
+    font-size: 13px;
+    margin: 18px 0 0 4px;
   }
   @media (min-width: 980px) {
     .radioButton {
@@ -142,7 +146,7 @@
     }
     #signupButton {
       width: 30%;
-      margin: 5% 0 0 35%;
+      margin: 10px 0 0 35%;
     }
   }
 </style>

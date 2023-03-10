@@ -1,5 +1,4 @@
 <template>
-  <div class="container" />
   <video autoplay loop muted playsinline>
     <source :src="movieSrc" type="video/mp4" />
   </video>
