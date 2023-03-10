@@ -3,7 +3,15 @@
   in method. -->
 <template>
   <CartComp @fromcartcomp="test" :category="category" />
+  <div id="hacky-divider" />
 </template>
+
+<style scoped>
+  /* the hacky divider only exists to act as a mean to make the last item/s visible at the bottom of the product page */
+  #hacky-divider {
+    margin-bottom: 6em;
+  }
+</style>
 
 <script>
   import CartComp from '../components/CartComponents/CartComp.vue'

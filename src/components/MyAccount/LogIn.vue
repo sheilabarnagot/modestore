@@ -32,39 +32,40 @@
 </script>
 
 <template>
-  <h2>{{ $t('login.firstTitle') }}</h2>
-  <form id="formlogin">
-    <b-form-input
-      class="loginInput"
-      type="email"
-      :placeholder="$t('login.email')"
-      v-model="email"
-      :state="regex.test(email) && email.length > 1 ? true : false"
-    />
-    <b-form-input
-      class="loginInput"
-      type="password"
-      :placeholder="$t('login.password')"
-      v-model="password"
-      :state="password.length > 6 ? true : false"
-    />
-    <RouterLink to="/account/konto" id="linkLogin">
-      <input
-        @click="saveData"
-        id="loginButton"
-        type="button"
-        :value="$t('login.login')"
-    /></RouterLink>
-  </form>
-  <p class="passText">{{ $t('login.forgotten') }}</p>
-
-  <h2>{{ $t('login.secondTitle') }}</h2>
-  <RouterLink to="/signup">
-    <input id="button" type="button" :value="$t('login.register')" />
-  </RouterLink>
-  <RouterLink to="/" id="guest">
-    <p class="passText">Procide as guest</p>
-  </RouterLink>
+  <div>
+    <h2>{{ $t('login.firstTitle') }}</h2>
+    <form id="formlogin">
+      <b-form-input
+        class="loginInput"
+        type="email"
+        :placeholder="$t('login.email')"
+        v-model="email"
+        :state="regex.test(email) && email.length > 1 ? true : false"
+      />
+      <b-form-input
+        class="loginInput"
+        type="password"
+        :placeholder="$t('login.password')"
+        v-model="password"
+        :state="password.length > 6 ? true : false"
+      />
+      <RouterLink to="/account/konto" id="linkLogin">
+        <input
+          @click="saveData"
+          id="loginButton"
+          type="button"
+          :value="$t('login.login')"
+      /></RouterLink>
+    </form>
+    <p class="passText">{{ $t('login.forgotten') }}</p>
+    <h2>{{ $t('login.secondTitle') }}</h2>
+    <RouterLink to="/signup">
+      <input id="button" type="button" :value="$t('login.register')" />
+    </RouterLink>
+    <RouterLink to="/" id="guest">
+      <p class="passText">Procide as guest</p>
+    </RouterLink>
+  </div>
 </template>
 
 <style scoped>
@@ -74,6 +75,7 @@
     margin: 20px 0 30px 0;
     padding: 10px;
   }
+
   #formlogin {
     width: 100%;
     height: 20vh;
@@ -101,7 +103,6 @@
     margin-top: 20px;
   }
   #linkLogin {
-    width: 100%;
     margin-left: 10%;
   }
   .passText {

@@ -89,7 +89,7 @@ export default createRouter({
     {
       path: '/tops',
       component: ShoppingView,
-      props: { category: 'top' }
+      props: { category: 'tops' }
     },
     {
       path: '/bottoms',
