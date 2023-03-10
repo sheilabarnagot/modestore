@@ -42,7 +42,7 @@
     margin: 5px 15px;
     padding: 3px 4px;
     background-color: #dbdeed;
-    color: azure;
+    color: rgb(103, 114, 114);
     outline: none;
     border: none;
     border-radius: 5px;
