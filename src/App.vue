@@ -17,7 +17,7 @@
 </script>
 
 <template>
-  <LangBtn />
+  <LangBtn id="test" />
   <MobileMainNav />
   <FilterFetch />
   <!-- <SearchView /> -->
@@ -26,3 +26,10 @@
     <RouterView />
   </main>
 </template>
+
+<style scoped>
+  #test {
+    /* position: absolute;
+    top: 0; */
+  }
+</style>
