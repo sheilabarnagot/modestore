@@ -121,6 +121,7 @@
   ul li a {
     font-family: 'jost';
     text-decoration: none;
+    color: #3c3e3f;
   }
   /*
   #input-container {
@@ -144,9 +145,6 @@
     padding-left: 0;
   }
 
-  #menuitem a {
-    color: #3c3e3f;
-  }
   span {
     color: black;
   }

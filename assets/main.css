@@ -4,9 +4,15 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 @font-face {
   font-family: 'gloock';
   src: url('./fonts/Gloock-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'didot';
+  src: url('./fonts/GFSDidot-Regular.ttf') format('truetype');
 }
 
 @font-face {
