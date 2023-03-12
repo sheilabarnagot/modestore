@@ -1,8 +1,9 @@
 <template>
-  <div class="search-wrapper">
+  <!-- <div class="search-wrapper">
     <input type="text" v-model="Search" placeholder="Search" />
     <button @click="filterProducts">Search</button>
-  </div>
+  </div> -->
+  <p />
 </template>
 
 <script>
@@ -27,13 +28,13 @@
   //     filterProducts(event) {
   //       console.log(event)
 
-  //       return this.filteredProducts = this.products.filter((entry) =>
+  //       return (this.filteredProducts = this.products.filter((entry) =>
   //         Object.keys(entry).some((key) =>
   //           ('' + entry[key])
   //             .toLowerCase()
   //             .includes(this.searchTerm.toLowerCase())
   //         )
-  //       )
+  //       ))
   //     }
   //   }
   // }

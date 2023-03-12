@@ -10,12 +10,14 @@
       FilterFetch
       // SearchView
       // SidebarMenu
+      // Jag testar med branches Sheila
       //Klara was never here...
     }
   }
 </script>
 
 <template>
+  <!-- Pontus was here -->
   <MobileMainNav />
   <FilterFetch />
   <!-- <SearchView /> -->
