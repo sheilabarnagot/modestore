@@ -39,10 +39,9 @@
 
 <style scoped>
   #langButton {
-    /* margin: 5px 15px; */
-    /* top: 0; */
-    /* padding: 3px 4px; */
-    background-color: #dbdeed;
+    margin: 0 15px;
+    padding: 3px 4px;
+    background-color: none;
     color: rgb(103, 114, 114);
     outline: none;
     border: none;

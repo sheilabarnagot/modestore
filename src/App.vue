@@ -7,17 +7,21 @@
   // import SidebarMenu from './components/SidebarMenu.vue'
   export default {
     components: {
-      MobileMainNav,
       FilterFetch,
-      LangBtn
+      MobileMainNav,
       // SearchView
       // SidebarMenu
+      // Jag testar med branches Sheila
+      //Klara was never here...
+      LangBtn
     }
   }
 </script>
 
 <template>
-  <LangBtn id="test" />
+  <LangBtn />
+  <!-- Pontus was here -->
+
   <MobileMainNav />
   <FilterFetch />
   <!-- <SearchView /> -->
@@ -26,10 +30,3 @@
     <RouterView />
   </main>
 </template>
-
-<style scoped>
-  #test {
-    /* position: absolute;
-    top: 0; */
-  }
-</style>

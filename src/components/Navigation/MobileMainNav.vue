@@ -135,7 +135,6 @@
     cursor: pointer;
   }
 
-
   .dropdown-menu {
     flex-direction: column;
   }
