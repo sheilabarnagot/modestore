@@ -47,6 +47,7 @@
     border: none;
     border-radius: 5px;
     position: absolute;
+    z-index: 1;
     top: 0;
   }
 </style>

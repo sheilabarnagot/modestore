@@ -1,13 +1,12 @@
 <script>
-  import FilterFetch from './components/Filter/FilterFetch.vue'
   import MobileMainNav from './components/Navigation/MobileMainNav.vue'
   import LangBtn from './components/LangBtn.vue'
   // import FilterFetch from './components/Filter/FilterFetch.vue'
-  // import SearchView from './views/SearchView.vue'
+  import SearchView from './views/SearchView.vue'
   // import SidebarMenu from './components/SidebarMenu.vue'
   export default {
     components: {
-      FilterFetch,
+      SearchView,
       MobileMainNav,
       // SearchView
       // SidebarMenu
@@ -19,12 +18,11 @@
 </script>
 
 <template>
-  <!-- Pontus was here -->
   <LangBtn id="test" />
   <MobileMainNav />
-  <FilterFetch />
-  <!-- <SearchView /> -->
+  <SearchView />
   <!-- <SidebarMenu /> -->
+
   <main>
     <RouterView />
   </main>

@@ -94,7 +94,7 @@
     z-index: 2;
     height: 4em;
     width: 100%;
-    background-color: #f6f6f7;
+    background-color: #eeece5;
   }
 
   ul:not(.dropdown-menu) {
@@ -121,6 +121,7 @@
   ul li a {
     font-family: 'jost';
     text-decoration: none;
+    color: #3c3e3f;
   }
   /*
   #input-container {
@@ -138,9 +139,12 @@
   .dropdown-menu {
     flex-direction: column;
   }
+
   #menuitem {
     text-align: center;
+    padding-left: 0;
   }
+
   span {
     color: black;
   }

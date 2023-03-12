@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="container">
     <h2 id="productsh2">Products</h2>
 
     <ul id="products">
@@ -7,7 +7,6 @@
       <li v-for="product in filteredProducts" :key="product.id">
         <div id="productinfo">
           <p class="top-p">{{ product.name }}</p>
-
           <p class="bottom-p">{{ product.product }}</p>
         </div>
 
@@ -108,11 +107,6 @@
 </script>
 
 <style scoped>
-  .container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2em;
-  }
   #addbutton {
     background-color: #2ea44f;
     border: 4px solid rgba(27, 31, 35, 0.15);
@@ -141,7 +135,7 @@
     padding-bottom: 10%;
   }
   img {
-    max-width: 50%;
+    max-width: 100%;
     box-shadow: 50px 0px 50px 5px grey;
   }
   #productinfo {
@@ -150,6 +144,7 @@
     flex-direction: column;
   }
   ul {
+    padding-left: 0;
     list-style: none;
   }
   #productsh2 {
@@ -164,5 +159,17 @@
   }
   .selected {
     border: 2px solid red;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li:nth-child(2) {
+    /* height: 340px; */
+    /* border: 1px solid green; */
   }
 </style>
