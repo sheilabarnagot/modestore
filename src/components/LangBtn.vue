@@ -28,8 +28,8 @@
 </script>
 
 <template>
-  <label>
-    <select name="lang" id="langButton" v-model="locale" @change="changelocale">
+  <label id="langButton">
+    <select name="lang" v-model="locale" @change="changelocale">
       <option v-for="(lang, i) in languages" :value="lang.value" :key="i">
         {{ lang.text }}
       </option>
@@ -39,9 +39,9 @@
 
 <style scoped>
   #langButton {
-    margin: 5px 15px;
+    margin: 0 15px;
     padding: 3px 4px;
-    background-color: #dbdeed;
+    background-color: none;
     color: rgb(103, 114, 114);
     outline: none;
     border: none;

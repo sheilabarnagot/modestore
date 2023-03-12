@@ -1,8 +1,4 @@
 <template>
-  <!-- Test -->
-  <div id="langButton">
-    <LangBtn id="langbtn" />
-  </div>
   <nav class="mobile-menu">
     <ul>
       <li>
@@ -58,7 +54,6 @@
   import UserIcon from '../SvgIcons/UserIcon.vue'
   import ShoppingIcon from '../SvgIcons/ShoppingIcon.vue'
   import FilterFetch from '../Filter/FilterFetch.vue'
-  import LangBtn from '../LangBtn.vue'
 
   export default {
     data() {
@@ -73,7 +68,6 @@
       SearchIcon,
       UserIcon,
       ShoppingIcon,
-      LangBtn,
       FilterFetch
     },
     methods: {
@@ -141,12 +135,12 @@
     cursor: pointer;
   }
 
-  #langbtn {
+  /* #langbtn {
     position: absolute;
-    /* width: 100%; */
+    width: 100%;
     z-index: 1;
     left: 5%;
-  }
+  } */
   .dropdown-menu {
     flex-direction: column;
   }
