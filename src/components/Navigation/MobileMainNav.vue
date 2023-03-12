@@ -138,8 +138,10 @@
   .dropdown-menu {
     flex-direction: column;
   }
+
   #menuitem {
     text-align: center;
+    padding-left: 0;
   }
   span {
     color: black;
