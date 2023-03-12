@@ -14,12 +14,6 @@
       // Jag testar med branches Sheila
       //Klara was never here...
       LangBtn
-    },
-
-    computed: {
-      tester() {
-        return this.$store.state.items
-      }
     }
   }
 </script>
@@ -30,10 +24,6 @@
   <FilterFetch />
   <!-- <SearchView /> -->
   <!-- <SidebarMenu /> -->
-
-  <template v-for="(i, index) in tester" :key="index">
-    <li>{{ i.name }}</li>
-  </template>
 
   <main>
     <RouterView />
