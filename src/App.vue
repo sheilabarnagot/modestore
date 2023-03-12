@@ -19,9 +19,8 @@
 </script>
 
 <template>
-  <LangBtn />
   <!-- Pontus was here -->
-
+  <LangBtn id="test" />
   <MobileMainNav />
   <FilterFetch />
   <!-- <SearchView /> -->
