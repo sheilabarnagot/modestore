@@ -1,6 +1,5 @@
-<!-- KZ new child component for MyAccount->HelpChild->ChildHelp->ExchangesComponent
--->
-<!--
+<!-- KZ new child component for MyAccount->HelpChild->ChildHelp->ExchangesComponent -->
+
 <template>
   <div>
     <h2>Exchanges</h2>
@@ -10,10 +9,10 @@
         <button @click="showExchangeDialog(product)">Exchange/Return</button>
       </li>
     </ul>
--->
-<!-- Exchange/Return dialog box -->
-<!--
-  <div v-if="showDialog">
+
+    <!-- Exchange/Return dialog box -->
+
+    <div v-if="showDialog">
       <h3>Exchange/Return {{ selectedProduct.name }}</h3>
       <label>
         <input type="radio" v-model="exchangeType" value="exchange" /> Exchange
@@ -92,4 +91,3 @@
     }
   }
 </script>
--->

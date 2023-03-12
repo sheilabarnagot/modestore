@@ -167,9 +167,4 @@
     justify-content: center;
     align-items: center;
   }
-
-  li:nth-child(2) {
-    /* height: 340px; */
-    /* border: 1px solid green; */
-  }
 </style>

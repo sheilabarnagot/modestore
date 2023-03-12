@@ -5,22 +5,30 @@
     <h2>Help</h2>
     <ul>
       <li>
-        <RouterLink to="/help/materials">Material Information</RouterLink>
+        <RouterLink to="/account/help/materials"
+          >Material Information</RouterLink
+        >
       </li>
       <li>
-        <RouterLink to="/help/buy">Buying on Bon.com</RouterLink>
+        <RouterLink to="/account/account/help/buy"
+          >Buying on Bon.com</RouterLink
+        >
       </li>
       <li>
-        <RouterLink to="/help/delivery">Delivery and Order Status</RouterLink>
+        <RouterLink to="/account/help/delivery"
+          >Delivery and Order Status</RouterLink
+        >
       </li>
       <li>
-        <RouterLink to="/help/exchanges">Exchanges and Returns</RouterLink>
+        <RouterLink to="/account/help/exchanges"
+          >Exchanges and Returns</RouterLink
+        >
       </li>
       <li>
-        <RouterLink to="/help/payment">Payment</RouterLink>
+        <RouterLink to="/account/help/payment">Payment</RouterLink>
       </li>
       <li>
-        <RouterLink to="/help/qr">Bon QR</RouterLink>
+        <RouterLink to="/account/help/qr">Bon QR</RouterLink>
       </li>
     </ul>
     <RouterView />
@@ -56,3 +64,9 @@
   //   routes: helpComponents
   // }
 </script>
+
+<style scoped>
+  h2 {
+    text-align: center;
+  }
+</style>

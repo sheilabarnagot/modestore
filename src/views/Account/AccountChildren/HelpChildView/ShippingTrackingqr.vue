@@ -1,29 +1,36 @@
 <!-- KZ new child component for MyAccount->HelpChild->ChildHelp->ShippingTrackingqr
 -->
-<!--
+
 <template>
   <div class="shipping-tracking">
     <h2>Shipping and Tracking</h2>
     <div class="shipment-list">
-      <div v-for="shipment in shipments" :key="shipment.id" class="shipment">
+      <!-- <div v-for="shipment in shipments" :key="shipment.id" class="shipment">
         <div class="shipment-info">
           <h3>{{ shipment.title }}</h3>
           <p>{{ shipment.description }}</p>
           <p>Tracking number: {{ shipment.trackingNumber }}</p>
         </div>
-        <div class="shipment-qrcode">
-          <qrcode :value="'shipment:' + shipment.trackingNumber" />
-        </div>
+      </div> -->
+      <div class="shipment-qrcode">
+        <!-- <qrcode-vue :value="'shipment:' + shipment.trackingNumber" /> -->
+        <qrcode-vue value="https://example.com" size="300" level="H" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import Qrcode from 'qrcode.vue'
+  import QrcodeVue from 'qrcode.vue'
 
   export default {
     name: 'ShippingTracking',
+    data() {
+      return {
+        value: 'https://example.com',
+        size: 300
+      }
+    },
     props: {
       shipments: {
         type: Array,
@@ -31,7 +38,7 @@
       }
     },
     components: {
-      Qrcode
+      QrcodeVue
     }
   }
 </script>
@@ -90,4 +97,3 @@
     max-width: 100%;
   }
 </style>
--->
