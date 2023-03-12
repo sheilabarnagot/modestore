@@ -32,11 +32,6 @@
     </ul>
   </nav>
   <RouterView />
-  <!-- <p id="welcomeLogin">
-    Hi,you are now logged in. Welcome to MODESTORE! From your private account
-    you can access different products from the store, you can save the clothes
-    that you like the most and much more. Enjoy!
-  </p> -->
   <RouterLink to="/">
     <button id="logout" @click="logout">Logout</button>
   </RouterLink>
@@ -44,6 +39,7 @@
 
 <style scoped>
   ul {
+    margin: 30px;
     padding-left: 0;
     list-style-type: none;
     display: flex;
@@ -57,15 +53,15 @@
   ul li a {
     font-family: 'jost';
     text-decoration: none;
+    color: #3c3e3f;
   }
   #logout {
     margin: 0 5%;
     width: 90%;
-    background-color: #000;
+    background-color: #3c3e3f;
     color: #fff;
     font-size: 11px;
     border: none;
-    border: 1px solid #000;
     margin-top: 40px;
     padding: 10px;
   }

@@ -28,24 +28,25 @@
 </script>
 
 <template>
-  <label>
-    <select name="lang" id="langButton" v-model="locale" @change="changelocale">
-      <option v-for="(lang, i) in languages" :value="lang.value" :key="i">
-        {{ lang.text }}
-      </option>
-    </select>
-  </label>
+  <div>
+    <label id="langButton">
+      <select name="lang" v-model="locale" @change="changelocale">
+        <option v-for="(lang, i) in languages" :value="lang.value" :key="i">
+          {{ lang.text }}
+        </option>
+      </select>
+    </label>
+  </div>
 </template>
 
 <style scoped>
   #langButton {
-    margin: 5px 15px;
-    padding: 3px 4px;
-    background-color: #dbdeed;
+    background-color: none;
     color: rgb(103, 114, 114);
     outline: none;
     border: none;
     border-radius: 5px;
     position: absolute;
+    top: 0;
   }
 </style>

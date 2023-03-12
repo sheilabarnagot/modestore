@@ -1,57 +1,16 @@
 <template>
-  <b-carousel v-model="slide" controls indicators>
-    <b-carousel-slide img-src="/img1200/sva/sva-studio-125.jpg" />
-    <b-carousel-slide img-src="/img1200/sva/sva-studio-120.jpg" />
-    <b-carousel-slide img-src="/img1200/sva/sva-studio-122.jpg" />
-    <b-carousel-slide img-src="/img1200/sva/sva-studio-124.jpg" />
-    <b-carousel-slide img-src="/img1200/sva/sva-studio-121.jpg" />
-    <b-carousel-slide img-src="/img1200/sva/sva-studio-123.jpg" />
-
-    <b-carousel-slide img-src="/img1200/pk-paris/pk-paris-107.jpg" />
-    <b-carousel-slide img-src="/img1200/fuc/fuc-glam-83.jpg" />
-    <b-carousel-slide img-src="/img1200/fuc/fuc-paris-61.jpg" />
-    <b-carousel-slide img-src="/img1200/fuc/fuc-paris-66.jpg" />
-    <b-carousel-slide img-src="/img1200/fuc/fuc-studios-73.jpg" />
-    <b-carousel-slide img-src="/img1200/pk-paris/pk-paris-108.jpg" />
-    <b-carousel-slide img-src="/img1200/punk/punk-look-171.jpg" />
-    <b-carousel-slide img-src="/img1200/punk/punk-look-178.jpg" />
-  </b-carousel>
-  <!--
-    <b-carousel-slide
-      img-src="/img1200/billy-ss-campagne/billy-ss-campagne-21.jpg"
-    />
-
-    <b-carousel-slide
-      img-src="/img1200/billy-ss-campagne/billy-ss-campagne-26.jpg"
-    />
-    -->
-  <!-- <b-carousel
-    id="my-carousel"
-    controls
-    indicators
-    fade
-    interval="5000"
-    @sliding-start="stopAutoplay"
-    @sliding-end="startAutoplay"
-  >
-    <b-carousel-slide
-      v-for="(image, index) in images"
-      :key="index"
-      :src="image.src"
-      :alt="image.alt"
-    />
-  </b-carousel>
-  </b-carousel
-  > --><!--
-    <b-carousel-slide
-      src="/img1200/pk-paris/pk-paris-107.jpg"
-      alt="PK Paris 107"
-    />
-    <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=10" />
-    <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=11" />
-    <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=12" />
-  </b-carousel>
---></template>
+  <div class="slide-container">
+    <h2>{{ slideTitle }}</h2>
+    <b-carousel class="img-slide" v-model="slide" controls indicators>
+      <b-carousel-slide img-src="/img1200/sva/sva-studio-125.jpg" />
+      <b-carousel-slide img-src="/img1200/sva/sva-studio-120.jpg" />
+      <b-carousel-slide img-src="/img1200/sva/sva-studio-122.jpg" />
+      <b-carousel-slide img-src="/img1200/sva/sva-studio-124.jpg" />
+      <b-carousel-slide img-src="/img1200/sva/sva-studio-121.jpg" />
+      <b-carousel-slide img-src="/img1200/sva/sva-studio-123.jpg" />
+    </b-carousel>
+  </div>
+</template>
 
 <script>
   export default {
@@ -59,8 +18,15 @@
       return {
         slide: 0
       }
+    },
+    props: {
+      slideTitle: {
+        type: String,
+        default: 'Studio'
+      }
     }
-    /*  methods: {
+    /*
+      methods: {
       stopAutoplay() {
         this.$refs.carousel.pause()
       },
@@ -70,6 +36,18 @@
     }*/
   }
 </script>
+
+<style scoped>
+  .slide-container {
+    margin: 30px;
+  }
+
+  h2 {
+    margin-left: 10px;
+    color: #353337;
+  }
+</style>
+
 <!--
 <template>
   <div class="swiper-container">
@@ -84,6 +62,15 @@
     </div>
     <div class="swiper-pagination" />
   </div>
+
+  * more pic for the carousel:
+  <b-carousel-slide img-src="/img1200/fuc/fuc-glam-83.jpg" />
+    <b-carousel-slide img-src="/img1200/fuc/fuc-paris-61.jpg" />
+    <b-carousel-slide img-src="/img1200/fuc/fuc-paris-66.jpg" />
+    <b-carousel-slide img-src="/img1200/fuc/fuc-studios-73.jpg" />
+    <b-carousel-slide img-src="/img1200/punk/punk-look-171.jpg" />
+    <b-carousel-slide img-src="/img1200/punk/punk-look-178.jpg" />
+
 </template>
 
 <script>
