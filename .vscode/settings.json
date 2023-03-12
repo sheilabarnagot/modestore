@@ -29,5 +29,8 @@
   "editor.tabSize": 2,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+  "i18n-ally.localesPaths": [
+    "src/locales"
+  ]
 }

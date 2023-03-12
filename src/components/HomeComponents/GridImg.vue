@@ -1,85 +1,183 @@
+<!--KZ GridImg will show different pictures using props to show in a grid. The grid is changing deppinding on screen size-->
 <template>
-  <div class="grid">
-    <div v-for="(src, index) in imageSources" :key="index">
-      <a :href="`/product/${index}`">
-        <img :src="src" alt="Product Image" />
-      </a>
+  <div class="gallery-container">
+    <div class="grid-img">
+      <h2 class="gallery-title">{{ title }}</h2>
+      <div class="grid-container">
+        <div
+          class="grid-item"
+          v-for="(image, index) in images"
+          :key="index"
+          :style="{ backgroundImage: `url(${image.src})` }"
+        >
+          <div class="overlay">{{ image.title }}</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
   export default {
+    name: 'GridImg',
     props: {
-      jsonSrc: {
+      title: {
         type: String,
+        default: 'Meeting spring in Paris'
+      },
+      images: {
+        type: Array,
         required: true
-      }
-    },
-    data() {
-      return {
-        imageSources: []
-      }
-    },
-    async mounted() {
-      const response = await fetch(this.jsonSrc)
-      const data = await response.json()
-      this.imageSources = data.map((item) => item.src)
+      },
+      columnsXs: { type: Number, default: 2 },
+      columnsSm: { type: Number, default: 3 },
+      columnsMd: { type: Number, default: 4 },
+      columnsLg: { type: Number, default: 5 },
+      columnsXl: { type: Number, default: 6 }
     }
   }
 </script>
+
 <style scoped>
-  .grid {
+  .gallery-container {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 1200px;
+    background-color: #f5f5f5;
+  }
+  .gallery-title {
+    color: #464343;
+    opacity: 0.7;
+  }
+  .grid-img {
+    margin: 1rem;
+    padding: 1rem;
+    object-fit: cover;
+    max-width: 1200px;
+  }
+
+  .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 1rem;
   }
 
-  @media (min-width: 768px) {
-    .grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
+  .grid-item {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
   }
-  /*
-  .grid img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    max-width: 100%;
+
+  /*.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 0.5rem;
+    text-align: center;
   }*/
 </style>
 <!--<template>
-  <div class="grid">
-    <div v-for="item in items" :key="item.id">
-      <a :href="`/product/${item.id}`">
-        <img :src="item.src" alt="item.alt" />
-      </a>
-    </div>
+  <div class="gallery-container">
+    <h2>{{ galleryTitle }}</h2>
+    <b-container>
+      <b-row class="gall-gap-row">
+        <b-col
+          class="gall-gap-col"
+          v-for="(image, index) in images"
+          :key="index"
+          :xs="columnsXs"
+          :sm="columnsSm"
+          :md="columnsMd"
+          :lg="columnsLg"
+          :xl="columnsXl"
+        >
+          <img
+            :src="image.src"
+            :alt="image.alt"
+            class="img-fluid"
+            :style="{ width: '100%', height: 'auto' }"
+          />
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
 <script>
   export default {
     props: {
-      items: {
+      images: {
+        type: Array,
+        required: true
+      },
+      columns: {
+        type: Number,
+        default: 3
+      },
+      galleryTitle: {
+        type: String,
+        default: 'Gallery'
+      }
+    },
+    computed: {
+      columnsMd() {
+        return Math.floor(12 / Math.min(this.columns, 2))
+      },
+      columnsLg() {
+        return Math.floor(12 / Math.min(this.columns, 3))
+      },
+      columnsXl() {
+        return Math.floor(12 / Math.max(this.columns, 4))
+      }
+    }
+  }
+</script>
+-->
+<!--
+<template>
+  <div class="gallery-container">
+    <h2>Spring in Paris</h2>
+    <b-container>
+      <b-row>
+        <b-col v-for="(image, index) in images" :key="index">
+          <img :src="image.src" :alt="image.alt" class="img-fluid" />
+        </b-col>
+      </b-row>
+    </b-container>
+  </div>
+</template>
+
+<script>
+  export default {
+    props: {
+      images: {
         type: Array,
         required: true
       }
     }
   }
 </script>
-
+-->
+<!--
 <style scoped>
-  .grid
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
+  .gallery-container {
+    margin: 20px;
   }
 
-  @media (min-width: 768px) {
-    .grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
+  h2 {
+    margin-left: 20px;
+  }
+
+  .gall-gap-row {
+    gap: 20px;
+  }
+
+  gall-gap-col {
+    gap: 20px;
   }
 </style>
 -->
