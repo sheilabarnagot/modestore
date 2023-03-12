@@ -94,7 +94,7 @@
     z-index: 2;
     height: 4em;
     width: 100%;
-    background-color: #f6f6f7;
+    background-color: #eeece5;
   }
 
   ul:not(.dropdown-menu) {
