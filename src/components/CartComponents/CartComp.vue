@@ -135,7 +135,7 @@
     padding-bottom: 10%;
   }
   img {
-    max-width: 50%;
+    max-width: 100%;
     box-shadow: 50px 0px 50px 5px grey;
   }
   #productinfo {
@@ -169,7 +169,7 @@
   }
 
   li:nth-child(2) {
-    height: 340px;
+    /* height: 340px; */
     /* border: 1px solid green; */
   }
 </style>
