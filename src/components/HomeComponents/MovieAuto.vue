@@ -37,7 +37,7 @@
   @media (min-width: 768px) {
     /* Add styles for larger screens */
     video {
-      height: 50vh;
+      height: 100vh;
     }
   }
 </style>
