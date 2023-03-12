@@ -62,9 +62,7 @@
     color: #fff;
     font-size: 11px;
     border: none;
-    /* border: 1px solid #000; */
     margin-top: 40px;
     padding: 10px;
   }
-  
 </style>
