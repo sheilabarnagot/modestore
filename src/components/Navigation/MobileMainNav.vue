@@ -143,6 +143,10 @@
     text-align: center;
     padding-left: 0;
   }
+
+  #menuitem a {
+    color: #3c3e3f;
+  }
   span {
     color: black;
   }
