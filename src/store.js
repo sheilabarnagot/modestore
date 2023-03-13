@@ -61,7 +61,7 @@ const mutations = {
     state.totalCost = 0
   },
   searchedItemsFiltered(state, itmz) {
-    state.searchedItems.push(itmz)
+    state.searchedItems = itmz
   }
 }
 
