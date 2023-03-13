@@ -39,10 +39,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1em;
+    margin: 1em;
     justify-items: center;
   }
 
   img {
-    max-width: 90%;
+    max-width: 100%;
   }
 </style>

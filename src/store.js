@@ -59,12 +59,16 @@ const mutations = {
   },
   clearTotalCost(state) {
     state.totalCost = 0
+  },
+  searchedItemsFiltered(state, itmz) {
+    state.searchedItems = itmz
   }
 }
 
 const state = {
   items: [],
   favoriteItems: [],
+  searchedItems: [],
   // Totalpriset av ens produkter
   totalCost: 0
 }

@@ -136,7 +136,8 @@
   }
   img {
     max-width: 100%;
-    box-shadow: 50px 0px 50px 5px grey;
+    /* box-shadow: 50px 0px 50px 5px grey; */
+    /* object-fit: none; */
   }
   #productinfo {
     margin-bottom: 10px;
@@ -155,6 +156,9 @@
   }
   #products {
     display: grid;
+    gap: 1em;
+    margin: 1em;
+    justify-items: center;
     grid-template-columns: 1fr 1fr;
   }
   .selected {

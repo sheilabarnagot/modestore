@@ -3,13 +3,18 @@
     <form @submit="filterProducts" action="">
       <input type="text" v-model="searchTerm" placeholder="Search" />
       <input class="search" type="submit" value="Search" />
-    </form>
-    <!-- <button @click="test">test me</button>
+
+      <form @submit="filterProducts">
+        <input type="text" v-model="searchTerm" />
+        <input type="submit" value="Search" />
+      </form>
+      <!-- <button @click="test">test me</button>
     <div v-for="(product, index) in filteredProducts" :key="index">
       <h3>{{ product.name }}</h3>
       <img :src="product.image" :alt="product.name" />
       <p>{{ product.description }}</p>
     </div> -->
+    </form>
   </div>
 
   <!-- <div :key="product.id" v-for="product in products" />

@@ -54,7 +54,6 @@
   import UserIcon from '../SvgIcons/UserIcon.vue'
   import ShoppingIcon from '../SvgIcons/ShoppingIcon.vue'
   import FilterFetch from '../Filter/FilterFetch.vue'
-
   export default {
     data() {
       return {
@@ -78,8 +77,9 @@
         this.menuToggl = !this.menuToggl
       },
       testar(ez) {
+        this.$store.commit('searchedItemsFiltered', ez)
         this.$router.push('/SearchComponent')
-        console.log(ez)
+        console.log(ez, 'från MobileMainNav')
       }
     }
   }
