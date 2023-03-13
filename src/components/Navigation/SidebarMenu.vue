@@ -1,4 +1,4 @@
-<!--for screen 768 and up -->
+<!--KZ menu/navigation for screens 768 and up -->
 <template>
   <div class="menu-icon tablet-menu" @click="toggleMenu">
     <div class="icon"><HamburgerMenu /></div>
@@ -29,12 +29,12 @@
         isOpenWidth: '0',
         firstTransitsion: '0.5s',
         categories: [
-          { id: 1, name: 'female' },
-          { id: 2, name: 'jackets' },
-          { id: 3, name: 'tops' },
-          { id: 4, name: 'bottoms' },
-          { id: 5, name: 'dresses' },
-          { id: 6, name: 'about' }
+          { id: 1, name: 'News' },
+          { id: 2, name: 'Jackets' },
+          { id: 3, name: 'Tops' },
+          { id: 4, name: 'Bottoms' },
+          { id: 5, name: 'Dresses' },
+          { id: 6, name: 'About' }
         ]
       }
     },
