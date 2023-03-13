@@ -13,6 +13,7 @@ export default defineConfig({
     }),
     VueI18n({
       include: path.resolve(__dirname, './src/locales/**')
+      // this configuration indicates that all language files should be searched in the src/locales folder and its subfolders so that they can be used by the VueI18n plugin
     })
   ]
 })

@@ -26,11 +26,18 @@
     }
   })
 </script>
+<!-- This component allows changing the language of the app using the vue-i18n plugin.
+
+In the setup() the useI18n function is imported, which provides the instance of the i18n object that contains the language and translation information. A locale constant is created that represents the current language of the application, a list of languages objects that contains the different languages available, and a changeLocale function that is executed when a new language is selected from the dropdown menu.
+
+In this case, the exported properties are locale, languages, changeLocale, and t (which is a translation function provided by vue-i18n).
+
+ -->
 
 <template>
   <div>
     <label id="langButton">
-      <select name="lang" v-model="locale" @change="changelocale">
+      <select id="button" name="lang" v-model="locale" @change="changelocale">
         <option v-for="(lang, i) in languages" :value="lang.value" :key="i">
           {{ lang.text }}
         </option>
@@ -39,15 +46,25 @@
   </div>
 </template>
 
+<!-- I used a div element that wraps around all the content to make it easy to style. A select element that is the language selector button and that contains a list of options to choose from.
+The v-model attribute that binds the value selected in the select to the locale property (3 Json in locale).
+An @change event that is fired when the user changes the language selection and that calls the changelocale method of the data model.
+And a v-for directive that creates an option for each lang object in the languages array, using the text property as the text of the option and the value property as the value.
+ -->
+
 <style scoped>
   #langButton {
-    background-color: none;
-    color: rgb(103, 114, 114);
+    position: absolute;
+    /* z-index: 1; */
+    top: 0;
+  }
+  #button {
+    background-color: #dbdeeb;
     outline: none;
     border: none;
-    border-radius: 5px;
-    position: absolute;
-    z-index: 1;
-    top: 0;
+    color: #3d3e41;
+    border-radius: 3px;
+    margin: 10px 20px;
+    padding-left: 5px;
   }
 </style>
