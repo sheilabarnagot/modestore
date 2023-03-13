@@ -12,7 +12,8 @@
       :columnsLg="5"
       :columnsXl="6"
     />
-    <!--
+    <!--  <mood-board :images="images" />
+
          :images="[
         {
           src: '/img1200/pk-paris/pk-paris-107.jpg',
@@ -73,10 +74,9 @@
 </script>
 <style scoped>
   .bonnie {
-    color: #585049;
-
+    color: #47413d;
     position: absolute;
-    margin: 50px 30px;
+    margin: 40px 30px;
   }
 </style>
 
@@ -102,29 +102,4 @@
     }
   }
 </script>
--->
-
-<!--KZ testar olika styling
-<style>
-  .container {
-    height: 100vh;
-  }
-</style>
--->
-
-<!--
-<style>
-  .swiper-container {
-    width: 100%;
-    /*height: 70vh;*/
-    overflow: hidden;
-    margin: 20px;
-  }
-  @media screen and (max-width: 767px) {
-    .movie-auto,
-    .carousel-img {
-      height: 100vh;
-    }
-  }
-</style>
 -->

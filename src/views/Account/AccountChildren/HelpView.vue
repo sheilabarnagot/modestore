@@ -1,8 +1,7 @@
-<!--KZ creating a help component (one of the child nav for Myaccount). Trying to fix warning in router because of missing component and wrong path -->
-
 <template>
   <nav>
     <h2>Help</h2>
+
     <ul>
       <li>
         <RouterLink to="/account/help/materials"
@@ -34,37 +33,37 @@
     <RouterView />
   </nav>
 </template>
-
+<!--
 <script>
   // import { RouterLink, routerView } from 'vue-router'
-  // import MaterialsComponent from './MaterialsComponent.vue'
+  import MaterialsComponent from './MaterialsComponent.vue'
 
-  // const helpComponents = [
-  //   {
-  //     path: '/help/materials',
-  //     name: 'Materials',
-  //     component: MaterialsComponent,
-  //     props: {}
-  //   },
-  //   {
-  //     path: '/help/another',
-  //     name: 'Another Component',
-  //     component: MaterialsComponent,
-  //     props: {}
-  //   }
-  // ]
+  const helpComponents = [
+    {
+      path: '/help/materials',
+      name: 'Materials',
+      component: MaterialsComponent,
+      props: {}
+    },
+    {
+      path: '/help/another',
+      name: 'Another Component',
+      component: MaterialsComponent,
+      props: {}
+    }
+  ]
 
-  // export default {
-  //   name: 'HelpAccount',
-  //   components: {
-  //     RouterLink,
-  //     routerView
-  //   },
-  //   // use the routes option to define your routes
-  //   routes: helpComponents
-  // }
+  export default {
+    name: 'HelpAccount',
+    components: {
+      // RouterLink,
+      // routerView
+    },
+    //use the routes option to define your routes
+    routes: helpComponents
+  }
 </script>
-
+-->
 <style scoped>
   h2 {
     text-align: center;
