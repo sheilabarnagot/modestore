@@ -4,7 +4,7 @@
     <div class="grid-img">
       <h2 class="gallery-title">{{ title }}</h2>
       <div class="grid-container">
-        {{ columnsXs }}
+        <!-- {{ columnsXs }} -->
         <div
           class="grid-item"
           v-for="(image, index) in images"
