@@ -67,16 +67,41 @@
     background-size: cover;
     background-position: center;
     position: relative;
+    padding-bottom: 150%; /* Maintain 2:3 aspect ratio */
   }
 
   @media only screen and (min-width: 900px) {
     .grid-container {
       grid-template-columns: repeat(
         auto-fill,
-        minmax(233px, 1fr)
+        minmax(3, 1fr)
       ); /* Sm 3 columns */
     }
   }
+
+  /*lägg till sen   .grid-item {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+@media only screen and (min-width: 300px) {
+  .grid-item {
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .grid-item {
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .grid-item {
+    height: 400px;
+  }
+}*/
 
   /*.overlay {
     position: absolute;
