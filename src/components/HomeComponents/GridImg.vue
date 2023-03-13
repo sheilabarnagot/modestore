@@ -3,16 +3,14 @@
   <div class="gallery-container">
     <div class="grid-img">
       <h2 class="gallery-title">{{ title }}</h2>
-      <div class="grid-container">
-        {{ columnsXs }}
-        <div
-          class="grid-item"
-          v-for="(image, index) in images"
-          :key="index"
-          :style="{ backgroundImage: `url(${image.src})` }"
-        >
-          <div class="overlay">{{ image.title }}</div>
-        </div>
+
+      <div
+        class="grid-item"
+        v-for="(image, index) in images"
+        :key="index"
+        :style="{ backgroundImage: `url(${image.src})` }"
+      >
+        <div class="overlay">{{ image.title }}</div>
       </div>
     </div>
   </div>
