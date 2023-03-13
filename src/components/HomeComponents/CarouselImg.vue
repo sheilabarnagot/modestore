@@ -45,6 +45,7 @@
   h2 {
     margin-left: 10px;
     color: #353337;
+    opacity: 0.9;
   }
 </style>
 

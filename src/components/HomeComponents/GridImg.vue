@@ -74,7 +74,7 @@
     .grid-container {
       grid-template-columns: repeat(
         auto-fill,
-        minmax(3, 1fr)
+        minmax(3, 1fr) /* Sheila helped with the columns bigger screens */
       ); /* Sm 3 columns */
     }
   }
