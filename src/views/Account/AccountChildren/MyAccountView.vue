@@ -1,5 +1,7 @@
 <template>
-  <p>Fattar inte koden, kan vi prata om det :) ?</p>
+  <div id="login">
+    <p>Hello, you are now logged in.</p>
+  </div>
   <!-- <div class="plagg-container">
     <div v-for="plagg in lista" :key="plagg.id" class="plagg-item">
       <h2>{{ plagg.namn }}</h2>
@@ -61,6 +63,14 @@
 
   .favorites-container li {
     margin-bottom: 5px;
+  }
+  #login {
+    width: 100%;
+    height: 50px;
+    margin: 80px 10px;
+    padding: 20px;
+    color: #3c3e3f;
+    font-size: 30px;
   }
 </style>
 
@@ -177,8 +187,5 @@
   .bi-heart,
   .bi-heart-fill {
     font-size: 1.8rem;
-  }
-  #welcomeLogin {
-    font-size: 20px;
   }
 </style>

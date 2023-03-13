@@ -1,4 +1,4 @@
-<!-- KZ new child component for MyAccount->HelpChild->ChildHelp->MaterialsComponent
+<!-- KZ new child component for MyAccount->HelpChild->ChildHelp->MaterialsComponent -->
 
 <template>
   <div class="materials">
@@ -174,4 +174,3 @@
     }
   }
 </style>
--->

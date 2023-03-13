@@ -1,6 +1,10 @@
 <!-- KZ new child component for MyAccount->HelpChild->ChildHelp->DeliveryComponent
 -->
+
 <!--
+  todo: Create orderStatus in vuex. It doesn't seem to exists.
+ -->
+
 <template>
   <div>
     <h2>Delivery Methods</h2>
@@ -12,7 +16,7 @@
       </li>
     </ul>
     <h2>Order Status</h2>
-    <div>{{ orderStatus }}</div>
+    <!-- <div>{{ orderStatus }}</div> -->
   </div>
 </template>
 
@@ -35,13 +39,12 @@
           }
         ]
       }
-    },
-    computed: {
-      orderStatus() {
-        // Get order status from store
-        return this.$store.state.order.status
-      }
     }
+    // computed: {
+    //   orderStatus() {
+    //     // Get order status from store
+    //     return this.$store.state.order.status
+    //   }
+    // }
   }
 </script>
--->

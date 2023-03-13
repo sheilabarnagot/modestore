@@ -2,7 +2,7 @@
 
   add BetalningsComponent here. Created of Diyana and Lilas
 -->
-<!--
+
 <template>
   <div class="payment-container">
     <h2>Payment Options</h2>
@@ -87,4 +87,3 @@
     text-align: justify;
   }
 </style>
--->

@@ -1,8 +1,4 @@
 <template>
-  <!-- Test -->
-  <div id="langButton">
-    <LangBtn id="langbtn" />
-  </div>
   <nav class="mobile-menu">
     <ul>
       <li>
@@ -58,7 +54,6 @@
   import UserIcon from '../SvgIcons/UserIcon.vue'
   import ShoppingIcon from '../SvgIcons/ShoppingIcon.vue'
   import FilterFetch from '../Filter/FilterFetch.vue'
-  import LangBtn from '../LangBtn.vue'
 
   export default {
     data() {
@@ -73,7 +68,6 @@
       SearchIcon,
       UserIcon,
       ShoppingIcon,
-      LangBtn,
       FilterFetch
     },
     methods: {
@@ -100,7 +94,7 @@
     z-index: 2;
     height: 4em;
     width: 100%;
-    background-color: #f6f6f7;
+    background-color: #eeece5;
   }
 
   ul:not(.dropdown-menu) {
@@ -127,6 +121,7 @@
   ul li a {
     font-family: 'jost';
     text-decoration: none;
+    color: #3c3e3f;
   }
   /*
   #input-container {
@@ -141,18 +136,15 @@
     cursor: pointer;
   }
 
-  #langbtn {
-    position: absolute;
-    /* width: 100%; */
-    z-index: 1;
-    left: 5%;
-  }
   .dropdown-menu {
     flex-direction: column;
   }
+
   #menuitem {
     text-align: center;
+    padding-left: 0;
   }
+
   span {
     color: black;
   }
