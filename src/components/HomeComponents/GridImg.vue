@@ -3,14 +3,15 @@
   <div class="gallery-container">
     <div class="grid-img">
       <h2 class="gallery-title">{{ title }}</h2>
-
-      <div
-        class="grid-item"
-        v-for="(image, index) in images"
-        :key="index"
-        :style="{ backgroundImage: `url(${image.src})` }"
-      >
-        <div class="overlay">{{ image.title }}</div>
+      <div class="grid-container">
+        <div
+          class="grid-item"
+          v-for="(image, index) in images"
+          :key="index"
+          :style="{ backgroundImage: `url(${image.src})` }"
+        >
+          <div class="overlay">{{ image.title }}</div>
+        </div>
       </div>
     </div>
   </div>
@@ -22,17 +23,17 @@
     props: {
       title: {
         type: String,
-        default: 'Meeting spring in Paris'
+        default: 'Spring in Paris'
       },
       images: {
         type: Array,
         required: true
       },
-      columnsXs: { type: Number, default: 2 },
-      columnsSm: { type: Number, default: 3 },
-      columnsMd: { type: Number, default: 4 },
-      columnsLg: { type: Number, default: 5 },
-      columnsXl: { type: Number, default: 6 }
+      // columnsXs: { type: Number, default: 2 },
+      columnsSm: { type: Number, default: 3 }
+      // columnsMd: { type: Number, default: 4 },
+      //  columnsLg: { type: Number, default: 5 },
+      //  columnsXl: { type: Number, default: 6 }
     }
   }
 </script>
@@ -46,7 +47,7 @@
   }
   .gallery-title {
     color: #464343;
-    opacity: 0.7;
+    opacity: 0.9;
   }
   .grid-img {
     margin: 1rem;
@@ -57,7 +58,7 @@
 
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 1rem;
   }
 
@@ -66,6 +67,15 @@
     background-size: cover;
     background-position: center;
     position: relative;
+  }
+
+  @media only screen and (min-width: 900px) {
+    .grid-container {
+      grid-template-columns: repeat(
+        auto-fill,
+        minmax(233px, 1fr)
+      ); /* Sm 3 columns */
+    }
   }
 
   /*.overlay {
