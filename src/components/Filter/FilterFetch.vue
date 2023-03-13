@@ -1,6 +1,6 @@
 <template>
   <div id="input-container">
-    <form @submit="filterProducts" action="">
+    <form @submit="filterProducts">
       <input type="text" v-model="searchTerm" />
       <input type="submit" value="Search" />
     </form>
