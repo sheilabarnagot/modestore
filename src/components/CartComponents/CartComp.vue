@@ -11,11 +11,13 @@
         </div>
 
         <!-- Med src här under så blir bilderna dubbla -->
-        <img
-          :src="`${product.src}`"
-          alt="product image"
-          :class="{ selected: isFavorit(product) }"
-        />
+        <RouterLink to="/"
+          ><img
+            :src="`${product.src}`"
+            alt="product image"
+            :class="{ selected: isFavorit(product) }"
+          />
+        </RouterLink>
         <!-- är produkten favorit eller inte -->
 
         <p>{{ product.price }}</p>
