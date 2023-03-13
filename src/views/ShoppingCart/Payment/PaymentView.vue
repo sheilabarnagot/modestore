@@ -73,6 +73,10 @@
         name="kortmodel"
         :no-close-on-backdrop="true"
         hide-footer
+        @submit1="(event) => pay(event)"
+        :submit1-disabled="
+          cardowner.length < 3 || kortnummer.length < 3 || CVC.length < 3
+        "
       >
         <div class="container">
           <div class="first">
@@ -178,7 +182,7 @@
         modalShowswish: false,
         modalShowkort: false,
         modalShowfaktura: false,
-        regex: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
+        regex: /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/,
         email: '',
         number: ''
       }
@@ -189,7 +193,6 @@
       onKort(MY) {
         this.MY = MY
       },
-
       inputValidation() {},
       pay(event) {
         // console.log('jhjjh' + this.kortnummer + this.CVC + this.cardowner)
@@ -207,6 +210,29 @@
       }
     }
   }
+
+  // methods:{
+  //   	check:function(){
+  //   		if (this.message==''){
+  //   			this.message='Please enter text in text box below';
+  //   		}
+  //   	}
+  //   }
+  // })
+
+  // <input v-model="message" v-on="check">
+
+  // pay(event) {
+  // console.log('jhjjh' + this.kortnummer + this.CVC + this.cardowner)
+  //     console.log(event.target)
+
+  //     if (this.kortnummer !== '' && this.CVC !== '' && this.cardowner !== '') {
+  //       console.log('pay ok')
+  //     } else {
+  //       console.log()
+  //     }
+  //   }
+  // }
 </script>
 
 <style lang="scss" scoped>

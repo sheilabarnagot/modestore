@@ -69,9 +69,16 @@ const state = {
   totalCost: 0
 }
 
+const getters = {
+  shoppingCartItems(state) {
+    return state.items
+  }
+}
+
 export default createStore({
   state,
   mutations,
+  getters,
   plugins: [createPersistedState()],
   strict: true
 })
