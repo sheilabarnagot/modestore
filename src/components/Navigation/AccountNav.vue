@@ -33,7 +33,7 @@
   </nav>
   <RouterView />
   <RouterLink to="/">
-    <button id="logout" @click="logout">Logout</button>
+    <!-- <button id="logout" @click="logout">Logout</button> -->
   </RouterLink>
 </template>
 

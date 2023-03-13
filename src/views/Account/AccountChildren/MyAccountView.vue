@@ -65,7 +65,6 @@
     margin-bottom: 5px;
   }
   #login {
-    width: 100%;
     height: 50px;
     margin: 80px 10px;
     padding: 20px;

@@ -9,6 +9,8 @@ import ShoppingView from './views/ShoppingView.vue'
 import FavoritesView from './views/Account/AccountChildren/FavoritesView.vue'
 import HelpView from './views/Account/AccountChildren/HelpView.vue'
 
+import AllProductsView from './views/AllProductsView.vue'
+
 // imports for Helpview's children.
 import MaterialsComponent from './views/Account/AccountChildren/HelpChildView/MaterialsComponent.vue'
 import PaymentComponent from './views/Account/AccountChildren/HelpChildView/PaymentComponent.vue'
@@ -29,7 +31,7 @@ export default createRouter({
       path: '/'
     },
     {
-      component: ShoppingView,
+      component: AllProductsView,
       path: '/shopping'
     },
     {
