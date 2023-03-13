@@ -11,11 +11,13 @@
         </div>
 
         <!-- Med src här under så blir bilderna dubbla -->
-        <img
-          :src="`${product.src}`"
-          alt="product image"
-          :class="{ selected: isFavorit(product) }"
-        />
+        <RouterLink to="/"
+          ><img
+            :src="`${product.src}`"
+            alt="product image"
+            :class="{ selected: isFavorit(product) }"
+          />
+        </RouterLink>
         <!-- är produkten favorit eller inte -->
 
         <p>{{ product.price }}</p>
@@ -136,7 +138,8 @@
   }
   img {
     max-width: 100%;
-    box-shadow: 50px 0px 50px 5px grey;
+    /* box-shadow: 50px 0px 50px 5px grey; */
+    /* object-fit: none; */
   }
   #productinfo {
     margin-bottom: 10px;
@@ -155,6 +158,9 @@
   }
   #products {
     display: grid;
+    gap: 1em;
+    margin: 1em;
+    justify-items: center;
     grid-template-columns: 1fr 1fr;
   }
   .selected {
@@ -166,10 +172,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  li:nth-child(2) {
-    /* height: 340px; */
-    /* border: 1px solid green; */
   }
 </style>

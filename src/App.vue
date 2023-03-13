@@ -2,13 +2,12 @@
   import MobileMainNav from './components/Navigation/MobileMainNav.vue'
   import LangBtn from './components/LangBtn.vue'
   // import FilterFetch from './components/Filter/FilterFetch.vue'
-  import SearchView from './views/SearchView.vue'
+  // import SearchView from './views/SearchView.vue'
   // import SidebarMenu from './components/SidebarMenu.vue'
   export default {
     components: {
-      SearchView,
+      // SearchView,
       MobileMainNav,
-      // SearchView
       // SidebarMenu
       // Jag testar med branches Sheila
       //Klara was never here...
@@ -18,9 +17,9 @@
 </script>
 
 <template>
-  <LangBtn id="test" />
+  <LangBtn />
   <MobileMainNav />
-  <SearchView />
+  <!-- <SearchView /> -->
   <!-- <SidebarMenu /> -->
 
   <main>
