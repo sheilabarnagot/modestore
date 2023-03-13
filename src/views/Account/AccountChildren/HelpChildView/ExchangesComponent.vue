@@ -1,4 +1,4 @@
-<!-- KZ new child component for MyAccount->HelpChild->ChildHelp->ExchangesComponent -->
+<!-- KZ och PA ExchangesComponent -->
 
 <template>
   <div>
