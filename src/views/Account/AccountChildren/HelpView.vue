@@ -1,7 +1,7 @@
 <!--KZ creating a help component (one of the child nav for Myaccount). Trying to fix warning in router because of missing component and wrong path -->
 
 <template>
-  <div>
+  <nav>
     <h2>Help</h2>
     <ul>
       <li>
@@ -32,7 +32,7 @@
       </li>
     </ul>
     <RouterView />
-  </div>
+  </nav>
 </template>
 
 <script>
@@ -68,5 +68,20 @@
 <style scoped>
   h2 {
     text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+    padding-left: 0;
+    justify-items: center;
+  }
+
+  ul li a {
+    font-family: 'jost';
+    color: #3c3e3f;
+    line-height: 2;
   }
 </style>
