@@ -1,4 +1,4 @@
-<!-- KZ new child component for MyAccount->HelpChild->ChildHelp->ShippingTrackingqr
+<!-- KZ new child component for MyAccount->HelpChild->ShippingTrackingqr
 -->
 <!--
 <template>

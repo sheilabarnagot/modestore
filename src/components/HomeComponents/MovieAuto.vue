@@ -1,3 +1,4 @@
+<!-- KZ video, autoplay, mobile first and for bigger screens from 768px -->
 <template>
   <video autoplay loop muted playsinline>
     <source :src="movieSrc" type="video/mp4" />
@@ -18,7 +19,7 @@
   .container {
     position: relative;
     height: 0;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
     overflow: hidden;
   }
 
@@ -29,33 +30,15 @@
     max-width: 100%;
   }
   video {
-    /* Set the default styles for the video */
+    /* Sets the default styles for the video */
     width: 100%;
     height: auto;
     object-fit: cover;
   }
   @media (min-width: 768px) {
-    /* Add styles for larger screens */
+    /* Add more styles for larger screens */
     video {
       height: 100vh;
     }
   }
 </style>
-<!--
-<style scoped>
-  video {
-    /* Set the default styles for the video */
-    width: 60%;
-    height: auto;
-    object-fit: cover;
-    max-width: 100%;
-  }
-
-  @media (min-width: 768px) {
-    /* Add styles for larger screens */
-    video {
-      height: 50vh;
-    }
-  }
-</style>
--->
