@@ -1,3 +1,4 @@
+<!--KZ making a image carousel for the first page-->
 <template>
   <div class="slide-container">
     <h2>{{ slideTitle }}</h2>
