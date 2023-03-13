@@ -4,7 +4,6 @@
     <div class="grid-img">
       <h2 class="gallery-title">{{ title }}</h2>
       <div class="grid-container">
-        {{ columnsXs }}
         <div
           class="grid-item"
           v-for="(image, index) in images"
@@ -24,17 +23,17 @@
     props: {
       title: {
         type: String,
-        default: 'Meeting spring in Paris'
+        default: 'Spring in Paris'
       },
       images: {
         type: Array,
         required: true
       },
-      columnsXs: { type: Number, default: 2 },
-      columnsSm: { type: Number, default: 3 },
-      columnsMd: { type: Number, default: 4 },
-      columnsLg: { type: Number, default: 5 },
-      columnsXl: { type: Number, default: 6 }
+      // columnsXs: { type: Number, default: 2 },
+      columnsSm: { type: Number, default: 3 }
+      // columnsMd: { type: Number, default: 4 },
+      //  columnsLg: { type: Number, default: 5 },
+      //  columnsXl: { type: Number, default: 6 }
     }
   }
 </script>
@@ -48,7 +47,7 @@
   }
   .gallery-title {
     color: #464343;
-    opacity: 0.7;
+    opacity: 0.9;
   }
   .grid-img {
     margin: 1rem;
@@ -59,7 +58,7 @@
 
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 1rem;
   }
 
@@ -68,7 +67,41 @@
     background-size: cover;
     background-position: center;
     position: relative;
+    padding-bottom: 150%; /* Maintain 2:3 aspect ratio */
   }
+
+  @media only screen and (min-width: 900px) {
+    .grid-container {
+      grid-template-columns: repeat(
+        auto-fill,
+        minmax(3, 1fr)
+      ); /* Sm 3 columns */
+    }
+  }
+
+  /*lägg till sen   .grid-item {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+@media only screen and (min-width: 300px) {
+  .grid-item {
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .grid-item {
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .grid-item {
+    height: 400px;
+  }
+}*/
 
   /*.overlay {
     position: absolute;
