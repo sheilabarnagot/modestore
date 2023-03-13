@@ -42,7 +42,7 @@
 <style scoped>
   #langButton {
     background-color: none;
-    color: rgb(103, 114, 114);
+    color: #dcdfee;
     outline: none;
     border: none;
     border-radius: 5px;

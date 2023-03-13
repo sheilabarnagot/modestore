@@ -18,6 +18,13 @@
     }
   }
 </script>
+<!-- In the data object, each property is initialized with an empty string.
+
+The expression validates a string containing an email address according to the specified pattern. And below I use the same type of function that in the login view.
+
+*The code does not perform any server-side validation, which could be a security risk in a real web application.
+ -->
+
 <template>
   <h2>{{ $t('signup.firstTitle') }}</h2>
   <form id="formSignup">
@@ -75,7 +82,15 @@
   </div>
 </template>
 
+<!-- Each input field has real-time validation using the :state directive to show if the entered value is valid.
+
+There are also two check boxes to accept communications and cookies (they are faked)
+
+When the "Create Account" button is clicked, the saveInfo() function is triggered and the email and password are saved to local storage.
+ -->
+
 <style scoped>
+  /* The page has been styled from the mobile first 375px */
   h2 {
     font-size: 15px;
     font-weight: 700;
