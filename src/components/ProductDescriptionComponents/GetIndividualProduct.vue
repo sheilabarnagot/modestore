@@ -1,11 +1,12 @@
 <template>
+  <h1>Product Details</h1>
   <div id="container">
     <img :src="dettur" />
     <div id="product-information">
       <div id="product-name-product">
         <p>{{ $route.params.name }}, {{ $route.params.product }}</p>
+        <p id="p-price">price: {{ $route.params.price }} kr</p>
       </div>
-      <p id="p-price">{{ $route.params.price }} kr</p>
     </div>
   </div>
 </template>
@@ -44,22 +45,33 @@
     justify-content: start;
     align-items: center;
     margin: 2em;
-    /* flex-direction: column; */
-    height: 100vh;
+    height: 90vh;
   }
 
   #product-information {
     display: flex;
     width: 100%;
     flex-direction: column;
-    align-items: start;
-    padding-left: 1em;
+    align-items: center;
+    font-size: 1.2em;
+    /* padding-left: 1em; */
   }
 
   #product-name-product {
     display: flex;
+    flex-direction: column;
+    padding-left: 0.3em;
   }
 
+  h1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    position: absolute;
+    top: 15%;
+  }
   #p-price {
     text-align: center;
     width: 100%;
@@ -67,6 +79,7 @@
 
   p {
     font-family: jost;
+    margin-bottom: 0;
   }
 
   img {
