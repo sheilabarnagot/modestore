@@ -5,6 +5,12 @@
     <ul id="products">
       <!-- Here we are looping through the filtered products, which will be different categories of clothes depending on what prop was sent in. -->
       <li v-for="product in filteredProducts" :key="product.id">
+        <div id="productinfo">
+          <p class="top-p">{{ product.name }}</p>
+          <p class="bottom-p">{{ product.product }}</p>
+        </div>
+        <!-- // encodeURIComponent() -->
+        <!-- Med src här under så blir bilderna dubbla -->
         <RouterLink
           :to="`/description/${product.src.split('/')}/${product.name}/${
             product.price
