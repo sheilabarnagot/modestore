@@ -14,7 +14,11 @@
       </div> -->
       <div class="shipment-qrcode">
         <!-- <qrcode-vue :value="'shipment:' + shipment.trackingNumber" /> -->
-        <qrcode-vue value="https://example.com" size="300" level="H" />
+        <qrcode-vue
+          value="https://github.com/sheilabarnagot/modestore"
+          size="300"
+          level="H"
+        />
       </div>
     </div>
   </div>
