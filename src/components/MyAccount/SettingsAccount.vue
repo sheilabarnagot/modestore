@@ -2,7 +2,7 @@
   <h2>Change your options</h2>
 </template>
 <style>
-h2{
-margin: 10px;
-}
+  h2 {
+    margin: 10px;
+  }
 </style>
