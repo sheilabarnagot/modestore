@@ -1,7 +1,6 @@
 <template>
   <nav>
     <h2>Help</h2>
-
     <ul>
       <li>
         <RouterLink to="/account/help/materials"
