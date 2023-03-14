@@ -69,8 +69,7 @@ const mutations = {
       id: id,
       src: src,
       price: price,
-      product: product,
-
+      product: product
     })
   }
 }
