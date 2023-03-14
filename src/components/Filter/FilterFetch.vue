@@ -1,8 +1,10 @@
 <template>
   <div id="input-container">
     <form @submit="filterProducts" action="">
-      <input type="text" v-model="searchTerm" placeholder="Search" />
-      <input class="search" type="submit" value="Search" />
+      <template v-if="toggls">
+        <input type="text" v-model="searchTerm" placeholder="Search" />
+        <input @click="togglers" class="search" type="submit" value="Search" />
+      </template>
     </form>
 
     <!-- <form @submit="filterProducts">
@@ -33,7 +35,8 @@
         searchTerm: '',
         products: [],
         filteredProducts: [],
-        reactiveProductList: null
+        reactiveProductList: null,
+        toggls: true
         //En ny kod:
         // Target: [
         //   {
@@ -68,6 +71,10 @@
           )
         )
         this.$emit('filterproducts', this.reactiveProductList)
+        this.toggls = !this.toggls
+      },
+      togglers() {
+        this.toggl = !this.toggls
       }
     }
   }
