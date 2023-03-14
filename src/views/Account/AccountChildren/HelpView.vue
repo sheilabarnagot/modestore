@@ -8,9 +8,7 @@
         >
       </li>
       <li>
-        <RouterLink to="/account/account/help/buy"
-          >Buying on Bon.com</RouterLink
-        >
+        <RouterLink to="/">Buying on Bon.com</RouterLink>
       </li>
       <li>
         <RouterLink to="/account/help/delivery"
