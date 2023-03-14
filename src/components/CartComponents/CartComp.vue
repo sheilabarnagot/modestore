@@ -110,11 +110,12 @@
 
 <style scoped>
   #addbutton {
-    background-color: #4f9c76;
-    border-radius: 15px;
-    border: 1px solid rgba(27, 31, 35, 0.15);
-    border-radius: 20px;
+    width: 100%;
+    background-color: #3c3e3f;
     color: #fff;
+    font-size: 0.8em;
+    border: none;
+    padding: 10px;
     cursor: pointer;
     font-family: -apple-system, system-ui, 'Segoe UI', Helvetica, Arial,
       sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
@@ -127,10 +128,10 @@
     margin-top: 3px;
     margin-left: 10px;
     margin-bottom: 10px;
-    font-family: 'didot', serif;
+    font-family: 'didot', sans-serif;
   }
   #addbutton:hover {
-    background-color: #3f684b;
+    background-color: #818c85;
   }
   .heart {
     font-size: 30px;
@@ -159,7 +160,7 @@
     text-align: center;
     margin-bottom: 50px;
     margin-top: 10px;
-    font-family: 'Gloock', serif;
+    font-family: 'Gloock', sans-serif;
   }
   #products {
     display: grid;
@@ -167,7 +168,7 @@
     margin: 1em;
     justify-items: center;
     grid-template-columns: 1fr 1fr;
-    font-family: 'didot', serif;
+    font-family: 'didot', sans-serif;
   }
   .selected {
     border: 2px solid red;
@@ -191,13 +192,31 @@
     margin-top: 14px;
   }
   .top-p {
-    font-family: 'didot', serif;
+    font-family: 'didot', sans-serif;
   }
   .bottom-p {
     white-space: nowrap;
-    font-family: 'didot', serif;
+    font-family: 'didot', sans-serif;
   }
   p {
     margin: 0;
+  }
+  @media screen and (max-width: 440px) {
+    #products {
+      display: grid;
+      margin: 1em;
+      justify-items: center;
+      grid-template-columns: 1fr;
+      font-family: 'didot', sans-serif;
+    }
+  }
+  @media screen and (min-width: 950px) {
+    #products {
+      display: grid;
+      margin: 1em;
+      justify-items: center;
+      grid-template-columns: 1fr 1fr 1fr;
+      font-family: 'didot', sans-serif;
+    }
   }
 </style>
