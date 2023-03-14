@@ -1,5 +1,6 @@
 <template>
   <GetIndividualProductVue />
+  <div id="hacky-divider" />
 </template>
 
 <script>
@@ -16,3 +17,9 @@
     }
   }
 </script>
+
+<style scoped>
+  #hacky-divider {
+    margin-bottom: 6em;
+  }
+</style>
