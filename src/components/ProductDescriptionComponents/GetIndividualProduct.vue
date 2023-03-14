@@ -1,4 +1,5 @@
 <template>
+  <ArrowBack @click="() => this.$router.go(-1)" id="arrow-back" />
   <h1>Product Details</h1>
   <div id="container">
     <img :src="dettur" />
@@ -12,6 +13,7 @@
 </template>
 
 <script>
+  import ArrowBack from '../SvgIcons/ArrowBack.vue'
   export default {
     created() {
       // watch the params of the route to fetch the data again
@@ -25,7 +27,9 @@
         { immediate: true }
       )
     },
-    components: {},
+    components: {
+      ArrowBack
+    },
     data() {
       return {
         dettur: null
@@ -75,6 +79,12 @@
   #p-price {
     text-align: center;
     width: 100%;
+  }
+
+  #arrow-back {
+    position: absolute;
+    top: 3%;
+    cursor: pointer;
   }
 
   p {
