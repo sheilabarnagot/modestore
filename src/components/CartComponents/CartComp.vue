@@ -11,7 +11,10 @@
         </div>
 
         <!-- Med src här under så blir bilderna dubbla -->
-        <RouterLink to="/"
+        <RouterLink
+          :to="`/description/${product.src.split('/')}/${product.name}/${
+            product.price
+          }/${product.product}`"
           ><img
             :src="`${product.src}`"
             alt="product image"
@@ -60,7 +63,7 @@
         required: true
       }
     },
-    emits: ['fromcartcomp'],
+    emits: ['fromcartcomp', 'imageclick'],
     components: {},
     data() {
       return {

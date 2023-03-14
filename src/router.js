@@ -10,6 +10,7 @@ import FavoritesView from './views/Account/AccountChildren/FavoritesView.vue'
 import HelpView from './views/Account/AccountChildren/HelpView.vue'
 
 import AllProductsView from './views/AllProductsView.vue'
+import IndividualProductView from './views/IndividualProductView.vue'
 
 // imports for Helpview's children.
 import MaterialsComponent from './views/Account/AccountChildren/HelpChildView/MaterialsComponent.vue'
@@ -87,6 +88,10 @@ export default createRouter({
           component: ShippingTrackingqr
         }
       ]
+    },
+    {
+      component: IndividualProductView,
+      path: '/description/:id?/:name?/:price?/:product?'
     },
 
     {
