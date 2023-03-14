@@ -8,11 +8,9 @@
     </form>
 
     <!-- <div :key="index" v-for="(product, index) in filteredProducts" />
-      <h1>{{ products.name }}</h1>
-      <img :src="products.src" :alt="products.name" />
-      <p>{{ products.src }}</p> -->
-
-    <!-- <div v-if="filterProducts && products().length">></div> -->
+    <h1>{{ products.name }}</h1>
+    <img :src="products.src" :alt="products.name" />
+    <p>{{ products.src }}</p> -->
 
     <!-- <form @submit="filterProducts">
         <input type="text" v-model="searchTerm" />
