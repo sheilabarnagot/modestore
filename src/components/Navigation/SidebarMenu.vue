@@ -2,7 +2,7 @@
 <template>
   <nav>
     <div class="menu-icon tablet-menu" @click="toggleMenu">
-      <div class="icon"><HamburgerMenu /></div>
+      <div class="icon"><StyledHamburger /></div>
     </div>
     <div
       :style="{ width: isOpenWidth, transition: firstTransitsion }"
@@ -24,11 +24,11 @@
 </template>
 
 <script>
-  import HamburgerMenu from '../SvgIcons/HamburgerMenu.vue'
+  import StyledHamburger from '../SvgIcons/StyledHamburger.vue'
   //import CloseMenuIcon from '../SvgIcons/CloseMenuIcon.vue'
   export default {
     components: {
-      HamburgerMenu
+      StyledHamburger
       // CloseMenuIcon
     },
     data() {
@@ -70,35 +70,63 @@
     left: 0;
     background-color: #eeece5; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
+    padding-top: 100px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    // color: #47413d;
   }
 
   .menu-icon {
     position: absolute;
-    top: 0;
-    left: 10px;
+    top: 40px;
+    left: 20px;
     font-size: 16px;
-    margin-left: 25px;
+    margin-left: 10px;
     z-index: 2;
   }
 
   .menu-items {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 8px 8px 40px;
     text-decoration: none;
     font-size: 16px;
-    color: #3c3e3f;
+    color: #47413d;
     display: block;
     transition: 0.3s;
   }
 
   .menu-items div {
     padding: 0.5rem 0;
-    font-size: 1.5rem;
+    margin: 10 0;
+    font-size: 1rem;
     font-weight: lighter;
   }
+  //line under the links to show where you are
+  .menu-items div::after {
+    content: '';
+    display: block;
+    //position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(60%);
+    width: 15px;
+    height: 0;
+    background-color: #818c85;
+    transition: height 0.3s ease;
+  }
+  .menu-items div:hover::after,
+  .menu-items div.active::after {
+    height: 2px;
+  }
 
-  @media (min-width: 601px) and (max-width: 768px) {
+  .menu-items a {
+    color: #47413d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .menu-items a:hover {
+    color: #818c85;
+  }
+
+  @media (min-width: 601px) {
     nav {
       display: block;
     }
