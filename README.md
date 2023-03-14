@@ -13,3 +13,11 @@ Röd=underdel
 orange=överdel
 gul=klänning
 grön=jacka
+
+### Rubriker
+
+font-family: Gloock;
+
+#### paragrafer
+
+font-family: Jost;

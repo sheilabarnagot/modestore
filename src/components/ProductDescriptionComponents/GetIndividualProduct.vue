@@ -42,7 +42,7 @@
   #container {
     display: flex;
     justify-content: start;
-    align-items: start;
+    align-items: center;
     margin: 2em;
     /* flex-direction: column; */
     height: 100vh;
@@ -58,13 +58,6 @@
 
   #product-name-product {
     display: flex;
-  }
-  #product-name-product:first-child {
-    padding-left: 0;
-  }
-
-  #product-name-product p {
-    /* padding-left: 0.5em; */
   }
 
   #p-price {

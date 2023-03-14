@@ -9,7 +9,7 @@
           <p class="top-p">{{ product.name }}</p>
           <p class="bottom-p">{{ product.product }}</p>
         </div>
-
+        <!-- // encodeURIComponent() -->
         <!-- Med src här under så blir bilderna dubbla -->
         <RouterLink
           :to="`/description/${product.src.split('/')}/${product.name}/${

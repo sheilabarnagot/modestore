@@ -69,7 +69,7 @@
       },
       filterProducts(event) {
         event.preventDefault()
-
+        //stackoverflow
         this.reactiveProductList = this.products.filter((entry) =>
           Object.keys(entry).some((key) =>
             String(entry[key])
