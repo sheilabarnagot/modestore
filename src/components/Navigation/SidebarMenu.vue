@@ -2,7 +2,8 @@
 <template>
   <nav>
     <div class="menu-icon tablet-menu" @click="toggleMenu">
-      <div class="icon"><StyledHamburger /></div>
+      <div class="icon" v-if="!isOpen"><StyledHamburger /></div>
+      <div class="icon" v-else><CloseIcon @close-menu="toggleMenu" /></div>
     </div>
     <div
       :style="{ width: isOpenWidth, transition: firstTransitsion }"
@@ -25,11 +26,11 @@
 
 <script>
   import StyledHamburger from '../SvgIcons/StyledHamburger.vue'
-  //import CloseMenuIcon from '../SvgIcons/CloseMenuIcon.vue'
+  import CloseIcon from '../SvgIcons/CloseIcon.vue'
   export default {
     components: {
-      StyledHamburger
-      // CloseMenuIcon
+      StyledHamburger,
+      CloseIcon
     },
     data() {
       return {
@@ -37,7 +38,7 @@
         isOpenWidth: '0',
         firstTransitsion: '0.5s',
         categories: [
-          { id: 1, name: 'News' },
+          { id: 1, name: 'All products' },
           { id: 2, name: 'Jackets' },
           { id: 3, name: 'Tops' },
           { id: 4, name: 'Bottoms' },
@@ -49,10 +50,16 @@
     methods: {
       toggleMenu() {
         this.isOpen = !this.isOpen
-
+        if (this.isOpen) {
+          this.isOpenWidth = '250px'
+        } else {
+          this.isOpenWidth = '0'
+        }
+        /*
         this.isOpenWidth === null || this.isOpenWidth === '0'
           ? (this.isOpenWidth = '250px')
           : (this.isOpenWidth = '0')
+          */
       }
     }
   }
@@ -68,11 +75,11 @@
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #eeece5; /* Black*/
+    background-color: #eeece5;
+    opacity: 0.7;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 100px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    // color: #47413d;
   }
 
   .menu-icon {
@@ -82,6 +89,17 @@
     font-size: 16px;
     margin-left: 10px;
     z-index: 2;
+    //new style
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu-icon svg {
+    margin-right: 10px;
+  }
+  .menu-icon .icon {
+    display: flex;
+    align-items: center;
   }
 
   .menu-items {
@@ -106,7 +124,7 @@
     //position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(60%);
+    transform: translateX(80%);
     width: 15px;
     height: 0;
     background-color: #818c85;
@@ -124,6 +142,12 @@
   }
   .menu-items a:hover {
     color: #818c85;
+  }
+  .close-icon {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    cursor: pointer;
   }
 
   @media (min-width: 601px) {

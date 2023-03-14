@@ -1,11 +1,11 @@
 <template>
   <svg
-    fill="#3c3e3f"
-    width="100px"
-    height="100px"
+    fill="#47413d"
+    width="50px"
+    height="50px"
     viewBox="-225.28 -225.28 1474.56 1474.56"
     xmlns="http://www.w3.org/2000/svg"
-    stroke="#3c3e3f"
+    stroke="#47413d"
     stroke-width="0.01024"
     transform="matrix(1, 0, 0, 1, 0, 0)"
   >
@@ -15,7 +15,7 @@
       id="SVGRepo_tracerCarrier"
       stroke-linecap="round"
       stroke-linejoin="round"
-      stroke="#CCCCCC"
+      stroke="#818c85"
       stroke-width="34.816"
     />
 

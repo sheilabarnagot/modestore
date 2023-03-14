@@ -27,6 +27,11 @@ import SearchComponent from './components/SearchComponents/SearchComponent.vue'
 
 export default createRouter({
   history: createWebHashHistory(),
+  //to, from, savedPosition parameters
+  scrollBehavior() {
+    // always scroll to top
+    return { top: 1 }
+  },
   routes: [
     {
       component: HomeView,
