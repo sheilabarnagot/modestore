@@ -1,7 +1,7 @@
 [
   {
     "name": "Charlie",
-    "src": "public/img1200/billy-aw-campagne/billy-aw-campagne-30.jpg",
+    "src": "/img1200/billy-aw-campagne/billy-aw-campagne-30.jpg",
     "id": "30",
     "price": "1700 sek",
     "compostion": "100% silk",
@@ -12,7 +12,7 @@
   },
   {
     "name": "Nico",
-    "src": "public/img1200/billy-aw-campagne/billy-aw-campagne-32.jpg",
+    "src": "/img1200/billy-aw-campagne/billy-aw-campagne-32.jpg",
     "id": "32",
     "price": "4400 sek",
     "compostion": "fake fur",
@@ -23,7 +23,7 @@
   },
   {
     "name": "Tuva",
-    "src": "public/img1200/billy-aw-campagne/billy-aw-campagne-33.jpg",
+    "src": "/img1200/billy-aw-campagne/billy-aw-campagne-33.jpg",
     "id": "33",
     "price": "2800",
     "compostion": "100% silk",
@@ -34,7 +34,7 @@
   },
   {
     "name": "Tuva",
-    "src": "public/img1200/billy-aw-campagne/billy-aw-campagne-34.jpg",
+    "src": "/img1200/billy-aw-campagne/billy-aw-campagne-34.jpg",
     "id": "34",
     "price": "2800 sek",
     "compostion": "100% silk",
@@ -45,7 +45,7 @@
   },
   {
     "name": "Tuva",
-    "src": "public/img1200/billy-aw-look/billy-aw-look-31.jpg",
+    "src": "/img1200/billy-aw-look/billy-aw-look-31.jpg",
     "id": "31",
     "price": "2800 sek",
     "compostion": "100% silk",
@@ -56,7 +56,7 @@
   },
   {
     "name": "Dora",
-    "src": "public/img1200/billy-aw-look/billy-aw-look-35.jpg",
+    "src": "/img1200/billy-aw-look/billy-aw-look-35.jpg",
     "id": "35",
     "price": "2250 sek",
     "compostion": "100% silk",
@@ -67,7 +67,7 @@
   },
   {
     "name": "Disa",
-    "src": "public/img1200/billy-aw-look/billy-aw-look-35.jpg",
+    "src": "/img1200/billy-aw-look/billy-aw-look-35.jpg",
     "id": "35.5",
     "price": "2250 sek",
     "compostion": "100% wool",
@@ -78,7 +78,7 @@
   },
   {
     "name": "Sarah",
-    "src": "public/img1200/billy-aw-look/billy-aw-look-36.jpg",
+    "src": "/img1200/billy-aw-look/billy-aw-look-36.jpg",
     "id": "36",
     "price": "4600 sek",
     "compostion": "wool/leather",
@@ -89,7 +89,7 @@
   },
   {
     "name": "Dylan",
-    "src": "public/img1200/billy-aw-look/billy-aw-look-37.jpg",
+    "src": "/img1200/billy-aw-look/billy-aw-look-37.jpg",
     "id": "37",
     "price": "1350 sek",
     "compostion": "wool",
@@ -100,7 +100,7 @@
   },
   {
     "name": "Doris",
-    "src": "public/img1200/billy-aw-look/billy-aw-look-37.jpg",
+    "src": "/img1200/billy-aw-look/billy-aw-look-37.jpg",
     "id": "37.7",
     "price": "1550 sek",
     "compostion": "wool",
@@ -111,7 +111,7 @@
   },
   {
     "name": "Chu",
-    "src": "public/img1200/billy-aw-look/billy-aw-look-38.jpg",
+    "src": "/img1200/billy-aw-look/billy-aw-look-38.jpg",
     "id": "38",
     "price": "1400 sek",
     "compostion": "100% silk",
@@ -122,7 +122,7 @@
   },
   {
     "name": "Line",
-    "src": "public/img1200/billy-aw-look/billy-aw-look-39.jpg",
+    "src": "/img1200/billy-aw-look/billy-aw-look-39.jpg",
     "id": "39",
     "price": "3400 sek",
     "compostion": "100% wool",
@@ -133,7 +133,7 @@
   },
   {
     "name": "Nico",
-    "src": "public/img1200/billy-aw-look/billy-aw-look-40.jpg",
+    "src": "/img1200/billy-aw-look/billy-aw-look-40.jpg",
     "id": "40",
     "price": "4400 sek",
     "compostion": "fake fur",
@@ -144,7 +144,7 @@
   },
   {
     "name": "Nico",
-    "src": "public/img1200/billy-aw-look/billy-aw-look-41.jpg",
+    "src": "/img1200/billy-aw-look/billy-aw-look-41.jpg",
     "id": "41",
     "price": "1400 sek",
     "compostion": "fake fur",
@@ -155,7 +155,7 @@
   },
   {
     "name": "Alba",
-    "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-10.jpg",
+    "src": "/img1200/billy-ss-campagne/billy-ss-campagne-10.jpg",
     "id": "10",
     "price": "4200 sek",
     "compostion": "cotton",
@@ -166,7 +166,7 @@
   },
   {
     "name": "Susie",
-    "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-20.jpg",
+    "src": "/img1200/billy-ss-campagne/billy-ss-campagne-20.jpg",
     "id": "20",
     "price": "1300 sek",
     "compostion": "linen",
@@ -177,7 +177,7 @@
   },
   {
     "name": "Sici",
-    "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-20.jpg",
+    "src": "/img1200/billy-ss-campagne/billy-ss-campagne-20.jpg",
     "id": "20.0",
     "price": "2300 sek",
     "compostion": "100% silk",
@@ -188,7 +188,7 @@
   },
   {
     "name": "Seny",
-    "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-21.jpg",
+    "src": "/img1200/billy-ss-campagne/billy-ss-campagne-21.jpg",
     "id": "21",
     "price": "5300 sek",
     "compostion": "leather",
@@ -199,7 +199,7 @@
   },
   {
     "name": "Seny suede",
-    "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-22.jpg",
+    "src": "/img1200/billy-ss-campagne/billy-ss-campagne-22.jpg",
     "id": "22",
     "price": "5300 sek",
     "compostion": "leather",
@@ -210,7 +210,7 @@
   },
   {
     "name": "Vera",
-    "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-23.jpg",
+    "src": "/img1200/billy-ss-campagne/billy-ss-campagne-23.jpg",
     "id": "23",
     "price": "4200 sek",
     "compostion": "100% silk",
@@ -221,7 +221,7 @@
   },
   {
     "name": "Vera",
-    "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-24.jpg",
+    "src": "/img1200/billy-ss-campagne/billy-ss-campagne-24.jpg",
     "id": "24",
     "price": "4200 sek",
     "compostion": "100% silk",
@@ -232,7 +232,7 @@
   },
   {
     "name": "Alba",
-    "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
+    "src": "/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
     "id": "25",
     "price": "3200 sek",
     "compostion": "cotton",
@@ -243,7 +243,7 @@
   },
   {
     "name": "Tilly",
-    "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-26.jpg",
+    "src": "/img1200/billy-ss-campagne/billy-ss-campagne-26.jpg",
     "id": "26",
     "price": "2400 sek",
     "compostion": "100% silk",
@@ -265,7 +265,7 @@
   },
   {
     "name": "Tilde",
-    "src": "public/img1200/billy-ss-look/billy-ss-look-id-27.jpg",
+    "src": "/img1200/billy-ss-look/billy-ss-look-id-27.jpg",
     "id": "27",
     "price": "2200 sek",
     "compostion": "100% silk",
@@ -276,7 +276,7 @@
   },
   {
     "name": "Toni",
-    "src": "public/img1200/billy-ss-look/billy-ss-look-id-27.jpg",
+    "src": "/img1200/billy-ss-look/billy-ss-look-id-27.jpg",
     "id": "27.7",
     "price": "2700 sek",
     "compostion": "100% silk",
@@ -287,7 +287,7 @@
   },
   {
     "name": "Vera",
-    "src": "public/img1200/billy-ss-look/billy-ss-look-id-28.jpg",
+    "src": "/img1200/billy-ss-look/billy-ss-look-id-28.jpg",
     "id": "28",
     "price": "4200 sek",
     "compostion": "100% silk",
@@ -298,7 +298,7 @@
   },
   {
     "name": "Vicky",
-    "src": "public/img1200/billy-ss-look/billy-ss-look-id-28.jpg",
+    "src": "/img1200/billy-ss-look/billy-ss-look-id-28.jpg",
     "id": "28.8",
     "price": "1200 sek",
     "compostion": "100% silk",
@@ -320,7 +320,7 @@
   },
   {
     "name": "Susie",
-    "src": "public/img1200/billy-ss-look/billy-ss-look-id-30.jpg",
+    "src": "/img1200/billy-ss-look/billy-ss-look-id-30.jpg",
     "id": "30",
     "price": "1300 sek",
     "compostion": "linen",
@@ -331,7 +331,7 @@
   },
   {
     "name": "Sici",
-    "src": "public/img1200/billy-ss-look/billy-ss-look-id-30.jpg",
+    "src": "/img1200/billy-ss-look/billy-ss-look-id-30.jpg",
     "id": "30.0",
     "price": "2300 sek",
     "compostion": "100% silk",
@@ -342,7 +342,7 @@
   },
   {
     "name": "Mini",
-    "src": "public/img1200/mono/mono-140.jpg",
+    "src": "/img1200/mono/mono-140.jpg",
     "id": "140",
     "price": "1600 sek",
     "compostion": "cotton",
@@ -353,7 +353,7 @@
   },
   {
     "name": "Cloe",
-    "src": "public/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
+    "src": "/img1200/billy-ss-campagne/billy-ss-campagne-25.jpg",
     "id": "25",
     "price": "4200 sek",
     "compostion": "cotton",
@@ -364,7 +364,7 @@
   },
   {
     "name": "Lisa",
-    "src": "public/img1200/mono/mono-141.jpg",
+    "src": "/img1200/mono/mono-141.jpg",
     "id": "141",
     "price": "2200 sek",
     "compostion": "100% silk",
@@ -376,7 +376,7 @@
 
   {
     "name": "Vivi",
-    "src": "public/img1200/mono/mono-142.jpg",
+    "src": "/img1200/mono/mono-142.jpg",
     "id": "142",
     "price": "750 sek",
     "compostion": "cotton",
@@ -387,7 +387,7 @@
   },
   {
     "name": "Gini",
-    "src": "public/img1200/mono/mono-143.jpg",
+    "src": "/img1200/mono/mono-143.jpg",
     "id": "143",
     "price": "2400 sek",
     "compostion": "wool",
@@ -399,7 +399,7 @@
 
   {
     "name": "Bonni",
-    "src": "public/img1200/pk-paris/pk-paris-100.jpg",
+    "src": "/img1200/pk-paris/pk-paris-100.jpg",
     "id": "100",
     "price": "3400 sek",
     "compostion": "100% silk",
@@ -410,7 +410,7 @@
   },
   {
     "name": "Bibbi",
-    "src": "public/img1200/pk-paris/pk-paris-100.jpg",
+    "src": "/img1200/pk-paris/pk-paris-100.jpg",
     "id": "100.0",
     "price": "2600 sek",
     "compostion": "100% silk",
@@ -421,7 +421,7 @@
   },
   {
     "name": "Nina",
-    "src": "public/img1200/pk-paris/pk-paris-101.jpg",
+    "src": "/img1200/pk-paris/pk-paris-101.jpg",
     "id": "101",
     "price": "1300 sek",
     "compostion": "cotton",
@@ -432,7 +432,7 @@
   },
   {
     "name": "Filippa",
-    "src": "public/img1200/pk-paris/pk-paris-102.jpg",
+    "src": "/img1200/pk-paris/pk-paris-102.jpg",
     "id": "102",
     "price": "1200 sek",
     "compostion": "cotton",
@@ -443,7 +443,7 @@
   },
   {
     "name": "Fanny",
-    "src": "public/img1200/pk-paris/pk-paris-104.jpg",
+    "src": "/img1200/pk-paris/pk-paris-104.jpg",
     "id": "104",
     "price": "600 sek",
     "compostion": "cotton",
@@ -454,7 +454,7 @@
   },
   {
     "name": "Nicy",
-    "src": "public/img1200/pk-paris/pk-paris-104.jpg",
+    "src": "/img1200/pk-paris/pk-paris-104.jpg",
     "id": "104.4",
     "price": "1400 sek",
     "compostion": "cotton",
@@ -465,7 +465,7 @@
   },
   {
     "name": "Lucy",
-    "src": "public/img1200/pk-paris/pk-paris-107.jpg",
+    "src": "/img1200/pk-paris/pk-paris-107.jpg",
     "id": "107",
     "price": "4100 sek",
     "compostion": "100% silk",
@@ -476,7 +476,7 @@
   },
   {
     "name": "Ellie",
-    "src": "public/img1200/pk-paris/pk-paris-107.jpg",
+    "src": "/img1200/pk-paris/pk-paris-107.jpg",
     "id": "107.7",
     "price": "2700 sek",
     "compostion": "100% silk",
@@ -487,7 +487,7 @@
   },
   {
     "name": "Ellie",
-    "src": "public/img1200/pk-paris/pk-paris-107.jpg",
+    "src": "/img1200/pk-paris/pk-paris-107.jpg",
     "id": "107.7",
     "price": "2700 sek",
     "compostion": "100% silk",
@@ -498,7 +498,7 @@
   },
   {
     "name": "Elinor",
-    "src": "public/img1200/pk-paris/pk-paris-108.jpg",
+    "src": "/img1200/pk-paris/pk-paris-108.jpg",
     "id": "108",
     "price": "1500 sek",
     "compostion": "100% silk",
@@ -509,7 +509,7 @@
   },
   {
     "name": "Nora",
-    "src": "public/img1200/punk/punk-look-177.jpg",
+    "src": "/img1200/punk/punk-look-177.jpg",
     "id": "177",
     "price": "6500 sek",
     "compostion": "leather",
@@ -520,7 +520,7 @@
   },
   {
     "name": "Micca",
-    "src": "public/img1200/punk/punk-look-177.jpg",
+    "src": "/img1200/punk/punk-look-177.jpg",
     "id": "177.7",
     "price": "7100 sek",
     "compostion": "100% silk",
@@ -531,7 +531,7 @@
   },
   {
     "name": "Astrid",
-    "src": "public/img1200/punk/punk-look-171.jpg",
+    "src": "/img1200/punk/punk-look-171.jpg",
     "id": "171",
     "price": "6200 sek",
     "compostion": "Leather",
@@ -542,7 +542,7 @@
   },
   {
     "name": "Alma",
-    "src": "public/img1200/punk/punk-look-172.jpg",
+    "src": "/img1200/punk/punk-look-172.jpg",
     "id": "172",
     "price": "1200 sek",
     "compostion": "Polyester",
@@ -553,7 +553,7 @@
   },
   {
     "name": "Moa",
-    "src": "public/img1200/punk/punk-look-173.jpg",
+    "src": "/img1200/punk/punk-look-173.jpg",
     "id": "173",
     "price": "1200 sek",
     "compostion": "wool",
@@ -564,7 +564,7 @@
   },
   {
     "name": "Joni",
-    "src": "public/img1200/punk/punk-look-178.jpg",
+    "src": "/img1200/punk/punk-look-178.jpg",
     "id": "178",
     "price": "5200 sek",
     "compostion": "fake fur",
@@ -575,7 +575,7 @@
   },
   {
     "name": "Jonna",
-    "src": "public/img1200/punk/punk-look-179.jpg",
+    "src": "/img1200/punk/punk-look-179.jpg",
     "id": "179",
     "price": "3200 sek",
     "compostion": "Lyocel",
@@ -586,7 +586,7 @@
   },
   {
     "name": "Jonna",
-    "src": "public/img1200/punk/punk-look-179.jpg",
+    "src": "/img1200/punk/punk-look-179.jpg",
     "id": "179",
     "price": "3200 sek",
     "compostion": "Lyocel",
@@ -597,7 +597,7 @@
   },
   {
     "name": "Hana",
-    "src": "public/img1200/sva/sva-studio-120.jpg",
+    "src": "/img1200/sva/sva-studio-120.jpg",
     "id": "120",
     "price": "2200 sek",
     "compostion": "Lace",
@@ -608,7 +608,7 @@
   },
   {
     "name": "Ana",
-    "src": "public/img1200/sva/sva-studio-121.jpg",
+    "src": "/img1200/sva/sva-studio-121.jpg",
     "id": "121",
     "price": "1600 sek",
     "compostion": "Lace",
@@ -619,7 +619,7 @@
   },
   {
     "name": "Anci",
-    "src": "public/img1200/sva/sva-studio-121.jpg",
+    "src": "/img1200/sva/sva-studio-121.jpg",
     "id": "121.1",
     "price": "1400 sek",
     "compostion": "cotton",
@@ -630,7 +630,7 @@
   },
   {
     "name": "Hana",
-    "src": "public/img1200/sva/sva-studio-122.jpg",
+    "src": "/img1200/sva/sva-studio-122.jpg",
     "id": "122",
     "price": "2200 sek",
     "compostion": "Lace",
@@ -641,7 +641,7 @@
   },
   {
     "name": "Sici",
-    "src": "public/img1200/sva/sva-studio-122.jpg",
+    "src": "/img1200/sva/sva-studio-122.jpg",
     "id": "122",
     "price": "2300 sek",
     "compostion": "100% silk",
@@ -652,7 +652,7 @@
   },
   {
     "name": "Asta",
-    "src": "public/img1200/sva/sva-studio-123.jpg",
+    "src": "/img1200/sva/sva-studio-123.jpg",
     "id": "123",
     "price": "1800 sek",
     "compostion": "wool",
@@ -663,7 +663,7 @@
   },
   {
     "name": "Ema",
-    "src": "public/img1200/sva/sva-studio-124.jpg",
+    "src": "/img1200/sva/sva-studio-124.jpg",
     "id": "124",
     "price": "1800 sek",
     "compostion": "100% silk",
@@ -674,7 +674,7 @@
   },
   {
     "name": "Jona",
-    "src": "public/img1200/sva/sva-studio-125.jpg",
+    "src": "/img1200/sva/sva-studio-125.jpg",
     "id": "125",
     "price": "12000 sek",
     "compostion": "leather",
@@ -685,7 +685,7 @@
   },
   {
     "name": "Jona",
-    "src": "public/img1200/sva/sva-studio-125.jpg",
+    "src": "/img1200/sva/sva-studio-125.jpg",
     "id": "125.5",
     "price": "12000 sek",
     "compostion": "leather",
@@ -696,7 +696,7 @@
   },
   {
     "name": "Kira",
-    "src": "public/img1200/thumb/thumb-130.jpg",
+    "src": "/img1200/thumb/thumb-130.jpg",
     "id": "130",
     "price": "8700 sek",
     "compostion": "leather",
@@ -707,7 +707,7 @@
   },
   {
     "name": "Mari",
-    "src": "public/img1200/thumb/thumb-131.jpg",
+    "src": "/img1200/thumb/thumb-131.jpg",
     "id": "133",
     "price": "3700 sek",
     "compostion": "wool",
@@ -718,7 +718,7 @@
   },
   {
     "name": "Julia",
-    "src": "public/img1200/thumb/thumb-132.jpg",
+    "src": "/img1200/thumb/thumb-132.jpg",
     "id": "132",
     "price": "2400 sek",
     "compostion": "wool",
@@ -729,7 +729,7 @@
   },
   {
     "name": "Jill",
-    "src": "public/img1200/thumb/thumb-133.jpg",
+    "src": "/img1200/thumb/thumb-133.jpg",
     "id": "133",
     "price": "2400 sek",
     "compostion": "wool",
@@ -740,7 +740,7 @@
   },
   {
     "name": "Lilly",
-    "src": "public/img1200/thumb/thumb-134.jpg",
+    "src": "/img1200/thumb/thumb-134.jpg",
     "id": "134",
     "price": "1300 sek",
     "compostion": "cotton",
@@ -751,7 +751,7 @@
   },
   {
     "name": "Milly",
-    "src": "public/img1200/thumb/thumb-135.jpg",
+    "src": "/img1200/thumb/thumb-135.jpg",
     "id": "135",
     "price": "300 sek",
     "compostion": "silver",
@@ -762,7 +762,7 @@
   },
   {
     "name": "Sally",
-    "src": "public/img1200/thumb/thumb-136.jpg",
+    "src": "/img1200/thumb/thumb-136.jpg",
     "id": "136",
     "price": "3500 sek",
     "compostion": "wool",
@@ -773,7 +773,7 @@
   },
   {
     "name": "June",
-    "src": "public/img1200/thumb/thumb-137.jpg",
+    "src": "/img1200/thumb/thumb-137.jpg",
     "id": "137",
     "price": "4200 sek",
     "compostion": "wool",
@@ -784,7 +784,7 @@
   },
   {
     "name": "Ester",
-    "src": "public/img1200/thumb/thumb-138.jpg",
+    "src": "/img1200/thumb/thumb-138.jpg",
     "id": "138",
     "price": "1200 sek",
     "compostion": "wool",
@@ -795,7 +795,7 @@
   },
   {
     "name": "Inga",
-    "src": "public/img1200/tone-in-tone/toneintone-blue-2.jpg",
+    "src": "/img1200/tone-in-tone/toneintone-blue-2.jpg",
     "id": "2",
     "price": "3400 sek",
     "compostion": "cotton",
@@ -806,7 +806,7 @@
   },
   {
     "name": "Inger",
-    "src": "public/img1200/tone-in-tone/toneintone-green-4.jpg",
+    "src": "/img1200/tone-in-tone/toneintone-green-4.jpg",
     "id": "4",
     "price": "4400 sek",
     "compostion": "wool",
@@ -817,7 +817,7 @@
   },
   {
     "name": "Felicia",
-    "src": "public/img1200/tone-in-tone/toneintone-grey-6.jpg",
+    "src": "/img1200/tone-in-tone/toneintone-grey-6.jpg",
     "id": "6",
     "price": "5400 sek",
     "compostion": "wool",
@@ -828,7 +828,7 @@
   },
   {
     "name": "Felicia",
-    "src": "public/img1200/tone-in-tone/toneintone-grey-6.jpg",
+    "src": "/img1200/tone-in-tone/toneintone-grey-6.jpg",
     "id": "6.6",
     "price": "2400 sek",
     "compostion": "wool",
@@ -839,7 +839,7 @@
   },
   {
     "name": "Vicky",
-    "src": "public/img1200/tone-in-tone/toneintone-pink-3.jpg",
+    "src": "/img1200/tone-in-tone/toneintone-pink-3.jpg",
     "id": "3",
     "price": "3400 sek",
     "compostion": "polyester",
@@ -850,7 +850,7 @@
   },
   {
     "name": "Rina",
-    "src": "public/img1200/tone-in-tone/toneintone-red-5.jpg",
+    "src": "/img1200/tone-in-tone/toneintone-red-5.jpg",
     "id": "5",
     "price": "6400 sek",
     "compostion": "fake fur",
@@ -861,7 +861,7 @@
   },
   {
     "name": "Flora",
-    "src": "public/img1200/tone-in-tone/toneintone-white-1.jpg",
+    "src": "/img1200/tone-in-tone/toneintone-white-1.jpg",
     "id": "1",
     "price": "5600 sek",
     "compostion": "fake fur",
@@ -872,7 +872,7 @@
   },
   {
     "name": "Fanny",
-    "src": "public/img1200/tone-in-tone/toneintone-white-1.jpg",
+    "src": "/img1200/tone-in-tone/toneintone-white-1.jpg",
     "id": "1.1",
     "price": "1600 sek",
     "compostion": "cotton",
