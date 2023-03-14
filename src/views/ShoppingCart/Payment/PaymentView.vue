@@ -154,6 +154,12 @@
     </div>
   </div>
   <div class="totalcost">Totalcost: {{ $store.state.totalCost }}</div>
+  <div class="container">
+    <h2>Checkout</h2>
+    <div v-for="item in shoppingCartItems" :key="item.id">
+      <img :src="item.src" alt="product image" />
+    </div>
+  </div>
 </template>
 
 <script>
@@ -193,6 +199,11 @@
         } else {
           console.log()
         }
+      }
+    },
+    computed: {
+      shoppingCartItems() {
+        return this.$store.getters.shoppingCartItems
       }
     }
   }
