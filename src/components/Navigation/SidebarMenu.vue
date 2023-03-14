@@ -21,16 +21,27 @@
         </div>
       </template>
     </div>
+    <div id="menu-item-icons-container">
+      <SearchIcon />
+      <UserIcon class="menu-shopping-search" />
+      <ShoppingIcon class="menu-shopping-search" />
+    </div>
   </nav>
 </template>
 
 <script>
   import StyledHamburger from '../SvgIcons/StyledHamburger.vue'
   import CloseIcon from '../SvgIcons/CloseIcon.vue'
+  import UserIcon from '../SvgIcons/UserIcon.vue'
+  import ShoppingIcon from '../SvgIcons/ShoppingIcon.vue'
+  import SearchIcon from '../SvgIcons/SearchIcon.vue'
   export default {
     components: {
       StyledHamburger,
-      CloseIcon
+      CloseIcon,
+      UserIcon,
+      ShoppingIcon,
+      SearchIcon
     },
     data() {
       return {
@@ -148,6 +159,22 @@
     top: 100px;
     right: 100px;
     cursor: pointer;
+  }
+
+  // for the icons on the right
+
+  #menu-item-icons-container {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    width: 100%;
+    padding-left: 1em;
+    top: 5%;
+    right: 5%;
+  }
+
+  .menu-shopping-search {
+    margin-left: 2em;
   }
 
   @media (min-width: 601px) {
