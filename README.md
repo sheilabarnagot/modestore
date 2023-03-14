@@ -17,7 +17,9 @@ grön=jacka
 ### Rubriker
 
 font-family: Gloock;
+serifferna mest har en dekorativ funktion
 
 #### paragrafer
 
 font-family: Jost;
+använd till paragrafer
