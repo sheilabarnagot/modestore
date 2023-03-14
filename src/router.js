@@ -26,6 +26,11 @@ import SignUp from './components/MyAccount/SignUp.vue'
 import SearchComponent from './components/SearchComponents/SearchComponent.vue'
 
 export default createRouter({
+  //to, from, savedPosition
+  scrollBehavior() {
+    // always scroll to top
+    return { top: 1 }
+  },
   history: createWebHashHistory(),
   routes: [
     {
