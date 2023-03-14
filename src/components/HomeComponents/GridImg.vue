@@ -24,17 +24,17 @@
     props: {
       title: {
         type: String,
-        default: 'Meeting spring in Paris'
+        default: 'Spring in Paris'
       },
       images: {
         type: Array,
         required: true
       },
       columnsXs: { type: Number, default: 2 },
-      columnsSm: { type: Number, default: 3 },
-      columnsMd: { type: Number, default: 4 },
-      columnsLg: { type: Number, default: 5 },
-      columnsXl: { type: Number, default: 6 }
+      columnsSm: { type: Number, default: 2 },
+      columnsMd: { type: Number, default: 3 },
+      columnsLg: { type: Number, default: 3 },
+      columnsXl: { type: Number, default: 3 }
     }
   }
 </script>
@@ -48,18 +48,18 @@
   }
   .gallery-title {
     color: #464343;
-    opacity: 0.7;
+    opacity: 0.8;
   }
   .grid-img {
     margin: 1rem;
     padding: 1rem;
-    object-fit: cover;
-    max-width: 1200px;
+    /*object-fit: cover;
+    max-width: 1200px;*/
   }
 
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 1rem;
   }
 
