@@ -19,9 +19,11 @@
 
 <script>
   import HamburgerMenu from '../SvgIcons/HamburgerMenu.vue'
+  //import CloseMenuIcon from '../SvgIcons/CloseMenuIcon.vue'
   export default {
     components: {
       HamburgerMenu
+      // CloseMenuIcon
     },
     data() {
       return {
@@ -57,7 +59,7 @@
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #f6f6f7; /* Black*/
+    background-color: #eeece5; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -66,7 +68,7 @@
   .menu-icon {
     position: absolute;
     top: 0;
-    right: 10px;
+    left: 10px;
     font-size: 16px;
     margin-left: 25px;
     z-index: 2;
@@ -76,7 +78,7 @@
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 16px;
-    color: #818181;
+    color: #3c3e3f;
     display: block;
     transition: 0.3s;
   }
