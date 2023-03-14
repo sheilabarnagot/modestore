@@ -3,7 +3,7 @@
   import LangBtn from './components/LangBtn.vue'
   // import FilterFetch from './components/Filter/FilterFetch.vue'
   // import SearchView from './views/SearchView.vue'
-  import SidebarMenu from './components/SidebarMenu.vue'
+  import SidebarMenu from './components/Navigation/Sidebarmenu.vue'
   export default {
     components: {
       // SearchView,
