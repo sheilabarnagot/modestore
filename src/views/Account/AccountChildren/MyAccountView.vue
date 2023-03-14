@@ -1,6 +1,6 @@
 <template>
   <div id="login">
-    <p>Hello, you are now logged in.</p>
+    <p id="hello">Hello, you are now logged in.</p>
   </div>
   <!-- <div class="plagg-container">
     <div v-for="plagg in lista" :key="plagg.id" class="plagg-item">
@@ -65,11 +65,18 @@
     margin-bottom: 5px;
   }
   #login {
-    height: 50px;
-    margin: 80px 10px;
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3em 2.5em;
     color: #3c3e3f;
-    font-size: 30px;
+    font-size: 1.2em;
+  }
+  @media (min-width: 980px) {
+    #login {
+      justify-content: center;
+      font-size: 30px;
+    }
   }
 </style>
 
