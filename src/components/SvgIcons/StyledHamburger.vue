@@ -1,11 +1,11 @@
 <template>
   <svg
-    width="72px"
-    height="72px"
+    width="52px"
+    height="52px"
     viewBox="-0.42 -0.42 21.84 21.84"
     xmlns="http://www.w3.org/2000/svg"
-    fill="#3c3e3f"
-    stroke="#3c3e3f"
+    fill="#47413d"
+    stroke="#47413d"
     stroke-width="0.798"
   >
     <g id="SVGRepo_bgCarrier" stroke-width="0" />
@@ -20,7 +20,7 @@
       <g
         fill="none"
         fill-rule="evenodd"
-        stroke="#3c3e3f"
+        stroke="#47413d"
         stroke-linecap="round"
         stroke-linejoin="round"
       >

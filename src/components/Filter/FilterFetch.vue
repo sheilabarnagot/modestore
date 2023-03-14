@@ -70,7 +70,7 @@
 
         this.reactiveProductList = this.products.filter((entry) =>
           Object.keys(entry).some((key) =>
-            ('' + entry[key])
+            String(entry[key])
               .toLowerCase()
               .includes(this.searchTerm.toLocaleLowerCase())
           )

@@ -5,12 +5,6 @@
     <ul id="products">
       <!-- Here we are looping through the filtered products, which will be different categories of clothes depending on what prop was sent in. -->
       <li v-for="product in filteredProducts" :key="product.id">
-        <div id="productinfo">
-          <p class="top-p">{{ product.name }}</p>
-          <p class="bottom-p">{{ product.product }}</p>
-        </div>
-
-        <!-- Med src här under så blir bilderna dubbla -->
         <RouterLink
           :to="`/description/${product.src.split('/')}/${product.name}/${
             product.price
@@ -21,17 +15,20 @@
             :class="{ selected: isFavorit(product) }"
           />
         </RouterLink>
-        <!-- är produkten favorit eller inte -->
-
-        <p>{{ product.price }}</p>
-        <!-- här skapar en hjärtikon som antingen fylls med färg eller inte beroende på om produkten är favorit eller inte.
+        <div id="main-info">
+          <div id="productinfo">
+            <p class="top-p">{{ product.product }} {{ product.name }}</p>
+            <p class="bottom-p">Price: {{ product.price }}</p>
+          </div>
+          <!-- här skapar en hjärtikon som antingen fylls med färg eller inte beroende på om produkten är favorit eller inte.
     När hjärtat klickas på så ändras statusen för produkten. -->
-        <i
-          :class="isFavorit(product) ? 'bi bi-heart-fill' : 'bi bi-heart'"
-          @click="toggleFavorit(product)"
-          type="button"
-          class="heart"
-        />
+          <i
+            :class="isFavorit(product) ? 'bi bi-heart-fill' : 'bi bi-heart'"
+            @click="toggleFavorit(product)"
+            type="button"
+            class="heart"
+          />
+        </div>
         <button
           id="addbutton"
           @click="
@@ -113,19 +110,24 @@
 
 <style scoped>
   #addbutton {
-    background-color: #2ea44f;
-    border: 4px solid rgba(27, 31, 35, 0.15);
+    background-color: #4f9c76;
+    border-radius: 15px;
+    border: 1px solid rgba(27, 31, 35, 0.15);
     border-radius: 20px;
     color: #fff;
     cursor: pointer;
     font-family: -apple-system, system-ui, 'Segoe UI', Helvetica, Arial,
       sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-    font-size: 23px;
+    font-size: 13px;
     font-weight: 600;
     line-height: 20px;
     padding: 6px 16px;
     position: relative;
     text-align: center;
+    margin-top: 3px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-family: 'didot', serif;
   }
   #addbutton:hover {
     background-color: #3f684b;
@@ -135,7 +137,7 @@
     color: rgb(50, 48, 48);
     cursor: pointer;
     line-height: 10px;
-    padding: 9px 40px 9px 20%; /* increase right padding to 60px */
+    padding: 9px 40px 9px 0px; /* increase right padding to 60px */
     text-align: center;
     padding-bottom: 10%;
   }
@@ -165,6 +167,7 @@
     margin: 1em;
     justify-items: center;
     grid-template-columns: 1fr 1fr;
+    font-family: 'didot', serif;
   }
   .selected {
     border: 2px solid red;
@@ -175,5 +178,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  #productinfo {
+    display: flex;
+    white-space: nowrap;
+  }
+
+  #main-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 14px;
+  }
+  .top-p {
+    font-family: 'didot', serif;
+  }
+  .bottom-p {
+    white-space: nowrap;
+    font-family: 'didot', serif;
+  }
+  p {
+    margin: 0;
   }
 </style>

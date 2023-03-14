@@ -44,7 +44,7 @@ Also imports the "RouterLink" component from Vue Router and registers it as a co
  -->
 
 <template>
-  <div>
+  <div id="signup">
     <h2>{{ $t('login.firstTitle') }}</h2>
     <form id="formlogin">
       <b-form-input
@@ -102,7 +102,9 @@ RouterLink is use to link the user to the account page if the email and password
     margin: 50px 0 30px 10px;
     padding: 10px;
   }
-
+  #signup {
+    margin: 7em 0;
+  }
   #formlogin {
     width: 100%;
     height: 30vh;
@@ -163,6 +165,7 @@ RouterLink is use to link the user to the account page if the email and password
       font-size: 20px;
       margin: 40px 50px 0;
     }
+
     .passText {
       margin: 50px 0 40px 50px;
       font-size: 13px;
