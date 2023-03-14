@@ -1,3 +1,4 @@
+<!--KZ making a image carousel for the first page-->
 <template>
   <div class="slide-container">
     <h2>{{ slideTitle }}</h2>
@@ -45,6 +46,7 @@
   h2 {
     margin-left: 10px;
     color: #353337;
+    opacity: 0.9;
   }
 </style>
 

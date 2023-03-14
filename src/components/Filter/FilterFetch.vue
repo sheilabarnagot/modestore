@@ -1,16 +1,29 @@
 <template>
   <div id="input-container">
     <form @submit="filterProducts" action="">
-      <input type="text" v-model="searchTerm" placeholder="Search" />
-      <input class="search" type="submit" value="Search" />
+      <template v-if="toggls">
+        <input type="text" v-model="searchTerm" placeholder="Search" />
+        <input class="search" type="submit" value="Search" />
+      </template>
+    </form>
 
-      <!-- <div :key="index" v-for="(product, index) in filteredProducts" />
+    <!-- <div :key="index" v-for="(product, index) in filteredProducts" />
       <h1>{{ products.name }}</h1>
       <img :src="products.src" :alt="products.name" />
       <p>{{ products.src }}</p> -->
 
-      <!-- <div v-if="filterProducts && products().length">></div> -->
-    </form>
+    <!-- <div v-if="filterProducts && products().length">></div> -->
+
+    <!-- <form @submit="filterProducts">
+        <input type="text" v-model="searchTerm" />
+        <input type="submit" value="Search" />
+      </form> -->
+    <!-- <button @click="test">test me</button>
+    <div v-for="(product, index) in filteredProducts" :key="index">
+      <h3>{{ product.name }}</h3>
+      <img :src="product.image" :alt="product.name" />
+      <p>{{ product.description }}</p>
+    </div> -->
   </div>
 </template>
 
@@ -24,10 +37,23 @@
         searchTerm: '',
         products: [],
         filteredProducts: [],
-        reactiveProductList: null
+
+        reactiveProductList: null,
         //ney kod:
         //   name: '',
         //   image: ''
+
+        toggls: true
+        //En ny kod:
+        // Target: [
+        //   {
+        //     category: '',
+        //     color: '',
+        //     name: '',
+        //     price: '',
+        //     src: ''
+        //   }
+        // ]
       }
     },
     emits: ['filterproducts'],
@@ -52,6 +78,7 @@
           )
         )
         this.$emit('filterproducts', this.reactiveProductList)
+        this.toggls = !this.toggls
       }
     }
   }

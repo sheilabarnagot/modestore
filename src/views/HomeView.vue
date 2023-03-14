@@ -44,28 +44,28 @@
       return {
         galleryImages: [
           {
-            src: '/img1200/pk-paris/pk-paris-107.jpg',
-            alt: 'PK Paris 107'
-          },
-          {
-            src: '/img1200/pk-paris/pk-paris-108.jpg',
-            alt: 'PK Paris 108'
-          },
-          /* {
-            src: '/img1200/pk-paris/pk-paris-104.jpg',
-            alt: 'PK Paris 104'
-          },*/
-          {
-            src: '/img1200/pk-paris/pk-paris-102.jpg',
-            alt: 'PK Paris 102'
+            src: '/img1200/pk-paris/pk-paris-100.jpg',
+            alt: 'PK Paris 100'
           },
           {
             src: '/img1200/pk-paris/pk-paris-106.jpg',
             alt: 'PK Paris 106'
           },
           {
-            src: '/img1200/pk-paris/pk-paris-100.jpg',
-            alt: 'PK Paris 100'
+            src: '/img1200/pk-paris/pk-paris-107.jpg',
+            alt: 'PK Paris 107'
+          },
+          {
+            src: '/img1200/pk-paris/pk-paris-104.jpg',
+            alt: 'PK Paris 104'
+          },
+          {
+            src: '/img1200/pk-paris/pk-paris-108.jpg',
+            alt: 'PK Paris 108'
+          },
+          {
+            src: '/img1200/pk-paris/pk-paris-102.jpg',
+            alt: 'PK Paris 102'
           }
         ]
       }

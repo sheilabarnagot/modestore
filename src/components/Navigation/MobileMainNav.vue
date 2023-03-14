@@ -18,20 +18,24 @@
         </button>
         <ul class="dropdown-menu">
           <!-- The different choises in the dropup menu -->
+          <!-- KZ and Sheila change the order in the dropup menu and add about all products should be News-->
           <li id="menuitem">
-            <RouterLink to="/bottoms"> Bottoms </RouterLink>
-          </li>
-          <li id="menuitem">
-            <RouterLink to="/tops"> Tops </RouterLink>
+            <RouterLink to="/shopping"> All products </RouterLink>
           </li>
           <li id="menuitem">
             <RouterLink to="/jackets"> Jackets </RouterLink>
           </li>
           <li id="menuitem">
+            <RouterLink to="/tops"> Tops </RouterLink>
+          </li>
+          <li id="menuitem">
+            <RouterLink to="/bottoms"> Bottoms </RouterLink>
+          </li>
+          <li id="menuitem">
             <RouterLink to="/dresses"> Dresses </RouterLink>
           </li>
           <li id="menuitem">
-            <RouterLink to="/shopping"> All products </RouterLink>
+            <!--   <RouterLink to="/tops"> About </RouterLink>-->
           </li>
         </ul>
       </li>
@@ -79,7 +83,6 @@
       testar(ez) {
         this.$store.commit('searchedItemsFiltered', ez)
         this.$router.push('/SearchComponent')
-        console.log(ez, 'från MobileMainNav')
       }
     }
   }
@@ -87,9 +90,10 @@
 
 <style scoped>
   nav {
+    display: none;
     position: fixed;
     bottom: 0;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     z-index: 2;
     height: 4em;
@@ -147,5 +151,11 @@
 
   span {
     color: black;
+  }
+
+  @media (min-width: 375px) and (max-width: 600px) {
+    nav {
+      display: flex;
+    }
   }
 </style>

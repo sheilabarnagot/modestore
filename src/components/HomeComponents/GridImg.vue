@@ -4,7 +4,7 @@
     <div class="grid-img">
       <h2 class="gallery-title">{{ title }}</h2>
       <div class="grid-container">
-        {{ columnsXs }}
+        <!-- {{ columnsXs }} -->
         <div
           class="grid-item"
           v-for="(image, index) in images"
@@ -68,7 +68,41 @@
     background-size: cover;
     background-position: center;
     position: relative;
+    padding-bottom: 150%; /* Maintain 2:3 aspect ratio */
   }
+
+  @media only screen and (min-width: 900px) {
+    .grid-container {
+      grid-template-columns: repeat(
+        auto-fill,
+        minmax(3, 1fr) /* Sheila helped with the columns bigger screens */
+      ); /* Sm 3 columns */
+    }
+  }
+
+  /*lägg till sen   .grid-item {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+@media only screen and (min-width: 300px) {
+  .grid-item {
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .grid-item {
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .grid-item {
+    height: 400px;
+  }
+}*/
 
   /*.overlay {
     position: absolute;
