@@ -1,20 +1,26 @@
 <!--KZ menu/navigation for screens 768 and up -->
 <template>
-  <div class="menu-icon tablet-menu" @click="toggleMenu">
-    <div class="icon"><HamburgerMenu /></div>
-  </div>
-  <div
-    :style="{ width: isOpenWidth, transition: firstTransitsion }"
-    class="sidebar-menu"
-  >
-    <template v-if="isOpen">
-      <div v-for="category in categories" :key="category.id" class="menu-items">
-        <div>
-          <RouterLink to="/">{{ $t(category.name) }}</RouterLink>
+  <nav>
+    <div class="menu-icon tablet-menu" @click="toggleMenu">
+      <div class="icon"><HamburgerMenu /></div>
+    </div>
+    <div
+      :style="{ width: isOpenWidth, transition: firstTransitsion }"
+      class="sidebar-menu"
+    >
+      <template v-if="isOpen">
+        <div
+          v-for="category in categories"
+          :key="category.id"
+          class="menu-items"
+        >
+          <div>
+            <RouterLink to="/">{{ $t(category.name) }}</RouterLink>
+          </div>
         </div>
-      </div>
-    </template>
-  </div>
+      </template>
+    </div>
+  </nav>
 </template>
 
 <script>
@@ -51,6 +57,9 @@
 </script>
 
 <style scoped lang="scss">
+  nav {
+    display: none;
+  }
   .sidebar-menu {
     height: 100%; /* 100% Full-height */
     position: fixed; /* Stay in place */
@@ -87,9 +96,9 @@
     font-weight: lighter;
   }
 
-  @media (max-width: 600px) {
-    .tablet-menu {
-      display: none;
+  @media (min-width: 601px) and (max-width: 768px) {
+    nav {
+      display: block;
     }
   }
 </style>

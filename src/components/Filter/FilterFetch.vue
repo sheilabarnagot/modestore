@@ -3,7 +3,7 @@
     <form @submit="filterProducts" action="">
       <template v-if="toggls">
         <input type="text" v-model="searchTerm" placeholder="Search" />
-        <input @click="togglers" class="search" type="submit" value="Search" />
+        <input class="search" type="submit" value="Search" />
       </template>
     </form>
 
@@ -72,9 +72,6 @@
         )
         this.$emit('filterproducts', this.reactiveProductList)
         this.toggls = !this.toggls
-      },
-      togglers() {
-        this.toggl = !this.toggls
       }
     }
   }
