@@ -96,11 +96,9 @@
     methods: {
       toggleMenu() {
         this.isOpen = !this.isOpen
-
         this.isOpenWidth === '0'
           ? (this.isOpenWidth = '250px')
           : (this.isOpenWidth = '0')
-
         // if (this.isOpen) {
         //   this.isOpenWidth = '250px'
         // } else {
@@ -130,7 +128,6 @@
     padding-top: 100px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   }
-
   .menu-icon {
     position: absolute;
     top: 40px;
@@ -151,7 +148,6 @@
     display: flex;
     align-items: center;
   }
-
   .menu-items {
     padding: 8px 8px 8px 40px;
     text-decoration: none;
@@ -160,7 +156,6 @@
     display: block;
     transition: 0.3s;
   }
-
   .menu-items div {
     padding: 0.5rem 0;
     margin: 10px 0px;
@@ -184,7 +179,6 @@
   .menu-items div.active::after {
     height: 2px;
   }
-
   .menu-items a {
     color: #47413d;
     text-decoration: none;
@@ -199,9 +193,7 @@
     right: 100px;
     cursor: pointer;
   }
-
   // for the icons on the right
-
   #menu-item-icons-container {
     display: flex;
     justify-content: flex-end;
@@ -212,7 +204,6 @@
     top: 5%;
     right: 5%;
   }
-
   .menu-shopping-search {
     margin-left: 2em;
   }
@@ -221,7 +212,6 @@
     left: 4px;
     top: 8px;
   }
-
   @media (min-width: 601px) {
     nav {
       display: block;
