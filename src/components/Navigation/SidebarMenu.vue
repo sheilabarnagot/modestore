@@ -93,16 +93,9 @@
           { id: 2, name: 'Jackets' },
           { id: 3, name: 'Tops' },
           { id: 4, name: 'Bottoms' },
-<<<<<<< HEAD
           { id: 5, name: 'Dresses' },
           { id: 6, name: 'About' }
         ]
-=======
-          { id: 5, name: 'Dresses' }
-          //{ id: 6, name: 'About' }
-        ],
-        toggl: true
->>>>>>> 3a7d0d678fd90dcf108660536e9fb58e09de7590
       }
     },
     methods: {
