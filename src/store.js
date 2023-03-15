@@ -20,6 +20,12 @@ const mutations = {
     }
     state.totalCost += price
   },
+
+  // mutations: {
+  //   setName(state, name) {
+  //     state.name = name
+  //   }
+  // },
   // Decrease the quantity of an item in the basket
   decreaseQuantity(state, payload) {
     const item = state.items.find((item) => item.id === payload.id)
@@ -70,7 +76,10 @@ const state = {
   favoriteItems: [],
   searchedItems: [],
   // Totalpriset av ens produkter
-  totalCost: 0
+  totalCost: 0,
+  state: {
+    name: ''
+  }
 }
 
 const getters = {
