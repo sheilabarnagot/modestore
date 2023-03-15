@@ -151,7 +151,6 @@
     bottom: -11px;
     left: 160px;
     position: absolute;
-    z-index: 3;
     font-size: smaller;
     font-weight: bolder;
   }

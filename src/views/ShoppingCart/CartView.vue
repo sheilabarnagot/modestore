@@ -2,7 +2,10 @@
 
 <template>
   <h2 id="cartsh2">Cart</h2>
-
+  <RouterLink to="/kop"
+    ><button id="checkout-button">To checkout</button>
+  </RouterLink>
+  <p id="totalamount">Total amount: {{ $store.state.totalCost }} kr</p>
   <div class="container">
     <div id="cart-div-grid" v-for="item in visibleItems" :key="item.id">
       <img :src="`${item.src}`" alt="product image" />
@@ -52,6 +55,28 @@
   }
 </script>
 <style scoped>
+  #checkout-button {
+    position: absolute;
+    margin-left: 75%;
+    top: 70px;
+    background-color: #3c3e3f;
+    color: white;
+    font-size: 0.8em;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+  }
+  #totalamount {
+    font-family: 'didot', sans-serif;
+    margin-left: 75%;
+    position: absolute;
+    line-height: 1;
+    max-width: 13ch;
+    top: 125px;
+  }
   .container {
     margin-bottom: 6em;
     padding-left: 2rem;

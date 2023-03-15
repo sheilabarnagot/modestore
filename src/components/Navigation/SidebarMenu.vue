@@ -47,7 +47,7 @@
     <div id="menu-item-icons-container">
       <SearchIcon />
       <UserIcon class="menu-shopping-search" />
-      <RouterLink to="/kop">
+      <RouterLink to="/cart">
         <ShoppingIcon class="menu-shopping-search" />
       </RouterLink>
       <div
@@ -59,7 +59,6 @@
         </p>
       </div>
     </div>
-    <p id="totalamount">Total amount: {{ $store.state.totalCost }} kr</p>
   </nav>
 </template>
 
@@ -111,13 +110,6 @@
 <style scoped lang="scss">
   nav {
     display: none;
-  }
-  #totalamount {
-    font-family: 'didot', sans-serif;
-    margin-left: 80%;
-    position: absolute;
-    line-height: 1;
-    max-width: 13ch;
   }
   .sidebar-menu {
     height: 100%; /* 100% Full-height */
@@ -223,7 +215,6 @@
       bottom: -11px;
       left: 160px;
       position: absolute;
-      z-index: 3;
       font-size: smaller;
       font-weight: bolder;
     }

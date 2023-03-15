@@ -8,15 +8,12 @@
         <div class="input-text">
           <b-form-input
             type="text"
-            placeholder="Ex Alexandra jon"
+            placeholder="Ex jon"
             v-model="input1"
             :state="input1.length >= 4 ? true : false"
           />
           <span>Name</span>
-          <div v-if="notEmpty">
-            <!-- <p>{{ tack }}</p> -->
-            <!-- <p>Please fill in all input fields.</p> -->
-          </div>
+          <div v-if="notEmpty" />
         </div>
         <div class="input-text">
           <b-form-input
@@ -103,7 +100,6 @@
                 value="Faktura"
                 v-model="Payment"
               />
-              <!-- häääärf -->
 
               <div class="swisha" v-if="Payment === 'Swish'">
                 <b-button class="btn" @click="modalShowswish = !modalShowswish"
@@ -586,34 +582,5 @@
   }
   .pay button:hover {
     background-color: blue !important;
-  }
-  .secure {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #aeaebc;
-  }
-  .secure p {
-    font-size: 12px;
-    font-weight: 600;
-    color: #aeaebc;
-    margin-left: 5px;
-  }
-  .last {
-    margin-top: 250px;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
-    font-weight: 700;
-  }
-  .last p {
-    margin-right: 5px;
-  }
-  .last a {
-    color: blue;
-    text-decoration: none;
-    margin-left: 5px;
-    cursor: pointer;
   }
 </style>
