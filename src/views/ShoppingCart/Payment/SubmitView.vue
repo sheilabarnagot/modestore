@@ -1,16 +1,17 @@
 <template>
-  <form @submit.prevent="submitForm">
+  <!-- <form @submit.prevent="submitForm">
     <input type="text" v-model="name" />
     <button type="submit">Submit</button>
-  </form>
+  </form> -->
   <!-- <b-button id="button">
     <RouterLink to="/shopping">{{ $t('navbar.menu') }}</RouterLink>
   </b-button> -->
-
-  <h3>Order Confirmation</h3>
+  <div class="h3">
+    <h3>Order Confirmation</h3>
+  </div>
 
   <div class="container">
-    <div class="bk" v-for="item in shoppingCartItems" :key="item.id">
+    <div v-for="item in shoppingCartItems" :key="item.id">
       <img class="image" :src="item.src" alt="product image" />
 
       <div class="name">
@@ -63,66 +64,87 @@
 </script>
 
 <style scoped>
-  #button {
+  /* #button {
     position: absolute;
     display: flex;
-    /* justify-content: center; */
-
     border-bottom: solid 3px;
     margin-top: 10px;
-  }
+  } */
   .container {
     display: flex;
-    position: relative;
-    width: 100%;
-    background-color: #f5f5f5;
-    padding: 180px;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    background-color: #eeece5;
+    /* padding: 180px; */
     border-radius: 10px;
     box-sizing: border-box;
-    height: 100%;
-    margin: 0 auto;
+    height: 100vh;
+    margin: 10 auto;
     padding: 1rem;
   }
   .amout {
     position: absolute;
-    display: flex;
+
     justify-content: center;
-    width: 100%;
-    top: 500px;
+    /* width: 100%; */
+    top: 600px;
   }
 
   .image {
-    width: 90px;
-    display: flex;
-    margin: 10px;
-    box-shadow: 40px 0px 40px 4px grey;
-    margin: 1rem;
-    padding: 1rem;
+    width: 100px;
+
+    top: 600px;
+
+    /* margin: 10px; */
+    box-shadow: 20px 0px 30px 2px grey;
+    /* margin: 1rem; */
+    /* padding: 1rem; */
   }
 
   h3 {
     justify-content: center;
     color: #464343;
-    opacity: 0.7;
-    display: flex;
-    margin-bottom: 45px;
-    margin-top: 20px;
+    opacity: 0.8;
+
+    /* margin-bottom: 60px;
+    margin-top: 20px; */
   }
   .name {
     font-size: small;
-    font-size: 10px;
+    font-size: 12px;
     margin-left: 50px;
   }
 
   .quantity {
     font-size: small;
-    font-size: 10px;
+    font-size: 12px;
     margin-left: 40px;
   }
 
   .price {
     font-size: small;
-    font-size: 10px;
+    font-size: 12px;
     margin-left: 37px;
+  }
+  @media screen and (min-width: 400px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+    .h3 {
+      display: flex;
+    }
+  }
+  @media screen and (min-width: 800px) {
+    .container {
+      margin-bottom: 6em;
+      padding-left: 2rem;
+      display: row;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3em;
+      font-family: 'didot', sans-serif;
+    }
   }
 </style>

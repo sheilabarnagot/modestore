@@ -2,7 +2,11 @@
   <div class="container5">
     <div class="card-box">
       <div class="payment-details">
-        <h3>Shipping adress</h3>
+        <h3>Delivery address</h3>
+        <p>
+          Complete your purchase by entering your payment details and your
+          address information.
+        </p>
       </div>
       <div class="input-text">
         <b-form-input
@@ -67,6 +71,7 @@
         </div>
 
         <div class="container2">
+          <!-- chose {{ Payment }} -->
           <div class="box2">
             <label style="display: block" for="Creditcard">Creditcard</label>
 
@@ -290,8 +295,6 @@
         return (
           this.cardowner === '' || this.kortnummer === '' || this.CVC === ''
         )
-
-        // && this.kortnummer === '' && this.CVC === '';
       },
       showErrorMessage() {
         return (
@@ -329,7 +332,7 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
   .AA {
     background-color: #eeece5;
   }
@@ -339,14 +342,6 @@
     flex-direction: row;
     font-family: 'didot', sans-serif;
   }
-
-  .container2 {
-    display: flex;
-    flex-direction: row;
-  }
-
-  // display: block ;
-  // justify-content: center;
 
   .box2 {
     height: 80px;
@@ -398,25 +393,14 @@
     width: 150px;
   }
 
-  // .swish-number {
-  //   width: 400px;
-  //   top: 300px;
-  //   left: 400px;
-  //   font-size: 20px;
-  //   color: #000;
-  // }
-
   #form {
     width: 15px;
     height: 15px;
     margin: 10px 10px 0 0;
     margin-left: 15px;
-    // appearance: none;
     border: 6px solid #000;
+    color: #000;
     margin-bottom: 20px;
-  }
-  #form:checked {
-    background-color: #000;
   }
 
   .cardbtn {
@@ -429,15 +413,7 @@
   .invocebtn {
     background-color: black;
     width: 124px;
-    background-color: black;
   }
-
-  // .scan {
-  //   display: block;
-  //   padding: 40px;
-  //   margin-left: 80px;
-  //   width: 250px;
-  // }
 
   #Months {
     margin: 5px;
@@ -448,12 +424,9 @@
   }
 
   .container5 {
-    // max-height: 90vh;
     display: flex;
     flex-direction: row;
-    // justify-content: center;
     align-items: center;
-    // margin-top: 10px;
     font-family: 'didot', sans-serif;
     background-color: #eeece5;
   }
@@ -465,7 +438,6 @@
     padding: 0 25px;
     box-sizing: border-box;
     height: 90vh;
-    // margin-top: 110px;
   }
   .message {
     position: fixed;
@@ -518,7 +490,6 @@
 
   .country {
     margin-top: 20px;
-    // position: relative;
   }
   .country span {
     font-size: 12px;
@@ -564,8 +535,6 @@
   }
   .pay button {
     height: 40px;
-
-    // background-color: #7047eb;
 
     width: 80vh;
     background-color: #7047eb;
