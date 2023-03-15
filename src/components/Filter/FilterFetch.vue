@@ -28,6 +28,7 @@
 </template>
 
 <script>
+  import levenshtein from 'fast-levenshtein'
   export default {
     created() {
       this.fetchData()
@@ -69,15 +70,21 @@
       },
       filterProducts(event) {
         event.preventDefault()
-        //stackoverflow
-        this.reactiveProductList = this.products.filter((entry) =>
-          Object.keys(entry).some((key) =>
-            String(entry[key])
-              .toLowerCase()
-              .includes(this.searchTerm.toLocaleLowerCase())
-          )
+
+        // stackoverflow and chapgpt
+        const array = this.products.filter((entry) =>
+          Object.keys(entry).some((key) => {
+            const entryValue = String(entry[key]).toLowerCase()
+            const searchTerm = this.searchTerm.toLocaleLowerCase()
+            const distance = levenshtein.get(entryValue, searchTerm)
+            const similarity =
+              1 - distance / Math.max(entryValue.length, searchTerm.length)
+            console.log(similarity)
+            return similarity >= 0.5 // filter entries with similarity score >= 0.8
+          })
         )
-        this.$emit('filterproducts', this.reactiveProductList)
+
+        this.$emit('filterproducts', array)
         this.toggls = !this.toggls
       }
     }

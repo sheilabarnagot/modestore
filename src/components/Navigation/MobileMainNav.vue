@@ -82,7 +82,7 @@
       },
       testar(ez) {
         this.$store.commit('searchedItemsFiltered', ez)
-        this.$router.push('/SearchComponent')
+        this.$router.push('/searchcomponent')
       }
     }
   }
