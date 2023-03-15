@@ -15,7 +15,7 @@
           />
           <span>Name</span>
           <div v-if="notEmpty">
-            <p>{{ tack }}</p>
+            <!-- <p>{{ tack }}</p> -->
             <!-- <p>Please fill in all input fields.</p> -->
           </div>
         </div>
@@ -26,9 +26,8 @@
             v-model="input2"
             :state="input2.length >= 4 ? true : false"
           />
-          <div v-if="notEmpty">
-            <span>Email</span>
-          </div>
+          <span>Email</span>
+          <div v-if="notEmpty" />
 
           <div class="billing">
             <select>
@@ -507,8 +506,8 @@
   }
 
   .billing {
-    margin-top: 30px;
-    position: relative;
+    margin-top: 20px;
+    // position: relative;
   }
   .billing span {
     font-size: 12px;
@@ -526,9 +525,9 @@
     border: 1px solid #f6f6f7;
     cursor: pointer;
   }
-  .billing select option:nth-child(1) {
-    display: none;
-  }
+  // .billing select option:nth-child(1) {
+  //   display: none;
+  // }
   .zip-state {
     display: flex;
     width: 100%;
@@ -558,45 +557,12 @@
   .pay button {
     height: 40px;
     width: 100%;
-    background-color: #7047eb;
+    // background-color: #7047eb;
     border: none;
     outline: 0;
     border-radius: 5px;
     color: #fff;
     font-size: 12px;
-    cursor: pointer;
-    transition: all 0.5s;
-  }
-  .pay button:hover {
-    background-color: blue !important;
-  }
-  .secure {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #aeaebc;
-  }
-  .secure p {
-    font-size: 12px;
-    font-weight: 600;
-    color: #aeaebc;
-    margin-left: 5px;
-  }
-  .last {
-    margin-top: 250px;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
-    font-weight: 700;
-  }
-  .last p {
-    margin-right: 5px;
-  }
-  .last a {
-    color: blue;
-    text-decoration: none;
-    margin-left: 5px;
     cursor: pointer;
   }
 </style>
