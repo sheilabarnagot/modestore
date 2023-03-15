@@ -23,19 +23,23 @@
     </div>
   </div>
 </template> -->
+
 <template>
   <div>
-    <AboutSide :image="team.image" :team="team" />
-    <img src="../components/SvgIcons/avatars/KlaraAvatar.vue" />
+    <AboutSide :image="team[0].image" :team="team" />
+    <KlaraAvatar />
+    <!-- <img src="../components/SvgIcons/avatars/KlaraAvatar.vue" /> -->
   </div>
 </template>
 <script>
   import AboutSide from '../components/AboutSide.vue'
+  import KlaraAvatar from '../components/SvgIcons/avatars/KlaraAvatar.vue'
 
   export default {
     name: 'AboutView',
     components: {
-      AboutSide
+      AboutSide,
+      KlaraAvatar
     },
     data() {
       return {
@@ -51,61 +55,67 @@
           },
           {
             name: 'Pontus',
-            age: new Date().getFullYear() - 1991,
+            age: new Date().getFullYear() - 1992,
             image: 'pontus.jpg',
-            background: 'Full-stack development',
-            skills: 'Vue, Node.js, MongoDB',
-            surprise: "He's a classically trained pianist",
-            likes: ['Playing video games', 'Cooking', 'Playing piano']
+            background: 'Warlockt',
+            skills: 'Web development',
+            surprise: 'I have got a pet snake',
+            likes: ['Playing video games']
           },
           {
-            name: 'Diyana',
-            age: 29,
+            name: 'Diyana  Rahim ',
+            age: new Date().getFullYear() - 1996,
             image: 'diyana.jpg',
-            background: 'Front-end development',
-            skills: 'Vue, React, TypeScript',
-            surprise: "She's a licensed scuba diver",
-            likes: ['Traveling', 'Scuba diving', 'Photography']
+            education: 'frontend-developer',
+            skills: 'Painting',
+            likes: [
+              'travellling',
+              'going to gym(exercise)',
+              'whatching decomentaries',
+              'read books'
+            ]
           },
           {
             name: 'Roland',
-            age: 31,
+            age: new Date().getFullYear() - 1995,
             image: 'roland.jpg',
-            background: 'UI design',
-            skills: 'Sketch, Figma, Photoshop',
-            surprise: 'He can juggle five balls at once',
-            likes: ['Playing basketball', 'Juggling', 'Going to the movies']
+            background: 'Table-tennis legend',
+            skills: 'Doing the dishes, table-tennis',
+            education: 'full-stack developer',
+            surprise: 'Going to visit Japan this year',
+            likes: [
+              'Playing video games',
+              'Travelling to new countries',
+              'Outdoors life'
+            ]
           },
           {
             name: 'Lilas',
-            age: 26,
+            age: new Date().getFullYear() - 1997,
             image: 'lilas.jpg',
-            background: 'Illustration',
-            skills: 'Adobe Illustrator, Procreate',
-            surprise: "She's an amateur astronomer",
-            likes: ['Stargazing', 'Drawing', 'Going to art museums']
+            Education: 'Frontend-Developer',
+            skills: 'Drive a car',
+            likes: ['Travel around to different countries', 'Watching filmes']
           },
           {
             name: 'Dona',
-            age: 28,
+            age: new Date().getFullYear() - 1986,
             image: 'dona.jpg',
-            background: 'UI design',
-            skills: 'Sketch, Figma, Photoshop',
-            surprise: 'She has a pet hedgehog',
-            likes: [
-              'Playing video games',
-              'Going to the gym',
-              'Watching documentaries'
-            ]
+            background: 'Poker player',
+            skills:
+              'Can create web applications so fast they can break the sound barrier.',
+            Education: 'Program',
+            surprise: 'Has talent for beatboxing',
+            likes: ['Pineapple on pizzas']
           },
           {
             name: 'Sheila',
             age: new Date().getFullYear() - 1988,
-            image: 'sheila.jpg',
+            image: '/SheilaAvatar.vue',
             background: 'User experience design',
             skills: 'Wireframing, prototyping, user testing',
             surprise: 'She has a collection of vintage typewriters',
-            likes: ['Reading', 'Going to concerts', 'Trying new cocktails']
+            likes: ['Music/Dance', 'Train and eat', 'Meet people/Travel']
           }
         ]
       }

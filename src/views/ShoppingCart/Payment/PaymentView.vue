@@ -2,7 +2,11 @@
   <div class="container5">
     <div class="card-box">
       <div class="payment-details">
-        <h3>Shipping adress</h3>
+        <h3>Delivery address</h3>
+        <p>
+          Complete your purchase by entering your payment details and your
+          address information.
+        </p>
       </div>
       <div class="input-text">
         <b-form-input
@@ -24,7 +28,7 @@
         <span>Email</span>
         <div v-if="notEmpty" />
 
-        <div class="billing">
+        <div class="country">
           <select>
             <option>Select Country</option>
             <option>United States</option>
@@ -67,6 +71,7 @@
         </div>
 
         <div class="container2">
+          <!-- chose {{ Payment }} -->
           <div class="box2">
             <label style="display: block" for="Creditcard">Creditcard</label>
 
@@ -100,7 +105,7 @@
               v-model="Payment"
             />
 
-            <div class="swisha" v-if="Payment === 'Swish'">
+            <!-- <div class="swisha" v-if="Payment === 'Swish'">
               <b-button class="btn" @click="modalShowswish = !modalShowswish"
                 >Swish
               </b-button>
@@ -123,7 +128,7 @@
                 />
                 <img src="assets/frame1.jpg" allt="" class="scan" />
               </b-modal>
-            </div>
+            </div> -->
 
             <div class="pay" v-if="Payment === 'Creditcard'">
               <button @click="modalShowkort = !modalShowkort">pay</button>
@@ -135,7 +140,7 @@
                 :no-close-on-backdrop="true"
                 hide-footer
               >
-                <div class="container">
+                <div class="inputCard">
                   <div class="first">
                     <b-form-input
                       required
@@ -316,8 +321,6 @@
         return (
           this.cardowner === '' || this.kortnummer === '' || this.CVC === ''
         )
-
-        // && this.kortnummer === '' && this.CVC === '';
       },
       showErrorMessage() {
         return (
@@ -355,7 +358,7 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
   .AA {
     background-color: #eeece5;
   }
@@ -366,26 +369,11 @@
     font-family: 'didot', sans-serif;
   }
 
-  .container2 {
-    display: flex;
-    flex-direction: row;
-    font-family: 'didot', sans-serif;
-  }
-
-  // display: block ;
-  // justify-content: center;
-
   .box2 {
     height: 80px;
     margin: 10px;
-    font-size: medium;
+    font-size: small;
   }
-
-  // .btn {
-  //   height: 40px;
-  //   margin: 9px;
-  //   margin-right: 220px;
-  // }
 
   .swisha {
     position: absolute;
@@ -396,20 +384,12 @@
   }
 
   .Fakturan {
+    position: absolute;
     display: flex;
     justify-content: center;
     width: 100%;
     top: 400px;
-    font-family: 'didot', sans-serif;
   }
-
-  // .kort {
-  //   position: absolute;
-  //   display: flex;
-  //   justify-content: center;
-  //   width: 100%;
-  //   top: 400px;
-  // }
 
   .section select {
     padding: 10px 20px;
@@ -417,12 +397,15 @@
 
   .first {
     margin: 5px;
+    border: 1px solid #f6f6f7;
   }
   .second {
     margin: 5px;
+    border: 1px solid #f6f6f7;
   }
   .third {
     margin: 5px;
+    border: 1px solid #f6f6f7;
   }
   .forth {
     margin: 5px;
@@ -436,26 +419,14 @@
     width: 150px;
   }
 
-  .swish-number {
-    width: 400px;
-    top: 300px;
-    left: 400px;
-    font-size: 20px;
-    color: #000;
-  }
-
   #form {
     width: 15px;
     height: 15px;
     margin: 10px 10px 0 0;
     margin-left: 15px;
-    // appearance: none;
     border: 6px solid #000;
+    color: #000;
     margin-bottom: 20px;
-    font-family: 'didot', sans-serif;
-  }
-  #form:checked {
-    background-color: #000;
   }
 
   .cardbtn {
@@ -467,16 +438,10 @@
 
   .invocebtn {
     width: 124px;
+
     background-color: #fff;
     color: #000;
   }
-
-  // .scan {
-  //   display: block;
-  //   padding: 40px;
-  //   margin-left: 80px;
-  //   width: 250px;
-  // }
 
   #Months {
     margin: 5px;
@@ -487,30 +452,28 @@
   }
 
   .container5 {
-    // max-height: 90vh;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
-    // margin-top: 10px;
     font-family: 'didot', sans-serif;
     background-color: #eeece5;
   }
 
   .card-box {
     width: 90vh;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: #fff;
     padding: 0 25px;
     box-sizing: border-box;
-    height: 100vh;
+    height: 90vh;
   }
   .message {
     position: fixed;
     margin-top: 150px;
   }
   .payment-details {
-    margin-top: 50px;
+    margin-top: 70px;
+    text-align: center;
   }
   .payment-details p {
     font-size: 12px;
@@ -533,26 +496,37 @@
     font-size: 12px;
     font-family: 'didot', sans-serif;
   }
+  input[type='number'] {
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    outline: 0;
+    border: 1px solid #f6f6f7;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: 'didot', sans-serif;
+  }
   .input-text span {
     position: absolute;
     top: -16px;
-    left: 10px;
+    left: 8px;
     font-size: 12px;
     font-weight: 600;
   }
 
-  .billing {
+  .country {
     margin-top: 20px;
-    // position: relative;
   }
-  .billing span {
+  .country span {
     font-size: 12px;
     font-weight: 700;
     position: absolute;
     top: -16px;
     left: 10px;
   }
-  .billing select {
+  .country select {
     height: 35px;
     width: 100%;
     font-size: 12px;
@@ -561,9 +535,7 @@
     border: 1px solid #f6f6f7;
     cursor: pointer;
   }
-  // .billing select option:nth-child(1) {
-  //   display: none;
-  // }
+
   .zip-state {
     display: flex;
     width: 100%;
@@ -591,8 +563,10 @@
   }
   .pay button {
     height: 40px;
+
     background-color: #d7dad8;
     color: #000;
+
     width: 80vh;
     border: none;
     outline: 0;
@@ -612,5 +586,28 @@
     height: 50px;
     padding: 10px;
     margin: 20px;
+  }
+
+  @media screen and (min-width: 600px) {
+    .container5 {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+    .pay {
+      text-decoration: none;
+      color: #3c3e3f;
+      display: flex;
+    }
+  }
+  @media screen and (min-width: 800px) {
+    .container5 {
+      margin-bottom: 6em;
+      padding-left: 2rem;
+      display: row;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1em;
+      font-family: 'didot', sans-serif;
+    }
   }
 </style>

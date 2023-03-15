@@ -40,7 +40,7 @@
     <h3>The Creative Team</h3>
     <div id="membersContainer" v-for="(member, index) in team" :key="index">
       <div id="members">
-        <h1>{{ member.name }}</h1>
+        <h1>{{ member[0].name }}</h1>
         <svg :src="member.image" :alt="member.image" />
         <p>
           ><strong>Age: {{ member.age }}</strong>
