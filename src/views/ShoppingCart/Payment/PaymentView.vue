@@ -100,7 +100,7 @@
               v-model="Payment"
             />
 
-            <div class="swisha" v-if="Payment === 'Swish'">
+            <!-- <div class="swisha" v-if="Payment === 'Swish'">
               <b-button class="btn" @click="modalShowswish = !modalShowswish"
                 >Swish
               </b-button>
@@ -123,7 +123,7 @@
                 />
                 <img src="assets/frame1.jpg" allt="" class="scan" />
               </b-modal>
-            </div>
+            </div> -->
 
             <div class="pay" v-if="Payment === 'Creditcard'">
               <button @click="modalShowkort = !modalShowkort">pay</button>
@@ -135,7 +135,7 @@
                 :no-close-on-backdrop="true"
                 hide-footer
               >
-                <div class="container">
+                <div class="inputCard">
                   <div class="first">
                     <b-form-input
                       required
@@ -218,35 +218,6 @@
             <div class="pay" v-if="Payment === 'Faktura'">
               <button @click="modalShowfaktura = !modalShowfaktura">pay</button>
 
-
-                <b-modal
-                  title="Invoice will be sent to your Email"
-                  v-model="modalShowfaktura"
-                  name="fakturamodel"
-                  :no-close-on-backdrop="true"
-                  hide-footer
-                  >Type your Email:
-                  <b-form-input
-                    type="email"
-                    v-model="email"
-                    :state="
-                      regex.test(email) && email.length > 1 ? true : false
-                    "
-                    placeholder="me@example.com"
-                    @click="ok"
-                  />
-                  <b-button
-                    class="invbtn"
-                    :disabled="regex.test(email) === false"
-                    href="#/submit"
-                    variant="primary"
-                    modalShowfaktura
-                    >Confirm
-                  </b-button>
-                  <p v-if="regex.test(email) === false" style="color: red">
-                    <P class="text">Please enter your Email!</P>
-                </p></b-modal>
-              </div>
               <b-modal
                 title="Invoice will be sent to your Email"
                 v-model="modalShowfaktura"
@@ -272,13 +243,12 @@
                   Please enter your Email!
                 </p>
               </b-modal>
-
             </div>
           </div>
         </div>
       </div>
     </div>
-
+  </div>
 </template>
 
 <script>
@@ -373,7 +343,6 @@
   .container2 {
     display: flex;
     flex-direction: row;
-    font-family: 'didot', sans-serif;
   }
 
   // display: block ;
@@ -382,14 +351,8 @@
   .box2 {
     height: 80px;
     margin: 10px;
-    font-size: medium;
+    font-size: small;
   }
-
-  // .btn {
-  //   height: 40px;
-  //   margin: 9px;
-  //   margin-right: 220px;
-  // }
 
   .swisha {
     position: absolute;
@@ -400,20 +363,12 @@
   }
 
   .Fakturan {
+    position: absolute;
     display: flex;
     justify-content: center;
     width: 100%;
     top: 400px;
-    font-family: 'didot', sans-serif;
   }
-
-  // .kort {
-  //   position: absolute;
-  //   display: flex;
-  //   justify-content: center;
-  //   width: 100%;
-  //   top: 400px;
-  // }
 
   .section select {
     padding: 10px 20px;
@@ -421,12 +376,15 @@
 
   .first {
     margin: 5px;
+    border: 1px solid #f6f6f7;
   }
   .second {
     margin: 5px;
+    border: 1px solid #f6f6f7;
   }
   .third {
     margin: 5px;
+    border: 1px solid #f6f6f7;
   }
   .forth {
     margin: 5px;
@@ -440,13 +398,13 @@
     width: 150px;
   }
 
-  .swish-number {
-    width: 400px;
-    top: 300px;
-    left: 400px;
-    font-size: 20px;
-    color: #000;
-  }
+  // .swish-number {
+  //   width: 400px;
+  //   top: 300px;
+  //   left: 400px;
+  //   font-size: 20px;
+  //   color: #000;
+  // }
 
   #form {
     width: 15px;
@@ -456,7 +414,6 @@
     // appearance: none;
     border: 6px solid #000;
     margin-bottom: 20px;
-    font-family: 'didot', sans-serif;
   }
   #form:checked {
     background-color: #000;
@@ -537,10 +494,22 @@
     font-size: 12px;
     font-family: 'didot', sans-serif;
   }
+  input[type='number'] {
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    outline: 0;
+    border: 1px solid #f6f6f7;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: 'didot', sans-serif;
+  }
   .input-text span {
     position: absolute;
     top: -16px;
-    left: 10px;
+    left: 8px;
     font-size: 12px;
     font-weight: 600;
   }
@@ -565,9 +534,7 @@
     border: 1px solid #f6f6f7;
     cursor: pointer;
   }
-  // .billing select option:nth-child(1) {
-  //   display: none;
-  // }
+
   .zip-state {
     display: flex;
     width: 100%;
@@ -592,7 +559,6 @@
     justify-content: center;
     align-items: center;
     margin-top: 40px;
-
   }
   .pay button {
     height: 40px;
@@ -613,17 +579,5 @@
   }
   .pay button:hover {
     background-color: blue !important;
-  }
-
-  .invbtn {
-    background-color: black;
-    width: 400px;
-    width: 100%;
-    height: 40px;
-    top: 5px;
-  }
-
-  .text{
-    padding: 15px;
   }
 </style>
