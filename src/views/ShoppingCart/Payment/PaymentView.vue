@@ -1,24 +1,19 @@
 <template>
   <div class="paybutton">
-    <!----------- Shipping ----------->
     <div class="container5">
       <div class="card">
         <div class="payment-details">
           <h3>Shipping adress</h3>
-          <p>Complete your purchase by providing your payment details.</p>
         </div>
         <div class="input-text">
           <b-form-input
             type="text"
-            placeholder="Ex Alexandra jon"
+            placeholder="Ex jon"
             v-model="input1"
             :state="input1.length >= 4 ? true : false"
           />
           <span>Name</span>
-          <div v-if="notEmpty">
-            <p>{{ tack }}</p>
-            <!-- <p>Please fill in all input fields.</p> -->
-          </div>
+          <div v-if="notEmpty" />
         </div>
         <div class="input-text">
           <b-form-input
@@ -27,9 +22,8 @@
             v-model="input2"
             :state="input2.length >= 4 ? true : false"
           />
-          <div v-if="notEmpty">
-            <span>Email</span>
-          </div>
+          <span>Email</span>
+          <div v-if="notEmpty" />
 
           <div class="billing">
             <select>
@@ -86,7 +80,7 @@
               />
             </div>
 
-            <div class="box2">
+            <!-- <div class="box2">
               <label style="display: block" for="swish">Swish</label>
               <input
                 @click="onSwish"
@@ -95,7 +89,7 @@
                 value="Swish"
                 v-model="Payment"
               />
-            </div>
+            </div> -->
 
             <div class="box2">
               <label style="display: block" for="Faktura">Invoice</label>
@@ -106,7 +100,6 @@
                 value="Faktura"
                 v-model="Payment"
               />
-              <!-- häääärf -->
 
               <div class="swisha" v-if="Payment === 'Swish'">
                 <b-button class="btn" @click="modalShowswish = !modalShowswish"
@@ -133,10 +126,8 @@
                 </b-modal>
               </div>
 
-              <div class="kort" v-if="Payment === 'Creditcard'">
-                <b-button class="btn" @click="modalShowkort = !modalShowkort"
-                  >Creditcard
-                </b-button>
+              <div class="pay" v-if="Payment === 'Creditcard'">
+                <button @click="modalShowkort = !modalShowkort">pay</button>
 
                 <b-modal
                   title="confirm your payment"
@@ -225,12 +216,10 @@
                 </b-modal>
               </div>
 
-              <div class="Fakturan" v-if="Payment === 'Faktura'">
-                <b-button
-                  class="btn"
-                  @click="modalShowfaktura = !modalShowfaktura"
-                  >Invoice
-                </b-button>
+              <div class="pay" v-if="Payment === 'Faktura'">
+                <button @click="modalShowfaktura = !modalShowfaktura">
+                  pay
+                </button>
 
                 <b-modal
                   title="Invoice will be sent to your Email"
@@ -348,36 +337,34 @@
 
 <style lang="scss" scoped>
   .AA {
-    justify-content: center;
-    // align-items:center;
-    margin-right: 300px;
-    position: absolute;
-    display: block;
-    width: 500px;
-    border-radius: 10px;
-    background-color: #fff;
-    padding: 0 25px;
-    box-sizing: border-box;
+    background-color: #eeece5;
   }
 
   .container2 {
     display: flex;
     flex-direction: row;
-
-    // display: block ;
-    // justify-content: center;
+    font-family: 'didot', sans-serif;
   }
+
+  .container2 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  // display: block ;
+  // justify-content: center;
 
   .box2 {
     height: 80px;
     margin: 10px;
+    font-size: small;
   }
 
-  .btn {
-    height: 40px;
-    margin: 9px;
-    margin-right: 220px;
-  }
+  // .btn {
+  //   height: 40px;
+  //   margin: 9px;
+  //   margin-right: 220px;
+  // }
 
   .swisha {
     position: absolute;
@@ -403,13 +390,6 @@
     top: 400px;
   }
 
-  // .selection {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: center;
-  //   padding: 10px;
-  // }
-
   .section select {
     padding: 10px 20px;
   }
@@ -434,11 +414,6 @@
   .swishlogo {
     width: 150px;
   }
-  // .swishaBtn {
-  //   width: 100px;
-  //   // left: 40px;
-  //   background-color: #33bedf;
-  // }
 
   .swish-number {
     width: 400px;
@@ -451,10 +426,11 @@
   #form {
     width: 15px;
     height: 15px;
-    margin: 6px 6px 0 0;
-    margin-left: 6px;
-    appearance: none;
-    border: 2px solid #000;
+    margin: 10px 10px 0 0;
+    margin-left: 15px;
+    // appearance: none;
+    border: 6px solid #000;
+    margin-bottom: 20px;
   }
   #form:checked {
     background-color: #000;
@@ -467,6 +443,7 @@
   .invocebtn {
     background-color: black;
     width: 124px;
+    background-color: black;
   }
 
   .scan {
@@ -484,23 +461,17 @@
     margin: 5px;
   }
 
-  // här slutar den------------
-  //   *{
-  //     margin:0;
-  //     padding:0;
-  // }
-
   .container5 {
     max-height: 100vh;
-    // background-color:#f7f7f9;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 50px;
+    font-family: 'didot', sans-serif;
+    background-color: #eeece5;
   }
 
   .card {
-    // height:auto;
     width: 100vh;
     border-radius: 10px;
     background-color: #fff;
@@ -544,8 +515,8 @@
   }
 
   .billing {
-    margin-top: 30px;
-    position: relative;
+    margin-top: 20px;
+    // position: relative;
   }
   .billing span {
     font-size: 12px;
@@ -563,9 +534,9 @@
     border: 1px solid #f6f6f7;
     cursor: pointer;
   }
-  .billing select option:nth-child(1) {
-    display: none;
-  }
+  // .billing select option:nth-child(1) {
+  //   display: none;
+  // }
   .zip-state {
     display: flex;
     width: 100%;
@@ -587,55 +558,29 @@
   }
 
   .pay {
-    display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .pay button {
     height: 40px;
+
     width: 100%;
+    // background-color: #7047eb;
+
+    width: 90vh;
     background-color: #7047eb;
+
     border: none;
     outline: 0;
     border-radius: 5px;
     color: #fff;
-    font-size: 12px;
     cursor: pointer;
+
     transition: all 0.5s;
+    transform: translate(-14%, -14%);
   }
   .pay button:hover {
     background-color: blue !important;
-  }
-  .secure {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /*text-align:center;*/
-    color: #aeaebc;
-  }
-  .secure p {
-    font-size: 12px;
-    font-weight: 600;
-    color: #aeaebc;
-    margin-left: 5px;
-  }
-  .last {
-    margin-top: 250px;
-
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
-    font-weight: 700;
-  }
-  .last p {
-    margin-right: 5px;
-  }
-  .last a {
-    color: blue;
-    text-decoration: none;
-    margin-left: 5px;
-    cursor: pointer;
   }
 </style>
