@@ -6,6 +6,8 @@ Roland björn
 Sheila Martinez
 Klara Z
 Dona M
+Lilas
+Diyana
 
 # A Vue.js template for Vite
 
