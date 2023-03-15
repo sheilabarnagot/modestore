@@ -57,9 +57,9 @@
         <p id="total-cart-items2">
           {{ $store.getters.totalQuantity }}
         </p>
-        <p id="totalamount">{{ $store.state.totalCost }} kr</p>
       </div>
     </div>
+    <p id="totalamount">Total amount: {{ $store.state.totalCost }} kr</p>
   </nav>
 </template>
 
@@ -116,6 +116,10 @@
   }
   #totalamount {
     font-family: 'didot', sans-serif;
+    margin-left: 80%;
+    position: absolute;
+    line-height: 1;
+    max-width: 13ch;
   }
   .sidebar-menu {
     height: 100%; /* 100% Full-height */
@@ -216,7 +220,7 @@
   #menu-item-icons-container p {
     position: relative;
     left: 4px;
-    top: 4px;
+    top: 8px;
   }
 
   @media (min-width: 601px) {
