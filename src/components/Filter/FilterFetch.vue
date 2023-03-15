@@ -36,8 +36,7 @@
     data() {
       return {
         searchTerm: '',
-        products: [],
-        filteredProducts: [],
+        products: null,
 
         reactiveProductList: null,
         //ney kod:
@@ -79,7 +78,7 @@
             const distance = levenshtein.get(entryValue, searchTerm)
             const similarity =
               1 - distance / Math.max(entryValue.length, searchTerm.length)
-            console.log(similarity)
+            console.log(distance)
             return similarity >= 0.5 // filter entries with similarity score >= 0.8
           })
         )
