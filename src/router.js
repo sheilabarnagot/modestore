@@ -9,8 +9,10 @@ import MyAccountView from './views/Account/AccountChildren/MyAccountView.vue'
 import ShoppingView from './views/ShoppingView.vue'
 import FavoritesView from './views/Account/AccountChildren/FavoritesView.vue'
 import HelpView from './views/Account/AccountChildren/HelpView.vue'
+import SettingsAccount from './components/MyAccount/SettingsAccount.vue'
 
 import AllProductsView from './views/AllProductsView.vue'
+import IndividualProductView from './views/IndividualProductView.vue'
 
 // imports for Helpview's children.
 import MaterialsComponent from './views/Account/AccountChildren/HelpChildView/MaterialsComponent.vue'
@@ -26,6 +28,11 @@ import SearchComponent from './components/SearchComponents/SearchComponent.vue'
 
 export default createRouter({
   history: createWebHashHistory(),
+  //to, from, savedPosition parameters
+  scrollBehavior() {
+    // always scroll to top
+    return { top: 1 }
+  },
   routes: [
     {
       component: HomeView,
@@ -63,6 +70,14 @@ export default createRouter({
         {
           path: 'konto',
           component: MyAccountView
+        },
+        {
+          component: HelpView,
+          path: 'help'
+        },
+        {
+          path: 'settings',
+          component: SettingsAccount
         }
       ]
     },
@@ -92,6 +107,10 @@ export default createRouter({
           component: ShippingTrackingqr
         }
       ]
+    },
+    {
+      component: IndividualProductView,
+      path: '/description/:id?/:name?/:price?/:product?'
     },
 
     {

@@ -425,6 +425,7 @@
         <img src="assets/frame1.jpg" allt="" class="scan" />
       </b-modal>
     </div>
+<<<<<<< HEAD
 
     <div class="kort" v-if="Payment === 'Creditcard'">
       <b-button class="btn" @click="modalShowkort = !modalShowkort"
@@ -569,6 +570,17 @@
 
 
 </div></div></div></template>
+=======
+  </div>
+  <div class="totalcost">Totalcost: {{ $store.state.totalCost }}</div>
+  <div class="container">
+    <h2>Checkout</h2>
+    <div v-for="item in shoppingCartItems" :key="item.id">
+      <img :src="item.src" alt="product image" />
+    </div>
+  </div>
+</template>
+>>>>>>> fb3e4aebd7e3244a062a01c66031389eee75faed
 
 <script>
 export default {
@@ -637,6 +649,24 @@ export default {
       // this.showErrorMessage = this.cardowner === '';
       // && this.kortnummer === '' && this.CVC === '';
 
+<<<<<<< HEAD
+=======
+        if (
+          this.kortnummer !== '' &&
+          this.CVC !== '' &&
+          this.cardowner !== ''
+        ) {
+          console.log('pay ok')
+        } else {
+          console.log()
+        }
+      }
+    },
+    computed: {
+      shoppingCartItems() {
+        return this.$store.getters.shoppingCartItems
+      }
+>>>>>>> fb3e4aebd7e3244a062a01c66031389eee75faed
     }
   }
 }

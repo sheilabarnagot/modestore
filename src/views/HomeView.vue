@@ -1,17 +1,9 @@
 <!--KZ updated Home new carousel with boutstrapvuenext instead of swiper-->
 <template>
-  <h1 class="bonnie">MODESTORE</h1>
   <div>
     <MovieAuto movieSrc="/pexels-cottonbro-5836750.mp4" />
     <CarouselImg />
-    <GridImg
-      :images="galleryImages"
-      :columnsXs="2"
-      :columnsSm="3"
-      :columnsMd="4"
-      :columnsLg="5"
-      :columnsXl="6"
-    />
+    <GridImg :images="galleryImages" :columnsXs="2" :columnsSm="3" />
     <!--  <mood-board :images="images" />
 
          :images="[
@@ -76,7 +68,23 @@
   .bonnie {
     color: #47413d;
     position: absolute;
-    margin: 40px 30px;
+    margin: 50px 40px;
+    font-size: 2.5rem;
+  }
+
+  @media (min-width: 601px) {
+    .bonnie {
+      position: absolute;
+      margin: 40px 100px;
+      font-size: 3.5rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .bonnie {
+      position: absolute;
+      margin: 40px 100px;
+      font-size: 4rem;
+    }
   }
 </style>
 

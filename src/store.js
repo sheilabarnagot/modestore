@@ -68,6 +68,15 @@ const mutations = {
   },
   searchedItemsFiltered(state, itmz) {
     state.searchedItems = itmz
+  },
+  productDescription(state, { name, id, src, price, product }) {
+    state.productDescriptionItem.push({
+      name: name,
+      id: id,
+      src: src,
+      price: price,
+      product: product
+    })
   }
 }
 
@@ -75,6 +84,7 @@ const state = {
   items: [],
   favoriteItems: [],
   searchedItems: [],
+  productDescriptionItem: [],
   // Totalpriset av ens produkter
   totalCost: 0,
   state: {

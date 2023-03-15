@@ -1,34 +1,36 @@
 <template>
   <div id="container">
-    <h2 id="productsh2">Products</h2>
+    <h2 id="productsh2">{{ category }}</h2>
 
     <ul id="products">
       <!-- Here we are looping through the filtered products, which will be different categories of clothes depending on what prop was sent in. -->
       <li v-for="product in filteredProducts" :key="product.id">
-        <div id="productinfo">
-          <p class="top-p">{{ product.name }}</p>
-          <p class="bottom-p">{{ product.product }}</p>
-        </div>
+        <!-- // encodeURIComponent() -->
 
-        <!-- Med src här under så blir bilderna dubbla -->
-        <RouterLink to="/"
+        <RouterLink
+          :to="`/description/${product.src.split('/')}/${product.name}/${
+            product.price
+          }/${product.product}`"
           ><img
             :src="`${product.src}`"
             alt="product image"
             :class="{ selected: isFavorit(product) }"
           />
         </RouterLink>
-        <!-- är produkten favorit eller inte -->
-
-        <p>{{ product.price }}</p>
-        <!-- här skapar en hjärtikon som antingen fylls med färg eller inte beroende på om produkten är favorit eller inte.
+        <div id="main-info">
+          <div id="productinfo">
+            <p class="top-p">{{ product.product }} {{ product.name }}</p>
+            <p class="bottom-p">Price: {{ product.price }}</p>
+          </div>
+          <!-- här skapar en hjärtikon som antingen fylls med färg eller inte beroende på om produkten är favorit eller inte.
     När hjärtat klickas på så ändras statusen för produkten. -->
-        <i
-          :class="isFavorit(product) ? 'bi bi-heart-fill' : 'bi bi-heart'"
-          @click="toggleFavorit(product)"
-          type="button"
-          class="heart"
-        />
+          <i
+            :class="isFavorit(product) ? 'bi bi-heart-fill' : 'bi bi-heart'"
+            @click="toggleFavorit(product)"
+            type="button"
+            class="heart"
+          />
+        </div>
         <button
           id="addbutton"
           @click="
@@ -60,7 +62,7 @@
         required: true
       }
     },
-    emits: ['fromcartcomp'],
+    emits: ['fromcartcomp', 'imageclick'],
     components: {},
     data() {
       return {
@@ -78,7 +80,8 @@
       favoriter() {
         return this.$store.state.favoriteItems
       }
-    }, //Metoden "isFavorit(product)" kollar om produkten finns i favoritlistan genom att använda
+    },
+    //Metoden "isFavorit(product)" kollar om produkten finns i favoritlistan genom att använda
     //array-metoden "some" för att söka efter produkten med en matchande id.
     //Om produkten finns i favoritlistan så returnerar metoden true, annars false.
     methods: {
@@ -110,29 +113,35 @@
 
 <style scoped>
   #addbutton {
-    background-color: #2ea44f;
-    border: 4px solid rgba(27, 31, 35, 0.15);
-    border-radius: 20px;
+    width: 100%;
+    background-color: #3c3e3f;
     color: #fff;
+    font-size: 0.8em;
+    border: none;
+    padding: 10px;
     cursor: pointer;
     font-family: -apple-system, system-ui, 'Segoe UI', Helvetica, Arial,
       sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-    font-size: 23px;
+    font-size: 13px;
     font-weight: 600;
     line-height: 20px;
     padding: 6px 16px;
     position: relative;
     text-align: center;
+    margin-top: 3px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-family: 'didot', sans-serif;
   }
   #addbutton:hover {
-    background-color: #3f684b;
+    background-color: #818c85;
   }
   .heart {
     font-size: 30px;
     color: rgb(50, 48, 48);
     cursor: pointer;
     line-height: 10px;
-    padding: 9px 40px 9px 20%; /* increase right padding to 60px */
+    padding: 9px 40px 9px 0px; /* increase right padding to 60px */
     text-align: center;
     padding-bottom: 10%;
   }
@@ -154,7 +163,7 @@
     text-align: center;
     margin-bottom: 50px;
     margin-top: 10px;
-    font-family: 'Gloock', serif;
+    font-family: 'Gloock', sans-serif;
   }
   #products {
     display: grid;
@@ -162,6 +171,7 @@
     margin: 1em;
     justify-items: center;
     grid-template-columns: 1fr 1fr;
+    font-family: 'didot', sans-serif;
   }
   .selected {
     border: 2px solid red;
@@ -172,5 +182,44 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  #productinfo {
+    display: flex;
+    white-space: nowrap;
+  }
+
+  #main-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 14px;
+  }
+  .top-p {
+    font-family: 'didot', sans-serif;
+  }
+  .bottom-p {
+    white-space: nowrap;
+    font-family: 'didot', sans-serif;
+  }
+  p {
+    margin: 0;
+  }
+  @media screen and (max-width: 440px) {
+    #products {
+      display: grid;
+      margin: 1em;
+      justify-items: center;
+      grid-template-columns: 1fr;
+      font-family: 'didot', sans-serif;
+    }
+  }
+  @media screen and (min-width: 950px) {
+    #products {
+      display: grid;
+      margin: 1em;
+      justify-items: center;
+      grid-template-columns: 1fr 1fr 1fr;
+      font-family: 'didot', sans-serif;
+    }
   }
 </style>

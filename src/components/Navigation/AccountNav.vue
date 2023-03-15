@@ -32,9 +32,11 @@
     </ul>
   </nav>
   <RouterView />
-  <RouterLink to="/">
-    <button id="logout" @click="logout">Logout</button>
-  </RouterLink>
+  <div id="divLogout">
+    <RouterLink to="/">
+      <button id="logout" @click="logout">Logout</button>
+    </RouterLink>
+  </div>
 </template>
 
 <style scoped>
@@ -50,19 +52,37 @@
     padding-left: 1em;
   }
 
+  ul li:first-child {
+    padding-left: 0em;
+  }
+
   ul li a {
     font-family: 'jost';
     text-decoration: none;
     color: #3c3e3f;
   }
   #logout {
-    margin: 0 5%;
-    width: 90%;
+    width: 100%;
     background-color: #3c3e3f;
     color: #fff;
-    font-size: 11px;
+    font-size: 0.8em;
     border: none;
-    margin-top: 40px;
     padding: 10px;
+  }
+  #divLogout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3c3e3f;
+    font-size: 1.5em;
+  }
+  @media (min-width: 980px) {
+    #logout {
+      margin: 2;
+      font-size: 1em;
+    }
+    #divLogout {
+      justify-content: center;
+    }
   }
 </style>

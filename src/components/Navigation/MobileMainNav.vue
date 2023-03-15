@@ -82,8 +82,7 @@
       },
       testar(ez) {
         this.$store.commit('searchedItemsFiltered', ez)
-        this.$router.push('/SearchComponent')
-        console.log(ez, 'från MobileMainNav')
+        this.$router.push('/searchcomponent')
       }
     }
   }
@@ -91,9 +90,10 @@
 
 <style scoped>
   nav {
+    display: none;
     position: fixed;
     bottom: 0;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     z-index: 2;
     height: 4em;
@@ -151,5 +151,11 @@
 
   span {
     color: black;
+  }
+
+  @media (min-width: 375px) and (max-width: 600px) {
+    nav {
+      display: flex;
+    }
   }
 </style>

@@ -44,7 +44,7 @@ Also imports the "RouterLink" component from Vue Router and registers it as a co
  -->
 
 <template>
-  <div>
+  <div id="signup">
     <h2>{{ $t('login.firstTitle') }}</h2>
     <form id="formlogin">
       <b-form-input
@@ -61,13 +61,15 @@ Also imports the "RouterLink" component from Vue Router and registers it as a co
         v-model="password"
         :state="password.length > 6 ? true : false"
       />
-      <RouterLink to="/account/konto" id="linkLogin">
-        <input
-          @click="saveData"
-          id="loginButton"
-          type="button"
-          :value="$t('login.login')"
-      /></RouterLink>
+      <div id="containerLogin">
+        <RouterLink to="/account/konto" id="linkLogin">
+          <input
+            @click="saveData"
+            id="loginButton"
+            type="button"
+            :value="$t('login.login')"
+        /></RouterLink>
+      </div>
     </form>
     <p class="passText">{{ $t('login.forgotten') }}</p>
     <h2>{{ $t('login.secondTitle') }}</h2>
@@ -101,6 +103,9 @@ RouterLink is use to link the user to the account page if the email and password
     font-weight: 700;
     margin: 50px 0 30px 10px;
     padding: 10px;
+  }
+  #signup {
+    margin: 7em 0;
   }
 
   #formlogin {
@@ -163,6 +168,9 @@ RouterLink is use to link the user to the account page if the email and password
       font-size: 20px;
       margin: 40px 50px 0;
     }
+    /* #containerLogin {
+      width: 100%;
+    } */
     .passText {
       margin: 50px 0 40px 50px;
       font-size: 13px;
@@ -170,7 +178,7 @@ RouterLink is use to link the user to the account page if the email and password
     #loginButton {
       font-size: 15px;
       margin: 40px 0;
-      padding: 10px 550px;
+      padding: 10px 660px;
     }
     #button {
       font-size: 15px;
