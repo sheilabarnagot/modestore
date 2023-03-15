@@ -59,16 +59,6 @@
             likes: ['Playing video games', 'Cooking', 'Playing piano']
           },
           {
-            name: 'Sheila',
-            age: new Date().getFullYear() - 1988,
-            image: 'sheila.jpg',
-            background: 'User experience design',
-            skills: 'Wireframing, prototyping, user testing',
-            surprise: 'She has a collection of vintage typewriters',
-            likes: ['Reading', 'Going to concerts', 'Trying new cocktails']
-          },
-
-          {
             name: 'Diyana',
             age: 29,
             image: 'diyana.jpg',
@@ -107,6 +97,15 @@
               'Going to the gym',
               'Watching documentaries'
             ]
+          },
+          {
+            name: 'Sheila',
+            age: new Date().getFullYear() - 1988,
+            image: 'sheila.jpg',
+            background: 'User experience design',
+            skills: 'Wireframing, prototyping, user testing',
+            surprise: 'She has a collection of vintage typewriters',
+            likes: ['Reading', 'Going to concerts', 'Trying new cocktails']
           }
         ]
       }
