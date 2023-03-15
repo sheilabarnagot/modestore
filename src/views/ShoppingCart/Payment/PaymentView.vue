@@ -47,7 +47,7 @@
         v-model="modalShowswish"
         name="swishmodel"
       >
-        <img src="assets/swish.png" alt="" class="swishlogo" />
+        <img src="../../../../assets/swish.png" alt="" class="swishlogo" />
 
         <b-form-input
           class="swish-number"

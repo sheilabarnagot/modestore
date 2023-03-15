@@ -74,6 +74,12 @@ const mutations = {
   }
 }
 
+const getters = {
+  totalQuantity(state) {
+    return state.items.reduce((total, item) => total + item.quantity, 0)
+  }
+}
+
 const state = {
   items: [],
   favoriteItems: [],
@@ -84,6 +90,7 @@ const state = {
 }
 
 export default createStore({
+  getters,
   state,
   mutations,
   plugins: [createPersistedState()],
