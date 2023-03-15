@@ -49,7 +49,7 @@
       <RouterLink class="need-z" to="/account">
         <UserIcon class="menu-shopping-search need-z" />
       </RouterLink>
-      <RouterLink to="/cart">
+      <RouterLink class="need-z" to="/cart">
         <ShoppingIcon class="menu-shopping-search need-z" />
       </RouterLink>
       <div
