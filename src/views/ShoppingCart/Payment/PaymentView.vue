@@ -8,15 +8,12 @@
         <div class="input-text">
           <b-form-input
             type="text"
-            placeholder="Ex Alexandra jon"
+            placeholder="Ex jon"
             v-model="input1"
             :state="input1.length >= 4 ? true : false"
           />
           <span>Name</span>
-          <div v-if="notEmpty">
-            <!-- <p>{{ tack }}</p> -->
-            <!-- <p>Please fill in all input fields.</p> -->
-          </div>
+          <div v-if="notEmpty" />
         </div>
         <div class="input-text">
           <b-form-input
@@ -103,7 +100,6 @@
                 value="Faktura"
                 v-model="Payment"
               />
-              <!-- häääärf -->
 
               <div class="swisha" v-if="Payment === 'Swish'">
                 <b-button class="btn" @click="modalShowswish = !modalShowswish"
