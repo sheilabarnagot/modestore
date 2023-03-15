@@ -1,307 +1,11 @@
 <template>
-  <!-- <div class="bcard"> -->
-      <!-- <b-card title="Card title" sub-title="Card subtitle" /> -->
-      <!-- <h4>Payment: {{ Payment }}</h4> -->
-
-
-    <!-- <b-card title="Card title" sub-title="Card subtitle" /> -->
-    <!-- <div class="container2">
-
-    <div class="box2">
-    <label style="display: block" for="Creditcard">Creditcard</label>
-
-      <input
-        @click="onKort"
-        type="radio"
-        id="form"
-        value="Creditcard"
-        v-model="Payment"
-
-      />
-    </div>
-
-    <div class="box2">
-      <label style="display: block" for="swish">Swish</label>
-      <input
-        @click="onSwish"
-        type="radio"
-        id="form"
-        value="Swish"
-        v-model="Payment"
-      />
-    </div>
-
-    <div class="box2">
-      <label style="display: block" for="Faktura">Invoice</label>
-      <input
-        @click="OnFaktura"
-        type="radio"
-        id="form"
-        value="Faktura"
-        v-model="Payment"
-      />
-
-
-  </div> -->
-
-
 
 
 
 
 <div class="paybutton">
-    <!-- <div class="swisha" v-if="Payment === 'Swish'">
-      <b-button class="btn" @click="modalShowswish = !modalShowswish"
-        >Swish
-      </b-button>
-
-      <b-modal
-        title="Swish With Phone Number or Scan"
-        v-model="modalShowswish"
-        name="swishmodel"
-        :no-close-on-backdrop="true"
-      >
-        <img src="assets/swish.png" alt="" class="swishlogo" />
-
-        <b-form-input
-          class="swish-number"
-          required
-          type="number"
-          :state="number.length >= 4 ? true : false"
-          placeholder="+46"
-          v-model="number"
-        />
-        <img src="assets/frame1.jpg" allt="" class="scan" />
-      </b-modal>
-    </div> -->
-
-    <!-- <div class="kort" v-if="Payment === 'Creditcard'">
-      <b-button class="btn" @click="modalShowkort = !modalShowkort"
-        >Creditcard
-      </b-button>
-
-      <b-modal
-        title="confirm your payment"
-        v-model="modalShowkort"
-        name="kortmodel"
-        :no-close-on-backdrop="true"
-        hide-footer
-      >
-        <div class="container">
-          <div class="first">
-            <b-form-input
-              required
-              type="text"
-              :state="cardowner.length >= 3 ? true : false"
-              placeholder="Card-owner"
-              v-model="cardowner"
-              @click="ok"
-            />
-          </div>
-          <div class="second">
-            <b-form-input
-              required
-              type="number"
-              :state="kortnummer.length >= 3 ? true : false"
-              placeholder="card-number"
-              v-model="kortnummer"
-              @click="ok"
-            />
-          </div>
-          <div class="third">
-            <b-form-input
-              required
-              type="password"
-              :state="CVC.length >= 3 ? true : false"
-              placeholder="CVC"
-              v-model="CVC"
-              @click="ok"
-            />
-          </div>
-
-          <div class="selection">
-            <div class="date">
-              <select name="Months" id="Months">
-                <option value="JAN">JAN</option>
-                <option value="FEB">FEB</option>
-                <option value="MAR">MAR</option>
-                <option value="APR">APR</option>
-                <option value="MAY">MAJ</option>
-                <option value="JUN">JUN</option>
-                <option value="JUL">JUL</option>
-                <option value="AUG">AUG</option>
-                <option value="SEP">SEP</option>
-                <option value="OKT">OKT</option>
-                <option value="NOV">NOV</option>
-                <option value="DEC">DEC</option>
-              </select>
-              <select name="years" id="years">
-                <option value="2019">2019</option>
-                <option value="2020">2020</option>
-                <option value="2023">2021</option>
-                <option value="2022">2022</option>
-                <option value="2023">2023</option>
-                <option value="2024">2024</option>
-                <option value="2025">2025</option>
-                <option value="2026">2026</option>
-              </select>
-              <img src="assets/mastercardlogo.jpeg" alt="" class="logo" />
-            </div>
-          </div>
-        </div>
-        <b-button
-         :disabled="submitButtonDisabled"
-          href="#/submit"
-          variant="primary"
-          modalShowkort:> Submit
-          </b-button>
-        <p v-if="showErrorMessage" style="color: red;">Please enter text!</p>
-
-      </b-modal>
-
-    </div>
-
-    <div class="Fakturan" v-if="Payment === 'Faktura'">
-      <b-button class="btn" @click="modalShowfaktura = !modalShowfaktura"
-        >Invoice
-      </b-button>
-
-      <b-modal
-        title="Invoice will be sent to your Email"
-        v-model="modalShowfaktura"
-        name="fakturamodel"
-        :no-close-on-backdrop="true"
-        hide-footer
-        >Type your Email:
-        <b-form-input
-          type="email"
-          v-model="email"
-          :state="regex.test(email) && email.length > 1 ? true : false"
-          placeholder="me@example.com"
-          @click="ok"
-        />
-        <b-button
-       :disabled="regex.test(email) === false "
-        href="#/submit"
-        variant="primary"
-        modalShowfaktura:>Submit
-
-          </b-button
-        >
-        <p v-if="(regex.test(email)) === false" style="color: red;">Please enter your Email!</p>
-      </b-modal>
-    </div> -->
-  <!-- </div> -->
 
 
-
-
-<!-- gammla checkout ---------------------------------------------------->
-  <!-- <div class="row">
-    <div class="col-75">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-50">
-            <h5>Shipping Address</h5>
-            <label for="fname"><i class="fa fa-user" /> Full Name</label>
-
-            <input
-              type="text"
-              id="fname"
-              name="firstname"
-              placeholder="John M. Doe"
-              v-model="fname"
-
-            />
-
-
-            <label for="email"><i class="fa fa-envelope" /> Email</label>
-
-            <input
-              type="text"
-              id="emailSH"
-              name="email"
-              placeholder="john@example.com"
-              v-model="emailSH"
-              @blur="checkInput"
-            />
-
-
-            <label for="adr"><i class="fa fa-address-card-o" /> Address</label>
-
-            <input
-              type="text"
-              id="adr"
-              name="address"
-              placeholder="542 W. 15th Street"
-              v-model="adr"
-
-
-            />
-
-            <label for="city"><i class="fa fa-institution" /> City</label>
-
-            <input
-            type="text" id="city" name="city" placeholder="New York" v-model="city"
-
-            />
-
-
-            <div class="row">
-              <div class="col-50">
-                <label for="state">State</label>
-
-                <input
-                type="text" id="state" name="state" placeholder="NY" v-model="state"
-
-                 />
-
-
-              </div>
-              <div class="col-50">
-                <label for="zip">Zip</label>
-
-                <input
-                type="text" id="zip" name="zip" placeholder="10001" v-model="zip"
-
-                />
-
-
-              </div>
-            </div>
-          </div>
-
-
-          <b-button
-          :disabled="isDisabled"
-
-          href="#/submit"
-          variant="primary"
-          @click="checkInp">
-          {{ isDisabled ? "Error" : "confirm" }}
-          </b-button>
-          <p v-if="isDisabled">All fields are required.</p>
-          <p v-if="isConfirmd">Form submitted successfully!</p>
-
-        </div>
-
-      </div>
-    </div>
-
-    <div class="col-25">
-      <div class="container">
-        <h4>
-          Cart
-
-        </h4>
-
-        Totalcost: {{ $store.state.totalCost }}
-
-      </div>
-    </div>
-  </div> -->
-  <!-- gamla checkout -------------------------------------------->
 
   <!----------- Shipping ----------->
   <div class="container5">
@@ -398,7 +102,7 @@
 <!-- häääärf -->
 
 
-<div v-if="notEmpty" />
+
 
 
 <div class="swisha" v-if="Payment === 'Swish'">
@@ -545,23 +249,6 @@
 
 
 
-        <div class="pay">
-            <button v-if="!isAnyInputEmpty">Submit</button>
-        </div>
-        <div class="message">
-        <p>Please fill in all input fields.</p>
-        <!-- <p v-if="isDisabled">All fields are required.</p>
-        <p v-if="isConfirmd">Form submitted successfully!</p> -->
-      </div>
-
-        <div class="last">
-            <p>BONIE</p>
-            <a href="#"> Homepage </a>
-
-        </div>
-
-
-
     </div>
 
 </div>
@@ -643,26 +330,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-//  #Payment{
-//     // min-height:100vh;
-//     // background-color:#f7f7f9;
-//     // display:flex;
-//     justify-content:center;
-//     // align-items:center;
-//     margin-right:300px ;
-//     position: absolute;
-//     display: block;
-//     width:500px;
-//     border-radius:10px;
-//     background-color:#fff;
-//     padding:0 25px;
-//     box-sizing:border-box;
-//   }
+
 
   .AA{
-    // min-height:100vh;
-    // background-color:#f7f7f9;
-    // display:flex;
+
     justify-content:center;
     // align-items:center;
     margin-right:300px ;
@@ -689,17 +360,7 @@ export default {
   }
 
   .box2{
-    // position: absolute;
-    // display: flex;
-    // justify-content: center;
-    // width: 100%;
-    // top: 200px;
-    // margin-bottom: 50px;
-    // color: #464343;
-    // margin-left: 520px;
-    // margin-top: 10px;
-    // border: 1px solid black;
-  // padding: 20px;
+
 
    height: 80px;
    margin: 10px;
@@ -713,28 +374,7 @@ export default {
 
   }
 
-  // .fakturapayment {
-  //   position: absolute;
-  //   display: flex;
-  //   justify-content: center;
-  //   width: 100%;
-  //   top: 250px;
-  //   color: #464343;
-  //   margin-left: 520px;
-  //   margin-top: 10px;
-  // }
 
-  // .cardPayment {
-  //   position: absolute;
-  //   display: flex;
-  //   justify-content: center;
-  //   width: 100%;
-  //   top: 150px;
-  //   margin-top: 150px;
-  //   color: #464343;
-  //   margin-left: 520px;
-  //   margin-top: 160px;
-  // }
 
   .swisha {
     width: 100%;
@@ -812,113 +452,12 @@ export default {
     margin: 5px;
   }
 
-  // .totalcost {
-  //   position: absolute;
-  //   display: flex;
-  //   justify-content: center;
-  //   width: 100%;
-  //   top: 500px;
-  //   color: #464343;
-  // }
-  // .submit1 {
-  //   background-color: #464343;
-  //   justify-content: center;
-  //   margin-left: 350px;
-  // }
-  // .submit2 {
-  //   background-color: #464343;
-  //   justify-content: center;
-  //   margin-left: 370px;
-  //   margin-top: 20px;
-  // }
 
-  // .row {
-  //   display: -ms-flexbox; /* IE10 */
-  //   display: flex;
-  //   -ms-flex-wrap: wrap; /* IE10 */
-  //   flex-wrap: wrap;
-  //   margin: 0 -16px;
-  // }
 
-  // .col-25 {
-  //   -ms-flex: 25%; /* IE10 */
-  //   flex: 25%;
-  // }
 
-  // .col-50 {
-  //   -ms-flex: 50%; /* IE10 */
-  //   flex: 50%;
-  // }
 
-  // .col-75 {
-  //   -ms-flex: 75%; /* IE10 */
-  //   flex: 75%;
-  // }
 
-  // .col-25,
-  // .col-50,
-  // .col-75 {
-  //   padding: 0 10px;
-  // }
 
-  // .container {
-  //   background-color: #f5f5f5;
-  //   padding: 5px 20px 15px 20px;
-  //   border: 1px solid lightgrey;
-  //   border-radius: 5px;
-  //   margin-top: 20px;
-  //   max-width: 500px;
-  // }
-
-  // input[type='text'] {
-  //   width: 100%;
-  //   margin-bottom: 20px;
-  //   padding: 12px;
-  //   border: 1px solid #ccc;
-  //   border-radius: 3px;
-  // }
-
-  // label {
-  //   margin-bottom: 10px;
-  //   display: block;
-  // }
-
-  // .icon-container {
-  //   margin-bottom: 20px;
-  //   padding: 7px 0;
-  //   font-size: 24px;
-  // }
-
-  // .btn {
-  //   background-color: grey;
-  //   color: white;
-  //   padding: 12px;
-  //   margin: 10px 0;
-  //   border: none;
-  //   width: 100%;
-  //   border-radius: 3px;
-  //   cursor: pointer;
-  //   font-size: 17px;
-  // }
-
-  // .btn:hover {
-  //   background-color: #45a049;
-  // }
-
-  // span.price {
-  //   float: right;
-  //   color: grey;
-  // }
-
-  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
-  // @media (max-width: 800px) {
-  //   .row {
-  //     flex-direction: column-reverse;
-  //   }
-  //   .col-25 {
-  //     margin-bottom: 20px;
-  //   }
-  // }
 
   // här slutar den------------
 //   *{

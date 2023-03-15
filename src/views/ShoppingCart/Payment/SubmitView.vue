@@ -90,9 +90,6 @@
     width: 100%;
     top: 500px;
   }
-  .bk {
-    /* padding-left: 80px; */
-  }
 
   .image {
     width: 90px;
