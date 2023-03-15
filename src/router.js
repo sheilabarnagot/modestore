@@ -4,6 +4,7 @@ import CartView from './views/ShoppingCart/CartView.vue'
 import HomeView from './views/HomeView.vue'
 import AccountView from './views/Account/AccountView.vue'
 import PaymentView from './views/ShoppingCart/Payment/PaymentView.vue'
+import SubmitView from './views/ShoppingCart/Payment/SubmitView.vue'
 import MyAccountView from './views/Account/AccountChildren/MyAccountView.vue'
 import ShoppingView from './views/ShoppingView.vue'
 import FavoritesView from './views/Account/AccountChildren/FavoritesView.vue'
@@ -49,6 +50,10 @@ export default createRouter({
     {
       path: '/kop',
       component: PaymentView
+    },
+    {
+      path: '/submit',
+      component: SubmitView
     },
     {
       component: AccountView,

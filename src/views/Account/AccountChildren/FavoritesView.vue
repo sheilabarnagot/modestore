@@ -51,67 +51,93 @@
     }
   }
 </script>
+
 <style scoped>
-  .container {
-    display: flex;
-    justify-content: space-between;
-  }
-  #addbutton {
-    background-color: #2ea44f;
-    border: 4px solid rgba(27, 31, 35, 0.15);
-    border-radius: 20px;
-    color: #fff;
-    cursor: pointer;
-    font-family: -apple-system, system-ui, 'Segoe UI', Helvetica, Arial,
-      sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-    font-size: 23px;
-    font-weight: 600;
-    line-height: 20px;
-    padding: 6px 16px;
-    position: relative;
-    text-align: center;
-  }
-
-  #addbutton:hover {
-    background-color: #3f684b;
-  }
-
   .heart {
     font-size: 30px;
     color: rgb(50, 48, 48);
     cursor: pointer;
     line-height: 10px;
-    padding: 9px 40px 9px 20%; /* increase right padding to 60px */
+    padding: 9px 40px 9px 0px; /* increase right padding to 60px */
     text-align: center;
     padding-bottom: 10%;
   }
-
   img {
-    max-width: 50%;
-    box-shadow: 50px 0px 50px 5px grey;
+    max-width: 100%;
+    max-height: 100%;
+    /* box-shadow: 50px 0px 50px 5px grey; */
+    /* object-fit: none; */
   }
-  #shirtname {
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  ul {
-    list-style: none;
-  }
-
   #favoriteh2 {
     text-align: center;
     margin-bottom: 50px;
-    margin-top: 10px;
-    font-family: 'Gloock', serif;
+    margin-top: 120px;
+    font-family: 'Gloock', sans-serif;
+  }
+  .bonnie {
+    color: #47413d;
+    position: absolute;
+    top: -3%;
+    margin: 50px 40px;
+    font-size: 2.5rem;
   }
   #favorite-products {
     display: grid;
+    gap: 1em;
+    margin: 1em;
+    justify-items: center;
     grid-template-columns: 1fr 1fr;
+    font-family: 'didot', sans-serif;
+    margin-top: 100px;
   }
-
   .selected {
     border: 2px solid red;
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #shirtname {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+  }
+  .top-p {
+    font-family: 'didot', sans-serif;
+    margin: 10%;
+  }
+  .bottom-p {
+    white-space: nowrap;
+    font-family: 'didot', sans-serif;
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
+  @media screen and (max-width: 440px) {
+    #favorite-products {
+      display: grid;
+      margin: 1em;
+      justify-items: center;
+      grid-template-columns: 1fr;
+      font-family: 'didot', sans-serif;
+    }
+  }
+  @media screen and (min-width: 950px) {
+    #favorite-products {
+      display: grid;
+      margin: 1em;
+      justify-items: center;
+      grid-template-columns: 1fr 1fr 1fr;
+      font-family: 'didot', sans-serif;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    #totalamount1 {
+      display: none;
+    }
   }
 </style>

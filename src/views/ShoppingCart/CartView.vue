@@ -1,16 +1,11 @@
 <!-- Here we are looping through and displaying the products in the shoppingcart. We are also placing a button next to each product that when clicked will delete it from the cart. -->
 
 <template>
-  <div id="head-div">
-    <h2 id="cartsh2">Cart</h2>
-
-    <div id="amountdiv">
-      <RouterLink to="/kop"> <shoppingIcon id="paybutton" /></RouterLink>
-
-      <p id="totalamount">{{ $store.state.totalCost }} kr</p>
-    </div>
-  </div>
-
+  <h2 id="cartsh2">Cart</h2>
+  <RouterLink to="/kop"
+    ><button id="checkout-button">To checkout</button>
+  </RouterLink>
+  <p id="totalamount">Total amount: {{ $store.state.totalCost }} kr</p>
   <div class="container">
     <div id="cart-div-grid" v-for="item in visibleItems" :key="item.id">
       <img :src="`${item.src}`" alt="product image" />
@@ -31,11 +26,7 @@
 </template>
 
 <script>
-  import shoppingIcon from '../../components/SvgIcons/ShoppingIcon.vue'
   export default {
-    components: {
-      shoppingIcon
-    },
     computed: {
       storedShoppingItems() {
         return this.$store.state.items
@@ -44,10 +35,6 @@
         return this.storedShoppingItems.filter((item) => !item.isClicked)
       }
     },
-    data() {
-      return { shoppingIcon }
-    },
-
     methods: {
       deleteItem(item) {
         this.$store.commit('setClicked', item)
@@ -68,6 +55,28 @@
   }
 </script>
 <style scoped>
+  #checkout-button {
+    position: absolute;
+    margin-left: 75%;
+    top: 70px;
+    background-color: #3c3e3f;
+    color: white;
+    font-size: 0.8em;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+  }
+  #totalamount {
+    font-family: 'didot', sans-serif;
+    margin-left: 75%;
+    position: absolute;
+    line-height: 1;
+    max-width: 13ch;
+    top: 125px;
+  }
   .container {
     margin-bottom: 6em;
     padding-left: 2rem;
@@ -75,6 +84,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 1em;
     font-family: 'didot', serif;
+    margin-top: 40px;
   }
   #delete {
     width: 100%;
@@ -104,9 +114,8 @@
     max-width: 100%;
   }
   #cartsh2 {
-    margin-left: 50%;
-    margin-bottom: 50px;
-    margin-top: 10px;
+    margin-left: 46%;
+    margin-top: 120px;
     font-family: 'Gloock', sans-serif;
   }
 
@@ -134,12 +143,7 @@
     border-radius: 10px;
     padding: 2px;
   }
-  #totalamount {
-    float: right;
-    align-self: center;
-    font-family: 'didot', sans-serif;
-    margin-right: 6px;
-  }
+
   #amountdiv {
     display: flex;
     flex-direction: column;
@@ -164,10 +168,7 @@
     margin-top: 5px;
     font-family: 'didot', sans-serif;
   }
-  #head-div {
-    display: flex;
-    justify-content: space-between;
-  }
+
   @media screen and (min-width: 600px) {
     #amountdiv {
       display: flex;

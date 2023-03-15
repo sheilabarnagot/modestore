@@ -18,6 +18,8 @@
           <div>
             <!--The toLowerCase() method is used to convert the category name to lowercase, as the convention for URL paths.-->
             <RouterLink
+              @click="toggleMenu"
+              :style="{ width: isOpenWidth, transition: firstTransitsion }"
               :to="{
                 path:
                   category.id === 1 ? '/' : `/${category.name.toLowerCase()}`
@@ -43,10 +45,25 @@
       </template>
     </div>
     <div id="menu-item-icons-container">
-      <SearchIcon />
-      <UserIcon class="menu-shopping-search" />
-      <ShoppingIcon class="menu-shopping-search" />
+      <SearchIcon class="need-z" @click="toggler" />
+      <RouterLink class="need-z" to="/account">
+        <UserIcon class="menu-shopping-search need-z" />
+      </RouterLink>
+      <RouterLink class="need-z" to="/cart">
+        <ShoppingIcon class="menu-shopping-search need-z" />
+      </RouterLink>
+      <div
+        style="display
+      flex"
+      >
+        <p id="total-cart-items2">
+          {{ $store.getters.totalQuantity }}
+        </p>
+      </div>
     </div>
+    <template v-if="toggl"
+      ><FilterFetch @filterproducts="testar" /><template
+    /></template>
   </nav>
 </template>
 
@@ -56,9 +73,11 @@
   import UserIcon from '../SvgIcons/UserIcon.vue'
   import ShoppingIcon from '../SvgIcons/ShoppingIcon.vue'
   import SearchIcon from '../SvgIcons/SearchIcon.vue'
+  import FilterFetch from '../Filter/FilterFetch.vue'
   export default {
     components: {
       StyledHamburger,
+      FilterFetch,
       CloseIcon,
       UserIcon,
       ShoppingIcon,
@@ -74,30 +93,45 @@
           { id: 2, name: 'Jackets' },
           { id: 3, name: 'Tops' },
           { id: 4, name: 'Bottoms' },
+<<<<<<< HEAD
           { id: 5, name: 'Dresses' },
           { id: 6, name: 'About' }
         ]
+=======
+          { id: 5, name: 'Dresses' }
+          //{ id: 6, name: 'About' }
+        ],
+        toggl: true
+>>>>>>> 3a7d0d678fd90dcf108660536e9fb58e09de7590
       }
     },
     methods: {
       toggleMenu() {
         this.isOpen = !this.isOpen
-        if (this.isOpen) {
-          this.isOpenWidth = '250px'
-        } else {
-          this.isOpenWidth = '0'
-        }
-        /*
-        this.isOpenWidth === null || this.isOpenWidth === '0'
+        this.isOpenWidth === '0'
           ? (this.isOpenWidth = '250px')
           : (this.isOpenWidth = '0')
-          */
+        // if (this.isOpen) {
+        //   this.isOpenWidth = '250px'
+        // } else {
+        //   this.isOpenWidth = '0'
+        // }
+      },
+      toggler() {
+        this.toggl = !this.toggl
+      },
+      testar(ez) {
+        this.$store.commit('searchedItemsFiltered', ez)
+        this.$router.push('/searchcomponent')
       }
     }
   }
 </script>
 
 <style scoped lang="scss">
+  .need-z {
+    z-index: 999;
+  }
   nav {
     display: none;
   }
@@ -113,14 +147,13 @@
     padding-top: 100px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   }
-
   .menu-icon {
     position: absolute;
     top: 40px;
     left: 20px;
     font-size: 16px;
     margin-left: 10px;
-    z-index: 2;
+    z-index: 999;
     //new style
     display: flex;
     align-items: center;
@@ -130,10 +163,10 @@
     margin-right: 10px;
   }
   .menu-icon .icon {
+    z-index: 999;
     display: flex;
     align-items: center;
   }
-
   .menu-items {
     padding: 8px 8px 8px 40px;
     text-decoration: none;
@@ -142,7 +175,6 @@
     display: block;
     transition: 0.3s;
   }
-
   .menu-items div {
     padding: 0.5rem 0;
     margin: 10px 0px;
@@ -166,7 +198,6 @@
   .menu-items div.active::after {
     height: 2px;
   }
-
   .menu-items a {
     color: #47413d;
     text-decoration: none;
@@ -181,26 +212,37 @@
     right: 100px;
     cursor: pointer;
   }
-
   // for the icons on the right
-
   #menu-item-icons-container {
     display: flex;
     justify-content: flex-end;
     position: absolute;
+    // z-index: 999;
     width: 100%;
     padding-left: 1em;
     top: 5%;
     right: 5%;
   }
-
   .menu-shopping-search {
     margin-left: 2em;
   }
-
+  #menu-item-icons-container p {
+    position: relative;
+    left: 4px;
+    top: 8px;
+  }
   @media (min-width: 601px) {
     nav {
       display: block;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    #total-cart-items2 {
+      bottom: -11px;
+      left: 160px;
+      position: absolute;
+      font-size: smaller;
+      font-weight: bolder;
     }
   }
 </style>

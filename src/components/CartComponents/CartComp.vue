@@ -1,5 +1,9 @@
 <template>
   <div id="container">
+    <RouterLink to="/kop"
+      ><button id="checkout-button">To checkout</button>
+    </RouterLink>
+    <p id="totalamount1">Total amount: {{ $store.state.totalCost }} kr</p>
     <h2 id="productsh2">{{ category }}</h2>
 
     <ul id="products">
@@ -112,6 +116,26 @@
 </script>
 
 <style scoped>
+  #checkout-button {
+    position: absolute;
+    margin-left: 75%;
+    top: 70px;
+    background-color: #3c3e3f;
+    color: white;
+    font-size: 0.8em;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+  }
+  #totalamount1 {
+    margin-left: 75%;
+    position: absolute;
+    max-width: 13ch;
+    font-family: 'didot', sans-serif;
+  }
   #addbutton {
     width: 100%;
     background-color: #3c3e3f;
@@ -162,7 +186,7 @@
   #productsh2 {
     text-align: center;
     margin-bottom: 50px;
-    margin-top: 10px;
+    margin-top: 120px;
     font-family: 'Gloock', sans-serif;
   }
   #products {
@@ -172,6 +196,7 @@
     justify-items: center;
     grid-template-columns: 1fr 1fr;
     font-family: 'didot', sans-serif;
+    margin-top: 100px;
   }
   .selected {
     border: 2px solid red;

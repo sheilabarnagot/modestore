@@ -6,22 +6,6 @@
         <input class="search" type="submit" value="Search" />
       </template>
     </form>
-
-    <!-- <div :key="index" v-for="(product, index) in filteredProducts" />
-    <h1>{{ products.name }}</h1>
-    <img :src="products.src" :alt="products.name" />
-    <p>{{ products.src }}</p> -->
-
-    <!-- <form @submit="filterProducts">
-        <input type="text" v-model="searchTerm" />
-        <input type="submit" value="Search" />
-      </form> -->
-    <!-- <button @click="test">test me</button>
-    <div v-for="(product, index) in filteredProducts" :key="index">
-      <h3>{{ product.name }}</h3>
-      <img :src="product.image" :alt="product.name" />
-      <p>{{ product.description }}</p>
-    </div> -->
   </div>
 </template>
 
@@ -96,6 +80,7 @@
     flex-direction: column;
     bottom: 200%;
     position: absolute;
+    z-index: 999;
   }
 
   .search {
@@ -109,6 +94,31 @@
     background-color: #d7dad8;
     margin: 10px;
     padding: 5px;
+  }
+
+  @media (min-width: 600px) {
+    #input-container {
+      top: 10%;
+
+      /* bottom: 50%; */
+      left: 39%;
+    }
+  }
+  @media (min-width: 990px) {
+    #input-container {
+      top: 7%;
+      position: fixed;
+      /* bottom: 50%; */
+      left: 40%;
+    }
+  }
+  @media (min-width: 1024px) {
+    #input-container {
+      top: 7%;
+      position: fixed;
+      /* bottom: 50%; */
+      left: 65%;
+    }
   }
 </style>
 
