@@ -46,9 +46,11 @@
     </div>
     <div id="menu-item-icons-container">
       <SearchIcon />
-      <UserIcon class="menu-shopping-search" />
+      <RouterLink class="need-z" to="/account">
+        <UserIcon class="menu-shopping-search need-z" />
+      </RouterLink>
       <RouterLink to="/cart">
-        <ShoppingIcon class="menu-shopping-search" />
+        <ShoppingIcon class="menu-shopping-search need-z" />
       </RouterLink>
       <div
         style="display
@@ -110,6 +112,9 @@
 </script>
 
 <style scoped lang="scss">
+  .need-z {
+    z-index: 999;
+  }
   nav {
     display: none;
   }
@@ -132,7 +137,7 @@
     left: 20px;
     font-size: 16px;
     margin-left: 10px;
-    z-index: 2;
+    z-index: 999;
     //new style
     display: flex;
     align-items: center;
@@ -142,6 +147,7 @@
     margin-right: 10px;
   }
   .menu-icon .icon {
+    z-index: 999;
     display: flex;
     align-items: center;
   }
@@ -200,6 +206,7 @@
     display: flex;
     justify-content: flex-end;
     position: absolute;
+    // z-index: 999;
     width: 100%;
     padding-left: 1em;
     top: 5%;
