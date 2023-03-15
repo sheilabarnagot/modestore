@@ -1,14 +1,14 @@
 <template>
   <ArrowBack @click="() => this.$router.go(-1)" id="arrow-back" />
-  <h1>Product Details</h1>
+  <!-- <h1>Product Details</h1> -->
   <div id="container">
-    <img :src="dettur" />
     <div id="product-information">
       <div id="product-name-product">
         <p>{{ $route.params.name }}, {{ $route.params.product }}</p>
         <p id="p-price">price: {{ $route.params.price }} kr</p>
       </div>
     </div>
+    <img :src="dettur" />
   </div>
 </template>
 
@@ -47,9 +47,7 @@
 <style scoped>
   #container {
     display: flex;
-    justify-content: start;
     align-items: center;
-    margin: 2em;
     height: 90vh;
   }
 
@@ -58,8 +56,9 @@
     width: 100%;
     flex-direction: column;
     align-items: center;
+    /* padding-top: 2em; */
+
     font-size: 1.1em;
-    /* padding-left: 1em; */
   }
 
   #product-name-product {
@@ -70,7 +69,7 @@
 
   h1 {
     text-align: center;
-    margin-top: 1.5em;
+    margin-top: 1em;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -86,6 +85,7 @@
   #arrow-back {
     position: absolute;
     top: 3%;
+    right: 0%;
     cursor: pointer;
   }
 
@@ -97,5 +97,29 @@
   img {
     max-width: 60%;
     object-fit: contain;
+  }
+
+  @media (min-width: 500px) {
+    img {
+      max-width: 50%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    img {
+      max-width: 20%;
+    }
+
+    #container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5em;
+    }
+
+    #product-name-product {
+      padding-bottom: 0.5em;
+    }
   }
 </style>
