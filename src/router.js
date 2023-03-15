@@ -12,6 +12,7 @@ import SettingsAccount from './components/MyAccount/SettingsAccount.vue'
 
 import AllProductsView from './views/AllProductsView.vue'
 import IndividualProductView from './views/IndividualProductView.vue'
+import AboutView from './views/AboutView.vue'
 
 // imports for Helpview's children.
 import MaterialsComponent from './views/Account/AccountChildren/HelpChildView/MaterialsComponent.vue'
@@ -141,6 +142,11 @@ export default createRouter({
       path: '/bottoms',
       component: ShoppingView,
       props: { category: 'bottoms' }
+    },
+    {
+      path: '/About',
+      component: AboutView,
+      props: { category: 'AboutView' }
     }
   ]
 })

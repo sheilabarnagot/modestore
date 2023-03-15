@@ -74,8 +74,8 @@
           { id: 2, name: 'Jackets' },
           { id: 3, name: 'Tops' },
           { id: 4, name: 'Bottoms' },
-          { id: 5, name: 'Dresses' }
-          //{ id: 6, name: 'About' }
+          { id: 5, name: 'Dresses' },
+          { id: 6, name: 'About' }
         ]
       }
     },

@@ -162,6 +162,9 @@ RouterLink is use to link the user to the account page if the email and password
     text-decoration: none;
     color: #000;
   }
+  #containerLogin {
+    width: 90%;
+  }
 
   @media (min-width: 980px) {
     h2 {
@@ -178,7 +181,7 @@ RouterLink is use to link the user to the account page if the email and password
     #loginButton {
       font-size: 15px;
       margin: 40px 0;
-      padding: 10px 660px;
+      /* padding: 10px 660px; */
     }
     #button {
       font-size: 15px;
