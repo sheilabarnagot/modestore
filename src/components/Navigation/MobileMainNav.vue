@@ -43,7 +43,12 @@
         <RouterLink to="/account"> <UserIcon /> </RouterLink>
       </li>
       <li>
-        <RouterLink to="/cart"> <ShoppingIcon /> </RouterLink>
+        <RouterLink to="/cart">
+          <ShoppingIcon />
+          <p id="total-cart-items">
+            {{ $store.getters.totalQuantity }}
+          </p>
+        </RouterLink>
       </li>
     </ul>
     <template v-if="toggl">
@@ -147,6 +152,14 @@
   #menuitem {
     text-align: center;
     padding-left: 0;
+  }
+  #total-cart-items {
+    bottom: -11px;
+    left: 160px;
+    position: absolute;
+    z-index: 3;
+    font-size: smaller;
+    font-weight: bolder;
   }
 
   span {

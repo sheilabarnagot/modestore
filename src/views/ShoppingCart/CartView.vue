@@ -1,15 +1,7 @@
 <!-- Here we are looping through and displaying the products in the shoppingcart. We are also placing a button next to each product that when clicked will delete it from the cart. -->
 
 <template>
-  <div id="head-div">
-    <h2 id="cartsh2">Cart</h2>
-
-    <div id="amountdiv">
-      <RouterLink to="/kop"> <shoppingIcon id="paybutton" /></RouterLink>
-
-      <p id="totalamount">{{ $store.state.totalCost }} kr</p>
-    </div>
-  </div>
+  <h2 id="cartsh2">Cart</h2>
 
   <div class="container">
     <div id="cart-div-grid" v-for="item in visibleItems" :key="item.id">
@@ -31,11 +23,7 @@
 </template>
 
 <script>
-  import shoppingIcon from '../../components/SvgIcons/ShoppingIcon.vue'
   export default {
-    components: {
-      shoppingIcon
-    },
     computed: {
       storedShoppingItems() {
         return this.$store.state.items
@@ -44,10 +32,6 @@
         return this.storedShoppingItems.filter((item) => !item.isClicked)
       }
     },
-    data() {
-      return { shoppingIcon }
-    },
-
     methods: {
       deleteItem(item) {
         this.$store.commit('setClicked', item)
@@ -75,6 +59,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 1em;
     font-family: 'didot', serif;
+    margin-top: 100px;
   }
   #delete {
     width: 100%;
@@ -105,8 +90,8 @@
   }
   #cartsh2 {
     margin-left: 50%;
-    margin-bottom: 50px;
-    margin-top: 10px;
+    margin-top: 10%;
+
     font-family: 'Gloock', sans-serif;
   }
 
@@ -134,12 +119,7 @@
     border-radius: 10px;
     padding: 2px;
   }
-  #totalamount {
-    float: right;
-    align-self: center;
-    font-family: 'didot', sans-serif;
-    margin-right: 6px;
-  }
+
   #amountdiv {
     display: flex;
     flex-direction: column;
@@ -164,10 +144,7 @@
     margin-top: 5px;
     font-family: 'didot', sans-serif;
   }
-  #head-div {
-    display: flex;
-    justify-content: space-between;
-  }
+
   @media screen and (min-width: 600px) {
     #amountdiv {
       display: flex;

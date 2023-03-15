@@ -48,3 +48,4 @@
     <RouterView />
   </main>
 </template>
+<style></style>
