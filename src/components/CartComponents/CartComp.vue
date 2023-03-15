@@ -1,16 +1,12 @@
 <template>
   <div id="container">
-    <h2 id="productsh2">Products</h2>
+    <h2 id="productsh2">{{ category }}</h2>
 
     <ul id="products">
       <!-- Here we are looping through the filtered products, which will be different categories of clothes depending on what prop was sent in. -->
       <li v-for="product in filteredProducts" :key="product.id">
-        <div id="productinfo">
-          <p class="top-p">{{ product.name }}</p>
-          <p class="bottom-p">{{ product.product }}</p>
-        </div>
         <!-- // encodeURIComponent() -->
-        <!-- Med src här under så blir bilderna dubbla -->
+
         <RouterLink
           :to="`/description/${product.src.split('/')}/${product.name}/${
             product.price
@@ -84,7 +80,8 @@
       favoriter() {
         return this.$store.state.favoriteItems
       }
-    }, //Metoden "isFavorit(product)" kollar om produkten finns i favoritlistan genom att använda
+    },
+    //Metoden "isFavorit(product)" kollar om produkten finns i favoritlistan genom att använda
     //array-metoden "some" för att söka efter produkten med en matchande id.
     //Om produkten finns i favoritlistan så returnerar metoden true, annars false.
     methods: {
