@@ -4,7 +4,6 @@
       <div class="card">
         <div class="payment-details">
           <h3>Shipping adress</h3>
-          <p>Complete your purchase by providing your payment details.</p>
         </div>
         <div class="input-text">
           <b-form-input
@@ -84,7 +83,7 @@
               />
             </div>
 
-            <div class="box2">
+            <!-- <div class="box2">
               <label style="display: block" for="swish">Swish</label>
               <input
                 @click="onSwish"
@@ -93,7 +92,7 @@
                 value="Swish"
                 v-model="Payment"
               />
-            </div>
+            </div> -->
 
             <div class="box2">
               <label style="display: block" for="Faktura">Invoice</label>
@@ -131,10 +130,8 @@
                 </b-modal>
               </div>
 
-              <div class="kort" v-if="Payment === 'Creditcard'">
-                <b-button class="btn" @click="modalShowkort = !modalShowkort"
-                  >Creditcard
-                </b-button>
+              <div class="pay" v-if="Payment === 'Creditcard'">
+                <button @click="modalShowkort = !modalShowkort">pay</button>
 
                 <b-modal
                   title="confirm your payment"
@@ -223,12 +220,10 @@
                 </b-modal>
               </div>
 
-              <div class="Fakturan" v-if="Payment === 'Faktura'">
-                <b-button
-                  class="btn"
-                  @click="modalShowfaktura = !modalShowfaktura"
-                  >Invoice
-                </b-button>
+              <div class="pay" v-if="Payment === 'Faktura'">
+                <button @click="modalShowfaktura = !modalShowfaktura">
+                  pay
+                </button>
 
                 <b-modal
                   title="Invoice will be sent to your Email"
@@ -345,21 +340,35 @@
 </script>
 
 <style lang="scss" scoped>
+  .AA {
+    background-color: #eeece5;
+  }
+
+  .container2 {
+    display: flex;
+    flex-direction: row;
+    font-family: 'didot', sans-serif;
+  }
+
   .container2 {
     display: flex;
     flex-direction: row;
   }
 
+  // display: block ;
+  // justify-content: center;
+
   .box2 {
     height: 80px;
     margin: 10px;
+    font-size: small;
   }
 
-  .btn {
-    height: 40px;
-    margin: 9px;
-    margin-right: 220px;
-  }
+  // .btn {
+  //   height: 40px;
+  //   margin: 9px;
+  //   margin-right: 220px;
+  // }
 
   .swisha {
     position: absolute;
@@ -421,10 +430,11 @@
   #form {
     width: 15px;
     height: 15px;
-    margin: 6px 6px 0 0;
-    margin-left: 6px;
-    appearance: none;
-    border: 2px solid #000;
+    margin: 10px 10px 0 0;
+    margin-left: 15px;
+    // appearance: none;
+    border: 6px solid #000;
+    margin-bottom: 20px;
   }
   #form:checked {
     background-color: #000;
@@ -437,6 +447,7 @@
   .invocebtn {
     background-color: black;
     width: 124px;
+    background-color: black;
   }
 
   .scan {
@@ -459,7 +470,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 50px;
+    font-family: 'didot', sans-serif;
+    background-color: #eeece5;
   }
 
   .card {
@@ -549,20 +562,58 @@
   }
 
   .pay {
-    display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .pay button {
     height: 40px;
+
     width: 100%;
     // background-color: #7047eb;
+
+    width: 90vh;
+    background-color: #7047eb;
+
     border: none;
     outline: 0;
     border-radius: 5px;
     color: #fff;
+    cursor: pointer;
+
+    transition: all 0.5s;
+    transform: translate(-14%, -14%);
+  }
+  .pay button:hover {
+    background-color: blue !important;
+  }
+  .secure {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aeaebc;
+  }
+  .secure p {
     font-size: 12px;
+    font-weight: 600;
+    color: #aeaebc;
+    margin-left: 5px;
+  }
+  .last {
+    margin-top: 250px;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .last p {
+    margin-right: 5px;
+  }
+  .last a {
+    color: blue;
+    text-decoration: none;
+    margin-left: 5px;
     cursor: pointer;
   }
 </style>
