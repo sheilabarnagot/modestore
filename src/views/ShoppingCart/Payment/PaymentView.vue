@@ -1,7 +1,5 @@
 <template>
-  <div class="AA">
-    <!----------- Shipping ----------->
-    <div class="All" />
+  <div class="paybutton">
     <div class="container5">
       <div class="card">
         <div class="payment-details">
@@ -23,7 +21,7 @@
         <div class="input-text">
           <b-form-input
             type="text"
-            placeholder="luke@skywalker.com"
+            placeholder="me@example.com"
             v-model="input2"
             :state="input2.length >= 4 ? true : false"
           />
@@ -167,7 +165,7 @@
                     <div class="third">
                       <b-form-input
                         required
-                        type="password"
+                        type="number"
                         :state="CVC.length >= 3 ? true : false"
                         placeholder="CVC"
                         v-model="CVC"
@@ -353,6 +351,11 @@
     font-family: 'didot', sans-serif;
   }
 
+  .container2 {
+    display: flex;
+    flex-direction: row;
+  }
+
   // display: block ;
   // justify-content: center;
 
@@ -392,13 +395,6 @@
     top: 400px;
   }
 
-  // .selection {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: center;
-  //   padding: 10px;
-  // }
-
   .section select {
     padding: 10px 20px;
   }
@@ -423,11 +419,6 @@
   .swishlogo {
     width: 150px;
   }
-  // .swishaBtn {
-  //   width: 100px;
-  //   // left: 40px;
-  //   background-color: #33bedf;
-  // }
 
   .swish-number {
     width: 400px;
@@ -477,7 +468,6 @@
 
   .container5 {
     max-height: 100vh;
-    // background-color:#f7f7f9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -487,7 +477,6 @@
   }
 
   .card {
-    // height:auto;
     width: 100vh;
     border-radius: 10px;
     background-color: #fff;
@@ -598,7 +587,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /*text-align:center;*/
     color: #aeaebc;
   }
   .secure p {
@@ -609,7 +597,6 @@
   }
   .last {
     margin-top: 250px;
-
     justify-content: center;
     align-items: center;
     font-size: 12px;
