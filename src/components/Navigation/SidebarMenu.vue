@@ -18,6 +18,8 @@
           <div>
             <!--The toLowerCase() method is used to convert the category name to lowercase, as the convention for URL paths.-->
             <RouterLink
+              @click="toggleMenu"
+              :style="{ width: isOpenWidth, transition: firstTransitsion }"
               :to="{
                 path:
                   category.id === 1 ? '/' : `/${category.name.toLowerCase()}`
@@ -82,16 +84,16 @@
     methods: {
       toggleMenu() {
         this.isOpen = !this.isOpen
-        if (this.isOpen) {
-          this.isOpenWidth = '250px'
-        } else {
-          this.isOpenWidth = '0'
-        }
-        /*
-        this.isOpenWidth === null || this.isOpenWidth === '0'
+
+        this.isOpenWidth === '0'
           ? (this.isOpenWidth = '250px')
           : (this.isOpenWidth = '0')
-          */
+
+        // if (this.isOpen) {
+        //   this.isOpenWidth = '250px'
+        // } else {
+        //   this.isOpenWidth = '0'
+        // }
       }
     }
   }
