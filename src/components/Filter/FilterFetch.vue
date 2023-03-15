@@ -80,6 +80,7 @@
     flex-direction: column;
     bottom: 200%;
     position: absolute;
+    z-index: 999;
   }
 
   .search {
