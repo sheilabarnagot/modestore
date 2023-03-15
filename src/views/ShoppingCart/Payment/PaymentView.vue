@@ -23,7 +23,7 @@
         <div class="input-text">
           <b-form-input
             type="text"
-            placeholder="luke@skywalker.com"
+            placeholder="me@example.com"
             v-model="input2"
             :state="input2.length >= 4 ? true : false"
           />
@@ -169,7 +169,7 @@
                     <div class="third">
                       <b-form-input
                         required
-                        type="password"
+                        type="number"
                         :state="CVC.length >= 3 ? true : false"
                         placeholder="CVC"
                         v-model="CVC"
