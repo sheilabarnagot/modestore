@@ -218,6 +218,35 @@
             <div class="pay" v-if="Payment === 'Faktura'">
               <button @click="modalShowfaktura = !modalShowfaktura">pay</button>
 
+
+                <b-modal
+                  title="Invoice will be sent to your Email"
+                  v-model="modalShowfaktura"
+                  name="fakturamodel"
+                  :no-close-on-backdrop="true"
+                  hide-footer
+                  >Type your Email:
+                  <b-form-input
+                    type="email"
+                    v-model="email"
+                    :state="
+                      regex.test(email) && email.length > 1 ? true : false
+                    "
+                    placeholder="me@example.com"
+                    @click="ok"
+                  />
+                  <b-button
+                    class="invbtn"
+                    :disabled="regex.test(email) === false"
+                    href="#/submit"
+                    variant="primary"
+                    modalShowfaktura
+                    >Confirm
+                  </b-button>
+                  <p v-if="regex.test(email) === false" style="color: red">
+                    <P class="text">Please enter your Email!</P>
+                </p></b-modal>
+              </div>
               <b-modal
                 title="Invoice will be sent to your Email"
                 v-model="modalShowfaktura"
@@ -243,12 +272,13 @@
                   Please enter your Email!
                 </p>
               </b-modal>
+
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+
 </template>
 
 <script>
@@ -343,6 +373,7 @@
   .container2 {
     display: flex;
     flex-direction: row;
+    font-family: 'didot', sans-serif;
   }
 
   // display: block ;
@@ -351,7 +382,7 @@
   .box2 {
     height: 80px;
     margin: 10px;
-    font-size: small;
+    font-size: medium;
   }
 
   // .btn {
@@ -369,11 +400,11 @@
   }
 
   .Fakturan {
-    position: absolute;
     display: flex;
     justify-content: center;
     width: 100%;
     top: 400px;
+    font-family: 'didot', sans-serif;
   }
 
   // .kort {
@@ -425,6 +456,7 @@
     // appearance: none;
     border: 6px solid #000;
     margin-bottom: 20px;
+    font-family: 'didot', sans-serif;
   }
   #form:checked {
     background-color: #000;
@@ -560,6 +592,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 40px;
+
   }
   .pay button {
     height: 40px;
@@ -580,5 +613,17 @@
   }
   .pay button:hover {
     background-color: blue !important;
+  }
+
+  .invbtn {
+    background-color: black;
+    width: 400px;
+    width: 100%;
+    height: 40px;
+    top: 5px;
+  }
+
+  .text{
+    padding: 15px;
   }
 </style>
