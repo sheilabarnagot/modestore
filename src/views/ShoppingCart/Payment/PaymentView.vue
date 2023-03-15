@@ -86,7 +86,7 @@
               />
             </div>
 
-            <div class="box2">
+            <!-- <div class="box2">
               <label style="display: block" for="swish">Swish</label>
               <input
                 @click="onSwish"
@@ -95,7 +95,7 @@
                 value="Swish"
                 v-model="Payment"
               />
-            </div>
+            </div> -->
 
             <div class="box2">
               <label style="display: block" for="Faktura">Invoice</label>
@@ -133,10 +133,8 @@
                 </b-modal>
               </div>
 
-              <div class="kort" v-if="Payment === 'Creditcard'">
-                <b-button class="btn" @click="modalShowkort = !modalShowkort"
-                  >Creditcard
-                </b-button>
+              <div class="pay" v-if="Payment === 'Creditcard'">
+                <button @click="modalShowkort = !modalShowkort">pay</button>
 
                 <b-modal
                   title="confirm your payment"
@@ -225,12 +223,10 @@
                 </b-modal>
               </div>
 
-              <div class="Fakturan" v-if="Payment === 'Faktura'">
-                <b-button
-                  class="btn"
-                  @click="modalShowfaktura = !modalShowfaktura"
-                  >Invoice
-                </b-button>
+              <div class="pay" v-if="Payment === 'Faktura'">
+                <button @click="modalShowfaktura = !modalShowfaktura">
+                  pay
+                </button>
 
                 <b-modal
                   title="Invoice will be sent to your Email"
@@ -347,18 +343,18 @@
 </script>
 
 <style lang="scss" scoped>
-  .AA {
-    justify-content: center;
-    // align-items:center;
-    margin-right: 300px;
-    position: absolute;
-    display: block;
-    width: 500px;
-    border-radius: 10px;
-    background-color: #fff;
-    padding: 0 25px;
-    box-sizing: border-box;
-  }
+  // .AA {
+  //   justify-content: center;
+  //   // align-items:center;
+  //   margin-right: 300px;
+  //   position: absolute;
+  //   display: block;
+  //   width: 500px;
+  //   border-radius: 10px;
+  //   background-color: #fff;
+  //   padding: 0 25px;
+  //   box-sizing: border-box;
+  // }
 
   .container2 {
     display: flex;
@@ -371,13 +367,14 @@
   .box2 {
     height: 80px;
     margin: 10px;
+    font-size: small;
   }
 
-  .btn {
-    height: 40px;
-    margin: 9px;
-    margin-right: 220px;
-  }
+  // .btn {
+  //   height: 40px;
+  //   margin: 9px;
+  //   margin-right: 220px;
+  // }
 
   .swisha {
     width: 100%;
@@ -430,13 +427,14 @@
   #form {
     width: 15px;
     height: 15px;
-    margin: 6px 6px 0 0;
-    margin-left: 6px;
-    appearance: none;
-    border: 2px solid #000;
+    margin: 10px 10px 0 0;
+    margin-left: 15px;
+    // appearance: none;
+    border: 6px solid #000;
+    margin-bottom: 20px;
   }
   #form:checked {
-    background-color: #464343;
+    background-color: black;
   }
 
   .scan {
@@ -454,19 +452,13 @@
     margin: 5px;
   }
 
-  // här slutar den------------
-  //   *{
-  //     margin:0;
-  //     padding:0;
-  // }
-
   .container5 {
     max-height: 100vh;
     // background-color:#f7f7f9;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 50px;
   }
 
   .card {
@@ -557,22 +549,21 @@
   }
 
   .pay {
-    display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .pay button {
     height: 40px;
-    width: 100%;
+    width: 90vh;
     background-color: #7047eb;
     border: none;
     outline: 0;
     border-radius: 5px;
     color: #fff;
-    font-size: 12px;
     cursor: pointer;
     transition: all 0.5s;
+    transform: translate(-14%, -14%);
   }
   .pay button:hover {
     background-color: blue !important;
