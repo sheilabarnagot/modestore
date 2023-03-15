@@ -9,6 +9,7 @@
     top: -3%;
     margin: 50px 40px;
     font-size: 2.5rem;
+    text-decoration: none;
   }
 
   @media (min-width: 601px) {
