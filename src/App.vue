@@ -19,8 +19,8 @@
     },
     components: {
       // SearchView,
-      BonnieLogo,
       MobileMainNav,
+      BonnieLogo,
       SidebarMenu,
       // Jag testar med branches Sheila
       //Klara was never here...
