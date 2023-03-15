@@ -47,15 +47,12 @@
     display: flex;
     justify-content: center;
   }
-
   ul li {
     padding-left: 1em;
   }
-
   ul li:first-child {
     padding-left: 0em;
   }
-
   ul li a {
     font-family: 'jost';
     text-decoration: none;

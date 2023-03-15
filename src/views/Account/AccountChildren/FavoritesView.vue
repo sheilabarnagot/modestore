@@ -64,6 +64,7 @@
   }
   img {
     max-width: 100%;
+    max-height: 100%;
     /* box-shadow: 50px 0px 50px 5px grey; */
     /* object-fit: none; */
   }
@@ -72,6 +73,13 @@
     margin-bottom: 50px;
     margin-top: 120px;
     font-family: 'Gloock', sans-serif;
+  }
+  .bonnie {
+    color: #47413d;
+    position: absolute;
+    top: -3%;
+    margin: 50px 40px;
+    font-size: 2.5rem;
   }
   #favorite-products {
     display: grid;
@@ -99,7 +107,7 @@
   }
   .top-p {
     font-family: 'didot', sans-serif;
-    margin: 0;
+    margin: 10%;
   }
   .bottom-p {
     white-space: nowrap;
