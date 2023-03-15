@@ -218,35 +218,6 @@
             <div class="pay" v-if="Payment === 'Faktura'">
               <button @click="modalShowfaktura = !modalShowfaktura">pay</button>
 
-
-                <b-modal
-                  title="Invoice will be sent to your Email"
-                  v-model="modalShowfaktura"
-                  name="fakturamodel"
-                  :no-close-on-backdrop="true"
-                  hide-footer
-                  >Type your Email:
-                  <b-form-input
-                    type="email"
-                    v-model="email"
-                    :state="
-                      regex.test(email) && email.length > 1 ? true : false
-                    "
-                    placeholder="me@example.com"
-                    @click="ok"
-                  />
-                  <b-button
-                    class="invbtn"
-                    :disabled="regex.test(email) === false"
-                    href="#/submit"
-                    variant="primary"
-                    modalShowfaktura
-                    >Confirm
-                  </b-button>
-                  <p v-if="regex.test(email) === false" style="color: red">
-                    <P class="text">Please enter your Email!</P>
-                </p></b-modal>
-              </div>
               <b-modal
                 title="Invoice will be sent to your Email"
                 v-model="modalShowfaktura"
@@ -262,23 +233,48 @@
                   @click="ok"
                 />
                 <b-button
+                  class="invbtn"
                   :disabled="regex.test(email) === false"
                   href="#/submit"
                   variant="primary"
                   modalShowfaktura
-                  >Submit
+                  >Confirm
                 </b-button>
                 <p v-if="regex.test(email) === false" style="color: red">
                   Please enter your Email!
                 </p>
               </b-modal>
-
             </div>
+            <b-modal
+              title="Invoice will be sent to your Email"
+              v-model="modalShowfaktura"
+              name="fakturamodel"
+              :no-close-on-backdrop="true"
+              hide-footer
+              >Type your Email:
+              <b-form-input
+                type="email"
+                v-model="email"
+                :state="regex.test(email) && email.length > 1 ? true : false"
+                placeholder="me@example.com"
+                @click="ok"
+              />
+              <b-button
+                :disabled="regex.test(email) === false"
+                href="#/submit"
+                variant="primary"
+                modalShowfaktura
+                >Submit
+              </b-button>
+              <p v-if="regex.test(email) === false" style="color: red">
+                Please enter your Email!
+              </p></b-modal
+            >
           </div>
         </div>
       </div>
     </div>
-
+  </div>
 </template>
 
 <script>
@@ -470,9 +466,9 @@
   }
 
   .invocebtn {
-    background-color: black;
     width: 124px;
-    background-color: black;
+    background-color: #fff;
+    color: #000;
   }
 
   // .scan {
@@ -592,38 +588,29 @@
     justify-content: center;
     align-items: center;
     margin-top: 40px;
-
   }
   .pay button {
     height: 40px;
-
-    // background-color: #7047eb;
-
+    background-color: #d7dad8;
+    color: #000;
     width: 80vh;
-    background-color: #7047eb;
-
     border: none;
     outline: 0;
     border-radius: 5px;
-    color: #fff;
     cursor: pointer;
-
     transition: all 0.5s;
     transform: translate(-14%, -14%);
   }
   .pay button:hover {
-    background-color: blue !important;
+    background-color: #d7dad8 !important;
   }
 
   .invbtn {
     background-color: black;
     width: 400px;
-    width: 100%;
-    height: 40px;
-    top: 5px;
-  }
-
-  .text{
-    padding: 15px;
+    width: 90%;
+    height: 50px;
+    padding: 10px;
+    margin: 20px;
   }
 </style>
