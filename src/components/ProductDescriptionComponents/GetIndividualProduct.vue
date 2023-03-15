@@ -14,6 +14,7 @@
 
 <script>
   import ArrowBack from '../SvgIcons/ArrowBack.vue'
+
   export default {
     created() {
       // watch the params of the route to fetch the data again

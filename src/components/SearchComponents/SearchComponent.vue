@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="container">
     <template v-for="item in searchedItem" :key="item.id">
       <img :src="item.src" />
       <p>{{ item.name }}</p>
@@ -20,6 +20,9 @@
 </script>
 
 <style scoped>
+  #container {
+    margin-bottom: 6em;
+  }
   img {
     max-width: 100%;
   }
