@@ -24,7 +24,7 @@
         <span>Email</span>
         <div v-if="notEmpty" />
 
-        <div class="billing">
+        <div class="country">
           <select>
             <option>Select Country</option>
             <option>United States</option>
@@ -451,7 +451,7 @@
     // max-height: 90vh;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
     // margin-top: 10px;
     font-family: 'didot', sans-serif;
@@ -460,18 +460,20 @@
 
   .card-box {
     width: 90vh;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: #fff;
     padding: 0 25px;
     box-sizing: border-box;
-    height: 100vh;
+    height: 90vh;
+    // margin-top: 110px;
   }
   .message {
     position: fixed;
     margin-top: 150px;
   }
   .payment-details {
-    margin-top: 50px;
+    margin-top: 70px;
+    text-align: center;
   }
   .payment-details p {
     font-size: 12px;
@@ -514,18 +516,18 @@
     font-weight: 600;
   }
 
-  .billing {
+  .country {
     margin-top: 20px;
     // position: relative;
   }
-  .billing span {
+  .country span {
     font-size: 12px;
     font-weight: 700;
     position: absolute;
     top: -16px;
     left: 10px;
   }
-  .billing select {
+  .country select {
     height: 35px;
     width: 100%;
     font-size: 12px;
@@ -579,5 +581,33 @@
   }
   .pay button:hover {
     background-color: blue !important;
+  }
+  #amountdiv {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: 600px) {
+    .container5 {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+    .pay {
+      text-decoration: none;
+      color: #3c3e3f;
+      display: flex;
+    }
+  }
+  @media screen and (min-width: 800px) {
+    .container5 {
+      margin-bottom: 6em;
+      padding-left: 2rem;
+      display: row;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1em;
+      font-family: 'didot', sans-serif;
+    }
   }
 </style>
