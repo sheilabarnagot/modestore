@@ -1,5 +1,6 @@
 <template>
   <div id="container">
+    <button id="checkout-button">To checkout</button>
     <p id="totalamount1">Total amount: {{ $store.state.totalCost }} kr</p>
     <h2 id="productsh2">{{ category }}</h2>
 
@@ -113,6 +114,20 @@
 </script>
 
 <style scoped>
+  #checkout-button {
+    position: absolute;
+    margin-left: 75%;
+    top: 70px;
+    background-color: #3c3e3f;
+    color: white;
+    font-size: 0.8em;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+  }
   #totalamount1 {
     margin-left: 75%;
     position: absolute;

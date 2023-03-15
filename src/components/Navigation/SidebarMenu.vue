@@ -47,7 +47,7 @@
     <div id="menu-item-icons-container">
       <SearchIcon />
       <UserIcon class="menu-shopping-search" />
-      <RouterLink to="/kop">
+      <RouterLink to="/cart">
         <ShoppingIcon class="menu-shopping-search" />
       </RouterLink>
       <div
@@ -116,7 +116,7 @@
   }
   #totalamount {
     font-family: 'didot', sans-serif;
-    margin-left: 80%;
+    margin-left: 75%;
     position: absolute;
     line-height: 1;
     max-width: 13ch;
