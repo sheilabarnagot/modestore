@@ -191,7 +191,7 @@
         <p v-if="(regex.test(email)) === false" style="color: red;">Please enter your Email!</p>
       </b-modal>
     </div> -->
-  </div>
+  <!-- </div> -->
 
 
 
@@ -425,7 +425,6 @@
         <img src="assets/frame1.jpg" allt="" class="scan" />
       </b-modal>
     </div>
-<<<<<<< HEAD
 
     <div class="kort" v-if="Payment === 'Creditcard'">
       <b-button class="btn" @click="modalShowkort = !modalShowkort"
@@ -546,7 +545,6 @@
 
 
 
-
         <div class="pay">
             <button v-if="!isAnyInputEmpty">Submit</button>
         </div>
@@ -569,18 +567,7 @@
 </div>
 
 
-</div></div></div></template>
-=======
-  </div>
-  <div class="totalcost">Totalcost: {{ $store.state.totalCost }}</div>
-  <div class="container">
-    <h2>Checkout</h2>
-    <div v-for="item in shoppingCartItems" :key="item.id">
-      <img :src="item.src" alt="product image" />
-    </div>
-  </div>
-</template>
->>>>>>> fb3e4aebd7e3244a062a01c66031389eee75faed
+</div></div></div></div></template>
 
 <script>
 export default {
@@ -649,24 +636,6 @@ export default {
       // this.showErrorMessage = this.cardowner === '';
       // && this.kortnummer === '' && this.CVC === '';
 
-<<<<<<< HEAD
-=======
-        if (
-          this.kortnummer !== '' &&
-          this.CVC !== '' &&
-          this.cardowner !== ''
-        ) {
-          console.log('pay ok')
-        } else {
-          console.log()
-        }
-      }
-    },
-    computed: {
-      shoppingCartItems() {
-        return this.$store.getters.shoppingCartItems
-      }
->>>>>>> fb3e4aebd7e3244a062a01c66031389eee75faed
     }
   }
 }
@@ -744,6 +713,28 @@ export default {
 
   }
 
+  // .fakturapayment {
+  //   position: absolute;
+  //   display: flex;
+  //   justify-content: center;
+  //   width: 100%;
+  //   top: 250px;
+  //   color: #464343;
+  //   margin-left: 520px;
+  //   margin-top: 10px;
+  // }
+
+  // .cardPayment {
+  //   position: absolute;
+  //   display: flex;
+  //   justify-content: center;
+  //   width: 100%;
+  //   top: 150px;
+  //   margin-top: 150px;
+  //   color: #464343;
+  //   margin-left: 520px;
+  //   margin-top: 160px;
+  // }
 
   .swisha {
     width: 100%;
@@ -820,6 +811,104 @@ export default {
   #years {
     margin: 5px;
   }
+
+  // .totalcost {
+  //   position: absolute;
+  //   display: flex;
+  //   justify-content: center;
+  //   width: 100%;
+  //   top: 500px;
+  //   color: #464343;
+  // }
+  // .submit1 {
+  //   background-color: #464343;
+  //   justify-content: center;
+  //   margin-left: 350px;
+  // }
+  // .submit2 {
+  //   background-color: #464343;
+  //   justify-content: center;
+  //   margin-left: 370px;
+  //   margin-top: 20px;
+  // }
+
+  // .row {
+  //   display: -ms-flexbox; /* IE10 */
+  //   display: flex;
+  //   -ms-flex-wrap: wrap; /* IE10 */
+  //   flex-wrap: wrap;
+  //   margin: 0 -16px;
+  // }
+
+  // .col-25 {
+  //   -ms-flex: 25%; /* IE10 */
+  //   flex: 25%;
+  // }
+
+  // .col-50 {
+  //   -ms-flex: 50%; /* IE10 */
+  //   flex: 50%;
+  // }
+
+  // .col-75 {
+  //   -ms-flex: 75%; /* IE10 */
+  //   flex: 75%;
+  // }
+
+  // .col-25,
+  // .col-50,
+  // .col-75 {
+  //   padding: 0 10px;
+  // }
+
+  // .container {
+  //   background-color: #f5f5f5;
+  //   padding: 5px 20px 15px 20px;
+  //   border: 1px solid lightgrey;
+  //   border-radius: 5px;
+  //   margin-top: 20px;
+  //   max-width: 500px;
+  // }
+
+  // input[type='text'] {
+  //   width: 100%;
+  //   margin-bottom: 20px;
+  //   padding: 12px;
+  //   border: 1px solid #ccc;
+  //   border-radius: 3px;
+  // }
+
+  // label {
+  //   margin-bottom: 10px;
+  //   display: block;
+  // }
+
+  // .icon-container {
+  //   margin-bottom: 20px;
+  //   padding: 7px 0;
+  //   font-size: 24px;
+  // }
+
+  // .btn {
+  //   background-color: grey;
+  //   color: white;
+  //   padding: 12px;
+  //   margin: 10px 0;
+  //   border: none;
+  //   width: 100%;
+  //   border-radius: 3px;
+  //   cursor: pointer;
+  //   font-size: 17px;
+  // }
+
+  // .btn:hover {
+  //   background-color: #45a049;
+  // }
+
+  // span.price {
+  //   float: right;
+  //   color: grey;
+  // }
 
   /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
   // @media (max-width: 800px) {
