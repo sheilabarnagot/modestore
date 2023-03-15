@@ -1,6 +1,8 @@
 <template>
   <div id="container">
-    <button id="checkout-button">To checkout</button>
+    <RouterLink to="/kop"
+      ><button id="checkout-button">To checkout</button>
+    </RouterLink>
     <p id="totalamount1">Total amount: {{ $store.state.totalCost }} kr</p>
     <h2 id="productsh2">{{ category }}</h2>
 
@@ -131,7 +133,7 @@
   #totalamount1 {
     margin-left: 75%;
     position: absolute;
-
+    max-width: 13ch;
     font-family: 'didot', sans-serif;
   }
   #addbutton {
@@ -243,11 +245,6 @@
       justify-items: center;
       grid-template-columns: 1fr 1fr 1fr;
       font-family: 'didot', sans-serif;
-    }
-  }
-  @media screen and (min-width: 600px) {
-    #totalamount1 {
-      display: none;
     }
   }
 </style>
