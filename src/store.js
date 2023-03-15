@@ -95,13 +95,16 @@ const state = {
 const getters = {
   shoppingCartItems(state) {
     return state.items
+  },
+  totalQuantity(state) {
+    return state.items.reduce((total, item) => total + item.quantity, 0)
   }
 }
 
 export default createStore({
+  getters,
   state,
   mutations,
-  getters,
   plugins: [createPersistedState()],
   strict: true
 })

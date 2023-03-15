@@ -47,7 +47,18 @@
     <div id="menu-item-icons-container">
       <SearchIcon />
       <UserIcon class="menu-shopping-search" />
-      <ShoppingIcon class="menu-shopping-search" />
+      <RouterLink to="/kop">
+        <ShoppingIcon class="menu-shopping-search" />
+      </RouterLink>
+      <div
+        style="display
+      flex"
+      >
+        <p id="total-cart-items2">
+          {{ $store.getters.totalQuantity }}
+        </p>
+        <p id="totalamount">{{ $store.state.totalCost }} kr</p>
+      </div>
     </div>
   </nav>
 </template>
@@ -102,6 +113,9 @@
 <style scoped lang="scss">
   nav {
     display: none;
+  }
+  #totalamount {
+    font-family: 'didot', sans-serif;
   }
   .sidebar-menu {
     height: 100%; /* 100% Full-height */
@@ -199,10 +213,25 @@
   .menu-shopping-search {
     margin-left: 2em;
   }
+  #menu-item-icons-container p {
+    position: relative;
+    left: 4px;
+    top: 4px;
+  }
 
   @media (min-width: 601px) {
     nav {
       display: block;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    #total-cart-items2 {
+      bottom: -11px;
+      left: 160px;
+      position: absolute;
+      z-index: 3;
+      font-size: smaller;
+      font-weight: bolder;
     }
   }
 </style>

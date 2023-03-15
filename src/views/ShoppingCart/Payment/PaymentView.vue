@@ -4,6 +4,151 @@
 
 
 <div class="paybutton">
+<<<<<<< HEAD
+=======
+    <!-- <div class="swisha" v-if="Payment === 'Swish'">
+      <b-button class="btn" @click="modalShowswish = !modalShowswish"
+        >Swish
+      </b-button>
+
+      <b-modal
+        title="Swish With Phone Number or Scan"
+        v-model="modalShowswish"
+        name="swishmodel"
+        :no-close-on-backdrop="true"
+      >
+        <img src="../../../../assets/swish.png" alt="" class="swishlogo" />
+
+        <b-form-input
+          class="swish-number"
+          required
+          type="number"
+          :state="number.length >= 4 ? true : false"
+          placeholder="+46"
+          v-model="number"
+        />
+        <img src="assets/frame1.jpg" allt="" class="scan" />
+      </b-modal>
+    </div> -->
+
+    <!-- <div class="kort" v-if="Payment === 'Creditcard'">
+      <b-button class="btn" @click="modalShowkort = !modalShowkort"
+        >Creditcard
+      </b-button>
+
+      <b-modal
+        title="confirm your payment"
+        v-model="modalShowkort"
+        name="kortmodel"
+        :no-close-on-backdrop="true"
+        hide-footer
+      >
+        <div class="container">
+          <div class="first">
+            <b-form-input
+              required
+              type="text"
+              :state="cardowner.length >= 3 ? true : false"
+              placeholder="Card-owner"
+              v-model="cardowner"
+              @click="ok"
+            />
+          </div>
+          <div class="second">
+            <b-form-input
+              required
+              type="number"
+              :state="kortnummer.length >= 3 ? true : false"
+              placeholder="card-number"
+              v-model="kortnummer"
+              @click="ok"
+            />
+          </div>
+          <div class="third">
+            <b-form-input
+              required
+              type="password"
+              :state="CVC.length >= 3 ? true : false"
+              placeholder="CVC"
+              v-model="CVC"
+              @click="ok"
+            />
+          </div>
+
+          <div class="selection">
+            <div class="date">
+              <select name="Months" id="Months">
+                <option value="JAN">JAN</option>
+                <option value="FEB">FEB</option>
+                <option value="MAR">MAR</option>
+                <option value="APR">APR</option>
+                <option value="MAY">MAJ</option>
+                <option value="JUN">JUN</option>
+                <option value="JUL">JUL</option>
+                <option value="AUG">AUG</option>
+                <option value="SEP">SEP</option>
+                <option value="OKT">OKT</option>
+                <option value="NOV">NOV</option>
+                <option value="DEC">DEC</option>
+              </select>
+              <select name="years" id="years">
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2023">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+              </select>
+              <img src="assets/mastercardlogo.jpeg" alt="" class="logo" />
+            </div>
+          </div>
+        </div>
+        <b-button
+         :disabled="submitButtonDisabled"
+          href="#/submit"
+          variant="primary"
+          modalShowkort:> Submit
+          </b-button>
+        <p v-if="showErrorMessage" style="color: red;">Please enter text!</p>
+
+      </b-modal>
+
+    </div>
+
+    <div class="Fakturan" v-if="Payment === 'Faktura'">
+      <b-button class="btn" @click="modalShowfaktura = !modalShowfaktura"
+        >Invoice
+      </b-button>
+
+      <b-modal
+        title="Invoice will be sent to your Email"
+        v-model="modalShowfaktura"
+        name="fakturamodel"
+        :no-close-on-backdrop="true"
+        hide-footer
+        >Type your Email:
+        <b-form-input
+          type="email"
+          v-model="email"
+          :state="regex.test(email) && email.length > 1 ? true : false"
+          placeholder="me@example.com"
+          @click="ok"
+        />
+        <b-button
+       :disabled="regex.test(email) === false "
+        href="#/submit"
+        variant="primary"
+        modalShowfaktura:>Submit
+
+          </b-button
+        >
+        <p v-if="(regex.test(email)) === false" style="color: red;">Please enter your Email!</p>
+      </b-modal>
+    </div> -->
+  <!-- </div> -->
+>>>>>>> 5805d96099900855e4df25cc6125b0691fa00089
 
 
 
