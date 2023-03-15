@@ -583,33 +583,4 @@
   .pay button:hover {
     background-color: blue !important;
   }
-  .secure {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #aeaebc;
-  }
-  .secure p {
-    font-size: 12px;
-    font-weight: 600;
-    color: #aeaebc;
-    margin-left: 5px;
-  }
-  .last {
-    margin-top: 250px;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
-    font-weight: 700;
-  }
-  .last p {
-    margin-right: 5px;
-  }
-  .last a {
-    color: blue;
-    text-decoration: none;
-    margin-left: 5px;
-    cursor: pointer;
-  }
 </style>
