@@ -1,4 +1,4 @@
-<!--KZ menu/navigation for screens 768 and up -->
+<!--KZ menu/navigation for screens 601 and up -->
 <template>
   <nav>
     <div class="menu-icon tablet-menu" @click="toggleMenu">
@@ -16,8 +16,29 @@
           class="menu-items"
         >
           <div>
-            <RouterLink to="/">{{ $t(category.name) }}</RouterLink>
+            <!--The toLowerCase() method is used to convert the category name to lowercase, as the convention for URL paths.-->
+            <RouterLink
+              :to="{
+                path:
+                  category.id === 1 ? '/' : `/${category.name.toLowerCase()}`
+              }"
+              >{{ $t(category.name) }}</RouterLink
+            >
           </div>
+          <ul>
+            <li
+              v-for="subcategory in category.subcategories"
+              :key="subcategory.id"
+            >
+              <RouterLink
+                :to="`/${category.name.toLowerCase()}/${subcategory.name.toLowerCase()}`"
+                >{{ $t(subcategory.name) }}</RouterLink
+              >
+            </li>
+          </ul>
+          <!--  <div>
+            <RouterLink to="/">{{ $t(category.name) }}</RouterLink>
+          </div> -->
         </div>
       </template>
     </div>
@@ -38,12 +59,12 @@
         isOpenWidth: '0',
         firstTransitsion: '0.5s',
         categories: [
-          { id: 1, name: 'All products' },
+          { id: 7, name: 'shopping' },
           { id: 2, name: 'Jackets' },
           { id: 3, name: 'Tops' },
           { id: 4, name: 'Bottoms' },
-          { id: 5, name: 'Dresses' },
-          { id: 6, name: 'About' }
+          { id: 5, name: 'Dresses' }
+          //{ id: 6, name: 'About' }
         ]
       }
     },
@@ -113,7 +134,7 @@
 
   .menu-items div {
     padding: 0.5rem 0;
-    margin: 10 0;
+    margin: 10px 0px;
     font-size: 1rem;
     font-weight: lighter;
   }

@@ -1,5 +1,6 @@
 <template>
   <svg
+    class="close-style"
     fill="#47413d"
     width="50px"
     height="50px"
