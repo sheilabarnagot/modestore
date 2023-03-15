@@ -212,7 +212,7 @@
                   href="#/submit"
                   modalShowkort
                 >
-                  Submit
+                  Confirm
                 </b-button>
                 <p v-if="showErrorMessage" style="color: red">
                   Please fill in your card task
