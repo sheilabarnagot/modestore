@@ -1,6 +1,5 @@
 <template>
   <div class="paybutton">
-    <!----------- Shipping ----------->
     <div class="container5">
       <div class="card">
         <div class="payment-details">
@@ -347,25 +346,9 @@
 </script>
 
 <style lang="scss" scoped>
-  .AA {
-    justify-content: center;
-    // align-items:center;
-    margin-right: 300px;
-    position: absolute;
-    display: block;
-    width: 500px;
-    border-radius: 10px;
-    background-color: #fff;
-    padding: 0 25px;
-    box-sizing: border-box;
-  }
-
   .container2 {
     display: flex;
     flex-direction: row;
-
-    // display: block ;
-    // justify-content: center;
   }
 
   .box2 {
@@ -403,13 +386,6 @@
     top: 400px;
   }
 
-  // .selection {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: center;
-  //   padding: 10px;
-  // }
-
   .section select {
     padding: 10px 20px;
   }
@@ -434,11 +410,6 @@
   .swishlogo {
     width: 150px;
   }
-  // .swishaBtn {
-  //   width: 100px;
-  //   // left: 40px;
-  //   background-color: #33bedf;
-  // }
 
   .swish-number {
     width: 400px;
@@ -484,15 +455,8 @@
     margin: 5px;
   }
 
-  // här slutar den------------
-  //   *{
-  //     margin:0;
-  //     padding:0;
-  // }
-
   .container5 {
     max-height: 100vh;
-    // background-color:#f7f7f9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -500,7 +464,6 @@
   }
 
   .card {
-    // height:auto;
     width: 100vh;
     border-radius: 10px;
     background-color: #fff;
@@ -612,7 +575,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /*text-align:center;*/
     color: #aeaebc;
   }
   .secure p {
@@ -623,7 +585,6 @@
   }
   .last {
     margin-top: 250px;
-
     justify-content: center;
     align-items: center;
     font-size: 12px;
