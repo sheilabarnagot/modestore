@@ -5,7 +5,7 @@
 <style scoped>
   .bonnie {
     color: #47413d;
-    position: fixed;
+    position: absolute;
     top: -3%;
     margin: 50px 40px;
     font-size: 2.5rem;
