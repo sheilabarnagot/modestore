@@ -58,7 +58,7 @@
     width: 100%;
     flex-direction: column;
     align-items: center;
-    font-size: 1.2em;
+    font-size: 1.1em;
     /* padding-left: 1em; */
   }
 
@@ -70,6 +70,7 @@
 
   h1 {
     text-align: center;
+    margin-top: 1.5em;
     display: flex;
     justify-content: center;
     width: 100%;
