@@ -1,5 +1,6 @@
 <template>
   <svg
+    class="burger-style"
     width="52px"
     height="52px"
     viewBox="-0.42 -0.42 21.84 21.84"

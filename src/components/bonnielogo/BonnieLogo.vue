@@ -1,11 +1,12 @@
 <template>
-  <h1 class="bonnie">BONIE</h1>
+  <RouterLink to="/" class="bonnie">BONIE</RouterLink>
 </template>
 
 <style scoped>
   .bonnie {
     color: #47413d;
-    position: absolute;
+    position: fixed;
+    top: -3%;
     margin: 50px 40px;
     font-size: 2.5rem;
   }

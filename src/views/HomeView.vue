@@ -1,16 +1,10 @@
 <!--KZ updated Home new carousel with boutstrapvuenext instead of swiper-->
 <template>
-  <h1 class="bonnie">BONIE</h1>
   <div>
     <MovieAuto movieSrc="/pexels-cottonbro-5836750.mp4" />
     <CarouselImg />
     <GridImg :images="galleryImages" :columnsXs="2" :columnsSm="3" />
-    <!--
-      :columnsMd="4"
-      :columnsLg="5"
-      :columnsXl="6"
-
-      <mood-board :images="images" />
+    <!--  <mood-board :images="images" />
 
          :images="[
         {
