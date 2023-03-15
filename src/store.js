@@ -96,6 +96,8 @@ const getters = {
   shoppingCartItems(state) {
     return state.items
   },
+
+  // used to be able to return the total amount of items from the component of your choise by writing {{ $store.getters.totalQuantity }}
   totalQuantity(state) {
     return state.items.reduce((total, item) => total + item.quantity, 0)
   }

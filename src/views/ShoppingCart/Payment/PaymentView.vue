@@ -1,11 +1,11 @@
 <template>
-  <div class="paybutton">
+  <div class="AA">
     <!----------- Shipping ----------->
+    <div class="All" />
     <div class="container5">
       <div class="card">
         <div class="payment-details">
           <h3>Shipping adress</h3>
-          <p>Complete your purchase by providing your payment details.</p>
         </div>
         <div class="input-text">
           <b-form-input
@@ -343,26 +343,18 @@
 </script>
 
 <style lang="scss" scoped>
-  // .AA {
-  //   justify-content: center;
-  //   // align-items:center;
-  //   margin-right: 300px;
-  //   position: absolute;
-  //   display: block;
-  //   width: 500px;
-  //   border-radius: 10px;
-  //   background-color: #fff;
-  //   padding: 0 25px;
-  //   box-sizing: border-box;
-  // }
+  .AA {
+    background-color: #eeece5;
+  }
 
   .container2 {
     display: flex;
     flex-direction: row;
-
-    // display: block ;
-    // justify-content: center;
+    font-family: 'didot', sans-serif;
   }
+
+  // display: block ;
+  // justify-content: center;
 
   .box2 {
     height: 80px;
@@ -377,19 +369,35 @@
   // }
 
   .swisha {
+    position: absolute;
+    display: flex;
+    justify-content: center;
     width: 100%;
     top: 400px;
   }
 
   .Fakturan {
-    width: 10%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     top: 400px;
   }
 
   .kort {
-    width: 10%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     top: 400px;
   }
+
+  // .selection {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  //   padding: 10px;
+  // }
 
   .section select {
     padding: 10px 20px;
@@ -415,6 +423,11 @@
   .swishlogo {
     width: 150px;
   }
+  // .swishaBtn {
+  //   width: 100px;
+  //   // left: 40px;
+  //   background-color: #33bedf;
+  // }
 
   .swish-number {
     width: 400px;
@@ -434,6 +447,16 @@
     margin-bottom: 20px;
   }
   #form:checked {
+    background-color: #000;
+  }
+
+  .cardbtn {
+    background-color: black;
+  }
+
+  .invocebtn {
+    background-color: black;
+    width: 124px;
     background-color: black;
   }
 
@@ -459,6 +482,8 @@
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+    font-family: 'didot', sans-serif;
+    background-color: #eeece5;
   }
 
   .card {

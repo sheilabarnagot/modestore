@@ -1,5 +1,6 @@
 <template>
   <div id="container">
+    <p id="totalamount1">Total amount: {{ $store.state.totalCost }} kr</p>
     <h2 id="productsh2">{{ category }}</h2>
 
     <ul id="products">
@@ -112,6 +113,12 @@
 </script>
 
 <style scoped>
+  #totalamount1 {
+    margin-left: 75%;
+    position: absolute;
+
+    font-family: 'didot', sans-serif;
+  }
   #addbutton {
     width: 100%;
     background-color: #3c3e3f;
@@ -162,7 +169,7 @@
   #productsh2 {
     text-align: center;
     margin-bottom: 50px;
-    margin-top: 10px;
+    margin-top: 120px;
     font-family: 'Gloock', sans-serif;
   }
   #products {
@@ -172,6 +179,7 @@
     justify-items: center;
     grid-template-columns: 1fr 1fr;
     font-family: 'didot', sans-serif;
+    margin-top: 100px;
   }
   .selected {
     border: 2px solid red;
@@ -220,6 +228,11 @@
       justify-items: center;
       grid-template-columns: 1fr 1fr 1fr;
       font-family: 'didot', sans-serif;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    #totalamount1 {
+      display: none;
     }
   }
 </style>

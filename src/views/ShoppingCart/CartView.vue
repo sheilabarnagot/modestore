@@ -59,7 +59,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 1em;
     font-family: 'didot', serif;
-    margin-top: 100px;
+    margin-top: 40px;
   }
   #delete {
     width: 100%;
@@ -89,9 +89,8 @@
     max-width: 100%;
   }
   #cartsh2 {
-    margin-left: 50%;
-    margin-top: 10%;
-
+    margin-left: 46%;
+    margin-top: 120px;
     font-family: 'Gloock', sans-serif;
   }
 
