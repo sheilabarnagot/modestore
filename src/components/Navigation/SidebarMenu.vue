@@ -45,7 +45,7 @@
       </template>
     </div>
     <div id="menu-item-icons-container">
-      <SearchIcon />
+      <SearchIcon class="need-z" @click="toggler" />
       <RouterLink class="need-z" to="/account">
         <UserIcon class="menu-shopping-search need-z" />
       </RouterLink>
@@ -61,6 +61,9 @@
         </p>
       </div>
     </div>
+    <template v-if="toggl"
+      ><FilterFetch @filterproducts="testar" /><template
+    /></template>
   </nav>
 </template>
 
@@ -70,9 +73,11 @@
   import UserIcon from '../SvgIcons/UserIcon.vue'
   import ShoppingIcon from '../SvgIcons/ShoppingIcon.vue'
   import SearchIcon from '../SvgIcons/SearchIcon.vue'
+  import FilterFetch from '../Filter/FilterFetch.vue'
   export default {
     components: {
       StyledHamburger,
+      FilterFetch,
       CloseIcon,
       UserIcon,
       ShoppingIcon,
@@ -90,7 +95,8 @@
           { id: 4, name: 'Bottoms' },
           { id: 5, name: 'Dresses' }
           //{ id: 6, name: 'About' }
-        ]
+        ],
+        toggl: true
       }
     },
     methods: {
@@ -104,6 +110,13 @@
         // } else {
         //   this.isOpenWidth = '0'
         // }
+      },
+      toggler() {
+        this.toggl = !this.toggl
+      },
+      testar(ez) {
+        this.$store.commit('searchedItemsFiltered', ez)
+        this.$router.push('/searchcomponent')
       }
     }
   }
