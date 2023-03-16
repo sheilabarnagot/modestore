@@ -462,13 +462,14 @@
   }
 
   .container5 {
-    max-height: 100vh;
+    // max-height: 100vh;
     display: flex;
+    // border: 1px solid green;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    font-family: 'didot', sans-serif;
-    background-color: #eeece5;
+    // margin-top: 50px;
+    // font-family: 'didot', sans-serif;
+    // background-color: #eeece5;
   }
 
   .card {
@@ -477,7 +478,7 @@
     background-color: #fff;
     padding: 0 25px;
     box-sizing: border-box;
-    height: 85vh;
+    // height: 85vh;
   }
   .message {
     position: fixed;
