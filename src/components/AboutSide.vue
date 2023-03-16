@@ -76,13 +76,36 @@
 
 <style scoped>
   #intro {
-    margin: 15em 2em 10em 2em;
+    margin: 10em 2.5em 4em 2.5em;
   }
   #membersContainer {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    border: 2px solid red;
+    font-size: 1.3em;
+    /* border: 2px solid red; */
+  }
+  #members {
+    margin-bottom: 5em;
+  }
+  @media (min-width: 880px) {
+    h2 {
+      font-size: 2em;
+    }
+    h3 {
+      font-size: 2.5em;
+      margin-bottom: 2em;
+    }
+    #intro {
+      font-size: 2em;
+      margin: 7em 2.5em 4em 2.5em;
+    }
+    #membersContainer {
+      width: 50%;
+    }
+    #members {
+    margin-bottom: 5em;font-size: 1.3em;
+  }
   }
 </style>
