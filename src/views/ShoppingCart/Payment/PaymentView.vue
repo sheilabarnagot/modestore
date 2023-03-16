@@ -2,18 +2,20 @@
   <div class="container5">
     <div class="card-box">
       <div class="payment-details">
+        <!-- Detta är den nya input för leverans, samt betalsätt -->
         <h3>Delivery address</h3>
         <p>
           Complete your purchase by entering your payment details and your
           address information.
         </p>
       </div>
+      <!--här börjar första input botstrap, när man skriver in namn lyser grönt. -->
       <div class="input-text">
         <b-form-input
           type="text"
           placeholder="Ex jon"
           v-model="input1"
-          :state="input1.length >= 4 ? true : false"
+          :state="input1.length >= 3 ? true : false"
         />
         <span>Name</span>
         <div v-if="notEmpty" />
@@ -71,7 +73,7 @@
         </div>
 
         <div class="container2">
-          <!-- chose {{ Payment }} -->
+          <!-- chose {{ Payment }} välj betalsätt mellan card, swish och invoice -->
           <div id="box2-container">
             <div class="box2">
               <label style="display: block" for="Creditcard">Creditcard</label>
@@ -104,9 +106,8 @@
               />
             </div>
           </div>
-
+          <!-- här är modalerna som innehåller betalsätten -->
           <div class="box2">
-            <!-- <div></div> -->
             <div class="pay" v-if="Payment === 'Swish'">
               <b-button class="btn" @click="modalShowswish = !modalShowswish"
                 >pay
@@ -142,12 +143,13 @@
                 >
                   Confirm
                 </b-button>
+                <!-- om nummer ej inskriver och man clickar på confirm så ska error message returneras -->
                 <p v-if="showErrorMessage" style="color: red">
                   Please fill in your number
                 </p>
               </b-modal>
             </div>
-
+            <!-- modal for Creditcard -->
             <div class="pay" v-if="Payment === 'Creditcard'">
               <b-button class="btn" @click="modalShowkort = !modalShowkort"
                 >pay
@@ -160,6 +162,7 @@
                 :no-close-on-backdrop="true"
                 hide-footer
               >
+                <!-- alla input måste vara ifyllda innan man kan klicka op confirm knappen -->
                 <div class="inputCard">
                   <div class="first">
                     <b-form-input
@@ -265,7 +268,6 @@
                   class="invbtn"
                   :disabled="regex.test(email) === false"
                   href="#/submit"
-                  variant="primary"
                   modalShowfaktura
                   >Confirm
                 </b-button>
@@ -469,10 +471,11 @@
   .invbtn {
     background-color: black;
     width: 400px;
-    width: 90%;
+    width: 100%;
     height: 50px;
     padding: 10px;
-    margin: 20px;
+    margin-right: 30px;
+    margin-top: 10px;
   }
 
   .swishbtn {
@@ -600,71 +603,41 @@
 
   .pay {
     min-width: 200px;
-    /* border: 1px solid green; */
+
     justify-content: center;
     align-items: center;
-    /* margin-top: 40px; */
+
     background-color: #d7dad8;
     color: #000;
   }
 
   .pay button {
-    /* height: 40px; */
     width: 100%;
-    background-color: #d7dad8;
+    background-color: #89898e;
     color: #000;
-
-    /* width: 70vh; */
-    /* border: none; */
-    /* outline: 0; */
-    border-radius: 5px;
-    cursor: pointer;
     transition: all 0.5s;
-
-    transform: translate(-14%, -14%);
+    transform: translate(0%, -4%);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
-    /* background-color: blue; */
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-
-    /* transform: translate(-14%, -14%); */
-    /* border: 1px solid green; */
+    font-size: 12px;
   }
   .pay button:hover {
     background-color: #d7dad8 !important;
   }
 
-  /* .pay {
-    text-decoration: none;
-    color: #3c3e3f;
-    display: flex;
-    width: 100%;
-  } */
-
   #button-container {
     display: flex;
   }
-  /* .invbtn {
-    background-color: black;
-    width: 400px;
-    width: 90%;
-    height: 50px;
-    padding: 10px;
-    margin: 20px;
-  } */
 
   @media screen and (min-width: 900px) {
     .container5 {
       display: flex;
       flex-direction: column;
-
-      /* margin-bottom: 10px; */
     }
     .pay {
       text-decoration: none;
