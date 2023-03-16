@@ -2,7 +2,7 @@
   <!-- <h3>Products</h3> -->
   <div>
     <template v-for="item in allProducts" :key="item.id">
-      <img :src="item.src" alt="" />
+      <img :src="item.src" alt="" class="product-img" />
     </template>
   </div>
 </template>
@@ -47,4 +47,27 @@
   img {
     max-width: 100%;
   }
+
+  /* KZ tryied to make the images in the same size but also responsive.
+
+   .product-img {
+      height: 200px;
+    width: 200px;
+    object-fit: contain;
+  }
+
+
+  @media screen and (min-width: 576px) {
+    .product-img {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .product-img {
+      height: auto;
+      width: 25%;
+    }
+  }*/
 </style>
