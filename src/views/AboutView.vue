@@ -26,20 +26,19 @@
 
 <template>
   <div>
-    <AboutSide :image="team[0].image" :team="team" />
-    <KlaraAvatar />
+    <AboutSide :image="team.image" :team="team" />
     <!-- <img src="../components/SvgIcons/avatars/KlaraAvatar.vue" /> -->
   </div>
 </template>
 <script>
   import AboutSide from '../components/AboutSide.vue'
-  import KlaraAvatar from '../components/SvgIcons/avatars/KlaraAvatar.vue'
+  // import KlaraAvatar from '../components/SvgIcons/avatars/KlaraAvatar.vue'
 
   export default {
     name: 'AboutView',
     components: {
-      AboutSide,
-      KlaraAvatar
+      AboutSide
+      // KlaraAvatar
     },
     data() {
       return {
@@ -47,7 +46,7 @@
           {
             name: 'Klara',
             age: new Date().getFullYear() - 1981,
-            image: '../components/SvgIcons/avatars/KlaraAvatar.vue',
+            // image: <'../components/SvgIcons/avatars/KlaraAvatar.vue'>,
             background: 'Graphic design',
             skills: 'Adobe Creative Suite, HTML, CSS',
             surprise: 'She has a black belt in karate',
@@ -56,7 +55,7 @@
           {
             name: 'Pontus',
             age: new Date().getFullYear() - 1992,
-            image: 'pontus.jpg',
+            // image: 'pontus.jpg',
             background: 'Warlockt',
             skills: 'Web development',
             surprise: 'I have got a pet snake',
@@ -65,7 +64,7 @@
           {
             name: 'Diyana  Rahim ',
             age: new Date().getFullYear() - 1996,
-            image: 'diyana.jpg',
+            // image: 'diyana.jpg',
             education: 'frontend-developer',
             skills: 'Painting',
             likes: [
@@ -78,7 +77,7 @@
           {
             name: 'Roland',
             age: new Date().getFullYear() - 1995,
-            image: 'roland.jpg',
+            // image: 'roland.jpg',
             background: 'Table-tennis legend',
             skills: 'Doing the dishes, table-tennis',
             education: 'full-stack developer',
@@ -92,7 +91,7 @@
           {
             name: 'Lilas',
             age: new Date().getFullYear() - 1997,
-            image: 'lilas.jpg',
+            // image: 'lilas.jpg',
             Education: 'Frontend-Developer',
             skills: 'Drive a car',
             likes: ['Travel around to different countries', 'Watching filmes']
@@ -100,7 +99,7 @@
           {
             name: 'Dona',
             age: new Date().getFullYear() - 1986,
-            image: 'dona.jpg',
+            // image: 'dona.jpg',
             background: 'Poker player',
             skills:
               'Can create web applications so fast they can break the sound barrier.',
@@ -111,7 +110,7 @@
           {
             name: 'Sheila',
             age: new Date().getFullYear() - 1988,
-            image: '/SheilaAvatar.vue',
+            // image: '/SheilaAvatar.vue',
             background: 'User experience design',
             skills: 'Wireframing, prototyping, user testing',
             surprise: 'She has a collection of vintage typewriters',

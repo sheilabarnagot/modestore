@@ -40,10 +40,11 @@
     <h3>The Creative Team</h3>
     <div id="membersContainer" v-for="(member, index) in team" :key="index">
       <div id="members">
-        <h1>{{ member[0].name }}</h1>
-        <svg :src="member.image" :alt="member.image" />
+        <h1>{{ member.name }}</h1>
+        <!-- <svg :src="member.image" :alt="member.image" /> -->
+        <KlaraAvatar />
         <p>
-          ><strong>Age: {{ member.age }}</strong>
+          <strong>Age: {{ member.age }}</strong>
         </p>
         <p><strong>Background:</strong> {{ member.background }}</p>
         <p><strong>Skills:</strong> {{ member.skills }}</p>
@@ -58,7 +59,11 @@
   </div>
 </template>
 <script>
+  import KlaraAvatar from './SvgIcons/avatars/KlaraAvatar.vue'
   export default {
+    components: {
+      KlaraAvatar
+    },
     name: 'TeamModestore',
     props: {
       team: {
