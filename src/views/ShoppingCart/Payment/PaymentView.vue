@@ -620,6 +620,19 @@
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.5s;
+
+    transform: translate(-14%, -14%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    /* background-color: blue; */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+
     /* transform: translate(-14%, -14%); */
     /* border: 1px solid green; */
   }
