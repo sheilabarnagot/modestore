@@ -133,7 +133,9 @@
             </div>
 
             <div class="pay" v-if="Payment === 'Creditcard'">
-              <button @click="modalShowkort = !modalShowkort">pay</button>
+              <b-button class="btn" @click="modalShowkort = !modalShowkort"
+                >pay
+              </b-button>
 
               <b-modal
                 title="confirm your payment"
@@ -223,11 +225,12 @@
             </div>
 
             <div class="pay" v-if="Payment === 'Faktura'">
-              <div id="button-container">
-                <button @click="modalShowfaktura = !modalShowfaktura">
-                  pay
-                </button>
-              </div>
+              <b-button
+                class="btn"
+                @click="modalShowfaktura = !modalShowfaktura"
+                >pay
+              </b-button>
+
               <b-modal
                 title="Invoice will be sent to your Email"
                 v-model="modalShowfaktura"
