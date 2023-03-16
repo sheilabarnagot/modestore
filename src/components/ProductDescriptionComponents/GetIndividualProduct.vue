@@ -1,5 +1,7 @@
 <template>
-  <ArrowBack @click="() => this.$router.go(-1)" id="arrow-back" />
+  <div id="arrow-back">
+    <ArrowBack @click="() => this.$router.go(-1)" />
+  </div>
   <!-- <h1>Product Details</h1> -->
   <div id="container">
     <div id="product-information">
@@ -48,7 +50,7 @@
   #container {
     display: flex;
     align-items: center;
-    height: 90vh;
+    /* height: 90vh; */
   }
 
   #product-information {
@@ -83,9 +85,8 @@
   }
 
   #arrow-back {
-    position: absolute;
-    top: 3%;
-    right: 0%;
+    display: flex;
+    justify-content: center;
     cursor: pointer;
   }
 
@@ -107,7 +108,7 @@
 
   @media (min-width: 768px) {
     img {
-      max-width: 20%;
+      max-width: 30%;
     }
 
     #container {
