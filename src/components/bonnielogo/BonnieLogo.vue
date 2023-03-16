@@ -10,7 +10,7 @@
     margin: 50px 40px;
     font-size: 2.5rem;
     text-decoration: none;
-    z-index: 999;
+    /* z-index: 999; */
   }
 
   @media (min-width: 601px) {

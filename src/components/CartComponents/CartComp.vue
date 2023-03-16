@@ -5,7 +5,6 @@
     </RouterLink>
     <p id="totalamount1">Total amount: {{ $store.state.totalCost }} kr</p>
     <h2 id="productsh2">{{ category }}</h2>
-
     <ul id="products">
       <!-- Here we are looping through the filtered products, which will be different categories of clothes depending on what prop was sent in. -->
       <li v-for="product in filteredProducts" :key="product.id">
