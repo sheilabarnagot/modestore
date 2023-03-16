@@ -365,8 +365,9 @@
 
   .container2 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     font-family: 'didot', sans-serif;
+    margin-bottom: 6em;
   }
 
   .box2 {
@@ -453,6 +454,7 @@
 
   .container5 {
     color: #47413d;
+    /* width: 100vh; */
     display: flex;
     flex-direction: row;
     /* align-items: center; */
@@ -462,7 +464,7 @@
   }
 
   .card-box {
-    width: 90vh;
+    /* width: 90vh; */
     border-radius: 20px;
     background-color: #fff;
     padding: 0 25px;
@@ -559,23 +561,25 @@
   }
 
   .pay {
+    min-width: 200px;
+    border: 1px solid green;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    /* margin-top: 40px; */
   }
   .pay button {
-    height: 40px;
+    /* height: 40px; */
 
     background-color: #d7dad8;
     color: #000;
 
-    width: 80vh;
-    border: none;
-    outline: 0;
+    /* width: 80vh; */
+    /* border: none; */
+    /* outline: 0; */
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.5s;
-    transform: translate(-14%, -14%);
+    /* transform: translate(-14%, -14%); */
   }
   .pay button:hover {
     background-color: #d7dad8 !important;
@@ -594,12 +598,12 @@
     .container5 {
       display: flex;
       flex-direction: column;
+
       /* margin-bottom: 10px; */
     }
     .pay {
       text-decoration: none;
       color: #3c3e3f;
-      display: flex;
     }
   }
   @media screen and (min-width: 800px) {

@@ -56,7 +56,7 @@
             name: 'Pontus',
             age: new Date().getFullYear() - 1992,
             // image: 'pontus.jpg',
-            background: 'Warlockt',
+            background: 'Warlock',
             skills: 'Web development',
             surprise: 'I have got a pet snake',
             likes: ['Playing video games']

@@ -1,6 +1,5 @@
 <template>
-  <nav>
-    <h2>Help</h2>
+  <nav id="nav-container">
     <ul>
       <li>
         <RouterLink to="/account/help/materials"
@@ -64,20 +63,30 @@
 <style scoped>
   h2 {
     text-align: center;
+    padding-right: 9em;
+    padding-bottom: 1em;
+  }
+
+  #nav-container {
+    display: flex;
+    justify-content: center;
   }
 
   ul {
     list-style-type: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    /* grid-template-columns: 1fr 1fr; */
     flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
     padding-left: 0;
-    justify-items: center;
+    /* justify-items: center; */
   }
 
   ul li a {
     font-family: 'jost';
     color: #3c3e3f;
     line-height: 2;
+    text-decoration: none;
   }
 </style>
