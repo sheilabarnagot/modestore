@@ -452,11 +452,13 @@
   }
 
   .container5 {
+    color: #47413d;
     display: flex;
     flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
     align-items: center;
     font-family: 'didot', sans-serif;
-    background-color: #eeece5;
   }
 
   .card-box {
@@ -592,7 +594,7 @@
     .container5 {
       display: flex;
       flex-direction: column;
-      margin-bottom: 10px;
+      /* margin-bottom: 10px; */
     }
     .pay {
       text-decoration: none;
@@ -602,9 +604,10 @@
   }
   @media screen and (min-width: 800px) {
     .container5 {
-      margin-bottom: 6em;
+      min-height: 100vh;
+      /* margin-bottom: 6em; */
       padding-left: 2rem;
-      display: row;
+      display: flex;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 1em;
       font-family: 'didot', sans-serif;
