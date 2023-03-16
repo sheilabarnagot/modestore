@@ -105,7 +105,7 @@
             </div>
           </div>
 
-          <div class="ewqewq">
+          <div class="box2">
             <!-- <div></div> -->
             <div class="pay" v-if="Payment === 'Swish'">
               <b-button class="btn" @click="modalShowswish = !modalShowswish"
@@ -121,7 +121,7 @@
                 <img src="assets/swish.png" alt="" class="swishlogo" />
 
                 <b-form-input
-                  class="swish-number"
+                  class="swishbtn"
                   required
                   type="number"
                   :state="number.length >= 4 ? true : false"
@@ -385,13 +385,13 @@
     font-size: small;
   }
 
-  .swisha {
+  /* .swisha {
     position: absolute;
     display: flex;
     justify-content: center;
     width: 100%;
     top: 400px;
-  }
+  } */
 
   .Fakturan {
     position: absolute;
@@ -447,10 +447,17 @@
   }
 
   .invocebtn {
-    width: 124px;
+    background-color: black;
+    width: 400px;
+    width: 100%;
+    height: 40px;
+  }
 
-    background-color: #fff;
-    color: #000;
+  .swishbtn {
+    background-color: black;
+    width: 400px;
+    width: 100%;
+    height: 40px;
   }
 
   #Months {
@@ -571,7 +578,7 @@
 
   .pay {
     min-width: 200px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     justify-content: center;
     align-items: center;
     /* margin-top: 40px; */
@@ -583,25 +590,25 @@
     background-color: #d7dad8;
     color: #000;
 
-    /* width: 80vh; */
+    /* width: 70vh; */
     /* border: none; */
     /* outline: 0; */
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.5s;
     /* transform: translate(-14%, -14%); */
-    border: 1px solid green;
+    /* border: 1px solid green; */
   }
   .pay button:hover {
     background-color: #d7dad8 !important;
   }
 
-  .pay {
+  /* .pay {
     text-decoration: none;
     color: #3c3e3f;
     display: flex;
     width: 100%;
-  }
+  } */
 
   #button-container {
     display: flex;
