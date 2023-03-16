@@ -20,6 +20,12 @@ const mutations = {
     }
     state.totalCost += price
   },
+
+  // mutations: {
+  //   setName(state, name) {
+  //     state.name = name
+  //   }
+  // },
   // Decrease the quantity of an item in the basket
   decreaseQuantity(state, payload) {
     const item = state.items.find((item) => item.id === payload.id)
@@ -80,10 +86,25 @@ const state = {
   searchedItems: [],
   productDescriptionItem: [],
   // Totalpriset av ens produkter
-  totalCost: 0
+  totalCost: 0,
+  state: {
+    name: ''
+  }
+}
+
+const getters = {
+  shoppingCartItems(state) {
+    return state.items
+  },
+
+  // used to be able to return the total amount of items from the component of your choise by writing {{ $store.getters.totalQuantity }}
+  totalQuantity(state) {
+    return state.items.reduce((total, item) => total + item.quantity, 0)
+  }
 }
 
 export default createStore({
+  getters,
   state,
   mutations,
   plugins: [createPersistedState()],

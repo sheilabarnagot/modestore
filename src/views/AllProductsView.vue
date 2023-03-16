@@ -1,5 +1,5 @@
 <template>
-  <h1>Products</h1>
+  <!-- <h3>Products</h3> -->
   <div>
     <template v-for="item in allProducts" :key="item.id">
       <img :src="item.src" alt="" class="product-img" />
@@ -31,8 +31,8 @@
 <style scoped>
   h1 {
     text-align: center;
-    margin-top: 1.5em;
-    margin-bottom: 1em;
+    /* margin-top: 1.5em; */
+    /* margin-bottom: 1em; */
   }
 
   div {
@@ -40,6 +40,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 1em;
     margin: 1em;
+    padding-top: 6em;
     justify-items: center;
   }
 

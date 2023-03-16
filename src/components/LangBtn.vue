@@ -1,7 +1,7 @@
 <script>
   import { defineComponent } from 'vue'
   import { useI18n } from 'vue-i18n'
-
+  //test
   export default defineComponent({
     setup() {
       const { locale, t } = useI18n()

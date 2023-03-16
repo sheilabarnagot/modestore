@@ -43,7 +43,12 @@
         <RouterLink to="/account"> <UserIcon /> </RouterLink>
       </li>
       <li>
-        <RouterLink to="/cart"> <ShoppingIcon /> </RouterLink>
+        <RouterLink to="/cart">
+          <ShoppingIcon />
+          <p id="total-cart-items">
+            {{ $store.getters.totalQuantity }}
+          </p>
+        </RouterLink>
       </li>
     </ul>
     <template v-if="toggl">
@@ -100,7 +105,6 @@
     width: 100%;
     background-color: #eeece5;
   }
-
   ul:not(.dropdown-menu) {
     margin-bottom: 0;
     padding-left: 0;
@@ -109,19 +113,16 @@
     align-items: center;
     justify-content: center;
     position: fixed;
-
     bottom: 15px;
     left: 50%;
     right: 50%;
   }
-
   ul li:first-child {
     padding-left: 0;
   }
   ul li {
     padding-left: 2em;
   }
-
   ul li a {
     font-family: 'jost';
     text-decoration: none;
@@ -139,20 +140,23 @@
   #bad-element {
     cursor: pointer;
   }
-
   .dropdown-menu {
     flex-direction: column;
   }
-
   #menuitem {
     text-align: center;
     padding-left: 0;
   }
-
+  #total-cart-items {
+    bottom: -11px;
+    left: 160px;
+    position: absolute;
+    font-size: smaller;
+    font-weight: bolder;
+  }
   span {
     color: black;
   }
-
   @media (min-width: 375px) and (max-width: 600px) {
     nav {
       display: flex;
