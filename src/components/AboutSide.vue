@@ -105,7 +105,8 @@
       width: 50%;
     }
     #members {
-    margin-bottom: 5em;font-size: 1.3em;
-  }
+      margin-bottom: 5em;
+      font-size: 1.3em;
+    }
   }
 </style>
