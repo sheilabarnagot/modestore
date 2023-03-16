@@ -7,15 +7,21 @@
 
 <template>
   <div>
-    <h2>Delivery Methods</h2>
-    <ul>
-      <li v-for="method in deliveryMethods" :key="method.id">
-        <div>{{ method.name }}</div>
-        <div>{{ method.description }}</div>
-        <div>{{ method.price }} kr</div>
+    <h2 class="delivery-methods__heading">Delivery Methods</h2>
+    <ul class="delivery-methods__list">
+      <li
+        v-for="method in deliveryMethods"
+        :key="method.id"
+        class="delivery-methods__item"
+      >
+        <div class="delivery-methods__name">{{ method.name }}</div>
+        <div class="delivery-methods__description">
+          {{ method.description }}
+        </div>
+        <div class="delivery-methods__price">{{ method.price }} kr</div>
       </li>
     </ul>
-    <h2>Order Status</h2>
+    <h2 class="order-status__heading">Order Status</h2>
     <!-- <div>{{ orderStatus }}</div> -->
   </div>
 </template>
@@ -45,6 +51,51 @@
     //     // Get order status from store
     //     return this.$store.state.order.status
     //   }
-    // }
+    // }  #eeece5
   }
 </script>
+
+<style scoped>
+  .delivery-methods__heading {
+    font-size: 24px;
+    margin: 50px 30px;
+    color: #47413d;
+  }
+
+  .delivery-methods__list {
+    list-style: none;
+    padding: 20px 40px;
+    left: 20px;
+    color: #47413d;
+  }
+
+  .delivery-methods__item {
+    border-bottom: 1px solid #818c85;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    color: #47413d;
+  }
+
+  .delivery-methods__name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #47413d;
+  }
+
+  .delivery-methods__description {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #47413d;
+  }
+
+  .delivery-methods__price {
+    font-size: 16px;
+    color: #47413d;
+  }
+
+  .order-status__heading {
+    font-size: 22px;
+    margin: 20px 10px 10px 40px;
+    color: #47413d;
+  }
+</style>
