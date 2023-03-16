@@ -95,7 +95,8 @@
           { id: 4, name: 'Bottoms' },
           { id: 5, name: 'Dresses' },
           { id: 6, name: 'About' }
-        ]
+        ],
+        toggl: false
       }
     },
     methods: {
@@ -146,7 +147,7 @@
     left: 20px;
     font-size: 16px;
     margin-left: 10px;
-    z-index: 999;
+    // z-index: 999;
     //new style
     display: flex;
     align-items: center;
@@ -210,8 +211,8 @@
     display: flex;
     justify-content: flex-end;
     position: absolute;
-    // z-index: 999;
-    width: 100%;
+    // z-index: 1;
+    // width: 100%;
     padding-left: 1em;
     top: 5%;
     right: 5%;
