@@ -564,21 +564,11 @@
   }
 
   .pay {
-<<<<<<< HEAD
     min-width: 200px;
     border: 1px solid green;
     justify-content: center;
     align-items: center;
     /* margin-top: 40px; */
-=======
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    /* width: 100%; */
-    border: 1px solid green;
-    width: 80vh;
->>>>>>> 3f5d84bc90a2059912065d8b50c1ddc581ca56ea
   }
 
   .pay button {
@@ -588,21 +578,13 @@
     color: #000;
 
     /* width: 80vh; */
-<<<<<<< HEAD
     /* border: none; */
     /* outline: 0; */
-=======
-    border: none;
-    outline: 0;
->>>>>>> 3f5d84bc90a2059912065d8b50c1ddc581ca56ea
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.5s;
     /* transform: translate(-14%, -14%); */
-<<<<<<< HEAD
-=======
     border: 1px solid green;
->>>>>>> 3f5d84bc90a2059912065d8b50c1ddc581ca56ea
   }
   .pay button:hover {
     background-color: #d7dad8 !important;
@@ -634,13 +616,10 @@
 
       /* margin-bottom: 10px; */
     }
-<<<<<<< HEAD
     .pay {
       text-decoration: none;
       color: #3c3e3f;
     }
-=======
->>>>>>> 3f5d84bc90a2059912065d8b50c1ddc581ca56ea
   }
   @media screen and (min-width: 600px) {
     .container5 {
