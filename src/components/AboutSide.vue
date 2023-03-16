@@ -42,7 +42,7 @@
       <div id="members">
         <h1>{{ member.name }}</h1>
         <!-- <svg :src="member.image" :alt="member.image" /> -->
-        <!-- <KlaraAvatar /> -->
+        <KlaraAvatar />
         <p>
           <strong>Age: {{ member.age }}</strong>
         </p>
@@ -59,10 +59,10 @@
   </div>
 </template>
 <script>
-  // import KlaraAvatar from './SvgIcons/avatars/KlaraAvatar.vue'
+  import KlaraAvatar from './SvgIcons/avatars/KlaraAvatar.vue'
   export default {
     components: {
-      // KlaraAvatar
+      KlaraAvatar
     },
     name: 'TeamModestore',
     props: {
