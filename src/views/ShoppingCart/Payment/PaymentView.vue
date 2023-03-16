@@ -72,19 +72,18 @@
 
         <div class="container2">
           <!-- chose {{ Payment }} -->
-          <div class="box2">
-            <label style="display: block" for="Creditcard">Creditcard</label>
-
-            <input
-              @click="onKort"
-              type="radio"
-              id="form"
-              value="Creditcard"
-              v-model="Payment"
-            />
-          </div>
-
-          <!-- <div class="box2">
+          <div id="box2-container">
+            <div class="box2">
+              <label style="display: block" for="Creditcard">Creditcard</label>
+              <input
+                @click="onKort"
+                type="radio"
+                id="form"
+                value="Creditcard"
+                v-model="Payment"
+              />
+            </div>
+            <div class="box2">
               <label style="display: block" for="swish">Swish</label>
               <input
                 @click="onSwish"
@@ -93,21 +92,24 @@
                 value="Swish"
                 v-model="Payment"
               />
-            </div> -->
+            </div>
+            <div class="box2">
+              <label style="display: block" for="Faktura">Invoice</label>
+              <input
+                @click="OnFaktura"
+                type="radio"
+                id="form"
+                value="Faktura"
+                v-model="Payment"
+              />
+            </div>
+          </div>
 
-          <div class="box2">
-            <label style="display: block" for="Faktura">Invoice</label>
-            <input
-              @click="OnFaktura"
-              type="radio"
-              id="form"
-              value="Faktura"
-              v-model="Payment"
-            />
-
-            <!-- <div class="swisha" v-if="Payment === 'Swish'">
+          <div class="ewqewq">
+            <!-- <div></div> -->
+            <div class="pay" v-if="Payment === 'Swish'">
               <b-button class="btn" @click="modalShowswish = !modalShowswish"
-                >Swish
+                >pay
               </b-button>
 
               <b-modal
@@ -128,7 +130,7 @@
                 />
                 <img src="assets/frame1.jpg" allt="" class="scan" />
               </b-modal>
-            </div> -->
+            </div>
 
             <div class="pay" v-if="Payment === 'Creditcard'">
               <button @click="modalShowkort = !modalShowkort">pay</button>
@@ -221,8 +223,11 @@
             </div>
 
             <div class="pay" v-if="Payment === 'Faktura'">
-              <button @click="modalShowfaktura = !modalShowfaktura">pay</button>
-
+              <div id="button-container">
+                <button @click="modalShowfaktura = !modalShowfaktura">
+                  pay
+                </button>
+              </div>
               <b-modal
                 title="Invoice will be sent to your Email"
                 v-model="modalShowfaktura"
@@ -365,8 +370,13 @@
 
   .container2 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     font-family: 'didot', sans-serif;
+    margin-bottom: 6em;
+  }
+
+  #box2-container {
+    display: flex;
   }
 
   .box2 {
@@ -453,6 +463,7 @@
 
   .container5 {
     color: #47413d;
+    /* width: 100vh; */
     display: flex;
     flex-direction: row;
     /* align-items: center; */
@@ -462,7 +473,7 @@
   }
 
   .card-box {
-    width: 90vh;
+    /* width: 90vh; */
     border-radius: 20px;
     background-color: #fff;
     padding: 0 25px;
@@ -559,28 +570,42 @@
   }
 
   .pay {
+    min-width: 200px;
+    border: 1px solid green;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    /* margin-top: 40px; */
   }
-  .pay button {
-    height: 40px;
 
+  .pay button {
+    /* height: 40px; */
+    width: 100%;
     background-color: #d7dad8;
     color: #000;
 
-    width: 80vh;
-    border: none;
-    outline: 0;
+    /* width: 80vh; */
+    /* border: none; */
+    /* outline: 0; */
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.5s;
-    transform: translate(-14%, -14%);
+    /* transform: translate(-14%, -14%); */
+    border: 1px solid green;
   }
   .pay button:hover {
     background-color: #d7dad8 !important;
   }
 
+  .pay {
+    text-decoration: none;
+    color: #3c3e3f;
+    display: flex;
+    width: 100%;
+  }
+
+  #button-container {
+    display: flex;
+  }
   .invbtn {
     background-color: black;
     width: 400px;
@@ -590,19 +615,19 @@
     margin: 20px;
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 900px) {
     .container5 {
       display: flex;
       flex-direction: column;
+
       /* margin-bottom: 10px; */
     }
     .pay {
       text-decoration: none;
       color: #3c3e3f;
-      display: flex;
     }
   }
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 600px) {
     .container5 {
       min-height: 100vh;
       /* margin-bottom: 6em; */
