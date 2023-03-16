@@ -576,6 +576,16 @@
     cursor: pointer;
     transition: all 0.5s;
     transform: translate(-14%, -14%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    /* background-color: blue; */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
   }
   .pay button:hover {
     background-color: #d7dad8 !important;
