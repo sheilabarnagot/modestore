@@ -72,39 +72,41 @@
 
         <div class="container2">
           <!-- chose {{ Payment }} -->
-          <div class="box2">
-            <label style="display: block" for="Creditcard">Creditcard</label>
-
-            <input
-              @click="onKort"
-              type="radio"
-              id="form"
-              value="Creditcard"
-              v-model="Payment"
-            />
+          <div id="box2-container">
+            <div class="box2">
+              <label style="display: block" for="Creditcard">Creditcard</label>
+              <input
+                @click="onKort"
+                type="radio"
+                id="form"
+                value="Creditcard"
+                v-model="Payment"
+              />
+            </div>
+            <div class="box2">
+              <label style="display: block" for="swish">Swish</label>
+              <input
+                @click="onSwish"
+                type="radio"
+                id="form"
+                value="Swish"
+                v-model="Payment"
+              />
+            </div>
+            <div class="box2">
+              <label style="display: block" for="Faktura">Invoice</label>
+              <input
+                @click="OnFaktura"
+                type="radio"
+                id="form"
+                value="Faktura"
+                v-model="Payment"
+              />
+            </div>
           </div>
 
-          <div class="box2">
-            <label style="display: block" for="swish">Swish</label>
-            <input
-              @click="onSwish"
-              type="radio"
-              id="form"
-              value="Swish"
-              v-model="Payment"
-            />
-          </div>
-
-          <div class="box2">
-            <label style="display: block" for="Faktura">Invoice</label>
-            <input
-              @click="OnFaktura"
-              type="radio"
-              id="form"
-              value="Faktura"
-              v-model="Payment"
-            />
-
+          <div class="ewqewq">
+            <!-- <div></div> -->
             <div class="pay" v-if="Payment === 'Swish'">
               <b-button class="btn" @click="modalShowswish = !modalShowswish"
                 >pay
@@ -373,6 +375,10 @@
     margin-bottom: 6em;
   }
 
+  #box2-container {
+    display: flex;
+  }
+
   .box2 {
     height: 80px;
     margin: 10px;
@@ -573,7 +579,7 @@
 
   .pay button {
     /* height: 40px; */
-
+    width: 100%;
     background-color: #d7dad8;
     color: #000;
 
