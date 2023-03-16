@@ -64,12 +64,14 @@
   h2 {
     text-align: center;
     padding-right: 9em;
-    padding-bottom: 1em;
+    padding-bottom: 4em;
+    padding-left: 30px;
   }
 
   #nav-container {
     display: flex;
     justify-content: center;
+    padding-left: 30px;
   }
 
   ul {
@@ -79,7 +81,7 @@
     flex-direction: column;
     justify-content: center;
     /* align-items: center; */
-    padding-left: 0;
+    padding-left: 30px;
     /* justify-items: center; */
   }
 
