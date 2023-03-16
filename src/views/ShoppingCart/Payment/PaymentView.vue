@@ -84,16 +84,16 @@
             />
           </div>
 
-          <!-- <div class="box2">
-              <label style="display: block" for="swish">Swish</label>
-              <input
-                @click="onSwish"
-                type="radio"
-                id="form"
-                value="Swish"
-                v-model="Payment"
-              />
-            </div> -->
+          <div class="box2">
+            <label style="display: block" for="swish">Swish</label>
+            <input
+              @click="onSwish"
+              type="radio"
+              id="form"
+              value="Swish"
+              v-model="Payment"
+            />
+          </div>
 
           <div class="box2">
             <label style="display: block" for="Faktura">Invoice</label>
@@ -105,9 +105,9 @@
               v-model="Payment"
             />
 
-            <!-- <div class="swisha" v-if="Payment === 'Swish'">
+            <div class="pay" v-if="Payment === 'Swish'">
               <b-button class="btn" @click="modalShowswish = !modalShowswish"
-                >Swish
+                >pay
               </b-button>
 
               <b-modal
@@ -128,7 +128,7 @@
                 />
                 <img src="assets/frame1.jpg" allt="" class="scan" />
               </b-modal>
-            </div> -->
+            </div>
 
             <div class="pay" v-if="Payment === 'Creditcard'">
               <button @click="modalShowkort = !modalShowkort">pay</button>
@@ -221,8 +221,11 @@
             </div>
 
             <div class="pay" v-if="Payment === 'Faktura'">
-              <button @click="modalShowfaktura = !modalShowfaktura">pay</button>
-
+              <div id="button-container">
+                <button @click="modalShowfaktura = !modalShowfaktura">
+                  pay
+                </button>
+              </div>
               <b-modal
                 title="Invoice will be sent to your Email"
                 v-model="modalShowfaktura"
@@ -561,12 +564,23 @@
   }
 
   .pay {
+<<<<<<< HEAD
     min-width: 200px;
     border: 1px solid green;
     justify-content: center;
     align-items: center;
     /* margin-top: 40px; */
+=======
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    /* width: 100%; */
+    border: 1px solid green;
+    width: 80vh;
+>>>>>>> 3f5d84bc90a2059912065d8b50c1ddc581ca56ea
   }
+
   .pay button {
     /* height: 40px; */
 
@@ -574,17 +588,36 @@
     color: #000;
 
     /* width: 80vh; */
+<<<<<<< HEAD
     /* border: none; */
     /* outline: 0; */
+=======
+    border: none;
+    outline: 0;
+>>>>>>> 3f5d84bc90a2059912065d8b50c1ddc581ca56ea
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.5s;
     /* transform: translate(-14%, -14%); */
+<<<<<<< HEAD
+=======
+    border: 1px solid green;
+>>>>>>> 3f5d84bc90a2059912065d8b50c1ddc581ca56ea
   }
   .pay button:hover {
     background-color: #d7dad8 !important;
   }
 
+  .pay {
+    text-decoration: none;
+    color: #3c3e3f;
+    display: flex;
+    width: 100%;
+  }
+
+  #button-container {
+    display: flex;
+  }
   .invbtn {
     background-color: black;
     width: 400px;
@@ -594,19 +627,22 @@
     margin: 20px;
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 900px) {
     .container5 {
       display: flex;
       flex-direction: column;
 
       /* margin-bottom: 10px; */
     }
+<<<<<<< HEAD
     .pay {
       text-decoration: none;
       color: #3c3e3f;
     }
+=======
+>>>>>>> 3f5d84bc90a2059912065d8b50c1ddc581ca56ea
   }
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 600px) {
     .container5 {
       min-height: 100vh;
       /* margin-bottom: 6em; */
