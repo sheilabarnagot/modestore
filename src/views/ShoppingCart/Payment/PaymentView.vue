@@ -35,7 +35,7 @@
             <option>Spain</option>
             <option>England</option>
             <option>France</option>
-            <option>Sewden</option>
+            <option>Swden</option>
           </select>
 
           <div class="zip-state">
@@ -117,18 +117,34 @@
                 v-model="modalShowswish"
                 name="swishmodel"
                 :no-close-on-backdrop="true"
+                hide-footer
               >
                 <img src="assets/swish.png" alt="" class="swishlogo" />
 
+                <img src="assets/frame1.jpg" allt="" class="scan" />
+
                 <b-form-input
-                  class="swishbtn"
                   required
+                  class="sw"
                   type="number"
                   :state="number.length >= 4 ? true : false"
                   placeholder="+46"
                   v-model="number"
+                  @click="ok"
                 />
-                <img src="assets/frame1.jpg" allt="" class="scan" />
+                <!-- <img src="assets/frame1.jpg" allt="" class="scan" /> -->
+                <!-- Ny:  -->
+                <b-button
+                  class="swishbtn"
+                  :disabled="disabled"
+                  href="#/submit"
+                  modalShowswish
+                >
+                  Confirm
+                </b-button>
+                <p v-if="showErrorMessage" style="color: red">
+                  Please fill in your number
+                </p>
               </b-modal>
             </div>
 
@@ -336,8 +352,8 @@
           (this.cardowner !== '' || this.kortnummer !== '' || this.CVC !== '')
         )
       },
-      isDisabled() {
-        return !this.input1
+      disabled() {
+        return !this.number
       },
       showInput1Error() {
         return !this.input1 && !this.input1Valid
@@ -348,7 +364,8 @@
           this.input2 &&
           this.input3 &&
           this.input4 &&
-          this.input5
+          this.input5 &&
+          this.number
         )
       }
 
@@ -449,11 +466,13 @@
     height: 40px;
   }
 
-  .invocebtn {
+  .invbtn {
     background-color: black;
     width: 400px;
-    width: 100%;
-    height: 40px;
+    width: 90%;
+    height: 50px;
+    padding: 10px;
+    margin: 20px;
   }
 
   .swishbtn {
@@ -585,6 +604,8 @@
     justify-content: center;
     align-items: center;
     /* margin-top: 40px; */
+    background-color: #d7dad8;
+    color: #000;
   }
 
   .pay button {
@@ -616,14 +637,14 @@
   #button-container {
     display: flex;
   }
-  .invbtn {
+  /* .invbtn {
     background-color: black;
     width: 400px;
     width: 90%;
     height: 50px;
     padding: 10px;
     margin: 20px;
-  }
+  } */
 
   @media screen and (min-width: 900px) {
     .container5 {
@@ -647,5 +668,14 @@
       gap: 1em;
       font-family: 'didot', sans-serif;
     }
+  }
+
+  .scan {
+    width: 15%;
+    margin: 50px;
+  }
+
+  .sw {
+    margin-bottom: 20px;
   }
 </style>
