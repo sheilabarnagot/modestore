@@ -52,7 +52,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1rem;
+    margin-top: 10rem;
+    margin-left: 2rem;
   }
 
   .tracking-list {

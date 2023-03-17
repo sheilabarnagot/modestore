@@ -57,15 +57,15 @@
 
 <style scoped>
   .delivery-methods__heading {
-    font-size: 1.5rem;
-    margin: 50px 30px;
+    font-size: 1.2rem;
+    margin: 150px 40px 10px;
     color: #47413d;
   }
 
   .delivery-methods__list {
     list-style: none;
-    padding: 20px 40px;
-    left: 20px;
+    padding: 10px 40px;
+    left: 10px;
     color: #47413d;
   }
 
@@ -77,24 +77,27 @@
   }
 
   .delivery-methods__name {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: light;
+    margin-bottom: 0.8rem;
     color: #47413d;
   }
 
   .delivery-methods__description {
-    font-size: 16px;
+    font-family: jost;
+    font-size: 1rempx;
     margin-bottom: 5px;
     color: #47413d;
   }
 
   .delivery-methods__price {
-    font-size: 16px;
+    font-family: jost;
+    font-size: 1rem;
     color: #47413d;
   }
 
   .order-status__heading {
-    font-size: 22px;
+    font-size: 1rem;
     margin: 20px 10px 10px 40px;
     color: #47413d;
   }

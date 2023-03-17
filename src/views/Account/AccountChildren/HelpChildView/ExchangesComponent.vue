@@ -2,18 +2,18 @@
 
 <template>
   <div>
-    <h2>Exchanges</h2>
+    <!--<h2>Exchanges</h2>-->
     <ul>
       <li v-for="product in products" :key="product.id">
         {{ product.name }} - {{ product.status }}
-        <button @click="showExchangeDialog(product)">Exchange/Return</button>
+        <button @click="showExchangeDialog(product)">Handle</button>
       </li>
     </ul>
 
     <!-- Exchange/Return dialog box -->
 
     <div v-if="showDialog">
-      <h3>Exchange/Return {{ selectedProduct.name }}</h3>
+      <h3>Handle {{ selectedProduct.name }}</h3>
       <label>
         <input type="radio" v-model="exchangeType" value="exchange" /> Exchange
       </label>
@@ -41,9 +41,9 @@
     data() {
       return {
         products: [
-          { id: 1, name: 'Product A', status: 'delivered' },
-          { id: 2, name: 'Product B', status: 'delivered' },
-          { id: 3, name: 'Product C', status: 'on the way' }
+          { id: 1, name: 'Diana top', status: 'delivered' },
+          { id: 2, name: 'Jane biker', status: 'delivered' },
+          { id: 3, name: 'Susie dress', status: 'on the way' }
         ],
         showDialog: false,
         selectedProduct: null,
@@ -91,3 +91,69 @@
     }
   }
 </script>
+<!--
+<style>
+  /* Mobile-first styles */
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  li {
+    margin-top: 120px;
+    margin-right: 30px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  button {
+    color: #3c3e3f;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+  }
+
+  label {
+    display: block;
+    margin-top: 5px;
+    padding: 5px;
+  }
+
+  select {
+    display: block;
+    width: 100%;
+    padding: 2px;
+    border-radius: 2px;
+    border: 1px solid #eeece5;
+  }
+
+  input[type='radio'] {
+    margin-right: 5px;
+  }
+
+  button:focus,
+  input:focus,
+  select:focus {
+    outline: none;
+  }
+
+  /* Responsive styles */
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    li {
+      margin-right: 10px;
+      margin-bottom: 0;
+      display: inline-block;
+      width: 30%;
+      padding: 20px;
+      text-align: center;
+    }
+  }
+</style>
+-->
