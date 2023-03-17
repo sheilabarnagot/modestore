@@ -2,8 +2,8 @@
   <svg
     class="close-style"
     fill="#47413d"
-    width="50px"
-    height="50px"
+    width="48px"
+    height="48px"
     viewBox="-225.28 -225.28 1474.56 1474.56"
     xmlns="http://www.w3.org/2000/svg"
     stroke="#47413d"

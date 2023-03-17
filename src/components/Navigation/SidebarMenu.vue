@@ -38,9 +38,6 @@
               >
             </li>
           </ul>
-          <!--  <div>
-            <RouterLink to="/">{{ $t(category.name) }}</RouterLink>
-          </div> -->
         </div>
       </template>
     </div>
@@ -49,6 +46,9 @@
       <RouterLink class="need-z" to="/account">
         <UserIcon class="menu-shopping-search need-z" />
       </RouterLink>
+      <div class="lang">
+        <LangBtn />
+      </div>
       <RouterLink class="need-z" to="/cart">
         <ShoppingIcon class="menu-shopping-search need-z" />
       </RouterLink>
@@ -74,6 +74,7 @@
   import ShoppingIcon from '../SvgIcons/ShoppingIcon.vue'
   import SearchIcon from '../SvgIcons/SearchIcon.vue'
   import FilterFetch from '../Filter/FilterFetch.vue'
+  import LangBtn from '../LangBtn.vue'
   export default {
     components: {
       StyledHamburger,
@@ -81,7 +82,8 @@
       CloseIcon,
       UserIcon,
       ShoppingIcon,
-      SearchIcon
+      SearchIcon,
+      LangBtn
     },
     data() {
       return {
@@ -89,7 +91,7 @@
         isOpenWidth: '0',
         firstTransitsion: '0.5s',
         categories: [
-          { id: 7, name: 'shopping' },
+          { id: 7, name: 'Shopping' },
           { id: 2, name: 'Jackets' },
           { id: 3, name: 'Tops' },
           { id: 4, name: 'Bottoms' },
@@ -103,13 +105,8 @@
       toggleMenu() {
         this.isOpen = !this.isOpen
         this.isOpenWidth === '0'
-          ? (this.isOpenWidth = '250px')
+          ? (this.isOpenWidth = '300px') //sidebar widht when open
           : (this.isOpenWidth = '0')
-        // if (this.isOpen) {
-        //   this.isOpenWidth = '250px'
-        // } else {
-        //   this.isOpenWidth = '0'
-        // }
       },
       toggler() {
         this.toggl = !this.toggl
@@ -134,17 +131,17 @@
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
-    left: 0;
+    right: 0;
     background-color: #eeece5;
     opacity: 0.7;
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 100px; /* Place content 60px from the top */
+    padding-top: 120px; /* Place content 120px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   }
   .menu-icon {
     position: absolute;
     top: 40px;
-    left: 20px;
+    right: 50px;
     font-size: 16px;
     margin-left: 10px;
     // z-index: 999;
@@ -154,7 +151,7 @@
     justify-content: center;
   }
   .menu-icon svg {
-    margin-right: 10px;
+    margin-right: 30px;
   }
   .menu-icon .icon {
     z-index: 999;
@@ -162,7 +159,7 @@
     align-items: center;
   }
   .menu-items {
-    padding: 8px 8px 8px 40px;
+    padding: 30px 0px 0px 100px;
     text-decoration: none;
     font-size: 16px;
     color: #47413d;
@@ -170,10 +167,13 @@
     transition: 0.3s;
   }
   .menu-items div {
-    padding: 0.5rem 0;
-    margin: 10px 0px;
+    //padding: 0.5rem 0;
+    // margin: 10px 0px;
     font-size: 1rem;
-    font-weight: lighter;
+  }
+  a {
+    font-family: jost;
+    color: #47413d;
   }
   //line under the links to show where you are
   .menu-items div::after {
@@ -181,7 +181,7 @@
     display: block;
     //position: absolute;
     bottom: 0;
-    left: 50%;
+    right: 50%;
     transform: translateX(80%);
     width: 15px;
     height: 0;
@@ -206,24 +206,31 @@
     right: 100px;
     cursor: pointer;
   }
-  // for the icons on the right
+
+  .lang {
+    position: absolute;
+    // right: 70px;
+    right: 35%;
+    top: 15%;
+  }
+  // pontus add them here, kz fixing position for the icons on the right
   #menu-item-icons-container {
     display: flex;
     justify-content: flex-end;
     position: absolute;
     // z-index: 1;
     // width: 100%;
-    padding-left: 1em;
-    top: 5%;
-    right: 5%;
+    padding-right: 12em;
+    top: 6.5%;
+    right: 3%;
   }
   .menu-shopping-search {
     margin-left: 2em;
   }
   #menu-item-icons-container p {
     position: relative;
-    left: 4px;
-    top: 8px;
+    right: 1%;
+    top: 25%;
   }
   @media (min-width: 601px) {
     nav {
@@ -233,7 +240,7 @@
   @media screen and (min-width: 600px) {
     #total-cart-items2 {
       bottom: -11px;
-      left: 160px;
+      right: 160px;
       position: absolute;
       font-size: smaller;
       font-weight: bolder;

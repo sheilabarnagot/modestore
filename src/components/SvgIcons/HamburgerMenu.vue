@@ -1,3 +1,4 @@
+<!-- kz ta bort
 <template>
   <svg
     width="80px"
@@ -20,3 +21,4 @@
     </g>
   </svg>
 </template>
+-->

@@ -1,4 +1,4 @@
-<!--KZ GridImg will show different pictures using props to show in a grid. The grid is changing deppinding on screen size-->
+<!--KZ using props to show pictures in a grid. Responsive layout-->
 <template>
   <div class="gallery-container">
     <div class="grid-img">
@@ -42,7 +42,7 @@
 <style scoped>
   .gallery-container {
     margin: 0 auto;
-    padding: 1rem;
+    /* padding: 1rem;*/
     max-width: 1200px;
     background-color: #f5f5f5;
   }

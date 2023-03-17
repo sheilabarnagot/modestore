@@ -5,7 +5,6 @@
     <CarouselImg />
     <GridImg :images="galleryImages" :columnsXs="2" :columnsSm="3" />
     <CampagneImg :images="campagneImages" />
-    <!--  <mood-board :images="images" /> -->
   </div>
 </template>
 
@@ -50,9 +49,13 @@
             src: '/img1200/pk-paris/pk-paris-102.jpg',
             alt: 'PK Paris 102'
           }
-        ]
-        /*
+        ],
+
         campagneImages: [
+          {
+            src: '/img1200/mono/mono-143.jpg',
+            alt: 'mono 143'
+          },
           {
             src: '/img1200/mono/mono-140',
             alt: 'mono 140'
@@ -64,12 +67,8 @@
           {
             src: '/img1200/mono/mono-142.jpg',
             alt: 'mono 142'
-          },
-          {
-            src: '/img1200/mono/mono-143.jpg',
-            alt: 'mono 143'
-          },
-          {
+          }
+          /* {
             src: '/img1200/thumb/thumb-132.jpg',
             alt: 'thumb-132'
           },
@@ -80,8 +79,8 @@
           {
             src: '/img1200/thumb/thumb-134.jpg',
             alt: 'thumb-134'
-          }
-        ]*/
+          }*/
+        ]
       }
     }
     /*  mounted() {
@@ -119,29 +118,3 @@
     }*/
   }
 </script>
-
-<!--
-<style scoped>
-  .bonnie {
-    color: #47413d;
-    position: absolute;
-    margin: 50px 40px;
-    font-size: 2.5rem;
-  }
-
-  @media (min-width: 601px) {
-    .bonnie {
-      position: absolute;
-      margin: 40px 100px;
-      font-size: 3.5rem;
-    }
-  }
-  @media (min-width: 768px) {
-    .bonnie {
-      position: absolute;
-      margin: 40px 100px;
-      font-size: 4rem;
-    }
-  }
-</style>
--->

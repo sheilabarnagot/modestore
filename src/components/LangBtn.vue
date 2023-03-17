@@ -38,8 +38,10 @@ In this case, the exported properties are locale, languages, changeLocale, and t
   <div>
     <label id="langButton">
       <select id="button" name="lang" v-model="locale" @change="changelocale">
+        <!-- KZ replaced flag with text and removed background color-->
+        <option value="" disabled hidden>lgs</option>
         <option v-for="(lang, i) in languages" :value="lang.value" :key="i">
-          {{ lang.text }}
+          {{ lang.value }}
         </option>
       </select>
     </label>
@@ -56,15 +58,18 @@ And a v-for directive that creates an option for each lang object in the languag
   #langButton {
     position: absolute;
     /* z-index: 1; */
+    right: 0;
     top: 0;
   }
   #button {
-    background-color: #dbdeeb;
+    /* KZ transparent  background-color: #dbdeeb;*/
     outline: none;
     border: none;
     color: #3d3e41;
     border-radius: 3px;
-    margin: 10px 20px;
-    padding-left: 5px;
+
+    /*margin: 50px 30px;
+    padding-left: 5px;*/
+    background-color: transparent;
   }
 </style>

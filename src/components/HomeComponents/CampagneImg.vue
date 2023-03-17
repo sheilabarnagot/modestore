@@ -1,19 +1,16 @@
+<!--KZ using props to show pictures in a grid. Responsive layout-->
 <template>
-  <h2>Hej</h2>
-</template>
-<!--<template>
-  <div class="campagne-container">
-    <div class="campagne-img">
-      <h2 class="campagne-title">{{ title }}</h2>
+  <div class="camp-container">
+    <div class="grid-img">
+      <h2 class="camp-title">{{ title }}</h2>
       <div class="grid-container">
+        <!-- {{ columnsXs }} -->
         <div
-          class="campagne-item"
+          class="grid-item"
           v-for="(image, index) in images"
           :key="index"
           :style="{ backgroundImage: `url(${image.src})` }"
-        >
-          <div class="overlay">{{ image.title }}</div>
-        </div>
+        />
       </div>
     </div>
   </div>
@@ -25,33 +22,33 @@
     props: {
       title: {
         type: String,
-        default: 'The look'
+        default: 'New looks'
       },
       images: {
         type: Array,
         required: true
       },
-      columnsXs: { type: Number, default: 3 },
-      columnsSm: { type: Number, default: 3 },
-      columnsMd: { type: Number, default: 4 },
-      columnsLg: { type: Number, default: 4 },
-      columnsXl: { type: Number, default: 4 }
+      columnsXs: { type: Number, default: 1 },
+      columnsSm: { type: Number, default: 1 },
+      columnsMd: { type: Number, default: 1 },
+      columnsLg: { type: Number, default: 2 },
+      columnsXl: { type: Number, default: 2 }
     }
   }
 </script>
 
 <style scoped>
-  .campagne-container {
+  .camp-container {
     margin: 0 auto;
-    padding: 1rem;
-    /* max-width: 1200px;*/
+    /* padding: 1rem;*/
+    max-width: 1200px;
     background-color: #f5f5f5;
   }
-  .campagne-title {
+  .camp-title {
     color: #464343;
     opacity: 0.8;
   }
-  .campagne-img {
+  .grid-img {
     margin: 1rem;
     padding: 1rem;
     /*object-fit: cover;
@@ -60,22 +57,24 @@
 
   .grid-container {
     display: grid;
-    /*  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*/
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 1rem;
   }
 
-  .campagne-item {
-    /*height: 400px;*/
-    /*  background-size: cover;*/
+  .grid-item {
+    height: 400px;
+    background-size: cover;
     background-position: center;
     position: relative;
-    padding-bottom: 150%; /* Maintain 2:3 aspect ratio */
+    /* padding-bottom: 150%;*/ /* Maintain 2:3 aspect ratio */
   }
 
-  /* @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 900px) {
     .grid-container {
-      grid-template-columns: repeat(auto-fill, minmax(4, 1fr));
+      grid-template-columns: repeat(
+        auto-fill,
+        minmax(1, 1fr) /* Sheila helped with the columns bigger screens */
+      ); /* Sm 3 columns */
     }
-  }*/
+  }
 </style>
--->

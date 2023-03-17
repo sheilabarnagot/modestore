@@ -1,6 +1,6 @@
 <script>
   import MobileMainNav from './components/Navigation/MobileMainNav.vue'
-  import LangBtn from './components/LangBtn.vue'
+  // import LangBtn from './components/LangBtn.vue'
   // import FilterFetch from './components/Filter/FilterFetch.vue'
   // import SearchView from './views/SearchView.vue'
   // import SidebarMenu from './components/SidebarMenu.vue'
@@ -28,24 +28,22 @@
       // SidebarMenu,
 
       BonnieLogo,
-      SidebarMenu,
+      SidebarMenu
 
       // Jag testar med branches Sheila
       //Klara was never here...
-      LangBtn
+      //LangBtn
     }
   }
 </script>
 
 <template>
-  <LangBtn />
+  <!-- <LangBtn />-->
   <BonnieLogo />
   <MobileMainNav />
-  <!-- <SearchView /> -->
   <SidebarMenu />
 
   <main>
     <RouterView />
   </main>
 </template>
-<style></style>

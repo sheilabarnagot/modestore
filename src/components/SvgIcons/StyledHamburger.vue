@@ -1,8 +1,9 @@
+<!--kz new hamburger, styled to fit the rest of the icons and header.-->
 <template>
   <svg
     class="burger-style"
-    width="52px"
-    height="52px"
+    width="48px"
+    height="48px"
     viewBox="-0.42 -0.42 21.84 21.84"
     xmlns="http://www.w3.org/2000/svg"
     fill="#47413d"
