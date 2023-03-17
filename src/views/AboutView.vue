@@ -98,7 +98,7 @@
           },
           {
             name: 'Dona',
-            age: new Date().getFullYear() - 1986,
+            age: new Date().getFullYear() - 1987,
             // image: 'dona.jpg',
             background: 'Poker player',
             skills:
