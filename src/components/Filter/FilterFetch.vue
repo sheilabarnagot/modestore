@@ -60,8 +60,8 @@
             const distance = levenshtein.get(entryValue, searchTerm)
             const similarity =
               1 - distance / Math.max(entryValue.length, searchTerm.length)
-            console.log(distance)
-            return similarity >= 0.5 // filter entries with similarity score >= 0.8
+
+            return similarity >= 0.5 //
           })
         )
 
