@@ -1,4 +1,5 @@
-<template>
+<!--KZ custumer can registrate card in my account and save. So in checkout it will automatically be picked from local storage-->
+<!--<template>
   <div>
     <h2>Register your card</h2>
     <form @submit.prevent="saveCard">
@@ -59,3 +60,4 @@
     }
   }
 </script>
+-->

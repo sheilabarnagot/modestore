@@ -1,6 +1,6 @@
 <!--KZ + PA creating a chat for customer with axios and api
-where ahould the improt be?-->
-<!--npm install axios-->
+obs! cors problem-->
+<!--npm install axios
 <template>
   <div>
     <div v-for="message in messages" :key="message.id">
@@ -42,3 +42,4 @@ where ahould the improt be?-->
     }
   }
 </script>
+-->

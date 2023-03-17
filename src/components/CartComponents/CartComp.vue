@@ -118,7 +118,7 @@
   #checkout-button {
     position: absolute;
     margin-left: 75%;
-    top: 70px;
+    top: 100px;
     background-color: #3c3e3f;
     color: white;
     font-size: 0.8em;
@@ -132,6 +132,7 @@
   #totalamount1 {
     margin-left: 75%;
     position: absolute;
+    top: 140px;
     max-width: 13ch;
     font-family: 'didot', sans-serif;
   }

@@ -1,3 +1,4 @@
+<!--KZ routerlinks inside my account and in myaccount and inside nav help-->
 <template>
   <nav id="nav-container">
     <ul>
@@ -5,9 +6,6 @@
         <RouterLink to="/account/help/materials"
           >Material Information</RouterLink
         >
-      </li>
-      <li>
-        <RouterLink to="/">Buying on Bon.com</RouterLink>
       </li>
       <li>
         <RouterLink to="/account/help/delivery"
@@ -23,7 +21,7 @@
         <RouterLink to="/account/help/payment">Payment</RouterLink>
       </li>
       <li>
-        <RouterLink to="/account/help/qr">Bon QR</RouterLink>
+        <RouterLink to="/account/help/qr">Bonie QR</RouterLink>
       </li>
     </ul>
     <RouterView />
@@ -70,8 +68,10 @@
 
   #nav-container {
     display: flex;
-    justify-content: center;
-    padding-left: 30px;
+    justify-content: left;
+    padding-left: 70px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #818c85;
   }
 
   ul {
@@ -85,10 +85,16 @@
     /* justify-items: center; */
   }
 
+  ul li:last-child {
+    border-bottom: none;
+  }
   ul li a {
     font-family: 'jost';
     color: #3c3e3f;
     line-height: 2;
     text-decoration: none;
+  }
+  ul li a:hover {
+    color: #818c85;
   }
 </style>

@@ -1,3 +1,4 @@
+<!--KZ
 <script>
   import RegisterCard from './RegisterCard.vue'
 
@@ -7,3 +8,4 @@
     }
   }
 </script>
+-->

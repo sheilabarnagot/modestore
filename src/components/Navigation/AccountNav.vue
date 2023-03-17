@@ -78,21 +78,21 @@
     text-decoration: none;
     color: #3c3e3f;
     margin: 0.3rem;
-    position: relative; /* Make sure the :after element is positioned relative to this element */
+    position: relative; /* KZ make sure the :after element is positioned relative to this element */
   }
-  /* Add the line under the link to show where you are */
+  /* KZ Add the line under the link to show where you are */
   ul li a.active::after {
     content: '';
     display: block;
     position: absolute;
-    bottom: -2px; /* Distance the line is from the text */
+    bottom: -2px; /* Distance the line from the text */
     left: 5px;
     width: 20%;
     height: 2px; /* Height of the line */
     background-color: #818c85;
   }
 
-  /* Change the color of the link when hovered */
+  /* KZ Change the color of the link when hovered */
   ul li a:hover {
     color: #818c85;
   }
@@ -100,7 +100,7 @@
     width: 100%;
     background-color: #3c3e3f;
     color: #f5f5f5;
-    /*made the font a bit smaller to mach the nav*/
+    /*made the font a bit smaller to match the nav*/
     font-size: 0.5em;
     border: none;
     /*kz change the size just a little*/
