@@ -1,4 +1,7 @@
 <template>
+  <div class="lang">
+    <LangBtn />
+  </div>
   <nav class="mobile-menu">
     <ul>
       <li>
@@ -94,6 +97,11 @@
 </script>
 
 <style scoped>
+  .lang {
+    position: absolute;
+    right: 10%;
+    top: 6.5%;
+  }
   nav {
     display: none;
     position: fixed;
@@ -157,9 +165,22 @@
   span {
     color: black;
   }
+
+  .lang {
+    position: absolute;
+    right: 10%;
+    top: 6.5%;
+  }
+
   @media (min-width: 375px) and (max-width: 600px) {
     nav {
       display: flex;
+    }
+  }
+
+  @media (min-width: 600px) {
+    .lang {
+      display: none;
     }
   }
 </style>
