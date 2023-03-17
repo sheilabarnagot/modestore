@@ -3,22 +3,24 @@
 <template>
   <div class="materials">
     <h2>Materials Information</h2>
-    <div v-for="material in materials" :key="material.name" class="material">
-      <h3>{{ material.name }}</h3>
-      <p>{{ material.description }}</p>
-      <ul>
-        <li
-          v-for="careInstruction in material.careInstructions"
-          :key="careInstruction"
-        >
-          {{ careInstruction }}
-        </li>
-      </ul>
+    <div class="material-grid">
+      <div v-for="material in materials" :key="material.name" class="material">
+        <h3>{{ material.name }}</h3>
+        <p>{{ material.description }}</p>
+        <ul>
+          <li
+            v-for="careInstruction in material.careInstructions"
+            :key="careInstruction"
+          >
+            {{ careInstruction }}
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
 
-<script>
+<script scoped>
   export default {
     data() {
       return {
@@ -105,72 +107,57 @@
 </script>
 
 <style scoped>
-  .material-care-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* padding: 100px; */
+  .materials {
+    /* display: flex; */
+    color: #3c3e3f;
+    margin-top: 10rem;
   }
 
-  .material-card {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); */
+  h2 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin-bottom: 4rem;
   }
 
-  .material-card img {
-    width: 100%;
-    border-radius: 10px 10px 0 0;
+  h3 {
+    font-family: jost;
+    font-size: 1.1rem;
   }
 
-  .material-card .material-info {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    background-color: white;
-    border-radius: 0 0 10px 10px;
+  p,
+  ul li {
+    font-family: 'jost';
+    color: #3c3e3f;
+    line-height: 2;
+    text-decoration: none;
+    font-weight: light;
+  }
+  ul li {
+    list-style-type: none;
+  }
+  .material:hover {
+    border: 1px solid #818c85;
+    cursor: pointer;
+  }
+  .material-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
   }
 
-  .material-card .material-info h3 {
-    margin: 0 0 10px 0;
-    font-size: 1rem;
-  }
-
-  .material-card .material-info p {
-    margin: 0 0 10px 0;
-    font-size: 16px;
+  .material {
+    border: 1px solid #eeece5;
+    padding: 2rem;
   }
 
   @media (min-width: 768px) {
-    .material-care-container {
-      padding: 40px;
+    .material-grid {
+      grid-template-columns: 1fr 1fr;
     }
-
-    .material-card {
-      flex-direction: row;
-      width: 80%;
-      margin-bottom: 40px;
-    }
-
-    .material-card img {
-      width: 50%;
-      border-radius: 10px 0 0 10px;
-    }
-
-    .material-card .material-info {
-      padding: 40px;
-      border-radius: 0 10px 10px 0;
-    }
-
-    .material-card .material-info h3 {
-      font-size: 15px;
-    }
-
-    .material-card .material-info p {
-      font-size: 10px;
+    @media (min-width: 1024px) {
+      .material-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
     }
   }
 </style>
