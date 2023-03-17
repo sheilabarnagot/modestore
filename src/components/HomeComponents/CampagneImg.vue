@@ -7,7 +7,11 @@
         <!-- {{ columnsXs }} -->
         <!--         :style="{ backgroundImage: `url(${image.src})` }" -->
         <template v-for="(image, index) in images" :key="index">
-          <img :src="image.src" />
+          <kinesis-container :active="true">
+            <kinesis-element :strength="10" type="depth">
+              <img :src="image.src" />
+            </kinesis-element>
+          </kinesis-container>
         </template>
       </div>
     </div>

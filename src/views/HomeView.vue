@@ -22,6 +22,7 @@
       GridImg,
       CampagneImg
     },
+
     data() {
       return {
         galleryImages: [
