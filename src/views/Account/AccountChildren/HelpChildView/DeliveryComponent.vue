@@ -57,7 +57,7 @@
 
 <style scoped>
   .delivery-methods__heading {
-    font-size: 24px;
+    font-size: 1.5rem;
     margin: 50px 30px;
     color: #47413d;
   }

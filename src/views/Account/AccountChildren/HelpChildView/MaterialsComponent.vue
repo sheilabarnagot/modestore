@@ -104,7 +104,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   .material-care-container {
     display: flex;
     flex-direction: column;
@@ -166,7 +166,7 @@
     }
 
     .material-card .material-info h3 {
-      font-size: 1px;
+      font-size: 15px;
     }
 
     .material-card .material-info p {
