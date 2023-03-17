@@ -1,6 +1,5 @@
 <!-- KZ new child component for MyAccount->HelpChild->ChildHelp->PaymentComponent
-
-  add BetalningsComponent here. Created of Diyana and Lilas
+  add pict  BetalningsComponent here.
 -->
 
 <template>

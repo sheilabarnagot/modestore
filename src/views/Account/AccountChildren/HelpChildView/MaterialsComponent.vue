@@ -109,7 +109,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    /* padding: 100px; */
   }
 
   .material-card {
@@ -118,7 +118,7 @@
     width: 100%;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); */
   }
 
   .material-card img {
@@ -136,7 +136,7 @@
 
   .material-card .material-info h3 {
     margin: 0 0 10px 0;
-    font-size: 24px;
+    font-size: 1rem;
   }
 
   .material-card .material-info p {
@@ -166,11 +166,11 @@
     }
 
     .material-card .material-info h3 {
-      font-size: 32px;
+      font-size: 1px;
     }
 
     .material-card .material-info p {
-      font-size: 18px;
+      font-size: 10px;
     }
   }
 </style>

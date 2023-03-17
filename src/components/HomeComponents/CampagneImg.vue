@@ -1,4 +1,4 @@
-<!--KZ using props to show pictures in a grid. Responsive layout-->
+<!--KZ using props to show pictures in a grid. Responsive layout, some styling help from Pontus-->
 <template>
   <div class="camp-container">
     <div class="grid-img">

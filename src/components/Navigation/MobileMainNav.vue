@@ -1,3 +1,4 @@
+<!--KZ added some styling just to show langbtn upp to screen 600px-->
 <template>
   <div class="lang">
     <LangBtn />
