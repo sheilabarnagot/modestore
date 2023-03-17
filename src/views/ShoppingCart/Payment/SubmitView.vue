@@ -1,15 +1,7 @@
 <template>
-  <!-- <form @submit.prevent="submitForm">
-    <input type="text" v-model="name" />
-    <button type="submit">Submit</button>
-  </form> -->
   <!-- <b-button id="button">
     <RouterLink to="/shopping">{{ $t('navbar.menu') }}</RouterLink>
   </b-button> -->
-  <!-- <div class="h3">
-    <h3>Order Confirmation</h3>
-  </div> -->
-
   <div class="container">
     <h3>Order Confirmation</h3>
     <div v-for="item in shoppingCartItems" :key="item.id">
@@ -73,14 +65,9 @@
     width: 50%;
     border-radius: 10px;
     height: 100vh;
-    /* margin: 10 auto; */
-    /* padding: 1rem; */
   }
   .amout {
-    /* position: absolute; */
     justify-content: center;
-    /* width: 100%; */
-    /* top: 600px; */
     color: #464343;
   }
 
@@ -88,11 +75,6 @@
     justify-content: center;
     width: 100px;
     top: 600px;
-
-    /* margin: 10px; */
-    /* box-shadow: 20px 0px 30px 2px grey; */
-    /* margin: 1rem; */
-    /* padding: 1rem; */
   }
 
   h3 {
@@ -103,10 +85,8 @@
     margin-top: 105px;
   }
   .name {
-    /* justify-content: center; */
     font-size: 12px;
     margin-left: 40px;
-    /* font-family: 'didot', sans-serif; */
   }
 
   .quantity {
@@ -124,20 +104,5 @@
       display: flex;
       flex-direction: column;
     }
-
-    /* .h3 {
-      display: flex;
-      align-items: center;
-    } */
   }
-  /* @media screen and (min-width: 800px) {
-    .container {
-      margin-bottom: 6em;
-      padding-left: 2rem;
-      display: row;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 3em;
-      font-family: 'didot', sans-serif;
-    }
-  } */
 </style>

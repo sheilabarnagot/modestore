@@ -18,7 +18,6 @@
           :state="input1.length >= 3 ? true : false"
         />
         <span>Name</span>
-        <div v-if="notEmpty" />
       </div>
       <div class="input-text">
         <b-form-input
@@ -28,7 +27,6 @@
           :state="input2.length >= 4 ? true : false"
         />
         <span>Email</span>
-        <div v-if="notEmpty" />
 
         <div class="country">
           <select>
@@ -37,18 +35,17 @@
             <option>Spain</option>
             <option>England</option>
             <option>France</option>
-            <option>Swden</option>
+            <option>Sweden</option>
           </select>
 
           <div class="zip-state">
             <div class="zip">
               <b-form-input
                 type="text"
-                placeholder="ZIP"
+                placeholder="zip"
                 v-model="input3"
                 :state="input3.length >= 4 ? true : false"
               />
-              <div v-if="notEmpty" />
             </div>
             <div class="state">
               <b-form-input
@@ -57,7 +54,6 @@
                 v-model="input5"
                 :state="input5.length >= 4 ? true : false"
               />
-              <div v-if="notEmpty" />
             </div>
           </div>
         </div>
@@ -68,7 +64,7 @@
             v-model="input4"
             :state="input4.length >= 4 ? true : false"
           />
-          <div v-if="notEmpty" />
+
           <span> Address </span>
         </div>
 
@@ -144,7 +140,7 @@
                   Confirm
                 </b-button>
                 <!-- om nummer ej inskriver och man clickar på confirm så ska error message returneras -->
-                <p v-if="showErrorMessage" style="color: red">
+                <p v-if="ErrorMessage" style="color: red">
                   Please fill in your number
                 </p>
               </b-modal>
@@ -231,14 +227,14 @@
                 </div>
                 <b-button
                   class="cardbtn"
-                  :disabled="submitButtonDisabled"
+                  :disabled="submit"
                   href="#/submit"
                   modalShowkort
                 >
                   Confirm
                 </b-button>
-                <p v-if="showErrorMessage" style="color: red">
-                  Please fill in your card task
+                <p v-if="ErrorMessage" style="color: red">
+                  Please fill in your card information
                 </p>
               </b-modal>
             </div>
@@ -313,7 +309,6 @@
     data() {
       return {
         Payment: '',
-        MY: 'M/Y',
         CVC: '',
         kortnummer: '',
         cardowner: '',
@@ -323,9 +318,6 @@
         regex: /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/,
         email: '',
         number: '',
-        fname: '',
-        emailSH: '',
-        adr: '',
         state: '',
         zip: '',
         isConfirmd: false,
@@ -333,46 +325,34 @@
         input2: '',
         input3: '',
         input4: '',
-        input5: '',
-        tack: 'tacajajjajja'
-        // input1Valid: true,
-        // input2Valid: true,
-        // errorMessage: ''
-        // showErrorMessageShipp: false,
+        input5: ''
       }
     },
 
     computed: {
-      submitButtonDisabled() {
+      submit() {
         return (
           this.cardowner === '' || this.kortnummer === '' || this.CVC === ''
         )
       },
-      showErrorMessage() {
+      ErrorMessage() {
         return (
-          this.submitButtonDisabled &&
+          this.submit &&
           (this.cardowner !== '' || this.kortnummer !== '' || this.CVC !== '')
         )
-      },
-      disabled() {
-        return !this.number
-      },
-      showInput1Error() {
-        return !this.input1 && !this.input1Valid
-      },
-      notEmpty() {
-        return (
-          this.input1 &&
-          this.input2 &&
-          this.input3 &&
-          this.input4 &&
-          this.input5 &&
-          this.number
-        )
       }
+      // disabled() {
+      //   return !this.number
 
-      // isAnyInputEmpty() {
-      //   return this.input1 === '' || this.input2 === '' || this.input3 === '' || this.input4 === '' || this.input5 === ''
+      // notEmpty() {
+      //   return (
+      //     this.input1 &&
+      //     this.input2 &&
+      //     this.input3 &&
+      //     this.input4 &&
+      //     this.input5 &&
+      //     this.number
+      //   )
       // }
     },
 
@@ -406,14 +386,6 @@
     margin: 10px;
     font-size: small;
   }
-
-  /* .swisha {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    top: 400px;
-  } */
 
   .Fakturan {
     position: absolute;
@@ -495,10 +467,8 @@
 
   .container5 {
     color: #47413d;
-    /* width: 100vh; */
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
     justify-content: center;
     align-items: center;
     font-family: 'didot', sans-serif;
@@ -650,7 +620,7 @@
       /* margin-bottom: 6em; */
       padding-left: 2rem;
       display: flex;
-      grid-template-columns: 1fr 1fr 1fr;
+
       gap: 1em;
       font-family: 'didot', sans-serif;
     }
