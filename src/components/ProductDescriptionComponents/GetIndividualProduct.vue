@@ -2,7 +2,6 @@
   <div id="arrow-back">
     <ArrowBack @click="() => this.$router.go(-1)" />
   </div>
-  <!-- <h1>Product Details</h1> -->
   <div id="container">
     <div id="product-information">
       <div id="product-name-product">
@@ -10,7 +9,7 @@
         <p id="p-price">price: {{ $route.params.price }} kr</p>
       </div>
     </div>
-    <img :src="dettur" />
+    <img :src="src" />
   </div>
 </template>
 
@@ -35,12 +34,12 @@
     },
     data() {
       return {
-        dettur: null
+        src: null
       }
     },
     methods: {
       fetchData() {
-        this.dettur = this.$route.params.id.replaceAll(',', '/')
+        this.src = this.$route.params.id.replaceAll(',', '/')
       }
     }
   }
@@ -50,7 +49,6 @@
   #container {
     display: flex;
     align-items: center;
-    /* height: 90vh; */
   }
 
   #product-information {
@@ -58,8 +56,6 @@
     width: 100%;
     flex-direction: column;
     align-items: center;
-    /* padding-top: 2em; */
-
     font-size: 1.1em;
   }
 
@@ -75,7 +71,6 @@
     display: flex;
     justify-content: center;
     width: 100%;
-
     position: absolute;
     top: 15%;
   }

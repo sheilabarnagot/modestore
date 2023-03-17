@@ -62,7 +62,7 @@
       </div>
     </div>
     <template v-if="toggl"
-      ><FilterFetch @filterproducts="testar" /><template
+      ><FilterFetch @filterproducts="searchedItemsToVuex" /><template
     /></template>
   </nav>
 </template>
@@ -114,7 +114,7 @@
       toggler() {
         this.toggl = !this.toggl
       },
-      testar(ez) {
+      searchedItemsToVuex(ez) {
         this.$store.commit('searchedItemsFiltered', ez)
         this.$router.push('/searchcomponent')
       }

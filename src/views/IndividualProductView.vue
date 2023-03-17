@@ -10,11 +10,6 @@
   export default {
     components: {
       GetIndividualProductVue
-    },
-    methods: {
-      testar() {
-        console.log('ble')
-      }
     }
   }
 </script>
