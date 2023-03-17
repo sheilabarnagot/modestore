@@ -42,10 +42,9 @@
       </template>
     </div>
     <div id="menu-item-icons-container">
-      <input
-        placeholder="search product"
+      <FilterFetchDesktop
+        @filterproducts="searchedItemsToVuex"
         class="need-z"
-        id="bottom-border-only-input"
       />
       <!-- <SearchIcon class="need-z" @click="toggler" /> -->
       <RouterLink class="need-z" to="/account">
@@ -66,9 +65,6 @@
         </p>
       </div>
     </div>
-    <template v-if="toggl"
-      ><FilterFetch @filterproducts="searchedItemsToVuex" /><template
-    /></template>
   </nav>
 </template>
 
@@ -77,17 +73,17 @@
   import CloseIcon from '../SvgIcons/CloseIcon.vue'
   import UserIcon from '../SvgIcons/UserIcon.vue'
   import ShoppingIcon from '../SvgIcons/ShoppingIcon.vue'
-  // import SearchIcon from '../SvgIcons/SearchIcon.vue'
-  import FilterFetch from '../Filter/FilterFetch.vue'
+
+  import FilterFetchDesktop from '../Filter/FilterFetchDesktop.vue'
+
   import LangBtn from '../LangBtn.vue'
   export default {
     components: {
       StyledHamburger,
-      FilterFetch,
       CloseIcon,
       UserIcon,
       ShoppingIcon,
-      // SearchIcon,
+      FilterFetchDesktop,
       LangBtn
     },
     data() {
