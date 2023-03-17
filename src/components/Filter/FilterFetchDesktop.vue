@@ -62,6 +62,7 @@
         )
 
         this.$emit('filterproducts', array)
+        this.searchTerm = ''
       }
     }
   }

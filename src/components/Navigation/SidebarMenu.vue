@@ -65,9 +65,6 @@
         </p>
       </div>
     </div>
-    <template v-if="toggl"
-      ><FilterFetch @filterproducts="searchedItemsToVuex" /><template
-    /></template>
   </nav>
 </template>
 
@@ -76,18 +73,17 @@
   import CloseIcon from '../SvgIcons/CloseIcon.vue'
   import UserIcon from '../SvgIcons/UserIcon.vue'
   import ShoppingIcon from '../SvgIcons/ShoppingIcon.vue'
-  // import SearchIcon from '../SvgIcons/SearchIcon.vue'
+
   import FilterFetchDesktop from '../Filter/FilterFetchDesktop.vue'
-  import FilterFetch from '../Filter/FilterFetch.vue'
+
   import LangBtn from '../LangBtn.vue'
   export default {
     components: {
       StyledHamburger,
-      FilterFetch,
+
       CloseIcon,
       UserIcon,
       ShoppingIcon,
-      // SearchIcon,
       FilterFetchDesktop,
       LangBtn
     },
