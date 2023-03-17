@@ -46,12 +46,6 @@
     color: #464343;
     opacity: 0.8;
   }
-  .grid-img {
-    /* margin: 1rem; */
-    /* padding: 1rem; */
-    /*object-fit: cover;
-    max-width: 1200px;*/
-  }
 
   .grid-container {
     display: flex;
