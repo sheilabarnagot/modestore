@@ -103,10 +103,15 @@
             background: 'Poker player',
             skills:
               'Can create web applications so fast they can break the sound barrier.',
-            Education: 'Program',
+            education: 'Program',
             surprise: 'Has talent for beatboxing',
-            likes: ['Pineapple on pizzas']
+            likes: [
+              'Running late.',
+              'Working out, but only because it allows her to eat more pizza.',
+              "Going shopping, but her bank account doesn't."
+            ]
           },
+
           {
             name: 'Sheila',
             age: new Date().getFullYear() - 1988,
