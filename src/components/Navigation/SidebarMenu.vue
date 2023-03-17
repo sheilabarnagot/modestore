@@ -42,7 +42,12 @@
       </template>
     </div>
     <div id="menu-item-icons-container">
-      <SearchIcon class="need-z" @click="toggler" />
+      <input
+        placeholder="search product"
+        class="need-z"
+        id="bottom-border-only-input"
+      />
+      <!-- <SearchIcon class="need-z" @click="toggler" /> -->
       <RouterLink class="need-z" to="/account">
         <UserIcon class="menu-shopping-search need-z" />
       </RouterLink>
@@ -72,7 +77,7 @@
   import CloseIcon from '../SvgIcons/CloseIcon.vue'
   import UserIcon from '../SvgIcons/UserIcon.vue'
   import ShoppingIcon from '../SvgIcons/ShoppingIcon.vue'
-  import SearchIcon from '../SvgIcons/SearchIcon.vue'
+  // import SearchIcon from '../SvgIcons/SearchIcon.vue'
   import FilterFetch from '../Filter/FilterFetch.vue'
   import LangBtn from '../LangBtn.vue'
   export default {
@@ -82,7 +87,7 @@
       CloseIcon,
       UserIcon,
       ShoppingIcon,
-      SearchIcon,
+      // SearchIcon,
       LangBtn
     },
     data() {
@@ -123,6 +128,7 @@
   .need-z {
     z-index: 999;
   }
+
   nav {
     display: none;
   }
@@ -205,6 +211,22 @@
     top: 100px;
     right: 100px;
     cursor: pointer;
+  }
+
+  input {
+    outline: 0;
+    position: absolute;
+    right: 100%;
+    border-width: 0 0 2px;
+    background: transparent;
+    border-top: none;
+    border-bottom: 2px solid black;
+  }
+
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
   }
 
   .lang {
