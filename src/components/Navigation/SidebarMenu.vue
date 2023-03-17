@@ -80,7 +80,6 @@
   export default {
     components: {
       StyledHamburger,
-
       CloseIcon,
       UserIcon,
       ShoppingIcon,

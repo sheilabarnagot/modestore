@@ -1,7 +1,8 @@
 <template>
   <form @submit="filterProduct" action="">
     <input type="text" v-model="searchTerm" placeholder="Search" />
-    <input class="search" type="submit" value="Search" />
+
+    <!-- <input class="search" type="submit" value="Search" /> -->
   </form>
 </template>
 
@@ -77,6 +78,12 @@
     background: transparent;
     border-top: none;
     border-bottom: 2px solid black;
+  }
+
+  @media (max-width: 690px) {
+    input {
+      width: 30%;
+    }
   }
 </style>
 
