@@ -52,13 +52,13 @@
         ],
 
         campagneImages: [
+          // {
+          //   src: '/img1200/mono/mono-140',
+          //   alt: 'mono 140'
+          // },
           {
             src: '/img1200/mono/mono-143.jpg',
             alt: 'mono 143'
-          },
-          {
-            src: '/img1200/mono/mono-140',
-            alt: 'mono 140'
           },
           {
             src: '/img1200/mono/mono-141.jpg',

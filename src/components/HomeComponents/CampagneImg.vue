@@ -5,12 +5,10 @@
       <h2 class="camp-title">{{ title }}</h2>
       <div class="grid-container">
         <!-- {{ columnsXs }} -->
-        <div
-          class="grid-item"
-          v-for="(image, index) in images"
-          :key="index"
-          :style="{ backgroundImage: `url(${image.src})` }"
-        />
+        <!--         :style="{ backgroundImage: `url(${image.src})` }" -->
+        <template v-for="(image, index) in images" :key="index">
+          <img :src="image.src" />
+        </template>
       </div>
     </div>
   </div>
@@ -49,16 +47,17 @@
     opacity: 0.8;
   }
   .grid-img {
-    margin: 1rem;
-    padding: 1rem;
+    /* margin: 1rem; */
+    /* padding: 1rem; */
     /*object-fit: cover;
     max-width: 1200px;*/
   }
 
   .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+    /* grid-gap: 1rem; */
   }
 
   .grid-item {
