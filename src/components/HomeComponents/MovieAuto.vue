@@ -23,6 +23,11 @@
     overflow: hidden;
   }
 
+  #tzst {
+    overflow: hidden;
+    /* position: absolute; */
+  }
+
   .movie-auto {
     position: absolute;
     top: 0;

@@ -1,4 +1,4 @@
-<!--KZ using props to show pictures in a grid. Responsive layout, some styling help from Pontus-->
+<!--KZ using props to show pictures in a grid. Responsive layout-->
 <template>
   <div class="camp-container">
     <div class="grid-img">
@@ -7,11 +7,7 @@
         <!-- {{ columnsXs }} -->
         <!--         :style="{ backgroundImage: `url(${image.src})` }" -->
         <template v-for="(image, index) in images" :key="index">
-          <kinesis-container :active="true">
-            <kinesis-element :strength="10" type="depth">
-              <img :src="image.src" />
-            </kinesis-element>
-          </kinesis-container>
+          <img :src="image.src" />
         </template>
       </div>
     </div>
