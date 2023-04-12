@@ -9,7 +9,7 @@ import MyAccountView from './views/Account/AccountChildren/MyAccountView.vue'
 import ShoppingView from './views/ShoppingView.vue'
 import FavoritesView from './views/Account/AccountChildren/FavoritesView.vue'
 import HelpView from './views/Account/AccountChildren/HelpView.vue'
-import SettingsAccount from './components/MyAccount/SettingsAccount.vue'
+import Reviews from './views/Review/Reviews.vue'
 
 import AllProductsView from './views/AllProductsView.vue'
 import IndividualProductView from './views/IndividualProductView.vue'
@@ -21,139 +21,136 @@ import PaymentComponent from './views/Account/AccountChildren/HelpChildView/Paym
 import ExchangesComponent from './views/Account/AccountChildren/HelpChildView/ExchangesComponent.vue'
 import DeliveryComponent from './views/Account/AccountChildren/HelpChildView/DeliveryComponent.vue'
 import ShippingTrackingqr from './views/Account/AccountChildren/HelpChildView/ShippingTrackingqr.vue'
-
 import LogIn from './components/MyAccount/LogIn.vue'
 import SignUp from './components/MyAccount/SignUp.vue'
 
 import SearchComponent from './components/SearchComponents/SearchComponent.vue'
 
 export default createRouter({
-  history: createWebHashHistory(),
-  //to, from, savedPosition parameters
-  scrollBehavior() {
-    // always scroll to top
-    return { top: 1 }
-  },
-  routes: [
-    {
-      component: HomeView,
-      path: '/'
+    history: createWebHashHistory(),
+    //to, from, savedPosition parameters
+    scrollBehavior() {
+        // always scroll to top
+        return { top: 1 }
     },
-    {
-      component: AllProductsView,
-      path: '/shopping'
-    },
-    {
-      component: CartView,
-      path: '/cart'
-    },
-    {
-      path: '/kop',
-      component: PaymentView
-    },
-    {
-      path: '/submit',
-      component: SubmitView
-    },
-    {
-      component: AccountView,
-      path: '/account',
-      redirect: '/account/konto',
-      beforeEnter: () => {
-        const auth = localStorage.getItem('auth')
-        return auth === 'true' ? true : '/login'
-      },
-      children: [
-        {
-          path: 'favourites',
-          component: FavoritesView
+    routes: [{
+            component: HomeView,
+            path: '/'
         },
-        {
-          path: 'konto',
-          component: MyAccountView
-        },
-        {
-          component: HelpView,
-          path: 'help'
-        },
-        {
-          path: 'settings',
-          component: SettingsAccount
-        }
-      ]
-    },
-    {
-      //KZ new component
-      component: HelpView,
-      path: '/account/help',
-      children: [
-        {
-          path: 'materials',
-          component: MaterialsComponent
-        },
-        {
-          path: 'payment',
-          component: PaymentComponent
-        },
-        {
-          path: 'exchanges',
-          component: ExchangesComponent
-        },
-        {
-          path: 'delivery',
-          component: DeliveryComponent
-        },
-        {
-          path: 'qr',
-          component: ShippingTrackingqr
-        }
-      ]
-    },
-    {
-      component: IndividualProductView,
-      path: '/description/:id?/:name?/:price?/:product?'
-    },
 
-    {
-      component: LogIn,
-      path: '/login'
-    },
-    {
-      component: SignUp,
-      path: '/signup'
-    },
+        {
+            component: AllProductsView,
+            path: '/shopping'
+        },
+        {
+            component: CartView,
+            path: '/cart'
+        },
+        {
+            path: '/kop',
+            component: PaymentView
+        },
+        {
+            path: '/submit',
+            component: SubmitView
+        },
+        {
+            component: AccountView,
+            path: '/account',
+            redirect: '/account/konto',
+            beforeEnter: () => {
+                const auth = localStorage.getItem('auth')
+                return auth === 'true' ? true : '/login'
+            },
+            children: [{
+                    path: 'favourites',
+                    component: FavoritesView
+                },
+                {
+                    path: 'konto',
+                    component: MyAccountView
+                },
+                {
+                    component: HelpView,
+                    path: 'help'
+                },
+                {
+                    path: 'review',
+                    component: Reviews
+                }
+            ]
+        },
+        {
+            //KZ new component
+            component: HelpView,
+            path: '/account/help',
+            children: [{
+                    path: 'materials',
+                    component: MaterialsComponent
+                },
+                {
+                    path: 'payment',
+                    component: PaymentComponent
+                },
+                {
+                    path: 'exchanges',
+                    component: ExchangesComponent
+                },
+                {
+                    path: 'delivery',
+                    component: DeliveryComponent
+                },
+                {
+                    path: 'qr',
+                    component: ShippingTrackingqr
+                }
+            ]
+        },
+        {
+            component: IndividualProductView,
+            path: '/description/:id?/:name?/:price?/:product?'
+        },
 
-    {
-      component: SearchComponent,
-      path: '/searchcomponent'
-    },
-    // New paths that depending on which you choose sends a certain prop to the Shoppingview page.
-    {
-      path: '/jackets',
-      component: ShoppingView,
-      props: { category: 'jacket' }
-    },
-    {
-      path: '/dresses',
-      component: ShoppingView,
-      props: { category: 'dress' }
-    },
-    {
-      path: '/tops',
-      component: ShoppingView,
-      props: { category: 'tops' }
-    },
-    {
-      path: '/bottoms',
-      component: ShoppingView,
-      props: { category: 'bottoms' }
-    },
-    {
-      path: '/About',
-      component: AboutView,
-      props: { category: 'AboutView' }
-    }
-  ]
+        {
+            component: LogIn,
+            path: '/login'
+        },
+        {
+            component: SignUp,
+            path: '/signup'
+        },
+
+        {
+            component: SearchComponent,
+            path: '/searchcomponent'
+        },
+        // New paths that depending on which you choose sends a certain prop to the Shoppingview page.
+        {
+            path: '/jackets',
+            component: ShoppingView,
+            props: { category: 'jacket' }
+        },
+        {
+            path: '/dresses',
+            component: ShoppingView,
+            props: { category: 'dress' }
+        },
+        {
+            path: '/tops',
+            component: ShoppingView,
+            props: { category: 'tops' }
+        },
+        {
+            path: '/bottoms',
+            component: ShoppingView,
+            props: { category: 'bottoms' }
+        },
+        {
+            path: '/About',
+            component: AboutView,
+            props: { category: 'AboutView' }
+        }
+    ]
 })
 
 /*

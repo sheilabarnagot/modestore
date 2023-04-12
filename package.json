@@ -19,7 +19,7 @@
     "vuex-persistedstate": "^4.1.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitejs/plugin-vue": "^4.1.0",
     "eslint": "^8.32.0",
     "eslint-plugin-vue": "^9.9.0",
     "sass": "^1.58.3",

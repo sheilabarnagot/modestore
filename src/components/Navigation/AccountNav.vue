@@ -18,28 +18,28 @@
           <RouterLink
             to="/account/konto"
             :class="{ active: $route.path === '/account/konto' }"
-            >{{ $t('navbar.konto') }}</RouterLink
+            >{{ $t('Konto') }}</RouterLink
           >
         </li>
         <li>
           <RouterLink
             to="/account/favourites"
             :class="{ active: $route.path === '/account/favourites' }"
-            >{{ $t('navbar.favoriter') }}</RouterLink
+            >{{ $t('Favoriter') }}</RouterLink
           >
         </li>
         <li>
           <RouterLink
             to="/account/help"
             :class="{ active: $route.path === '/account/help' }"
-            >{{ $t('navbar.hjälp') }}</RouterLink
+            >{{ $t('Hjälp') }}</RouterLink
           >
         </li>
         <li>
           <RouterLink
-            to="/account/settings"
+            to="./src/view/Review.vue"
             :class="{ active: $route.path === '/account/settings' }"
-            >{{ $t('navbar.Inställningar') }}</RouterLink
+            >{{ $t('Review') }}</RouterLink
           >
         </li>
       </ul>

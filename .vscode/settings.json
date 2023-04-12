@@ -30,7 +30,5 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "i18n-ally.localesPaths": [
-    "src/locales"
-  ]
+  "i18n-ally.localesPaths": ["src/locales"]
 }
